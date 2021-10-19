@@ -1,0 +1,53 @@
+$headline-script-font: Saturday, Zeyada;
+$headline-normal: Arapey, serif;
+$body-font: Arimo, san-serif;
+
+$break-small: 45em;
+$break-large: 60em;
+
+:root {
+  --lightgray: #f8f8f8;
+  --gray: #c0c0c0;
+  --darkgray: #333;
+  --navy: #17050f;
+  --blue: #333;
+  --white: #fff;
+  --yellow: #e99e03;
+  --font: #26100f;
+  --teal: #0292a8;
+  --base-font-size: 17px;
+
+  // set up font ratios
+  --ratio: 1.5;
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio)); // 5px
+  --s-2: calc(var(--s-1) / var(--ratio)); // 8px
+  --s-1: calc(var(--s0) / var(--ratio)); // 12px
+  --s0: 1rem; // 18px
+  --s1: calc(var(--s0) * var(--ratio)); // 27px
+  --s2: calc(var(--s1) * var(--ratio)); // 40px
+  --s3: calc(var(--s2) * var(--ratio)); // 60px
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+}
+
+@mixin breakpoint($break) {
+  @if $break == large {
+    @media (min-width: $break-large) {
+      @content;
+    }
+  } @else if $break == medium {
+    @media (min-width: $break-medium) {
+      @content;
+    }
+  } @else if $break == small {
+    @media (min-width: $break-small) {
+      @content;
+    }
+  } @else {
+    @media ($break) {
+      @content;
+    }
+  }
+}
