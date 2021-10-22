@@ -2,10 +2,7 @@
 title: Fetch Basics - What is AJAX and Fetch?
 description: Getting started with making asynchronous requests with Fetch
 date: 2021-10-15
-tags:
-  - JS
-  - Fetch
-  - Prepare
+
 layout: layouts/post.njk
 ---
 
@@ -13,7 +10,7 @@ layout: layouts/post.njk
 
 **AJAX** stands for Asynchronous Javascript And Xml. It is a collection of technologies that allow a webpage to make a request to a server after it has loaded for additional information. The requests are Asynchronous in that the program the made them does not wait around doing nothing until they come back...it will move on and do more stuff, the requests are made with Javascript, but they don't often return XML anymore. Most often now you will get the information back as JSON.
 
-Originally the requests were made using [XmlHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest), and you will still see that around, but more and more developers are turning to the newer [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) command to make their requests.
+Originally the requests were made using [XmlHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest), and you will still see that around, but more and more developers are turning to the newer [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) api to make their requests.
 
 ## Promises
 

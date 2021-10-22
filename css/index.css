@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Noto+Sans+Mono&display=swap");
+
 /* Colors */
 :root {
   --lightgray: #e0e0e0;
@@ -33,8 +34,8 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Titillium web";
-  text-transform: uppercase;
+  font-family: "Noto Sans Mono";
+  /* text-transform: uppercase; */
 }
 
 p:last-child {

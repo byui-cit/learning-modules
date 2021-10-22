@@ -1,6 +1,6 @@
 ---
-title: Fetch Basics - Ponder activities.
-description: Practice using Fetch
+title: JS Operators - Ponder activities.
+description: Practice using Operators
 date: 2021-10-15
 
 layout: layouts/post.njk
