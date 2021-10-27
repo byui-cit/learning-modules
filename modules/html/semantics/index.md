@@ -1,5 +1,5 @@
 ---
-title: Category then module name
+title: HTML Semantics
 description: Description of module
 date: 2021-10-15
 tags:

@@ -4,12 +4,12 @@ layout: layouts/home.njk
 ---
 <h1>{{ title }}</h1>
 <h2>Tags</h2>
-{% for tag in collections.jsTags %}
+{% for tag in collections[collectionName] %}
   {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
   <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
 {% endfor %}
 
-{% set postslist = collections['JS'] %}
+{% set postslist = collections[collectionTag] %}
 {% include "postslist.njk" %}
 
 <p>See <a href="{{ '/tags/' | url }}">all tags</a>.</p>

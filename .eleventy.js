@@ -84,6 +84,14 @@ module.exports = function (eleventyConfig) {
     tagSet.delete("CSS");
     return filterTagList([...tagSet]);
   });
+  eleventyConfig.addCollection("htmlTags", function (collectionApi) {
+    let tagSet = new Set();
+    collectionApi.getFilteredByTag("HTML").forEach((item) => {
+      (item.data.tags || []).forEach((tag) => tagSet.add(tag));
+    });
+    tagSet.delete("HTML");
+    return filterTagList([...tagSet]);
+  });
 
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("img");
