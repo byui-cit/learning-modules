@@ -2,10 +2,7 @@
 title: Module Name - Ponder activities.
 description: Practice using Fetch
 date: 2021-10-15
-tags:
-  - cat
-  - topic
-  - Ponder
+
 layout: layouts/post.njk
 ---
 

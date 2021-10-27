@@ -10,9 +10,9 @@ layout: layouts/post.njk
 
 ## Description
 
-The Document Object Model is actually NOT Javascript. It is an API (application programming interface) provided by the browser. This API provides Javascript with a bunch of built in functions it can use to interact with the DOM. These functions are available in all browsers.
+The Document Object Model is actually not really Javascript. It is an API (application programming interface) provided by the browser. This API provides Javascript with a bunch of built in functions it can use to interact with the DOM. These functions are available in all browsers.
 
-The DOM is the representation of the nodes or elements of a web page in code. The DOM is exposed through a special object to Javascript: document.
+The DOM is the representation of the nodes or elements of a web page in code. The DOM is exposed through special objects to Javascript: ie `document`, `window`.
 
 ## Prepare
 

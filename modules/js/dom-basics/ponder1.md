@@ -62,13 +62,15 @@ newParagraph.innerText = "Added with Javascript!";
 document.body.appendChild(newParagraph);
 ```
 
-2. Try adding an image. We would need to create the `img` element, then set the `src` and `alt` attributes, and finally append the image to the body. You can use `element.setAttribute('src', 'path/to/image')` to set those attributes. Try it
+2. Try adding an image. We would need to create the `img` element, then set the `src` and `alt` attributes, and finally append the image to the body. You should use
+   `element.setAttribute('src', 'path/to/image')` to set those attributes. Try it. You can use
+   `https://placeimg.com/200/200/animals` for the image path.
 
 <details><summary>Solution</summary>
 
 ```javascript
 const newImage = document.createElement("img");
-newImage.setAttribute("src", "path/to/image.jpg");
+newImage.setAttribute("src", "https://placeimg.com/200/200/animals");
 newImage.setAttribute("alt", "Description of image");
 document.body.appendChild(newImage);
 ```

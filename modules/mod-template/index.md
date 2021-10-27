@@ -12,6 +12,8 @@ layout: layouts/post.njk
 
 Copy this folder into whichever category you want to create a module for. Create a prepare or ponder file for each resource you will build.
 
+## Courses where this is used
+
 ## Prepare
 
 - [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)

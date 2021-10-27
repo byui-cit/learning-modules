@@ -93,6 +93,23 @@ module.exports = function (eleventyConfig) {
     return filterTagList([...tagSet]);
   });
 
+  eleventyConfig.addCollection("designTags", function (collectionApi) {
+    let tagSet = new Set();
+    collectionApi.getFilteredByTag("Design").forEach((item) => {
+      (item.data.tags || []).forEach((tag) => tagSet.add(tag));
+    });
+    tagSet.delete("Design");
+    return filterTagList([...tagSet]);
+  });
+  eleventyConfig.addCollection("generalTags", function (collectionApi) {
+    let tagSet = new Set();
+    collectionApi.getFilteredByTag("General").forEach((item) => {
+      (item.data.tags || []).forEach((tag) => tagSet.add(tag));
+    });
+    tagSet.delete("General");
+    return filterTagList([...tagSet]);
+  });
+
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
