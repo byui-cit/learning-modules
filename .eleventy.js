@@ -10,7 +10,7 @@ module.exports = function (eleventyConfig) {
   // Add plugins
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight, {
-    alwaysWrapLineHighlights: true,
+    alwaysWrapLineHighlights: false,
     trim: true,
   });
   eleventyConfig.addPlugin(pluginNavigation);
@@ -51,7 +51,8 @@ module.exports = function (eleventyConfig) {
 
   function filterTagList(tags) {
     return (tags || []).filter(
-      (tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1
+      (tag) =>
+        ["all", "nav", "post", "posts", "cat", "topic"].indexOf(tag) === -1
     );
   }
 
@@ -64,6 +65,23 @@ module.exports = function (eleventyConfig) {
       (item.data.tags || []).forEach((tag) => tagSet.add(tag));
     });
 
+    return filterTagList([...tagSet]);
+  });
+  eleventyConfig.addCollection("jsTags", function (collectionApi) {
+    let tagSet = new Set();
+    collectionApi.getFilteredByTag("JS").forEach((item) => {
+      (item.data.tags || []).forEach((tag) => tagSet.add(tag));
+    });
+    tagSet.delete("JS");
+    return filterTagList([...tagSet]);
+  });
+
+  eleventyConfig.addCollection("cssTags", function (collectionApi) {
+    let tagSet = new Set();
+    collectionApi.getFilteredByTag("CSS").forEach((item) => {
+      (item.data.tags || []).forEach((tag) => tagSet.add(tag));
+    });
+    tagSet.delete("CSS");
     return filterTagList([...tagSet]);
   });
 

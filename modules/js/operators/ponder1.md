@@ -8,55 +8,41 @@ layout: layouts/post.njk
 
 ## Preparation
 
-Make sure you read through the Prepare section for this topic. You will also need your editor open with some html and the code from the Prepare activity:
+Make sure you read through the Prepare section for this topic. You will also need your editor open with some html and the code from the Prepare portion of this module:
 
 ### html
 
 ```html
-<!-- fetch.html -->
+<!-- HTML -->
 <html>
   <head>
     <title>Fetch Activities</title>
     <script src="main.js"></script>
   </head>
-  <body></body>
+  <body>
+    <label for="age">Enter your Age</label>
+    <input id="age" />
+  </body>
 </html>
 ```
 
 ### Javascript
 
 ```javascript
-// main.js
-const url = "https://pokeapi.co/api/v2/pokemon/ditto";
-let results = null;
-// takes a fetch response and checks to make sure it was OK.
-// then returns the body of the response as a PROMISE to some JSON.
-function convertToJson(response) {
-  if (response.ok) {
-    return response.json();
-  } else {
-    console.log("error:", response);
-  }
-}
-// this is where we would do whatever we needed to do with the resulting data.
-function doStuff(data) {
-  results = data;
-  console.log("first: ", results);
-}
-// read this as: make a request to URL, WHEN it finishes THEN run convertToJson
-// WHEN it finishes THEN run doStuff
-fetch(url).then(convertToJson).then(doStuff);
-// meanwhile...continue with the rest of the program...
-console.log("second: ", results);
+// get age from input
+const age = document.getElementById("age").value; // assume 21 was entered
+// add 10 years
+const agePlus10 = parseInt(age) + 10;
+console.log(agePlus10); // success! 31
 ```
 
 These activities will be most effective if you TRY them first before you look at the solution. And after you do look at the solution...DO NOT copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.
 
 ## Activity 1
 
-Our doStuff function in the example above is a bit underwhelming...lets make it do more than just console log out. It should really display the data that we retrieved to the user in the browser. We need a list!
+Currently we are getting a value from an HTML input, adding 10 to it and logging it to the console. We can do better than that. Enhance the program to check the age entered. If it is greater than
 
-1. Add an element to our HTML to hold the pokemon data...something like `<section id="output"></section>`
+1. Add an element to our HTML to hold the output from our code...something like `<p id="output"></p>`
 2. Get that element with javascript. (`document.querySelector`)
 3. In the `doStuff` function create a variable and build out the html that we want to display the information. (I recommend a template literal string)
 4. Insert our HTML into the output element (innerHTML)

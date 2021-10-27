@@ -25,6 +25,8 @@ Coercion is simply the process Javascript uses when it has to do a comparison or
 1. Javascript prefers numeric comparisons and will coerce to a primitive numeric value if it can
 2. In the case of '+' (addition or concatination). If there is a string involved...all values will be converted to strings. That's the only way JS knows to combine mixed values.
 
+Why coercion? Javascript needs the ability to coerce values because it is [weakly typed](../../variables/prepare1/#strongly-typed-weakly-typed-what-does-that-even-mean)
+
 ## Examples
 
 ```javascript
@@ -45,6 +47,13 @@ null === undefined; // false
 "hello" == "Hello"; // false...are you surprised at this one?
 1 == true; // true...the boolean value true gets coerced into the number 1
 null == undefined; //  true
+```
+
+```javascript
+10 < 11; // true
+42 > "42"; // false
+43 > "42"; // true!  what is going on?
+"a" < "b"; // true
 ```
 
 ```javascript

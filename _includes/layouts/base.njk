@@ -19,8 +19,8 @@
         <h1 class="vertical-text">{{ metadata.title }}</h1>
       </div>
       {# <h1>
-                                                              <a href="{{ '/' | url }}">{{ metadata.title }}</a>
-                                                            </h1> #}
+                                                                                                                                                                          <a href="{{ '/' | url }}">{{ metadata.title }}</a>
+                                                                                                                                                                        </h1> #}
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
       <nav>
         <ul class="nav">
@@ -29,6 +29,21 @@
               <a href="{{ entry.url | url }}">{{ entry.title }}</a>
             </li>
           {%- endfor %}
+          {# <li class="nav-item{% if '/tags/js/' == page.url %} nav-item-active{% endif %}">
+                      <a href="{{ '/tags/js' | url }}">JS</a>
+                    </li>
+                    <li class="nav-item{% if '/tags/css/' == page.url %} nav-item-active{% endif %}">
+                      <a href="{{ '/tags/css' | url }}">CSS</a>
+                    </li>
+                    <li class="nav-item{% if '/tags/html/' == page.url %} nav-item-active{% endif %}">
+                      <a href="{{ '/tags/html' | url }}">HTML</a>
+                    </li>
+                    <li class="nav-item{% if '/tags/design/' == page.url %} nav-item-active{% endif %}">
+                      <a href="{{ '/tags/design' | url }}">Design</a>
+                    </li>
+                    <li class="nav-item{% if '/tags/general/' == page.url %} nav-item-active{% endif %}">
+                      <a href="{{ '/tags/general' | url }}">General</a>
+                    </li> #}
         </ul>
       </nav>
     </header>

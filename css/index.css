@@ -10,6 +10,7 @@
   --f2021: #c92436;
   --white: #fff;
   --code-color: #1990b8;
+  --callout-background-color: #b3a994;
   --font-body: Garamond, -apple-system, system-ui, sans-serif;
   --font-headline: "Titillium web";
 }
@@ -57,6 +58,15 @@ a[href] {
 }
 a[href]:visited {
   color: var(--navy);
+}
+a[href^="http"]::after {
+  background: transparent url(/img/external.svg) 0 0 no-repeat;
+  background-size: 16px;
+  display: inline-block;
+  content: "";
+  height: 16px;
+  margin-left: 3px;
+  width: 16px;
 }
 main {
   padding: 1rem;
@@ -371,4 +381,15 @@ a[href].direct-link:focus:visited,
 details {
   padding: 0.5em;
   border: 1px solid;
+}
+
+.callout {
+  display: block;
+
+  margin: 15px auto;
+  width: 90%;
+  padding: 10px;
+  border: 1px solid black;
+  color: #171717;
+  background: var(--callout-background-color);
 }

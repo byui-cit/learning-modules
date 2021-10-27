@@ -1,0 +1,15 @@
+---
+layout: layouts/home.njk
+
+---
+<h1>{{ title }}</h1>
+<h2>Tags</h2>
+{% for tag in collections.jsTags %}
+  {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+  <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+{% endfor %}
+
+{% set postslist = collections['JS'] %}
+{% include "postslist.njk" %}
+
+<p>See <a href="{{ '/tags/' | url }}">all tags</a>.</p>

@@ -10,7 +10,7 @@ layout: layouts/post.njk
 
 ## Description
 
-Variables are a fundamental part of any programming language.
+Variables are a fundamental part of any programming language. Learn how to declare and use variables in Javascript. Includes a discussion about weakly typed languages (like Javascript) and what that means.
 
 ## Prepare
 

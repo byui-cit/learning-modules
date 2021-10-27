@@ -1,8 +1,11 @@
 ---
-title: Fetch Basics - Ponder activities.
+title: Module Name - Ponder activities.
 description: Practice using Fetch
 date: 2021-10-15
-
+tags:
+  - cat
+  - topic
+  - Ponder
 layout: layouts/post.njk
 ---
 
@@ -50,11 +53,7 @@ fetch(url).then(convertToJson).then(doStuff);
 console.log("second: ", results);
 ```
 
-<div class="callout">
-
 These activities will be most effective if you TRY them first before you look at the solution. And after you do look at the solution...DO NOT copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.
-
-</div>
 
 ## Activity 1
 
@@ -87,15 +86,13 @@ As interesting as Ditto is...it would be more fun to get information on lots of 
 
 1. Add a ul element to our html to hold the list. (`<ul id="outputList"></ul>`)
 2. Get that element with Javascript
-3. Change the url that we are using to make the request to
-   `const url = "https://pokeapi.co/api/v2/pokemon";`
+3. Change the url that we are using to make the request to `const url = "https://pokeapi.co/api/v2/pokemon";`
 4. Create a function: `function doStuffList(data) {}`
-5. Change your fetch call to use the `doStuffList` function instead of `doStuff`
-6. In the function start by console.logging **data**. Save everything and open your file in the browser. Take a look in the console at the structure of what got sent back. Notice that our list is inside of a property called **results**
-7. Create a variable called `pokeList` in the doStuffList function and set it equal to `data.results`
-8. for each of the pokemon in the list: create a line of html to output it
-   `<li>${pokeList.name}</li>`
-9. Add the new list to what was already in our output element.
+5. In the function start by console.logging **data**. Take a look at the structure of what got sent back. Notice that our list is inside of a property called results
+6. Create a variable called `pokeList` and set it equal to `data.results`
+7. for each of the pokemon in the list: create a line of html to output it (`<li>${pokeList.name}</li>`
+8. Add the new list to what was already in our output element.
+9. Change your fetch call to use the `doStuffList` function instead of `doStuff`
 
 <details>
 <summary>Solution 2</summary>
