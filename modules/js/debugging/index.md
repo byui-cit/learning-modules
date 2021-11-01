@@ -2,6 +2,7 @@
 title: JS Debugging
 description: Teaches the basics of debugging Javascript in the developer tools of the browser
 date: 2021-10-15
+order: 3
 tags:
   - JS
   - Debugging

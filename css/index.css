@@ -244,6 +244,8 @@ nav {
   align-items: baseline;
   counter-increment: start-from -1;
   line-height: 1.8;
+  /* border: 1px solid; */
+  margin-bottom: 1em;
 }
 /* .postlist-item:before {
   display: inline-block;

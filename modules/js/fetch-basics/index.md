@@ -2,6 +2,7 @@
 title: JS Fetch Basics Module
 description: Getting started with making asynchronous requests with Fetch
 date: 2021-10-15
+order: 10
 tags:
   - JS
   - Fetch

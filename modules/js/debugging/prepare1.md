@@ -10,7 +10,7 @@ layout: layouts/post.njk
 
 An error could be defined as something wrong with your code. Errors generally can be placed into two buckets:
 
-- **Syntax Errors**: Often spelling errors where we try to use a defined variable or function that does not exist. These show up as error messages in the console, and are usually easier to fix.
+- **Syntax Errors**: Often spelling or other mis-typing errors where we try to use a defined variable or function that does not exist. These show up as error messages in the console, and are usually easier to fix.
 
 - **Logic Errors**: Logic errors happen when your code works...just not like you need it to. It doesn't give the correct output or result. There is often not a defined error message that shows which means that finding and fixing these is often harder.
 
@@ -39,14 +39,14 @@ The `<script>` can be used in two ways: we can add the code we want executed ins
 ...or we can put our Javascript code inside of a separate file and link it in:
 
 ```html
-<script src="main1.js"></script>
+<script src="debugging.js"></script>
 ```
 
 This second method is considered best practice and is how you should run our Javascript. The other method is often used for quick proof-of-concept hacking, but the code will usually get moved into a JS file if the code is going to be kept.
 
   </div>
 
-5. Add the following code to your main1.js file:
+5. Add the following code to your debugging.js file:
 
 ```javascript
 const PI = 3.14;
@@ -66,8 +66,10 @@ area = radius * radius * pi;
 9. Click on the line number for line 1. It should add a blue arrow on it. We have just set a breakpoint. If you refresh the browser the code execution will now stop on line 1 at our breakpoint.
    ![Debugging sources tab in developer tools](/img/debugging-sources.png)
 
-10. At this point we could click the Resume button to resume the execution of the program, or Step over, or step into. **Step into** is for functions, which we don't have yet. so click the **Step Over** button to advance to the next line in the code.
+10. The Resume button should be blue at this point. That means the execution of our code is paused. At this point we could click the Resume button to resume the execution of the program, or Step over, or step into. **Step into** is for functions, which we don't have yet. so click the **Step Over** button to advance to the next line in the code.
 
 11. Hover your mouse cursor over the word `PI` in the Sources tab. You should see a little popup with '3.14' show up. This indicates what the current value in that variable is. Do not underestimate how valuable this inspect ability is!
 
-12. If you click **Step Over** a few more times we will get to the line with the first syntax error and our execution will end.
+12. If you click **Step Over** a few more times we will get to the line with the first syntax error and our execution will end. (Resume button will no longer be a blue 'Play' button.)
+
+13. Clicking on the line number for line 1 again will remove the breakpoint.

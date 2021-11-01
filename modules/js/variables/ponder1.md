@@ -9,7 +9,7 @@ layout: layouts/post.njk
 ## Activity 1
 
 Open the following page in a new tab: [JS Variables Ponder](https://codepen.io/matkat/pen/LYjRjzm)
-and follow the intructions.
+and follow the instructions.
 
 <p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="LYjRjzm" data-editable="true" data-user="matkat" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/matkat/pen/LYjRjzm">

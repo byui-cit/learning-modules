@@ -8,144 +8,146 @@ layout: layouts/post.njk
 
 ## Preparation
 
-Make sure you read through the Prepare section for this topic. You will also need your editor open with some html and the code from the Prepare portion of this module:
+Make sure you read through the Prepare section for this topic. You will also need your editor open with some html and JS.
 
 ### html
 
 ```html
-<!-- HTML -->
+<!-- operators.html -->
 <html>
   <head>
-    <title>Fetch Activities</title>
-    <script src="main.js"></script>
+    <title>Operator Activities</title>
+    <script src="operators.js"></script>
   </head>
-  <body>
-    <label for="age">Enter your Age</label>
-    <input id="age" />
-  </body>
+  <body></body>
 </html>
 ```
 
 ### Javascript
 
 ```javascript
-// get age from input
-const age = document.getElementById("age").value; // assume 21 was entered
-// add 10 years
-const agePlus10 = parseInt(age) + 10;
-console.log(agePlus10); // success! 31
+// operators.js
+let shipHealth = 3;
+let shipAmmo = 3;
+let targetHealth = 3;
+
+function fireShip() {
+  if (shipCanFire()) {
+    shipAmmo--;
+    if (isHit()) {
+      targetHealth--;
+      console.log("hit - targetHealth:", targetHealth);
+    } else {
+      console.log("miss");
+    }
+  } else {
+    reloadShip();
+    console.log("reloading, shipHealth:", shipHealth);
+  }
+}
+
+function encounter() {
+  console.log("You see a target");
+  if (!isDestroyed(targetHealth) && !isDestroyed(shipHealth)) {
+    fireShip();
+    if (isDestroyed(targetHealth)) {
+      console.log("Target eliminated");
+    }
+    if (isDestroyed(shipHealth)) {
+      console.log("ship destroyed");
+    }
+  }
+}
 ```
 
 These activities will be most effective if you TRY them first before you look at the solution. And after you do look at the solution...DO NOT copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.
 
 ## Activity 1
 
-Currently we are getting a value from an HTML input, adding 10 to it and logging it to the console. We can do better than that. Enhance the program to check the age entered. If it is greater than
+Above you will find part of the code for a simple game. Several functions are missing however. Our task will be to write those.
 
-1. Add an element to our HTML to hold the output from our code...something like `<p id="output"></p>`
-2. Get that element with javascript. (`document.querySelector`)
-3. In the `doStuff` function create a variable and build out the html that we want to display the information. (I recommend a template literal string)
-4. Insert our HTML into the output element (innerHTML)
+1. Review the code and make a list of the missing functions we will need to write to get it to work.
+
+<details>
+<summary>Function List</summary>
+
+```javascript
+function isHit() {
+  // should return true if a randomly generated number is greater than .5, false if it is less than .5
+}
+
+function shipCanFire() {
+  // return true if the ships health is above 0 AND ammo is above 0 false otherwise
+}
+function isDestroyed(health) {
+  // return true if health is zero or less
+}
+function reloadShip() {
+  // reduce ship health by 1 and increase ammo by 3
+}
+```
+
+  </details>
+
+2. Write the code for the `isHit()` function. Note that `Math.random()` will generate a number between 0 and 1.
+3. Write the code for the `shipCanFire()` function. It should return true if the ship's health is above 0 AND ammo is above 0, return false otherwise
+4. Write the code for `isDestroyed(health)`. It should return true if health is zero or less
+5. Write the `reloadShip()` function. If the ship runs out of ammo before destroying the target, it will suffer damage. This function sohuld reduce ship health by 1 and increase ammo by 3.
+6. Test your program by opening the HTML file in the browser, then open the console.
+7. In the console prompt (at the bottom of the console window) enter `encounter()` and press enter. Do this until either you or the target are destroyed!
 
 <details>
 <summary>Solution 1</summary>
 
 ```javascript
-function doStuff(data) {
-  const outputElement = document.querySelector("#output");
-  results = data;
-  const html = `<h2>${results.name}</h2>
-                <img src="${results.sprites.front_default}" alt="Image of ${results.name}">`;
-  outputElement.innerHTML = html;
-  console.log("first: ", results);
+let shipHealth = 3;
+let shipAmmo = 3;
+let targetHealth = 3;
+
+function isHit() {
+  return Math.random() > 0.5;
 }
-```
 
-</details>
-
-## Activity 2
-
-As interesting as Ditto is...it would be more fun to get information on lots of pokemon...if we make a slight change to the URL we are making the request to, we can get a list of pokemon instead of just one. Let's do that and then make a new function called `doStuffList` that will output the list.
-
-1. Add a ul element to our html to hold the list. (`<ul id="outputList"></ul>`)
-2. Get that element with Javascript
-3. Change the url that we are using to make the request to `const url = "https://pokeapi.co/api/v2/pokemon";`
-4. Create a function: `function doStuffList(data) {}`
-5. In the function start by console.logging **data**. Take a look at the structure of what got sent back. Notice that our list is inside of a property called results
-6. Create a variable called `pokeList` and set it equal to `data.results`
-7. for each of the pokemon in the list: create a line of html to output it (`<li>${pokeList.name}</li>`
-8. Add the new list to what was already in our output element.
-9. Change your fetch call to use the `doStuffList` function instead of `doStuff`
-
-<details>
-<summary>Solution 2</summary>
-
-```javascript
-function doStuffList(data) {
-  console.log(data);
-  const pokeListElement = document.querySelector("#pokeList");
-  const pokeList = data.results;
-  pokeList.forEach((currentItem) => {
-    const html = `<li>${currentItem.name}</li>`;
-    // note the += here...
-    pokeListElement.innerHTML += html;
-  });
+function shipCanFire() {
+  return shipAmmo > 0 && shipHealth > 0;
 }
-```
+function isDestroyed(health) {
+  return health <= 0;
+}
+function reloadShip() {
+  shipHealth--;
+  shipAmmo += 3;
+}
 
-</details>
-
-## Activity 3 - Stretch!
-
-Our pokemon list is not alphabetized...we should fix that.
-
-Create a function: `function sortPokemon(list) {}`
-Check out some documentation on `Array.sort`. [MDN: Sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort). Notice that it provides an example compare function at the bottom...we can use that as a model.
-
-```javascript
-function compare(a, b) {
-  if (a is less than b by some ordering criterion) {
-    return -1;
+function fireShip() {
+  if (shipCanFire()) {
+    shipAmmo--;
+    if (isHit()) {
+      targetHealth--;
+      console.log("hit - targetHealth:", targetHealth);
+    } else {
+      console.log("miss");
+    }
+  } else {
+    reloadShip();
+    console.log("reloading, shipHealth:", shipHealth);
   }
-  if (a is greater than b by the ordering criterion) {
-    return 1;
+}
+
+function encounter() {
+  console.log("You see a target");
+  if (!isDestroyed(targetHealth) && !isDestroyed(shipHealth)) {
+    fireShip();
+    if (isDestroyed(targetHealth)) {
+      console.log("Target eliminated");
+    }
+    if (isDestroyed(shipHealth)) {
+      console.log("ship destroyed");
+    }
   }
-  // a must be equal to b
-  return 0;
-}
-```
-
-<details>
-<summary>Solution 3</summary>
-
-```javascript
-function compare(a, b) {
-  if (a.name > b.name) {
-    // sort b before a
-    return 1;
-  } else if (a.name < b.name) {
-    // a and b different but unchanged (already in the correct order)
-    return -1;
-  } else return 0; // a and b are equal
 }
 
-function sortPokemon(list) {
-  let sortedList = list.sort(compare);
-  return sortedList;
-}
-function doStuffList(data) {
-  console.log(data);
-  const pokeListElement = document.querySelector("#outputList");
-  const pokeList = data.results;
-  // sort our list before output it
-  pokeList = sortPokemon(pokeList);
-  pokeList.forEach((currentItem) => {
-    const html = `<li>${currentItem.name}</li>`;
-    //note the += here
-    pokeListElement.innerHTML += html;
-  });
-}
-fetch(url).then(convertToJson).then(doStuffList);
+encounter();
 ```
 
 </details>

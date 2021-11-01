@@ -2,6 +2,7 @@
 title: JS - Variables
 description: Using variables in Javascript. Including a discussion about weakly typed languages.
 date: 2021-10-15
+order: 1
 tags:
   - JS
   - variables

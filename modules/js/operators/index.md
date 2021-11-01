@@ -2,6 +2,7 @@
 title: JS Operators and Coercion
 description: Understanding how operators work in Javascript and the role that coercion plays when using them.
 date: 2021-10-15
+order: 2
 tags:
   - JS
   - operators

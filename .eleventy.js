@@ -56,7 +56,23 @@ module.exports = function (eleventyConfig) {
     );
   }
 
+  function sortByOrder(modules) {
+    return (modules || []).sort((a, b) =>
+      Math.sign(a.data.order - b.data.order)
+    );
+  }
+  eleventyConfig.addFilter("sortByOrder", sortByOrder);
   eleventyConfig.addFilter("filterTagList", filterTagList);
+
+  // modules sorted by order
+  eleventyConfig.addCollection("myCustomSort", function (collectionApi) {
+    return collectionApi.getAll().sort(function (a, b) {
+      //return a.date - b.date; // sort by date - ascending
+      return b.date - a.date; // sort by date - descending
+      //return a.inputPath.localeCompare(b.inputPath); // sort by path - ascending
+      //return b.inputPath.localeCompare(a.inputPath); // sort by path - descending
+    });
+  });
 
   // Create an array of all tags
   eleventyConfig.addCollection("tagList", function (collection) {
@@ -175,6 +191,8 @@ module.exports = function (eleventyConfig) {
 
     // Opt-out of pre-processing global data JSON files: (default: `liquid`)
     dataTemplateEngine: false,
+
+    pathPrefix: "/learning-modules/",
 
     // These are all optional (defaults are shown):
     dir: {

@@ -154,4 +154,20 @@ console.log(names);
 
 Can you remove elements from the end or add them to the beginning of the array? You bet. There are a large [number of methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) that you can apply to array. Check them out.
 
+## Strings
+
+Strings are a type of primitive value. The share some similarities with Arrays however. If you are wondering how long a string is for example, you can look at it's `length` property.
+
+```javascript
+let myString = "This is my String!";
+myString.length; // 18
+```
+
+You can also access each character of a string with an index just like with an array.
+
+```javascript
+let myString = "This is my String!";
+myString[2]; // "i"  - remember that indexes start counting with 0!
+```
+
 Much of the detail above comes from [You Don't Know JS Yet Ch 2](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/get-started/ch2.md). Highly recommend reading to learn more.
