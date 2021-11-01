@@ -10,8 +10,8 @@
     "url": ""
   },
   "items": [{
-      "id": "https://byui-hackweek.netlify.app/posts/fall2021/",
-      "url": "https://byui-hackweek.netlify.app/posts/fall2021/",
+      "id": "https://byui-hackweek.netlify.app/learning-modules/posts/fall2021/",
+      "url": "https://byui-hackweek.netlify.app/learning-modules/posts/fall2021/",
       "title": "Fall 2021 Hackathon",
       "content_html": "<div><img src=\"https://byui-hackweek.netlify.app/img/f21-ilift-logo_600.png\" alt=\"Fall 2021 theme: I lift\" class=\"f21-logo\" /></div>\n<!-- ![img/f21-hackathon-logo.jpg](../../img/f21-ilift-logo.png \"Fall 2021 theme: I lift\") -->\n<p>The theme for this round is 'I-Lift'. We hope you’ll come up with creative projects that can help lift others.</p>\n<p>The initial round of reviews is done and we have our top ten teams. They are (in no certain order):</p>\n<ul>\n<li>The Boise Boys</li>\n<li>Fearless Prophets</li>\n<li>Lift Me Up</li>\n<li>Mirage</li>\n<li>The Devo App</li>\n<li>Game Night</li>\n<li>LIFT (Wolfpack)</li>\n<li>EventRex</li>\n<li>I-survive</li>\n<li>Les Belges</li>\n</ul>\n<p>To see results visit <a href=\"https://byui-hackweek.netlify.app/fall2021/\">the results page</a></p>\n",
       "date_published": "2021-10-15T00:00:00Z"

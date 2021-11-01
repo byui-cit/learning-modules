@@ -3,7 +3,7 @@
 	<title>WDD Learning Modules</title>
 	<subtitle></subtitle>
 	
-	<link href="https://byui-hackweek.netlify.app/feed/feed.xml" rel="self"/>
+	<link href="https://byui-hackweek.netlify.app/learning-modules/feed/feed.xml" rel="self"/>
 	<link href="https://byui-hackweek.netlify.app"/>
 	<updated>2021-10-15T00:00:00Z</updated>
 	<id>https://byui-hackweek.netlify.app</id>
@@ -14,9 +14,9 @@
 	
 	<entry>
 		<title>Fall 2021 Hackathon</title>
-		<link href="https://byui-hackweek.netlify.app/posts/fall2021/"/>
+		<link href="https://byui-hackweek.netlify.app/learning-modules/posts/fall2021/"/>
 		<updated>2021-10-15T00:00:00Z</updated>
-		<id>https://byui-hackweek.netlify.app/posts/fall2021/</id>
+		<id>https://byui-hackweek.netlify.app/learning-modules/posts/fall2021/</id>
 		<content type="html">&lt;div&gt;&lt;img src=&quot;https://byui-hackweek.netlify.app/img/f21-ilift-logo_600.png&quot; alt=&quot;Fall 2021 theme: I lift&quot; class=&quot;f21-logo&quot; /&gt;&lt;/div&gt;
 &lt;!-- ![img/f21-hackathon-logo.jpg](../../img/f21-ilift-logo.png &quot;Fall 2021 theme: I lift&quot;) --&gt;
 &lt;p&gt;The theme for this round is &#39;I-Lift&#39;. We hope you’ll come up with creative projects that can help lift others.&lt;/p&gt;
