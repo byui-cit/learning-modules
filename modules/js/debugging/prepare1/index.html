@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Debugging - What went wrong?</title>
+    <meta name="description" content="Getting started debugging our Javascript Code in the browser">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/prism-coy.css">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="/feed/feed.json" type="application/json" title="WDD Learning Modules">
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <a href="/index.html">
+          <img src="/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        </a>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
+      </div>
+      
+      <nav>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/modules/js/">JS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/modules/html/">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a href="/modules/css/">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/modules/design/">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/modules/general/">General</a>
+            </li>
+          
+        </ul>
+      </nav>
+    </header>
+    <main  class="tmpl-post" >
+      <h1>JS Debugging - What went wrong?</h1>
+
+
+
+<h2 id="types-of-errors" tabindex="-1">Types of Errors <a class="direct-link" href="#types-of-errors" aria-hidden="true">#</a></h2>
+<p>An error could be defined as something wrong with your code. Errors generally can be placed into two buckets:</p>
+<ul>
+<li>
+<p><strong>Syntax Errors</strong>: Often spelling or other mis-typing errors where we try to use a defined variable or function that does not exist. These show up as error messages in the console, and are usually easier to fix.</p>
+</li>
+<li>
+<p><strong>Logic Errors</strong>: Logic errors happen when your code works...just not like you need it to. It doesn't give the correct output or result. There is often not a defined error message that shows which means that finding and fixing these is often harder.</p>
+</li>
+</ul>
+<h2 id="running-and-debugging-javascript-in-the-browser." tabindex="-1">Running and debugging Javascript in the Browser. <a class="direct-link" href="#running-and-debugging-javascript-in-the-browser." aria-hidden="true">#</a></h2>
+<p>Javascript was originally created to be run in a browser and much of it still is. Because of this we will focus on debugging techniques for the browser.</p>
+<ol>
+<li>Open a sandbox folder up in your editor. In the sandbox folder create an html file called <code>debugging.html</code> with the html for a basic page. (Hint: In VS Code type ! in your blank .html file...then press the tab key. You are welcome...;)</li>
+<li>Create a file called <code>debugging.js</code></li>
+<li>Add a script element to your <code>week1.html</code> file. The script element is how we let the browser know that there is some Javascript code that it needs to fetch and execute.</li>
+</ol>
+  <div class="callout">
+<p>There are a few special elements in HTML. They are special because the contents of those elements are not treated as HTML, but something different.</p>
+<p><code>&lt;script&gt;</code> and <code>&lt;style&gt;</code> are the most common of these special tags. In the case of <code>&lt;style&gt;</code> the contents are treated as CSS (which we won't talk about much in this course). For <code>&lt;script&gt;</code> the contents are treated as Javascript.</p>
+<p>The <code>&lt;script&gt;</code> can be used in two ways: we can add the code we want executed inside of the element, ie:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript"><br>  <span class="token keyword">let</span> myVar <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span><br></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+<p>...or we can put our Javascript code inside of a separate file and link it in:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>debugging.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+<p>This second method is considered best practice and is how you should run our Javascript. The other method is often used for quick proof-of-concept hacking, but the code will usually get moved into a JS file if the code is going to be kept.</p>
+  </div>
+<ol start="5">
+<li>Add the following code to your debugging.js file:</li>
+</ol>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token constant">PI</span> <span class="token operator">=</span> <span class="token number">3.14</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> radius <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span><br><span class="token keyword">let</span> area <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span><br>area <span class="token operator">=</span> radius <span class="token operator">*</span> radius <span class="token operator">*</span> pi<span class="token punctuation">;</span><br>radius <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span><br>area <span class="token operator">=</span> radius <span class="token operator">*</span> radius <span class="token operator">*</span> pi<span class="token punctuation">;</span></code></pre>
+<ol start="6">
+<li>
+<p>Open your HTML file in a browser. (If you are using VS Code and installed the LiveServer extension you can right click on the name of the file in VS Code and select the 'Open with LiveServer') There is nothing on the screen! This is normal...in our HTML we didn't ask for anything to be on the screen. Open up the <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">developer tools</a> and switch to the <strong>Console</strong> tab.</p>
+</li>
+<li>
+<p>Notice that there are errors listed. These are syntax errors that will keep our code from running correctly until the are fixed.</p>
+</li>
+<li>
+<p>Switch to the <strong>Sources</strong> tab in the developer tools. Click on the <code>debugging.js</code> file in the left pane. You should be able to see the code you wrote.</p>
+</li>
+<li>
+<p>Click on the line number for line 1. It should add a blue arrow on it. We have just set a breakpoint. If you refresh the browser the code execution will now stop on line 1 at our breakpoint.<br>
+<img src="/img/debugging-sources.png" alt="Debugging sources tab in developer tools"></p>
+</li>
+<li>
+<p>The Resume button should be blue at this point. That means the execution of our code is paused. At this point we could click the Resume button to resume the execution of the program, or Step over, or step into. <strong>Step into</strong> is for functions, which we don't have yet. so click the <strong>Step Over</strong> button to advance to the next line in the code.</p>
+</li>
+<li>
+<p>Hover your mouse cursor over the word <code>PI</code> in the Sources tab. You should see a little popup with '3.14' show up. This indicates what the current value in that variable is. Do not underestimate how valuable this inspect ability is!</p>
+</li>
+<li>
+<p>If you click <strong>Step Over</strong> a few more times we will get to the line with the first syntax error and our execution will end. (Resume button will no longer be a blue 'Play' button.)</p>
+</li>
+<li>
+<p>Clicking on the line number for line 1 again will remove the breakpoint.</p>
+</li>
+</ol>
+
+
+    </main>
+    <footer></footer>
+    <!-- Current page: /modules/js/debugging/prepare1/ -->
+  </body>
+</html>

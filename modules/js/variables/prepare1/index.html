@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables - Understanding variables in Javascript</title>
+    <meta name="description" content="Declaring and using variables in Javascript">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/prism-coy.css">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="/feed/feed.json" type="application/json" title="WDD Learning Modules">
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <a href="/index.html">
+          <img src="/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        </a>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
+      </div>
+      
+      <nav>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/modules/js/">JS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/modules/html/">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a href="/modules/css/">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/modules/design/">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/modules/general/">General</a>
+            </li>
+          
+        </ul>
+      </nav>
+    </header>
+    <main  class="tmpl-post" >
+      <h1>Variables - Understanding variables in Javascript</h1>
+
+
+
+<h2 id="values" tabindex="-1">Values <a class="direct-link" href="#values" aria-hidden="true">#</a></h2>
+<p>The most fundamental unit of information in a program is a value. Values are data. They're how the program maintains state. Values come in two forms in JS: primitive and object.</p>
+<h3 id="primitives" tabindex="-1">Primitives <a class="direct-link" href="#primitives" aria-hidden="true">#</a></h3>
+<ul>
+<li>string</li>
+<li>number</li>
+<li>boolean</li>
+<li>null</li>
+<li>undefined</li>
+</ul>
+<h3 id="objects" tabindex="-1">Objects <a class="direct-link" href="#objects" aria-hidden="true">#</a></h3>
+<ul>
+<li>object literals</li>
+<li>Arrays</li>
+<li>Functions</li>
+<li>Classes</li>
+<li>...basically everything that is not a primitive!</li>
+</ul>
+<p>Values are embedded in programs using literals. Different types of values use different <strong>delimeters</strong> to indicate where the value begins and ends. A common delimiter used for strings that you are probably familar with is quotations. In Javascript we have 'single quotes', &quot;double quotes&quot;, and `back-ticks`. Single and double quotes function exactly the same...pick one and stick with it. Back-ticks are used to form template literal strings where interpolation can happen.</p>
+<p><code>typeof</code> can be used to see what type a stored value is given by Javascript. See if you can identify the delimeters used for the different types of values:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">typeof</span> <span class="token number">42</span><span class="token punctuation">;</span><br><span class="token keyword">typeof</span> <span class="token string">"abc"</span><span class="token punctuation">;</span><br><span class="token keyword">typeof</span> <span class="token boolean">true</span><span class="token punctuation">;</span><br><span class="token keyword">typeof</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span><br><span class="token keyword">typeof</span> <span class="token keyword">null</span><span class="token punctuation">;</span><br><span class="token keyword">typeof</span> <span class="token punctuation">{</span> a<span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">;</span><br><span class="token keyword">typeof</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br><span class="token keyword">typeof</span> <span class="token keyword">function</span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<p>Any surprises? What does a literal for a basic Object look like? An Array?</p>
+<h2 id="variables" tabindex="-1">Variables <a class="direct-link" href="#variables" aria-hidden="true">#</a></h2>
+<ol>
+<li>
+<p>Variables are containers for values</p>
+</li>
+<li>
+<p>Must be declared (created) to be used</p>
+</li>
+<li>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a></p>
+</li>
+<li>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></p>
+</li>
+<li>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></p>
+</li>
+<li>
+<p>Differences (Which should I use?)</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> adult <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span><br><br><span class="token keyword">if</span> <span class="token punctuation">(</span>adult<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">var</span> myName <span class="token operator">=</span> <span class="token string">"Bob"</span><span class="token punctuation">;</span><br>  <span class="token keyword">let</span> age <span class="token operator">=</span> <span class="token number">24</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>myName<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token comment">// Bob</span><br><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token comment">// Error!</span></code></pre>
+<p>Why did we get an error on line 11?</p>
+</li>
+<li>
+<p><code>const</code> declared variables are not &quot;unchangeable&quot;, they just cannot be re-assigned.</p>
+</li>
+</ol>
+<h2 id="strongly-typed-weakly-typed-what-does-that-even-mean" tabindex="-1">Strongly Typed? Weakly typed? What does that even mean? <a class="direct-link" href="#strongly-typed-weakly-typed-what-does-that-even-mean" aria-hidden="true">#</a></h2>
+<p>Python is considered a strongly typed language. If you assign a value to a variable Python will not change the type of that variable. For example something like this would throw an error in Python:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token string">'foo'</span> <span class="token operator">+</span> <span class="token number">3</span> <span class="token operator">--</span><span class="token operator">></span> TypeError<span class="token operator">:</span> cannot concatenate <span class="token string">'str'</span> and <span class="token string">'int'</span> objects</code></pre>
+<p>Javascript is weakly typed...so if you tried the same thing it would work:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token string">"foo"</span> <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">;</span> <span class="token comment">// 'foo3'</span></code></pre>
+<p>Javascript knows that it cannot add a string and an integer...but it does know that it can add 2 strings, so it 'coerces' the integer value into a string so the operation will work. Sometimes this is helpful...but sometimes it can cause weird bugs.</p>
+<h2 id="coercion" tabindex="-1">Coercion <a class="direct-link" href="#coercion" aria-hidden="true">#</a></h2>
+<p>Coercion is simply the process Javascript uses when it has to do a comparison or arithmetic operation between two values that don't match. It is important to understand that it happens...and that JS has a few guidelines it follows as it is doing it.</p>
+<ol>
+<li>Javascript prefers numeric comparisons and will coerce to a primitive numeric value if it can</li>
+<li>In the case of '+' (addition or concatination). If there is a string involved...all values will be converted to strings. That's the only way JS knows to combine mixed values.</li>
+</ol>
+<h2 id="why-do-i-have-to-declare" tabindex="-1">Why do I have to declare? <a class="direct-link" href="#why-do-i-have-to-declare" aria-hidden="true">#</a></h2>
+<p>Javascript will actually let you use a variable without declaring it. Just because you can do something doesn't mean you should! This has been one criticism of Javascript because it can lead to bugs. Because of the decision to never break backwards compatibility they couldn't just fix this...so instead they added an option for a new mode to run your code in: Strict mode.</p>
+<p>One of the things that changes is if you are in strict mode the browser will throw an error if it finds you using a variable before you declare it. This is a good thing. To turn strict mode on we simply add <code>'use strict';</code> to the top of a file (or function). For a more complete description of what strict mode does visit <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">MDN: Strict Mode</a></p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> myVariable <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span><br><span class="token comment">// do some stuff with myVariable</span><br><br><span class="token comment">// reassign myVariable?</span><br>myVarable <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span><br><br><span class="token comment">// do some more stuff expecting myVariable to be changed...</span></code></pre>
+<h2 id="arrays" tabindex="-1">Arrays <a class="direct-link" href="#arrays" aria-hidden="true">#</a></h2>
+<p>Arrays are not primitive values like strings or numbers. This makes them much more flexible. Arrays are lists of values. Each spot of an array can hold any valid value.</p>
+<p>In JavaScript, arrays can be declared like this.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"Bob"</span><span class="token punctuation">,</span> <span class="token string">"Sue"</span><span class="token punctuation">,</span> <span class="token string">"Jorge"</span><span class="token punctuation">,</span> <span class="token string">"Svetlana"</span><span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre>
+<p>You access elements of an array like this</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> aName <span class="token operator">=</span> names<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre>
+<p>with zero being the index of the first element in the array. Modifying values in the array is doable also.</p>
+<pre class="language-javascript"><code class="language-javascript">names<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"George"</span><span class="token punctuation">;</span></code></pre>
+<p>Now the third element of the array is George instead of Jorge.</p>
+<p>JavaScript has a lot of Built in Functions(BIF's), or built-in object methods, that you can use to modify arrays. Imagine you needed to use an array to keep track of customers lined up to see a movie. As people show up, they need to line up in the order they arrived. You can simulate this using the push method of array.</p>
+<p>If Bob, Sue, George, and Svetlana were already waiting in line for the show in that order, and then Grace showed up too, you would use push to add Grace at the end of the array (the back of the line).</p>
+<pre class="language-javascript"><code class="language-javascript">names<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">"Grace"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>names<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token comment">//Displays ['Bob','Sue','George','Svetlana','Grace']</span></code></pre>
+<p>Since you can add elements to the end of the array, surely there is a way to remove elements from the end of the array. You do this with the pop method.</p>
+<pre class="language-javascript"><code class="language-javascript">names<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>names<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token comment">//Displays ['Bob','Sue','George','Svetlana']</span></code></pre>
+<p>Can you remove elements from the end or add them to the beginning of the array? You bet. There are a large <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">number of methods</a> that you can apply to array. Check them out.</p>
+<h2 id="strings" tabindex="-1">Strings <a class="direct-link" href="#strings" aria-hidden="true">#</a></h2>
+<p>Strings are a type of primitive value. The share some similarities with Arrays however. If you are wondering how long a string is for example, you can look at it's <code>length</code> property.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> myString <span class="token operator">=</span> <span class="token string">"This is my String!"</span><span class="token punctuation">;</span><br>myString<span class="token punctuation">.</span>length<span class="token punctuation">;</span> <span class="token comment">// 18</span></code></pre>
+<p>You can also access each character of a string with an index just like with an array.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> myString <span class="token operator">=</span> <span class="token string">"This is my String!"</span><span class="token punctuation">;</span><br>myString<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// "i"  - remember that indexes start counting with 0!</span></code></pre>
+<p>Much of the detail above comes from <a href="https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/get-started/ch2.md">You Don't Know JS Yet Ch 2</a>. Highly recommend reading to learn more.</p>
+
+
+    </main>
+    <footer></footer>
+    <!-- Current page: /modules/js/variables/prepare1/ -->
+  </body>
+</html>

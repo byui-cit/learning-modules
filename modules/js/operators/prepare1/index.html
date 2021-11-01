@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Operators - Operators and comparisons</title>
+    <meta name="description" content="Understanding comparisons in JS and the role type coercion plays.">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/prism-coy.css">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="/feed/feed.json" type="application/json" title="WDD Learning Modules">
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <a href="/index.html">
+          <img src="/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        </a>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
+      </div>
+      
+      <nav>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/modules/js/">JS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/modules/html/">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a href="/modules/css/">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/modules/design/">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/modules/general/">General</a>
+            </li>
+          
+        </ul>
+      </nav>
+    </header>
+    <main  class="tmpl-post" >
+      <h1>JS Operators - Operators and comparisons</h1>
+
+
+
+<h2 id="operators" tabindex="-1">Operators <a class="direct-link" href="#operators" aria-hidden="true">#</a></h2>
+<h3 id="arithmetic-and-assignment-operators" tabindex="-1">Arithmetic and Assignment Operators <a class="direct-link" href="#arithmetic-and-assignment-operators" aria-hidden="true">#</a></h3>
+<p>Make sure you have reviewed the <a href="https://www.w3schools.com/jsref/jsref_operators.asp">JS operators</a>.</p>
+<h3 id="comparison-operators" tabindex="-1">Comparison Operators <a class="direct-link" href="#comparison-operators" aria-hidden="true">#</a></h3>
+<p>Javascript has two equality comparison operators...&quot;==&quot;: loose equality, and &quot;===&quot;: strict equality. Both of these do approximately the same thing...they let you know if two values are the same. The difference in them is that the double equal allows for the values to be coerced (changed) before the comparison is made, while the triple equals does not.</p>
+<p>Note that neither equality operator will allow you to check to see if the contents of an Array or other Object is the same as another. It can only check if two Arrays are the same...ie they are both bound to the same value in memory. See example below.</p>
+<h2 id="coercion" tabindex="-1">Coercion <a class="direct-link" href="#coercion" aria-hidden="true">#</a></h2>
+<p>Coercion is simply the process Javascript uses when it has to do a comparison or arithmetic operation between two values that don't match. It is important to understand that it happens...and that JS has a few guidelines it follows as it is doing it.</p>
+<ol>
+<li>Javascript prefers numeric comparisons and will coerce to a primitive numeric value if it can</li>
+<li>In the case of '+' (addition or concatination). If there is a string involved...all values will be converted to strings. That's the only way JS knows to combine mixed values.</li>
+</ol>
+<p>Why coercion? Javascript needs the ability to coerce values because it is <a href="../../variables/prepare1/#strongly-typed-weakly-typed-what-does-that-even-mean">weakly typed</a></p>
+<h2 id="examples" tabindex="-1">Examples <a class="direct-link" href="#examples" aria-hidden="true">#</a></h2>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">// These would also be true with a double equals</span><br><span class="token number">3</span> <span class="token operator">===</span> <span class="token number">3.0</span><span class="token punctuation">;</span> <span class="token comment">// true</span><br><span class="token string">"yes"</span> <span class="token operator">===</span> <span class="token string">"yes"</span><span class="token punctuation">;</span> <span class="token comment">// true</span><br><span class="token keyword">null</span> <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">;</span> <span class="token comment">// true</span><br><span class="token boolean">false</span> <span class="token operator">===</span> <span class="token boolean">false</span><span class="token punctuation">;</span> <span class="token comment">// true</span><br><br><span class="token number">42</span> <span class="token operator">===</span> <span class="token string">"42"</span><span class="token punctuation">;</span> <span class="token comment">// false</span><br><span class="token string">"hello"</span> <span class="token operator">===</span> <span class="token string">"Hello"</span><span class="token punctuation">;</span> <span class="token comment">// false</span><br><span class="token boolean">true</span> <span class="token operator">===</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// false</span><br><span class="token number">0</span> <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">;</span> <span class="token comment">// false</span><br><span class="token string">""</span> <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">;</span> <span class="token comment">// false</span><br><span class="token keyword">null</span> <span class="token operator">===</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span> <span class="token comment">// false</span><br><span class="token comment">//note the difference in a double equal comparison</span><br><span class="token number">42</span> <span class="token operator">==</span> <span class="token string">"42"</span><span class="token punctuation">;</span> <span class="token comment">// true...the string "42" gets coerced into the number 42</span><br><span class="token string">"hello"</span> <span class="token operator">==</span> <span class="token string">"Hello"</span><span class="token punctuation">;</span> <span class="token comment">// false...are you surprised at this one?</span><br><span class="token number">1</span> <span class="token operator">==</span> <span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token comment">// true...the boolean value true gets coerced into the number 1</span><br><span class="token keyword">null</span> <span class="token operator">==</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span> <span class="token comment">//  true</span></code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token number">10</span> <span class="token operator">&lt;</span> <span class="token number">11</span><span class="token punctuation">;</span> <span class="token comment">// true</span><br><span class="token number">42</span> <span class="token operator">></span> <span class="token string">"42"</span><span class="token punctuation">;</span> <span class="token comment">// false</span><br><span class="token number">43</span> <span class="token operator">></span> <span class="token string">"42"</span><span class="token punctuation">;</span> <span class="token comment">// true!  what is going on?</span><br><span class="token string">"a"</span> <span class="token operator">&lt;</span> <span class="token string">"b"</span><span class="token punctuation">;</span> <span class="token comment">// true</span></code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">// array example</span><br><span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br><br><span class="token comment">// assignment is by reference-copy, so</span><br><span class="token comment">// y references the *same* array as x,</span><br><span class="token comment">// not another copy of it.</span><br><span class="token keyword">var</span> y <span class="token operator">=</span> x<span class="token punctuation">;</span><br><br>y <span class="token operator">===</span> x<span class="token punctuation">;</span> <span class="token comment">// true...both variables are bound to the exact same array.</span><br>y <span class="token operator">===</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// false...it might look the same, but this is NOT the same array that y is bound to.</span><br>x <span class="token operator">===</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// false</span><br>y <span class="token operator">==</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// false...doesn't work with double equal either :(</span></code></pre>
+<h2 id="which-should-i-use" tabindex="-1">Which should I use? <a class="direct-link" href="#which-should-i-use" aria-hidden="true">#</a></h2>
+<p>In most cases you should use the strict equality (triple equals) for your comparisons. The double equals is helpful when you are comparing two values where the result will be the same whether coercion happens or not, or when you don't care if the value is the same type...sometimes you want things to be coerced.</p>
+<h2 id="manual-coercion" tabindex="-1">Manual coercion <a class="direct-link" href="#manual-coercion" aria-hidden="true">#</a></h2>
+<p>Sometimes we know that the data is in the wrong format, and need to change it to the correct type. For example if you have a user input some information in an HTML input element, and then get that information with javascript it will always be a string. What if the form was asking for the person's age so that we could tell them how old they will be in 10 years?</p>
+<pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- HTML --></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>age<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Enter your Age<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>age<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">// get age from input</span><br><span class="token keyword">const</span> age <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"age"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">;</span> <span class="token comment">// assume 21 was entered</span><br><span class="token comment">// add 10 years</span><br><span class="token keyword">const</span> agePlus10 <span class="token operator">=</span> age <span class="token operator">+</span> <span class="token number">10</span><span class="token punctuation">;</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>agePlus10<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// would give something like 2110 (21 + 10)</span></code></pre>
+<p>Remember that if Javascript is asked to add a string and a number it will coerce the number to be a string. We need to manually change the type to get this to work correctly.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">// get age from input</span><br><span class="token keyword">const</span> age <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"age"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">;</span> <span class="token comment">// assume 21 was entered</span><br><span class="token comment">// add 10 years</span><br><span class="token keyword">const</span> agePlus10 <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">10</span><span class="token punctuation">;</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>agePlus10<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// success! 31</span></code></pre>
+<p>There is also a <code>parseFloat()</code> function for decimal point conversion.</p>
+<p>Much of the detail above comes from <a href="https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/get-started/ch2.md">You Don't Know JS Yet Ch 2</a>. Highly recommend reading to learn more.</p>
+
+
+    </main>
+    <footer></footer>
+    <!-- Current page: /modules/js/operators/prepare1/ -->
+  </body>
+</html>

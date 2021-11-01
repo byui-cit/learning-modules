@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module Name - Resource name</title>
+    <meta name="description" content="Getting started with making asynchronous requests with Fetch">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/prism-coy.css">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="/feed/feed.json" type="application/json" title="WDD Learning Modules">
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <a href="/index.html">
+          <img src="/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        </a>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
+      </div>
+      
+      <nav>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/modules/js/">JS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/modules/html/">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a href="/modules/css/">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/modules/design/">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/modules/general/">General</a>
+            </li>
+          
+        </ul>
+      </nav>
+    </header>
+    <main  class="tmpl-post" >
+      <h1>Module Name - Resource name</h1>
+
+<a href="/tags/prepare/" class="post-tag">Prepare</a>
+
+<h2 id="ajax:-asynchronous-requests" tabindex="-1">AJAX: asynchronous requests <a class="direct-link" href="#ajax:-asynchronous-requests" aria-hidden="true">#</a></h2>
+<p><strong>AJAX</strong> stands for Asynchronous Javascript And Xml. It is a collection of technologies that allow a webpage to make a request to a server after it has loaded for additional information. The requests are Asynchronous in that the program the made them does not wait around doing nothing until they come back...it will move on and do more stuff, the requests are made with Javascript, but they don't often return XML anymore. Most often now you will get the information back as JSON.</p>
+<p>Originally the requests were made using <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">XmlHttpRequest</a>, and you will still see that around, but more and more developers are turning to the newer <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">fetch</a> command to make their requests.</p>
+<h2 id="promises" tabindex="-1">Promises <a class="direct-link" href="#promises" aria-hidden="true">#</a></h2>
+<figure class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/a3Srum6o5Oo" title="BYU-I Hackathon 2021" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
+<h2 id="example" tabindex="-1">Example <a class="direct-link" href="#example" aria-hidden="true">#</a></h2>
+<p>We will use fetch to pull some data from a remote API (application programming interface). An API is essentially what happens when an organization decides to expose part of a program they own to the world. Why would they do this? Well let's take Calendly for example. It is an online scheduling application. A student can go sign up for an appointment with their instructor easily with it. The University uses Microsoft Exchange for calendaring. If something doesn't show up there...I will miss it. Luckily Exchange has an API. Through this API Calendly can log into my Exchange account and add things directly to my calendar if I give it permission to.</p>
+<p>So as soon as a student signs up for an appointment in Calendly, the appointment automatically gets added to my calendar. This is one example of when an API is very useful.</p>
+<p>We are going to use a fairly simple free API called <a href="https://pokeapi.co/">pokeapi</a>. If you visit that website you will find the documentation on how to request data, and examples. Let's use the example it has to pull information about the Pokemon Ditto.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'https://pokeapi.co/api/v2/pokemon/ditto'</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> results <span class="token operator">=</span> <span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>results<span class="token punctuation">)</span><span class="token punctuation">;</span>'</code></pre>
+<p>There is a lot going on in that simple line of code. With it we made a request for some specific information from a remote server. Check the console and you will find however that we did not get the information yet. Just as was mentioned above fetch returns a Promise. We have to tell it what we want it to do once the promise <strong>fulfills</strong> or finishes what it is doing. We do that with the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">.then()</a> method.</p>
+<pre class="language-javascript"><code class="language-javascript">promise<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>onFulfilled<span class="token punctuation">[</span><span class="token punctuation">,</span> onRejected<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br>  promise<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">value</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>    <span class="token comment">// fulfillment</span><br>  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token parameter">reason</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>    <span class="token comment">// rejection</span><br>  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p><code>.then()</code> takes two parameters...one required that contains what should happen if the request was successful, and one optional that contains what should happen if the request fails.</p>
+<p><code>fetch</code> does not return usable data initially. Instead we have to tell it what we were expecting...and ask it to convert the response into the right kind of data. The three types it understands are <code>json()</code>, <code>text()</code> (HTML and XML would be considered text), and <code>blob()</code> (blob is anything that isn't text or json). We are expecting JSON back from the api we made the request to. So we should convert it to that.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">"https://pokeapi.co/api/v2/pokemon/ditto"</span><span class="token punctuation">;</span><br><span class="token keyword">let</span> results <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span><br><span class="token comment">// takes a fetch response and checks to make sure it was OK.</span><br><span class="token comment">// then returns the body of the response as a PROMISE to some JSON.</span><br><span class="token keyword">function</span> <span class="token function">convertToJson</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>ok<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token keyword">return</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span><br>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"error:"</span><span class="token punctuation">,</span> response<span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br><span class="token punctuation">}</span><br><span class="token comment">// this is where we would do whatever we needed to do with the resulting data.</span><br><span class="token keyword">function</span> <span class="token function">doStuff</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  results <span class="token operator">=</span> data<span class="token punctuation">;</span><br>  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"first: "</span><span class="token punctuation">,</span> results<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token comment">// read this as: make a request to URL, WHEN it finishes THEN run convertToJson</span><br><span class="token comment">// WHEN it finishes THEN run doStuff</span><br><span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>convertToJson<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>doStuff<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token comment">// meanwhile...continue with the rest of the program...</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"second: "</span><span class="token punctuation">,</span> results<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Note that the second console.log ran first...then the first one. Remember that in async programming Javascript does not wait for everything to finish before moving on. If we had tried to use <code>results</code> immediately it would have failed. Instead we do whatever we need to do with <code>results</code> in the callback that gets called by <code>.then()</code>.</p>
+<h2 id="note" tabindex="-1">Note <a class="direct-link" href="#note" aria-hidden="true">#</a></h2>
+<p>Note that this would often be done with anonymous functions...without the comments and condensed the code above could look like this:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">"https://pokeapi.co/api/v2/pokemon/ditto"</span><span class="token punctuation">;</span><br><span class="token keyword">let</span> results <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span><br><span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><br>  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>    <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>ok<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>      <span class="token keyword">return</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span><br>      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"error:"</span><span class="token punctuation">,</span> response<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token punctuation">}</span><br>  <span class="token punctuation">}</span><span class="token punctuation">)</span><br>  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>    results <span class="token operator">=</span> data<span class="token punctuation">;</span><br>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"first: "</span><span class="token punctuation">,</span> results<span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"second: "</span><span class="token punctuation">,</span> results<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
+
+    </main>
+    <footer></footer>
+    <!-- Current page: /modules/general/vs-code-basic/prepare1/ -->
+  </body>
+</html>

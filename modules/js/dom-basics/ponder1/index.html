@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Basics - Ponder activities.</title>
+    <meta name="description" content="Practice using the document object model (DOM)">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/prism-coy.css">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="/feed/feed.json" type="application/json" title="WDD Learning Modules">
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <a href="/index.html">
+          <img src="/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        </a>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
+      </div>
+      
+      <nav>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/modules/js/">JS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/modules/html/">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a href="/modules/css/">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/modules/design/">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/modules/general/">General</a>
+            </li>
+          
+        </ul>
+      </nav>
+    </header>
+    <main  class="tmpl-post" >
+      <h1>DOM Basics - Ponder activities.</h1>
+
+
+
+<h2 id="preparation" tabindex="-1">Preparation <a class="direct-link" href="#preparation" aria-hidden="true">#</a></h2>
+<p>First thing...the Document Object Model is NOT Javascript. But Javascript can interact with the DOM with a bunch of built in functions that are available in all browsers.</p>
+<p>The DOM is the representation of the nodes or elements of a web page in code. The DOM is exposed through a special object to Javascript: document.</p>
+<p>Create a new html file in your sandbox directory for this activity. Call it <code>dom-basics.html</code>. Enter the following HTML into it (remember if you are in VS Code you can type '!' then hit the tab key to get some HTML boilerplate as a starting point):</p>
+<h3 id="html" tabindex="-1">html <a class="direct-link" href="#html" aria-hidden="true">#</a></h3>
+<pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- dom-basics.html --></span><br><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Week 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>Week 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>This is a paragraph<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>p2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>This is a paragraph with an ID<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dom-basics.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<p>Open the page in the browser, then open the developer tools (right-click-&gt;inspect), goto the console tab, and enter <code>document</code> in the prompt, then hit 'return'.</p>
+<h2 id="activity-1" tabindex="-1">Activity 1 <a class="direct-link" href="#activity-1" aria-hidden="true">#</a></h2>
+<ol>
+<li>Type <code>document.</code> (don't forget the . at the end) in the prompt area of the console (should be at the bottom of the console) in the browser developer tools. But don't hit 'enter/return'. Notice the long list of options that pops up. Those are all things we can do with the document. Review the list.</li>
+<li>Since all of the elements the users sees live in the <code>body</code> element, we are provided a shortcut to it: <code>document.body</code>.</li>
+<li>Notice that we can also look at the <code>children</code> and <code>parentElement</code> of body. We could if we wanted traverse anywhere in our page by using these...it's a bit tedious though, so we have been given shortcuts: <code>document.getElementById</code> and <code>document.querySelector</code></li>
+<li>Type <code>document.body.innerText</code> then 'enter', then try <code>document.body.innerHTML</code> and 'enter'. Notice the difference.</li>
+<li>Try doing this: <code>document.body.innerHTML = 'Hello World'</code> What happened?</li>
+<li>Refresh your browser to get the page back.</li>
+<li>Now try this: <code>document.getElementById('p2').innerText = 'Hello World'</code> That worked a bit better.</li>
+<li><code>querySelector</code> is more flexible that <code>getElementById</code>. It uses valid CSS selectors. To get the element with id='p2' with quertSelector we would need to add a '#' like this:<br>
+<code>document.querySelector('#p2')</code></li>
+<li>to get all parapgraphs we could do this: <code>document.querySelector('p')</code></li>
+<li>Did you notice that there is also a document.querySelectorAll? Try it with 'p'</li>
+</ol>
+<h2 id="activity-2" tabindex="-1">Activity 2 <a class="direct-link" href="#activity-2" aria-hidden="true">#</a></h2>
+<p>We can modify the elements in the DOM as we saw above. We can also add new elements.</p>
+<ol>
+<li>Lets add some content to the body. This will be much easier in a javascript file. Create a file called dom-basics.js and enter the following:</li>
+</ol>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> newParagraph <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>newParagraph<span class="token punctuation">.</span>innerText <span class="token operator">=</span> <span class="token string">"Added with Javascript!"</span><span class="token punctuation">;</span><br>document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>newParagraph<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<ol start="2">
+<li>Try adding an image. We would need to create the <code>img</code> element, then set the <code>src</code> and <code>alt</code> attributes, and finally append the image to the body. You should use<br>
+<code>element.setAttribute('src', 'path/to/image')</code> to set those attributes. Try it. You can use<br>
+<code>https://placeimg.com/200/200/animals</code> for the image path.</li>
+</ol>
+<details><summary>Solution</summary>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> newImage <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"img"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>newImage<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"src"</span><span class="token punctuation">,</span> <span class="token string">"https://placeimg.com/200/200/animals"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>newImage<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"alt"</span><span class="token punctuation">,</span> <span class="token string">"Description of image"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>newImage<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</details>
+<ol start="3">
+<li>If we have more complex HTML to add we can insert a whole string in at once:</li>
+</ol>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> newDiv <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>newDiv<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">"&lt;ul>&lt;li>One&lt;/li>&lt;li>Two&lt;/li>&lt;li>Three&lt;/li>&lt;/ul>"</span><span class="token punctuation">;</span><br>document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>newDiv<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<ol start="4">
+<li>
+<p>Try it on your own.</p>
+<ol>
+<li>Create a new <code>section</code> element.</li>
+<li>Add an <code>h2</code> element with the content &quot;CSE 121b&quot;</li>
+<li>Add a paragraph <code>p</code> that says: &quot;Welcome to Javascript Language&quot;</li>
+<li>Add your <code>section</code> to the <code>body</code>.</li>
+</ol>
+</li>
+</ol>
+<details>
+<summary>Solution</summary>
+<p>There are two common ways this could be done:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> newSection <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"section"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> newH2 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"h2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>newH2<span class="token punctuation">.</span>innerText <span class="token operator">=</span> <span class="token string">"CSE 121b"</span><span class="token punctuation">;</span><br>newSection<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>newH2<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> newP <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>newH2<span class="token punctuation">.</span>innerText <span class="token operator">=</span> <span class="token string">"Welcome to Javascript Language"</span><span class="token punctuation">;</span><br>newSection<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>newP<span class="token punctuation">)</span><span class="token punctuation">;</span><br><br>document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>newSection<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>OR you could do it this way:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> newSection <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"section"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>newSection<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">"&lt;h2>CSE 121b&lt;/h2>&lt;p>Welcome to Javascript Language&lt;/p>"</span><span class="token punctuation">;</span><br>document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>newSection<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</details>
+
+
+    </main>
+    <footer></footer>
+    <!-- Current page: /modules/js/dom-basics/ponder1/ -->
+  </body>
+</html>
