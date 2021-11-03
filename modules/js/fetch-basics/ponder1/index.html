@@ -13,12 +13,11 @@
   <body>
     <header>
       <div class="branding">
-        <a href="/index.html">
-          <img src="/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        <a href="/learning-modules/">
+          <img src="/learning-modules/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
         </a>
         <h1 class="vertical-text">WDD Learning Modules</h1>
       </div>
-      
       <nav>
         <ul class="nav">
             <li class="nav-item">
@@ -39,12 +38,12 @@
             <li class="nav-item">
               <a href="/learning-modules/modules/general/">General</a>
             </li>
-          
         </ul>
       </nav>
-    </header>
-    <main  class="tmpl-post" >
-      <h1>Fetch Basics - Ponder activities.</h1>
+    </body>
+  </body>
+</html></header><main  class="tmpl-post" >
+<h1>Fetch Basics - Ponder activities.</h1>
 
 
 
@@ -98,9 +97,4 @@ Check out some documentation on <code>Array.sort</code>. <a href="https://develo
 <pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">compare</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">.</span>name <span class="token operator">></span> b<span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token comment">// sort b before a</span><br>    <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">.</span>name <span class="token operator">&lt;</span> b<span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token comment">// a and b different but unchanged (already in the correct order)</span><br>    <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">// a and b are equal</span><br><span class="token punctuation">}</span><br><br><span class="token keyword">function</span> <span class="token function">sortPokemon</span><span class="token punctuation">(</span><span class="token parameter">list</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">let</span> sortedList <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>compare<span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token keyword">return</span> sortedList<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token keyword">function</span> <span class="token function">doStuffList</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token keyword">const</span> pokeListElement <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#outputList"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token keyword">const</span> pokeList <span class="token operator">=</span> data<span class="token punctuation">.</span>results<span class="token punctuation">;</span><br>  <span class="token comment">// sort our list before output it</span><br>  pokeList <span class="token operator">=</span> <span class="token function">sortPokemon</span><span class="token punctuation">(</span>pokeList<span class="token punctuation">)</span><span class="token punctuation">;</span><br>  pokeList<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">currentItem</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>    <span class="token keyword">const</span> html <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;li></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>currentItem<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/li></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span><br>    <span class="token comment">//note the += here</span><br>    pokeListElement<span class="token punctuation">.</span>innerHTML <span class="token operator">+=</span> html<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>convertToJson<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>doStuffList<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 </details>
 
-
-    </main>
-    <footer></footer>
-    <!-- Current page: /learning-modules/modules/js/fetch-basics/ponder1/ -->
-  </body>
-</html>
+</main><footer></footer><!-- Current page: /learning-modules/modules/js/fetch-basics/ponder1/ --></body></html>
