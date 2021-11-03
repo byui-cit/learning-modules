@@ -8,6 +8,7 @@
     "serve": "eleventy --serve",
     "start": "eleventy --serve",
     "debug": "DEBUG=* eleventy",
+    "predeploy": "eleventy",
     "deploy": "gh-pages -d _site"
   },
   "repository": {
