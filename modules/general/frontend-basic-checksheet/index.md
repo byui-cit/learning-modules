@@ -12,7 +12,9 @@ layout: layouts/post.njk
 
 ## Description
 
-This list provides a basic list of items that should be included on any web page. The list mimics the structure and content of the [fronendchecklist.io](https://fronendchecklist.io) [Front-End-Checklist Repo](https://github.com/thedaviddias/Front-End-Checklist)list of standards for developers.
+This list provides a basic list of items that should be included on any web page. The list mimics the structure and content of the [frontendchecklist.io](https://frontendchecklist.io) list of standards for developers.
+
+[Front-End-Checklist Repo](https://github.com/thedaviddias/Front-End-Checklist)
 
 ## Courses where this is used
 
