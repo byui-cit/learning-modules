@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods - Ponder activities.</title>
+    <meta name="description" content="Practice using Array methods">
+    <link rel="stylesheet" href="/learning-modules/css/index.css">
+    <link rel="stylesheet" href="/learning-modules/css/prism-coy.css">
+    <link rel="alternate" href="/learning-modules/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="/learning-modules/feed/feed.json" type="application/json" title="WDD Learning Modules">
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <a href="/learning-modules/">
+          <img src="/learning-modules/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        </a>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
+      </div>
+      <nav>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="/learning-modules/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/html/">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/js/">JS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/css/">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/design/">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/general/">General</a>
+            </li>
+        </ul>
+      </nav>
+    </body>
+  </body>
+</html></header><main  class="tmpl-post" >
+<h1>Array Methods - Ponder activities.</h1>
+
+
+
+<h2 id="preparation" tabindex="-1">Preparation <a class="direct-link" href="#preparation" aria-hidden="true">#</a></h2>
+<p>Make sure you read through the Prepare section for this topic. You will also need your editor open with some html:</p>
+<h3 id="html" tabindex="-1">html <a class="direct-link" href="#html" aria-hidden="true">#</a></h3>
+<pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- arrays.html --></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Array Activities<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>arrays.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>myList<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<p>These activities will be most effective if you TRY them first before you look at the solution. And after you do look at the solution...DO NOT copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.</p>
+<h2 id="activity-1-map" tabindex="-1">Activity 1 - Map <a class="direct-link" href="#activity-1-map" aria-hidden="true">#</a></h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a> is great when we need to change each item in an array somehow. It returns a new array and does NOT modify the original array.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> new_array <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">callback</span><span class="token punctuation">(</span> <span class="token parameter">currentValue<span class="token punctuation">[</span><span class="token punctuation">,</span> index<span class="token punctuation">[</span><span class="token punctuation">,</span> array<span class="token punctuation">]</span><span class="token punctuation">]</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token comment">// return element for new_array</span><br><span class="token punctuation">}</span><span class="token punctuation">[</span><span class="token punctuation">,</span> thisArg<span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
+<p>The syntax looks very similar to <code>forEach</code>, but notice that it needs a variable to store the new array it will return. We also need to make sure that the callback function we provide returns a value...usually the modified version of the array element.</p>
+<ol>
+<li>Declare an array with value = <code>['one', 'two', 'three']</code></li>
+<li>Convert our array of strings into an array of HTML strings. Each string should be turned into a list item. For example: &quot;&lt;li&gt;one&lt;/li&gt;&quot;</li>
+<li>Set our list of HTML strings into the <strong>myList</strong> list. (Hint...checkout the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join">.join()</a> method.)</li>
+</ol>
+<details>
+<summary>Solution 1</summary>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">// example 1</span><br><span class="token keyword">const</span> steps <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"one"</span><span class="token punctuation">,</span> <span class="token string">"two"</span><span class="token punctuation">,</span> <span class="token string">"three"</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> stepsHtml <span class="token operator">=</span> steps<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">step</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;li></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>step<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/li></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"myList"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> stepsHtml<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</details>
+<h2 id="activity-2-map" tabindex="-1">Activity 2 - Map <a class="direct-link" href="#activity-2-map" aria-hidden="true">#</a></h2>
+<ol>
+<li>Declare an array with letter grades in it: <code>['A', 'B', 'A']</code></li>
+<li>Write a function that will take one letter grade, and return the appropriate gpa points for that grade. IE if we send in 'A' it should return 4.</li>
+<li>Use <code>map</code> and our conversion function to convert the array in step 1 to gpa points.</li>
+</ol>
+<details>
+<summary>Solution 2</summary>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">// example 2</span><br><span class="token keyword">const</span> grades <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"A"</span><span class="token punctuation">,</span> <span class="token string">"B"</span><span class="token punctuation">,</span> <span class="token string">"A"</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br><span class="token keyword">function</span> <span class="token function">convertGradeToPoints</span><span class="token punctuation">(</span><span class="token parameter">grade</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">let</span> points <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span><br>  <span class="token keyword">if</span> <span class="token punctuation">(</span>grade <span class="token operator">===</span> <span class="token string">"A"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    points <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>grade <span class="token operator">===</span> <span class="token string">"B"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    points <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br>  <span class="token keyword">return</span> points<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token keyword">const</span> gpaPoints <span class="token operator">=</span> grades<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>convertGradeToPoints<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</details>
+<h2 id="activity-3-reduce" tabindex="-1">Activity 3 - Reduce <a class="direct-link" href="#activity-3-reduce" aria-hidden="true">#</a></h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce">reduce</a> is useful when we need to compress an array into a single value. It is most often used when the array has at least one value that can be mathematically flattened</p>
+<ol>
+<li>Using the function from the previous activity, convert an array of grades into an array of gpaPoints.</li>
+<li>Using <code>reduce</code> calculate the GPA from the array of gpaPoints.</li>
+</ol>
+<details>
+<summary>Solution 3</summary>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> gpaPoints <span class="token operator">=</span> grades<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>convertGradeToPoints<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> pointsTotal <span class="token operator">=</span> gpaPoints<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">total<span class="token punctuation">,</span> item</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">return</span> total <span class="token operator">+</span> item<span class="token punctuation">;</span><br><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> gpa <span class="token operator">=</span> pointsTotal <span class="token operator">/</span> gpaPoints<span class="token punctuation">.</span>length<span class="token punctuation">;</span><br><br><span class="token comment">// example 2</span><br><span class="token comment">// this is the same thing as above, but with an arrow function</span><br><span class="token keyword">const</span> pointsTotal <span class="token operator">=</span> gpaPoints<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">total<span class="token punctuation">,</span> item</span><span class="token punctuation">)</span> <span class="token operator">=></span> total <span class="token operator">+</span> item<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> gpa <span class="token operator">=</span> pointsTotal <span class="token operator">/</span> gpaPoints<span class="token punctuation">.</span>length<span class="token punctuation">;</span><br><br><span class="token comment">// this could be further simplified as</span><br><span class="token keyword">const</span> gpa <span class="token operator">=</span> gpaPoints<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">total<span class="token punctuation">,</span> item</span><span class="token punctuation">)</span> <span class="token operator">=></span> total <span class="token operator">+</span> item<span class="token punctuation">)</span> <span class="token operator">/</span> gpaPoints<span class="token punctuation">.</span>length<span class="token punctuation">;</span></code></pre>
+</details>
+<h2 id="activity-4-filter" tabindex="-1">Activity 4 - Filter <a class="direct-link" href="#activity-4-filter" aria-hidden="true">#</a></h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Filter">filter</a> is similar to map in that it returns a new array of elements. The elements in the calling array will be included in the new array if they pass a test that you include in the callback you pass in.</p>
+<ol>
+<li>Declare an array with the following value: <code>['watermelon', 'peach', 'apple', 'tomato', 'grape']</code></li>
+<li>Using <code>filter</code> keep only the fruits that are longer than 6 characters.</li>
+</ol>
+<details>
+<summary>Solution 4</summary>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> words <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"watermelon"</span><span class="token punctuation">,</span> <span class="token string">"peach"</span><span class="token punctuation">,</span> <span class="token string">"apple"</span><span class="token punctuation">,</span> <span class="token string">"tomato"</span><span class="token punctuation">,</span> <span class="token string">"grape"</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> shortWords <span class="token operator">=</span> words<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">word</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">return</span> word<span class="token punctuation">.</span>length <span class="token operator">&lt;</span> <span class="token number">6</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br><span class="token comment">//same thing with an arrow function</span><br><span class="token keyword">const</span> shortWords <span class="token operator">=</span> words<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">word</span><span class="token punctuation">)</span> <span class="token operator">=></span> word<span class="token punctuation">.</span>length <span class="token operator">&lt;</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</details>
+<h2 id="activity-5-indexof" tabindex="-1">Activity 5 - indexOf <a class="direct-link" href="#activity-5-indexof" aria-hidden="true">#</a></h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf">indexOf</a> returns the first index at which a given element can be found in the array, or -1 if it is not present.</p>
+<ol>
+<li>Declare an array with the following value: <code>[12, 34, 21, 54]</code></li>
+<li>Declare a luckNumber variable with the value 21;</li>
+<li>Use <code>indexOf</code> to see if the luckyNumber is in the Array.</li>
+</ol>
+<details>
+<summary>Solution 5</summary>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">// improved luckyNumber</span><br><span class="token keyword">const</span> myArray <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">34</span><span class="token punctuation">,</span> <span class="token number">21</span><span class="token punctuation">,</span> <span class="token number">54</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> luckyNumber <span class="token operator">=</span> <span class="token number">21</span><span class="token punctuation">;</span><br><span class="token keyword">let</span> luckyIndex <span class="token operator">=</span> myArray<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>luckyNumber<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</details>
+
+</main><footer></footer><!-- Current page: /learning-modules/modules/js/array-methods/ponder1/ --></body></html>

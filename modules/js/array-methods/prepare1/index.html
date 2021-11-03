@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods - Core concepts</title>
+    <meta name="description" content="Most array methods follow a similar pattern. This activity will show this pattern and how to read technical documentation to apply the pattern to any of the methods.">
+    <link rel="stylesheet" href="/learning-modules/css/index.css">
+    <link rel="stylesheet" href="/learning-modules/css/prism-coy.css">
+    <link rel="alternate" href="/learning-modules/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="/learning-modules/feed/feed.json" type="application/json" title="WDD Learning Modules">
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <a href="/learning-modules/">
+          <img src="/learning-modules/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        </a>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
+      </div>
+      <nav>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="/learning-modules/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/html/">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/js/">JS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/css/">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/design/">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/general/">General</a>
+            </li>
+        </ul>
+      </nav>
+    </body>
+  </body>
+</html></header><main  class="tmpl-post" >
+<h1>Array Methods - Core concepts</h1>
+
+
+
+<h2 id="array-helper-methods" tabindex="-1">Array helper methods <a class="direct-link" href="#array-helper-methods" aria-hidden="true">#</a></h2>
+<p>If we enter something like <code>[1,2,3]</code> in the console of a browser we will see our array show up with an arrow, if we expand the array by clicking on the arrow we see the values in our array and something that looks like this: <code>__proto__</code>. Open that up and we see a bunch of stuff associated with every array. Most of the list is helper functions, methods that do useful things with arrays.</p>
+<p>An easier way to see that list is to refer to the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array Documentation</a> at MDN.</p>
+<h2 id="mdn-documentation" tabindex="-1">MDN documentation <a class="direct-link" href="#mdn-documentation" aria-hidden="true">#</a></h2>
+<p>These modules pull heavily from the documentation at MDN. There are certain patterns seen commonly in coding documentation. Understanding these patterns is an important step on our journey to learn how to learn.</p>
+<p>For example if we take a look at the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push">MDN page for push</a> we will see this:</p>
+<blockquote>
+<h2 id="syntax" tabindex="-1">Syntax <a class="direct-link" href="#syntax" aria-hidden="true">#</a></h2>
+<pre class="language-javascript"><code class="language-javascript"><span class="token function">push</span><span class="token punctuation">(</span>element0<span class="token punctuation">)</span><br><span class="token function">push</span><span class="token punctuation">(</span>element0<span class="token punctuation">,</span> element1<span class="token punctuation">)</span><br><span class="token function">push</span><span class="token punctuation">(</span>element0<span class="token punctuation">,</span> element1<span class="token punctuation">,</span> <span class="token operator">...</span> <span class="token punctuation">,</span> elementN<span class="token punctuation">)</span></code></pre>
+<h3 id="parameters" tabindex="-1">Parameters <a class="direct-link" href="#parameters" aria-hidden="true">#</a></h3>
+<p><strong>elementN</strong><br>
+The element(s) to add to the end of the array.</p>
+<h3 id="return-value" tabindex="-1">Return value <a class="direct-link" href="#return-value" aria-hidden="true">#</a></h3>
+<p>The new length property of the object upon which the method was called.</p>
+</blockquote>
+<p>The parameters and return type are particularly important. They give us the blueprint for understanding how to use the method. This is a simple one. We can send the method one or more items to be inserted into the array as parameters, and we will get back the new length of the array as a result.</p>
+<p>Let's look at a more complex example: <code>forEach</code></p>
+<blockquote>
+<h2 id="syntax-1" tabindex="-1">Syntax <a class="direct-link" href="#syntax-1" aria-hidden="true">#</a></h2>
+<pre class="language-javascript"><code class="language-javascript">  arr<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token function">callback</span><span class="token punctuation">(</span>currentValue <span class="token punctuation">[</span><span class="token punctuation">,</span> index <span class="token punctuation">[</span><span class="token punctuation">,</span> array<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">,</span> thisArg<span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
+<h3 id="parameters-1" tabindex="-1">Parameters <a class="direct-link" href="#parameters-1" aria-hidden="true">#</a></h3>
+<p><strong>callbackFn</strong><br>
+Function to execute on each element. It accepts between one and three arguments:</p>
+<ol>
+<li>
+<p>element<br>
+The current element being processed in the array.</p>
+</li>
+<li>
+<p>index Optional<br>
+The index of element in the array.</p>
+</li>
+<li>
+<p>array Optional<br>
+The array forEach() was called upon.</p>
+</li>
+</ol>
+<p><strong>thisArg</strong> Optional<br>
+Value to use as this when executing callbackFn.</p>
+<h3 id="return-value-1" tabindex="-1">Return value <a class="direct-link" href="#return-value-1" aria-hidden="true">#</a></h3>
+<p>Undefined</p>
+</blockquote>
+<p>That is the official syntax for the method. How do we read that?</p>
+<ol>
+<li>First note that we will call this method from an existing array.</li>
+<li>Second notice that it expects a callback function as it's first argument. This callback can be a named function or an anonymous function.</li>
+<li>The callback is where the action takes place...it defines what we want to happen for each item in the array. .forEach() will handle the looping, where to start, where to stop, and will automatically pass each item in the array one at a time into the callback function.</li>
+<li>That callback function will have up to three parameters passed in that we can use.
+<ol>
+<li>First and required is the current array value.</li>
+<li>Second (optional) the index of the current array value</li>
+<li>Third (optional) the entire array.</li>
+</ol>
+</li>
+<li>Nothing will be returned from this method.</li>
+</ol>
+<h2 id="callbacks" tabindex="-1">Callbacks <a class="direct-link" href="#callbacks" aria-hidden="true">#</a></h2>
+<p>We have mentioned that in Javascript functions are special objects...but since they are objects we can do anything with functions that we can a normal object. This includes assigning functions to variables, and passing functions into other functions as arguments, as well as returning functions from functions.</p>
+<p>When we pass a function into another function we call it a 'callback'. Many of the Array methods we will be looking at use callbacks.</p>
+<h2 id="examples" tabindex="-1">Examples <a class="direct-link" href="#examples" aria-hidden="true">#</a></h2>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">// example 1</span><br><span class="token keyword">const</span> steps <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"one"</span><span class="token punctuation">,</span> <span class="token string">"two"</span><span class="token punctuation">,</span> <span class="token string">"three"</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br><span class="token comment">// callback declaration</span><br><span class="token keyword">function</span> <span class="token function">makeList</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">const</span> listElement <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"myList"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  listElement<span class="token punctuation">.</span>innerHTML <span class="token operator">+=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;li></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>item<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/li></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br>steps<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>makeList<span class="token punctuation">)</span><span class="token punctuation">;</span><br><br><span class="token comment">// example 2</span><br><span class="token comment">// is the luckyNumber in the list?</span><br><span class="token keyword">const</span> myArray <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">34</span><span class="token punctuation">,</span> <span class="token number">21</span><span class="token punctuation">,</span> <span class="token number">54</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> luckyNumber <span class="token operator">=</span> <span class="token number">21</span><span class="token punctuation">;</span><br><span class="token keyword">let</span> luckyIndex <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span><br>myArray<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">item<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">if</span> <span class="token punctuation">(</span>item <span class="token operator">===</span> luckyNumber<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    luckyIndex <span class="token operator">=</span> index<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
+</main><footer></footer><!-- Current page: /learning-modules/modules/js/array-methods/prepare1/ --></body></html>

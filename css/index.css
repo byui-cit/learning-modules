@@ -61,7 +61,7 @@ a[href]:visited {
   color: var(--navy);
 }
 a[href^="http"]::after {
-  background: transparent url(/img/external.svg) 0 0 no-repeat;
+  background: transparent url(../img/external.svg) 0 0 no-repeat;
   background-size: 16px;
   display: inline-block;
   content: "";
@@ -164,6 +164,10 @@ code .highlight-line:before {
   width: 0.4em;
 }
 
+blockquote {
+  border-left: 4px solid var(--callout-background-color);
+  padding-left: 0.5em;
+}
 .highlight-line {
   display: block;
   padding: 0.125em 1em;
