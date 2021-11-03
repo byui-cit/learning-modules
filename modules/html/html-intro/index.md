@@ -15,16 +15,16 @@ HTML gives structure to our web page with a hierarchy that will help it be under
 
 ## Prepare
 
-- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-- [What is HTML?]
+- [HTML (Mozilla)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+
 
 <figure class="video-container">
 
-<iframe width="560" height="315" src="https://youtu.be/jxYtjiuPfLQ" title="HTML Intro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jxYtjiuPfLQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </figure>
 
-- [HTML](prepare1)
+- [Practice with HTML](prepare1)
 
 ## Ponder
 
-- [Practice with HTML](ponder1/)
+- [HTML Assignment](ponder1/)

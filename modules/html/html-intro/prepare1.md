@@ -1,5 +1,5 @@
 ---
-title: Module Name - Resource name
+title: HTML Introduction - HTML
 description: Getting started HTML
 date: 2021-11-01
 
@@ -36,7 +36,7 @@ Let's copy the following code into an html file.
 </html>
 ```
 
-This is the framework of a beginning HTML page. Notice inside the <body> tag we have 3 general areas. The <body> tag has 3 children tags of <header>, <main> and <footer>. Let's start with the header. Let's type in a common element you'd find in the header a <nav> element.
+This is the framework of a beginning HTML page. Notice inside the body tag we have 3 general areas. The body tag has 3 children tags of header, main and footer. Let's start with the header. Let's type in a common element you'd find in the header a nav element.
 
 ```html
 <header>
@@ -44,7 +44,7 @@ This is the framework of a beginning HTML page. Notice inside the <body> tag we 
 </header>
 ```
 
-The nav element will contain menu links. These links are created with an <a> tag.
+The nav element will contain menu links. These links are created with an a tag.
 
 ```html
 <nav>
@@ -54,7 +54,7 @@ The nav element will contain menu links. These links are created with an <a> tag
 </nav>
 ```
 
-If we look at our rendered page now in a browser window, the content of the <a> tag shows but they are not links. When we click on the content text, nothing happens. We have to add an attribute to the opening <a> tag that shows where to take the user when they click on the content. Add attributes to each opening <a> tag as follows.
+If we look at our rendered page now in a browser window, the content of the a tag shows but they are not links. When we click on the content text, nothing happens. We have to add an attribute to the opening a tag that shows where to take the user when they click on the content. Add attributes to each opening a tag as follows.
 
 ```html
 <a href="https://www.churchofjesuschrist.org">Church of Jesus Christ</a>
@@ -62,7 +62,7 @@ If we look at our rendered page now in a browser window, the content of the <a> 
 <a href="https://www.churchofjesuschrist.org/study/scriptures">Scriptures</a>
 ```
 
-Now when you look at the rendered page in the browser you can click the text content and it will take you to the right place because we added the href or hypertext reference value for each <a> link.
+Now when you look at the rendered page in the browser you can click the text content and it will take you to the right place because we added the href or hypertext reference value for each a link.
 
 ## Note
 
@@ -70,7 +70,7 @@ Note that the links here are not going to internal website pages but to external
 
 ## Example Continued
 
-Let's move on to the main part of our web page with a header level one title for our page using an <h1> tag and a paragraph beneath the title using a <p> tag. Then let's add an <img> tag. There are two attributes needed for an image. First where is the image located or what is the source (src) and, second what is some alternative text (alt) that can be used if the image can't be seen.
+Let's move on to the main part of our web page with a header level one title for our page using an h1 tag and a paragraph beneath the title using a p tag. Then let's add an img tag. There are two attributes needed for an image. First where is the image located or what is the source (src) and, second what is some alternative text (alt) that can be used if the image can't be seen.
 
 ```html
 <main>
@@ -89,7 +89,7 @@ Again, we are using an attribute value for the src propertly that is taking us t
 
 ## Example Continued
 
-Lastly, let's add a <p> tag to our footer with a bit of information for the bottom of our page.
+Lastly, let's add a p tag to our footer with a bit of information for the bottom of our page.
 
 ```html
 <footer>
@@ -97,7 +97,7 @@ Lastly, let's add a <p> tag to our footer with a bit of information for the bott
 </footer>
 ```
 
-The &copy will create an HTML symbol copyright entity for us. See <a href="https://www.w3schools.com/html/html_symbols.asp"> for more examples.
+The &copy will create an HTML symbol copyright entity for us. See <a href="https://www.w3schools.com/html/html_symbols.asp">HTML Symbols</a>for more examples.
 
 And there we have our first simple HTML page. If we had multiple page that we created for the same website, the header and footer section that would remain the same for every page our our website and the main section would change from page to page of our website.
 
