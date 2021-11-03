@@ -2,15 +2,7 @@
 
 ## Tag naming rules
 
-The top level tags should look like this always!
-
-- JS
-- HTML
-- CSS
-- Design
-- General
-
-All other tags should be all lowercase. Check to see if the tag you want already exists and re-use as much as possible.
+All tags should be all lowercase. Check to see if the tag you want already exists and re-use as much as possible.
 
 Only use tags in the index.md file for each module.
 
