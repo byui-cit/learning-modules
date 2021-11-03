@@ -2,6 +2,7 @@
 title: HTML Introduction
 description: Introducing HTML
 date: 2021-11-01
+order: 1
 tags:
   - HTML
 layout: layouts/post.njk
@@ -16,7 +17,6 @@ HTML gives structure to our web page with a hierarchy that will help it be under
 ## Prepare
 
 - [HTML (Mozilla)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-
 
 <figure class="video-container">
 
