@@ -4,7 +4,6 @@ description: Introducing HTML
 date: 2021-11-01
 tags:
   - HTML
-  - html-intro
 layout: layouts/post.njk
 ---
 
