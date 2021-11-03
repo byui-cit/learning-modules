@@ -85,44 +85,44 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addCollection("jsTags", function (collectionApi) {
     let tagSet = new Set();
-    collectionApi.getFilteredByTag("JS").forEach((item) => {
+    collectionApi.getFilteredByTag("js").forEach((item) => {
       (item.data.tags || []).forEach((tag) => tagSet.add(tag));
     });
-    tagSet.delete("JS");
+    tagSet.delete("js");
     return filterTagList([...tagSet]);
   });
 
   eleventyConfig.addCollection("cssTags", function (collectionApi) {
     let tagSet = new Set();
-    collectionApi.getFilteredByTag("CSS").forEach((item) => {
+    collectionApi.getFilteredByTag("css").forEach((item) => {
       (item.data.tags || []).forEach((tag) => tagSet.add(tag));
     });
-    tagSet.delete("CSS");
+    tagSet.delete("css");
     return filterTagList([...tagSet]);
   });
   eleventyConfig.addCollection("htmlTags", function (collectionApi) {
     let tagSet = new Set();
-    collectionApi.getFilteredByTag("HTML").forEach((item) => {
+    collectionApi.getFilteredByTag("html").forEach((item) => {
       (item.data.tags || []).forEach((tag) => tagSet.add(tag));
     });
-    tagSet.delete("HTML");
+    tagSet.delete("html");
     return filterTagList([...tagSet]);
   });
 
   eleventyConfig.addCollection("designTags", function (collectionApi) {
     let tagSet = new Set();
-    collectionApi.getFilteredByTag("Design").forEach((item) => {
+    collectionApi.getFilteredByTag("design").forEach((item) => {
       (item.data.tags || []).forEach((tag) => tagSet.add(tag));
     });
-    tagSet.delete("Design");
+    tagSet.delete("design");
     return filterTagList([...tagSet]);
   });
   eleventyConfig.addCollection("generalTags", function (collectionApi) {
     let tagSet = new Set();
-    collectionApi.getFilteredByTag("General").forEach((item) => {
+    collectionApi.getFilteredByTag("general").forEach((item) => {
       (item.data.tags || []).forEach((tag) => tagSet.add(tag));
     });
-    tagSet.delete("General");
+    tagSet.delete("general");
     return filterTagList([...tagSet]);
   });
 
