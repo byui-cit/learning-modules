@@ -4,10 +4,10 @@ description: This module provides a standard list of check sheet items to use as
 date: 2021-11-03
 order: 99
 tags:
-  - General
+  - general
   - validation
-  - HTML
-  - CSS
+  - html
+  - css
 layout: layouts/post.njk
 ---
 

@@ -4,7 +4,7 @@ description: Teaches the basics of debugging Javascript in the developer tools o
 date: 2021-10-15
 order: 3
 tags:
-  - JS
+  - js
   - Debugging
 layout: layouts/post.njk
 ---

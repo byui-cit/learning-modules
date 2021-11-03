@@ -4,7 +4,7 @@ description: JavaScript comes with many very useful Array helper methods. This m
 date: 2021-10-15
 order: 6
 tags:
-  - JS
+  - js
   - arrays
 layout: layouts/post.njk
 ---

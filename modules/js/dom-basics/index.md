@@ -4,8 +4,8 @@ description: What is the Document Object Model (DOM) and how can we interact wit
 date: 2021-10-15
 order: 4
 tags:
-  - JS
-  - DOM
+  - js
+  - dom
 layout: layouts/post.njk
 ---
 

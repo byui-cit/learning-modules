@@ -2,7 +2,7 @@
 title: CSS Modules
 description: Learning Modules for CSS topics
 collectionName: cssTags
-collectionTag: CSS
+collectionTag: css
 layout: layouts/categoryPages.njk
 eleventyNavigation:
   key: CSS

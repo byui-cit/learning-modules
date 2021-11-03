@@ -3,7 +3,7 @@ title: VS Code Basics
 description: Installation and basic usage tips for the VS Code editor
 date: 2021-10-15
 tags:
-  - General
+  - general
   - vs-code
 layout: layouts/post.njk
 ---

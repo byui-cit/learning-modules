@@ -4,7 +4,7 @@ description: Understanding how operators work in Javascript and the role that co
 date: 2021-10-15
 order: 2
 tags:
-  - JS
+  - js
   - operators
   - coercion
 layout: layouts/post.njk

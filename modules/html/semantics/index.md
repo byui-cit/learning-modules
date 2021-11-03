@@ -4,7 +4,7 @@ description: Description of module
 date: 2021-10-15
 order: 2
 tags:
-  - HTML
+  - html
   - semantics
 layout: layouts/post.njk
 ---

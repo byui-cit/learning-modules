@@ -4,7 +4,7 @@ description: Reviews creating functions in Javascript and their role in helping 
 date: 2021-10-15
 order: 7
 tags:
-  - JS
+  - js
   - functions
   - organizing
 layout: layouts/post.njk

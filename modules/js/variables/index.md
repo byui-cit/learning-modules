@@ -4,7 +4,7 @@ description: Using variables in Javascript. Including a discussion about weakly 
 date: 2021-10-15
 order: 1
 tags:
-  - JS
+  - js
   - variables
 layout: layouts/post.njk
 ---
