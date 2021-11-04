@@ -14,6 +14,13 @@ HTML gives structure to our web page with a hierarchy that will help it be under
 
 ## Courses where this is used
 
+- WDD 130
+- WDD 230
+- WDD 330
+- WDD 430
+- CSE 121b
+- CSE 340
+
 ## Prepare
 
 - [MDN HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
