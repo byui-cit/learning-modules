@@ -1,5 +1,5 @@
 ---
-title: HTML Introduction
+title: HTML - HTML Introduction
 description: Introducing HTML
 date: 2021-11-01
 order: 1
@@ -16,15 +16,15 @@ HTML gives structure to our web page with a hierarchy that will help it be under
 
 ## Prepare
 
-- [HTML (Mozilla)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [MDN HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
 <figure class="video-container">
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jxYtjiuPfLQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </figure>
 
-- [Practice with HTML](prepare1)
+- [Understanding HTML](prepare1)
 
 ## Ponder
 
-- [HTML Assignment](ponder1/)
+- [Practice with HTML](ponder1/)
