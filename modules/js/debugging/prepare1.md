@@ -64,7 +64,7 @@ area = radius * radius * pi;
 8. Switch to the **Sources** tab in the developer tools. Click on the `debugging.js` file in the left pane. You should be able to see the code you wrote.
 
 9. Click on the line number for line 1. It should add a blue arrow on it. We have just set a breakpoint. If you refresh the browser the code execution will now stop on line 1 at our breakpoint.
-   ![Debugging sources tab in developer tools](/img/debugging-sources.png)
+   ![Debugging sources tab in developer tools](/learning-modules/img/debugging-sources.png)
 
 10. The Resume button should be blue at this point. That means the execution of our code is paused. At this point we could click the Resume button to resume the execution of the program, or Step over, or step into. **Step into** is for functions, which we don't have yet. so click the **Step Over** button to advance to the next line in the code.
 
