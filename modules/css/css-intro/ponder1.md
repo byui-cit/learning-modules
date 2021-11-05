@@ -37,7 +37,7 @@ Copy the HTML code below into your own HTML file.
 </html>
 ```
 
-Add a link element to the head section under the title and link it to an external CSS file. Add CSS to that new linked file. I used the darkred web color in the image below. Try some CSS declarations to style the page. Referring back to the prepare or practice activity in this learning module, see if you can get it to look something like this:
+Add a link element to the head section under the title and link it to an external CSS file. Add CSS to that new linked file. I used the darkred web color in the image below. Try some CSS declarations to style the page. Referring back to the previous activity in this learning module, see if you can get it to look something like this:
 
 ![Suzy's About Me Page](https://byui-wdd.github.io/wdd130/images/suzy.png "Suzy's About Me Page")
 

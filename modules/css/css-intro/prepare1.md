@@ -10,9 +10,9 @@ layout: layouts/post.njk
 
 **CSS** stands for cascading style sheets. It is a style sheet language used to layout and style web pages. 
 
-The following video introduces more HTML elements and attributes you use with elements.
+The following video introduces more CSS and the rule-sets you can make and how precedence and inheritance works.
 
-## HTML Elements and Attributes
+## CSS Synatx, Precedence, and Inheritance
 
 <figure class="video-container">
 
