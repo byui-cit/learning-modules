@@ -162,6 +162,16 @@
   </url>
   
   <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/modules/css/css-intro/</loc>
+    <lastmod>2021-11-01</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/modules/css/css-intro/prepare1/</loc>
+    <lastmod>2021-11-01</lastmod>
+  </url>
+  
+  <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/modules/general/frontend-basic-checksheet/prepare1/</loc>
     <lastmod>2021-11-01</lastmod>
   </url>
@@ -207,6 +217,16 @@
   </url>
   
   <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/css/</loc>
+    <lastmod>2021-11-03</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/prepare/</loc>
+    <lastmod>2021-11-03</lastmod>
+  </url>
+  
+  <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/tags/general/</loc>
     <lastmod>2021-11-03</lastmod>
   </url>
@@ -222,17 +242,12 @@
   </url>
   
   <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/css/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/tags/vs-code/</loc>
     <lastmod>2021-11-03</lastmod>
   </url>
   
   <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/prepare/</loc>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/semantics/</loc>
     <lastmod>2021-11-03</lastmod>
   </url>
   
@@ -247,12 +262,12 @@
   </url>
   
   <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/dom/</loc>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/debugging/</loc>
     <lastmod>2021-11-03</lastmod>
   </url>
   
   <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/debugging/</loc>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/dom/</loc>
     <lastmod>2021-11-03</lastmod>
   </url>
   
@@ -283,11 +298,6 @@
   
   <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/tags/variables/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/semantics/</loc>
     <lastmod>2021-11-03</lastmod>
   </url>
   
@@ -344,6 +354,11 @@
   <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/modules/js/</loc>
     <lastmod>2021-11-03</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/modules/css/css-intro/ponder1/</loc>
+    <lastmod>2021-11-04</lastmod>
   </url>
   
   <url>
