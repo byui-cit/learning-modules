@@ -60,7 +60,7 @@ Inside the head element, let's add the link tag to the HTML page
 </head>
 ```
 
-The link tag has two attributes. The rel specifies the relationship between the current document and the linked document. The href or hypertext reference shows where the document is located. Since our value for the href is just the file name, that indicates it is located at the same level or area that our HTML file located.
+The link tag has two attributes. The rel specifies the relationship between the current document and the linked document. The href or hypertext reference shows where the document is located. Since our value for the href is just the file name, that indicates it is located at the same level or area that our HTML file is located.
 
 Let's create the CSS file called styles.css. Open a new blank document and let's save it as styles.css in the same place you have the HTML file. Let's add our first rule-set to the CSS file:
 
@@ -112,6 +112,4 @@ footer {
 } 
 ```
 
-Don't worry if you don't understand some of the units of measurement like px or the % sign. More about those in a different learning module. 
-
-But you can see how a little CSS styling can make a different in how our page looks.
+Don't worry if you don't understand some of the units of measurement like px or the % sign. We will learn more about units of measurement in a different learning module. What we see from this activity is the proper syntax for creating rule-sets in our CSS file and how a little CSS styling can make a different in how our page looks. 

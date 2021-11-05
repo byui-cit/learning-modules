@@ -28,7 +28,7 @@ Let's copy the following code into an html file.
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Document</title>
+    <title>BYUI</title>
   </head>
   <body>
     <header></header>
