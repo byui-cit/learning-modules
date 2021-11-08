@@ -27,6 +27,8 @@ Knowing how the Web works is our first step in understanding how our web files w
 
 - [MDN What is Accessibility?](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility)
 
+## Web Development Basics
+
 <figure class="video-container">
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HTsJbDw13tI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
