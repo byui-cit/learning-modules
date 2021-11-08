@@ -2,7 +2,7 @@
 title: Web Basics - How the Web Works
 description: Web Basics
 date: 2021-11-05
-order: 1
+order: 2
 tags:
   - general
 layout: layouts/post.njk
