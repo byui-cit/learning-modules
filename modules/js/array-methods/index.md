@@ -2,7 +2,7 @@
 title: JS Array Built-in Methods
 description: JavaScript comes with many very useful Array helper methods. This module will introduce some of them and their usage.
 date: 2021-10-15
-order: 6
+order: 5
 tags:
   - js
   - arrays
@@ -20,6 +20,11 @@ It turns out that one of the most common tasks in programming is making a list o
 - WDD 330
 - WDD 430
 - CSE 341
+
+## Prerequisites
+
+- Understanding of [JS Variables](../variables)
+- Understanding of [JS Operators](../operators)
 
 ## Prepare
 
