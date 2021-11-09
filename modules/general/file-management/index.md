@@ -14,7 +14,7 @@ Visual Studio Code is one of many code editors that allow you to write your HTML
 
 In this module we will also be looking at basic File Management using VSCode. And under Ponder we will look at installing two extensions you can use with VSCode.
 
-## Courses where this is used
+## Where is this topic utilized?
 
 - WDD 130
 - WDD 230
