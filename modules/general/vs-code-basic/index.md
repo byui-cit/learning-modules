@@ -2,6 +2,7 @@
 title: VS Code Basics
 description: Installation and basic usage tips for the VS Code editor
 date: 2021-10-15
+order: 1
 tags:
   - general
   - vs-code

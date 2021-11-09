@@ -15,6 +15,16 @@ Copy this folder into whichever category you want to create a module for. Create
 
 ## Courses where this is used
 
+- CSE 121b
+- WDD 130
+- WDD 230
+- WDD 330
+- WDD 430
+
+## Prerequisites
+
+- Understanding of [JS Functions](../../js/organizing-functions)
+
 ## Prepare
 
 - [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)

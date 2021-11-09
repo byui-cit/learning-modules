@@ -119,7 +119,13 @@ function clickHandler() {
 
 4. Start by seeing if you can implement `getGrades()`. If you are having a hard time remembering how to select an HTML element review [JS DOM Basics](../../dom-basics/). Then note that the value that is entered into an HTML `input` element can be found in it's `.value` property.
 
-5. Add an event listener to the button in our HTML. It should call our `clickHandler` function when a click occurs. Go ahead and call the `getGrades()` function in `clickHandler` We can use that to test getGrades.
+5. Add an event listener to the button in our HTML. It should call our `clickHandler` function when a click occurs. Go ahead and call the `getGrades()` function in `clickHandler` We can use that to test getGrades. This line would look like this:
+
+   ```javascript
+   document
+     .querySelector("#submitButton")
+     .addEventListener("click", clickHandler);
+   ```
 
 6. Move onto the 'lookupGrade()` function. In this case a long if-else statement should work. To keep it simpler don't worry about the + and - grades. Make sure to test your function to make sure it works!
 

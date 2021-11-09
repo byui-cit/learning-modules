@@ -2,7 +2,7 @@
 title: JS Organizing with Functions
 description: Reviews creating functions in Javascript and their role in helping to organize our code.
 date: 2021-10-15
-order: 7
+order: 6
 tags:
   - js
   - functions
@@ -20,6 +20,10 @@ Functions in any language are a fundamental organizational building block. They 
 - WDD 230
 - WDD 330
 - WDD 430
+
+## Prerequisites
+
+- Understanding of [JS Array Methods](../array-methods)
 
 ## Prepare
 
