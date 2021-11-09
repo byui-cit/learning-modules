@@ -257,12 +257,12 @@
   </url>
   
   <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/arrays/</loc>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/debugging/</loc>
     <lastmod>2021-11-03</lastmod>
   </url>
   
   <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/debugging/</loc>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/arrays/</loc>
     <lastmod>2021-11-03</lastmod>
   </url>
   
@@ -379,5 +379,20 @@
   <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/modules/general/web-basics/prepare1/</loc>
     <lastmod>2021-11-05</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/modules/general/file-management/</loc>
+    <lastmod>2021-11-08</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/modules/general/file-management/ponder1/</loc>
+    <lastmod>2021-11-08</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/modules/general/file-management/prepare1/</loc>
+    <lastmod>2021-11-08</lastmod>
   </url>
 </urlset>
