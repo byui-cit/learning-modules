@@ -8,7 +8,7 @@ layout: layouts/post.njk
 
 ## Preparation
 
-Make sure you read through the Prepare section for this topic. You will also need your editor open with some html and the code from the Prepare activity:
+Make sure you read through the Prepare section for this topic. You will also need your editor open with some html :
 
 ### html
 

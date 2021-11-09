@@ -19,6 +19,7 @@ Arrays are wonderful things. If you need to keep several things of the same type
 - WDD 230
 - WDD 330
 - WDD 430
+- CSE 341
 
 ## Prerequisites
 
