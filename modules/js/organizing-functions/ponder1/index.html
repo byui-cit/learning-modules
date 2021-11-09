@@ -105,7 +105,8 @@
 <p>Start by seeing if you can implement <code>getGrades()</code>. If you are having a hard time remembering how to select an HTML element review <a href="../../dom-basics/">JS DOM Basics</a>. Then note that the value that is entered into an HTML <code>input</code> element can be found in it's <code>.value</code> property.</p>
 </li>
 <li>
-<p>Add an event listener to the button in our HTML. It should call our <code>clickHandler</code> function when a click occurs. Go ahead and call the <code>getGrades()</code> function in <code>clickHandler</code> We can use that to test getGrades.</p>
+<p>Add an event listener to the button in our HTML. It should call our <code>clickHandler</code> function when a click occurs. Go ahead and call the <code>getGrades()</code> function in <code>clickHandler</code> We can use that to test getGrades. This line would look like this:</p>
+<pre class="language-javascript"><code class="language-javascript">document<br>  <span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#submitButton"</span><span class="token punctuation">)</span><br>  <span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> clickHandler<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 </li>
 <li>
 <p>Move onto the 'lookupGrade()` function. In this case a long if-else statement should work. To keep it simpler don't worry about the + and - grades. Make sure to test your function to make sure it works!</p>
