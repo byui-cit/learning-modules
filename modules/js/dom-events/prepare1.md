@@ -89,3 +89,26 @@ function copyInput(event) {
 ```
 
 A few properties of particular interest would be `event.target`, `event.currentTarget`, and `event.type`
+
+## Another example
+
+We saw how to respond to a 'click' event above. What about a key event? If you refer back to the [Event Reference](https://developer.mozilla.org/en-US/docs/Web/Reference/Events) document from earlier we can find `keydown` and `keyup` events. With something like a click, we usually want to know if a specific thing has been clicked. A keyboard event however often is not specific to a particular element, so we will listen at the `document` level.
+
+```html
+<p id="log"></p>
+```
+
+```javascript
+const log = document.querySelector("#log");
+
+document.addEventListener("keydown", logKey);
+
+function logKey(e) {
+  // how do we know which key was pressed?
+  console.log(e);
+  // checkout e.code, e.key, and e.keyCode
+  // what is the difference?
+}
+```
+
+Did you note the difference between e.code and e.key? [Here](https://javascript.info/keyboard-events) is a hint.
