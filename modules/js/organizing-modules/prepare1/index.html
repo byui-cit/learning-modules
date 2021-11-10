@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizing - Introduction to Libraries with ES Modules</title>
+    <meta name="description" content="Getting started with using ES modules to create libraries to organize your code and make it more reusable.">
+    <link rel="stylesheet" href="/learning-modules/css/index.css">
+    <link rel="stylesheet" href="/learning-modules/css/prism-coy.css">
+    <link rel="alternate" href="/learning-modules/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="/learning-modules/feed/feed.json" type="application/json" title="WDD Learning Modules">
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <a href="/learning-modules/">
+          <img src="/learning-modules/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        </a>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
+      </div>
+      <nav>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="/learning-modules/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/html/">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/js/">JS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/css/">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/design/">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/general/">General</a>
+            </li>
+        </ul>
+      </nav>
+    </body>
+  </body>
+</html></header><main  class="tmpl-post" >
+<h1>Organizing - Introduction to Libraries with ES Modules</h1>
+
+
+
+<h2 id="libraries-sharing-your-functions-with-others" tabindex="-1">Libraries - sharing your functions with others <a class="direct-link" href="#libraries-sharing-your-functions-with-others" aria-hidden="true">#</a></h2>
+<p>A higher order organizational idea in JavaScript is a library. Libraries are a way that you can share your code for other programmers to use in their applications, and you can share your code with them. Libraries are groups of functions that, unlike applications, can not run on their own. Instead, you use what other people have written and compiled as if you wrote it yourself.</p>
+<p>In JavaScript, libraries consist of some number of files in which you put your JavaScript. By tradition, the names of your files always ends in '.js'. If I had a JavaScript library called totally_awesome, and in it there was some code that moved stuff around on the screen, I might put that code in a file called 'animations.js'. There would be other files in my library that contained other functions doing other things. Each file would be named after what it does and use the '.js' name ending. For example, fades.js, slideshow.js, etc.</p>
+<h2 id="purpose" tabindex="-1">Purpose <a class="direct-link" href="#purpose" aria-hidden="true">#</a></h2>
+<p>Encapsulation: &quot;The goal of encapsulation is the bundling or co-location of information (data) and behavior (functions) that together serve a common purpose.&quot;</p>
+<p>The reason developers like working with libraries is that it allows them to group alike program bits together, and selectively limit programmatic access to the parts we consider private details. What's not considered private is then marked as public, accessible to the whole program.</p>
+<p>A library should be focused on exposing in a simple way a specific bit of functionality. They should ideally do one thing and do it well.</p>
+<h2 id="es-modules" tabindex="-1">ES Modules <a class="direct-link" href="#es-modules" aria-hidden="true">#</a></h2>
+<p>Libraries created as described above are simple to make, but do have a few drawbacks. The most important is that everything in them gets added to the global scope with all of the disadvantages that come with that. In the ES6 version of Javascript a new feature was added to help solve this. ES Modules.</p>
+<p>Go read this article: <a href="https://ui.dev/javascript-modules-iifes-commonjs-esmodules/">JavaScript Modules: From IIFEs to CommonJS to ES6 Modules</a>. Read down to the section IIFE, if you are interested in some history then read on...if not then skip the next few sections and start again at the ES Modules section. Then come back and finish this article.</p>
+<p>First a few important facts about ESModules</p>
+<ul>
+<li>
+<p>ESModules are based around files...one module per file.</p>
+</li>
+<li>
+<p>ESModules are strict by default</p>
+</li>
+<li>
+<p>ESModules establish their own private scope.</p>
+</li>
+<li>
+<p>Anything that you need access to outside of the module must be <strong>exported</strong>.</p>
+</li>
+<li>
+<p>Exports can be <strong>default</strong> (one per module) or <strong>named</strong> (as many as you need)</p>
+</li>
+<li>
+<p>You use the <code>import</code> command to use a module.</p>
+</li>
+<li>
+<p>When you use ESModules you need to let the browser know by adding type=&quot;module&quot; to your script tag ie.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"main.js"</span> type<span class="token operator">=</span><span class="token string">"module"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
+</li>
+</ul>
+<h2 id="example-a-module-with-shared-utility-functions" tabindex="-1">Example - A module with shared utility functions <a class="direct-link" href="#example-a-module-with-shared-utility-functions" aria-hidden="true">#</a></h2>
+<p>If we had a simple module for utility functions it might look like this:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">// filename: utility.js</span><br><span class="token comment">// wrapper function for querySelector</span><br><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">qs</span><span class="token punctuation">(</span><span class="token parameter">selector</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">return</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span>selector<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token comment">// create an alert at the top of the page for 3 seconds</span><br><span class="token comment">// requires the message to be displayed and the time in milliseconds.</span><br><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">alertMessage</span><span class="token punctuation">(</span><span class="token parameter">message<span class="token punctuation">,</span> duration <span class="token operator">=</span> <span class="token number">3000</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">const</span> alert <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  alert<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> message<span class="token punctuation">;</span><br>  alert<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><br>    <span class="token string">"style"</span><span class="token punctuation">,</span><br>    <span class="token string">"background-color:lightpink; border: 1px solid red; position:absolute; top:0; left:0; right:0; padding: 1em;"</span><br>  <span class="token punctuation">)</span><span class="token punctuation">;</span><br>  document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">prepend</span><span class="token punctuation">(</span>alert<span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>alert<span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><span class="token punctuation">,</span> duration<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p>To use this we would import the functions we wanted to use in our main javascript file</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">// main.js...this is the file that you added to the html through a script tag</span><br><span class="token keyword">import</span> <span class="token punctuation">{</span> qs<span class="token punctuation">,</span> alertMessage <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./utilities.js"</span><span class="token punctuation">;</span><br><span class="token comment">// now you can use those functions just like if they were declared locally.</span><br><span class="token function">alertMessage</span><span class="token punctuation">(</span><span class="token string">"I'm from the module!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
+</main><footer></footer><!-- Current page: /learning-modules/modules/js/organizing-modules/prepare1/ --></body></html>
