@@ -12,7 +12,7 @@ layout: layouts/post.njk
 
 Knowing how the Web works is our first step in understanding how our web files will work as part of the Internet and World Wide Web. There are also a few basics to consider as we start preparing to create files for the web.
 
-## Courses where this is used
+## Courses where this topic is used
 
 - WDD 130
 - WDD 230

@@ -14,7 +14,7 @@ layout: layouts/post.njk
 
 Functions in any language are a fundamental organizational building block. They help us to write code that is more maintainable and in a word, DRY (Don't Repeat Yourself)
 
-## Courses where this is used
+## Courses where this topic is used
 
 - CSE 121b
 - WDD 230

@@ -13,7 +13,7 @@ layout: layouts/post.njk
 
 Arrays are wonderful things. If you need to keep several things of the same type together so you can work with them, an array is the way to go. But what about more complicated data?
 
-## Courses where this is used
+## Courses where this topic is used
 
 - CSE 121b
 - WDD 230

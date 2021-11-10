@@ -91,7 +91,7 @@ Use objects and encapsulation to create a representation of a school schedule
 ```
 
 3. Create a function to set the name and number of the course in the HTML. Pass the course object into your function (remember that you can use the dot notation to access the parts of an object.)
-4. Create another function that will output the sections into the table idenetified by `#sections`. You should pass the sections you want rendered into the function.
+4. Create another function that will output the sections into the table identified by `#sections`. You should pass the sections you want rendered into the function.
 
 <details>
 <summary>Solution 1</summary>
