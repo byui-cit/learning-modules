@@ -12,4 +12,4 @@ Make sure you read through the Prepare section for this topic.
 
 ### Activity 1
 
-Open the following page in a new tab: <a href="https://byui-wdd.github.io/wdd130/activities/w02-hosting-setup.html">GitHub Pages Hosting Setup</a> and follow the instructions.
+Open the following page in a new tab: <a href="https://byui-wdd.github.io/wdd130/activities/w02-hosting-setup-online.html">GitHub Pages Hosting Setup</a> and follow the instructions.
