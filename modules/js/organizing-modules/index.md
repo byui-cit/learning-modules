@@ -14,7 +14,7 @@ layout: layouts/post.njk
 
 ESModules added the ability to Javascript to easily bundle up related parts of our code in a way that is very organized and reusable
 
-## Courses where this topic is used
+## Where this knowledge is utilized
 
 - CSE 121b
 - WDD 230

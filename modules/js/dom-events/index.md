@@ -13,7 +13,7 @@ layout: layouts/post.njk
 
 Javascript in the browser is very event driven. This module will explain how to listen for and act on events that take place.
 
-## Courses where this topic is used
+## Where this knowledge is utilized
 
 - CSE 121b
 - WDD 230

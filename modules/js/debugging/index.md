@@ -15,7 +15,7 @@ As you learn how to write code in Javascript, or any language really, you will m
 
 Do not speed through this module! Mastering these skills can save you countless hours as you both learn how to code and after.
 
-## Courses where this topic is used
+## Where this knowledge is utilized
 
 - CSE 121b
 - WDD 230

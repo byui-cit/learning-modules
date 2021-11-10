@@ -18,11 +18,12 @@ Compare CSS Flexbox to CSS Grid:
 Grid displays, like Flexbox, are applied to the <strong>parent container</container> and only the immediate children are Grid items.
 
 To apply
-```CSS
-  display: grid;
+
+```css
+display: grid;
 ```
 
-## Courses where this is used
+## Where this knowledge is utilized
 
 - WDD 130
 - WDD 230
