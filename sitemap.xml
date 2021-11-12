@@ -317,6 +317,21 @@
   </url>
   
   <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/git/</loc>
+    <lastmod>2021-11-03</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/github/</loc>
+    <lastmod>2021-11-03</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/github-pages/</loc>
+    <lastmod>2021-11-03</lastmod>
+  </url>
+  
+  <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/tags/vs-code/</loc>
     <lastmod>2021-11-03</lastmod>
   </url>
@@ -337,12 +352,12 @@
   </url>
   
   <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/arrays/</loc>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/debugging/</loc>
     <lastmod>2021-11-03</lastmod>
   </url>
   
   <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/debugging/</loc>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/arrays/</loc>
     <lastmod>2021-11-03</lastmod>
   </url>
   
@@ -362,22 +377,22 @@
   </url>
   
   <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/functions/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/organizing/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/tags/operators/</loc>
     <lastmod>2021-11-03</lastmod>
   </url>
   
   <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/tags/coercion/</loc>
+    <lastmod>2021-11-03</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/functions/</loc>
+    <lastmod>2021-11-03</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/organizing/</loc>
     <lastmod>2021-11-03</lastmod>
   </url>
   
@@ -484,5 +499,20 @@
   <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/modules/general/file-management/prepare1/</loc>
     <lastmod>2021-11-08</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/modules/general/hosting-git-gihub/</loc>
+    <lastmod>2021-11-12</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/modules/general/hosting-git-gihub/ponder1/</loc>
+    <lastmod>2021-11-12</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/modules/general/hosting-git-gihub/prepare1/</loc>
+    <lastmod>2021-11-12</lastmod>
   </url>
 </urlset>
