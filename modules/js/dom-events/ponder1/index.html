@@ -57,11 +57,21 @@
 <h2 id="activity-1" tabindex="-1">Activity 1 <a class="direct-link" href="#activity-1" aria-hidden="true">#</a></h2>
 <p>There are 3 functions to be written, and some events to listen for to complete this simple Todo list application. Begin by reviewing the code you were given. Pay attention to the comments!</p>
 <ol>
-<li>Start with the <code>newTask</code> function. Get the value entered in the '#todo' input, then add it to the <code>tasks</code> array, and finally call the <code>renderTasks</code> function.</li>
-<li>After completing that attach an event listener to the '#submitTask' button that will call the <code>newTask</code> function when it is clicked.</li>
-<li>After making sure that it is working, complete the <code>renderTasks</code> function next. You can use the following for the markup for each task:<pre class="language-javascript"><code class="language-javascript"><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;li </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>task<span class="token punctuation">.</span>completed <span class="token operator">?</span> <span class="token string">'class="strike"'</span> <span class="token operator">:</span> <span class="token string">""</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">><br>   &lt;p></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>task<span class="token punctuation">.</span>detail<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/p><br>   &lt;div><br>     &lt;span data-function="delete">❎&lt;/span><br>     &lt;span data-function="complete">✅&lt;/span><br>   &lt;/div><br> &lt;/li></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span></code></pre>
+<li>
+<p>Start with the <code>newTask</code> function. Get the value entered in the '#todo' input, then add it to the <code>tasks</code> array, and finally call the <code>renderTasks</code> function.</p>
+<p>We need to store two bits of information about each task. The details of the task, and whether or not it has been completed. The best way to do this is with an Object</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token punctuation">{</span> detail<span class="token operator">:</span> task<span class="token punctuation">,</span> completed<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">}</span></code></pre>
 </li>
-<li>Finally we can write the <code>manageTasks()</code> function. When someone clicks the ❎ it should call the <code>removeTask()</code> function. If they click the ✅ then the <code>completeTask()</code> should be called.</li>
+<li>
+<p>After completing that attach an event listener to the '#submitTask' button that will call the <code>newTask</code> function when it is clicked.</p>
+</li>
+<li>
+<p>After making sure that it is working, complete the <code>renderTasks</code> function next. You can use the following for the markup for each task:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;li </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>task<span class="token punctuation">.</span>completed <span class="token operator">?</span> <span class="token string">'class="strike"'</span> <span class="token operator">:</span> <span class="token string">""</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">><br>   &lt;p></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>task<span class="token punctuation">.</span>detail<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/p><br>   &lt;div><br>     &lt;span data-function="delete">❎&lt;/span><br>     &lt;span data-function="complete">✅&lt;/span><br>   &lt;/div><br> &lt;/li></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span></code></pre>
+</li>
+<li>
+<p>Finally we can write the <code>manageTasks()</code> function. When someone clicks the ❎ it should call the <code>removeTask()</code> function. If they click the ✅ then the <code>completeTask()</code> should be called.</p>
+</li>
 </ol>
 <div class="callout">
 <p>One way to approach this would be to attach a listener to each button for each task. But if we up with many tasks that is a lot of listeners to keep track of. Instead we can take advantage of <a href="https://davidwalsh.name/event-delegate">Event Delegation</a>.</p>

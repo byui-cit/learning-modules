@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Operators - Conditionals and Branching</title>
+    <meta name="description" content="How we can use conditionals to create branches in our code.">
+    <link rel="stylesheet" href="/learning-modules/css/index.css">
+    <link rel="stylesheet" href="/learning-modules/css/prism-coy.css">
+    <link rel="alternate" href="/learning-modules/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="/learning-modules/feed/feed.json" type="application/json" title="WDD Learning Modules">
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <a href="/learning-modules/">
+          <img src="/learning-modules/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        </a>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
+      </div>
+      <nav>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="/learning-modules/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/html/">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/js/">JS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/css/">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/design/">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/general/">General</a>
+            </li>
+        </ul>
+      </nav>
+    </body>
+  </body>
+</html></header><main  class="tmpl-post" >
+<h1>JS Operators - Conditionals and Branching</h1>
+
+
+
+<h2 id="choice-making-and-computational-flow" tabindex="-1">Choice Making and Computational Flow <a class="direct-link" href="#choice-making-and-computational-flow" aria-hidden="true">#</a></h2>
+<p>JavaScript and Python share a set of structures used to control which part of your code is executed, based on specific situations. The idea of situational 'computational flow' control isn't unique to Python or JavaScript. It is found in all languages though the way it is accomplished can be different. The boolean operators you studied in <a href="../prepare1/">part 1</a> of this module are used by the control structures you will see below.</p>
+<h2 id="if" tabindex="-1">If <a class="direct-link" href="#if" aria-hidden="true">#</a></h2>
+<p>In JavaScript, the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if...else if....else</a> statement takes this form,</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">if</span><span class="token punctuation">(</span>boolean expression<span class="token punctuation">)</span><span class="token punctuation">{</span><br>	<span class="token comment">//code if true</span><br><span class="token punctuation">}</span><br><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>boolean expression<span class="token punctuation">)</span><span class="token punctuation">{</span><br>	<span class="token comment">//code if true</span><br><span class="token punctuation">}</span><br><span class="token keyword">else</span><span class="token punctuation">{</span><br>	<span class="token comment">//code if no other match</span><br><span class="token punctuation">}</span></code></pre>
+<p>Notice the boolean expressions have parenthesis around them, and the JavaScript scope operators are used to indicate what lines of code executes in each condition. Here is a code example that evaluates the number of sales of product a company has for one day. The first condition checks if the number of sales is less than or equal to 50. Since the first check has been done, the second actually tests if the number of sales is greater than 50 and less than or equal to 1000. The default, 'else', is the number of sales being greater than 1000.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">if</span> <span class="token punctuation">(</span>numSales <span class="token operator">&lt;=</span> <span class="token number">50</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Way to few sales"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>numSales <span class="token operator">&lt;=</span> <span class="token number">1000</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Average number of sales"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span><br>  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"A good number of sales."</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<h2 id="switch" tabindex="-1">Switch <a class="direct-link" href="#switch" aria-hidden="true">#</a></h2>
+<p>There is another way to control your code that behaves similar to an if-else if-else statement. It's called a <a href="https://www.w3schools.com/js/js_switch.asp">switch</a>. It can be very helpful if you have large numbers of cases to check. Just be careful using it. It is VERY easy for those not familiar with them to put logic errors in their code using switches.</p>
+<p>Switch is an alternative to if...else It's useful when you have a known set of values that you need to check.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> grade <span class="token operator">=</span> <span class="token string">"A"</span><span class="token punctuation">;</span><br><span class="token keyword">let</span> gpaPoints <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span><br><span class="token keyword">switch</span> <span class="token punctuation">(</span>grade<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">case</span> <span class="token string">"A"</span><span class="token operator">:</span><br>    gpaPoints <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span><br>    <span class="token keyword">break</span><span class="token punctuation">;</span><br>  <span class="token keyword">case</span> <span class="token string">"B"</span><span class="token operator">:</span><br>    gpaPoints <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span><br>    <span class="token keyword">break</span><span class="token punctuation">;</span><br>  <span class="token keyword">default</span><span class="token operator">:</span><br>    gpaPoints <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p>With a switch the <code>break;</code> is very important to understand. Look at the example below</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">gpaPoints</span><span class="token punctuation">(</span><span class="token parameter">grade</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">let</span> gpaPoints <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span><br>  <span class="token keyword">switch</span> <span class="token punctuation">(</span>grade<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token keyword">case</span> <span class="token string">"A"</span><span class="token operator">:</span><br>      gpaPoints <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span><br>    <span class="token comment">// break removed</span><br>    <span class="token keyword">case</span> <span class="token string">"B"</span><span class="token operator">:</span><br>      gpaPoints <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span><br>      <span class="token keyword">break</span><span class="token punctuation">;</span><br>    <span class="token keyword">case</span> <span class="token string">"C"</span><span class="token operator">:</span><br>      gpaPoints <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span><br>    <span class="token keyword">default</span><span class="token operator">:</span><br>      gpaPoints <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br>  <span class="token keyword">return</span> gpaPoints<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token function">gpaPoints</span><span class="token punctuation">(</span><span class="token string">"A"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// returns 3!</span><br><span class="token function">gpaPoints</span><span class="token punctuation">(</span><span class="token string">"B"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// also returns 3</span><br><span class="token function">gpaPoints</span><span class="token punctuation">(</span><span class="token string">"C"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// returns -1!</span><br><span class="token function">gpaPoints</span><span class="token punctuation">(</span><span class="token string">"X"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// returns -1</span></code></pre>
+<p>Once the switch finds a match, it will continue evaluating the cases that follow until it sees a <code>break</code></p>
+
+</main><footer></footer><!-- Current page: /learning-modules/modules/js/operators/prepare2/ --></body></html>
