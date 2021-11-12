@@ -8,7 +8,7 @@ layout: layouts/post.njk
 
 ## Event driven programming.
 
-Browsers operate by events. Most of the time they sit waiting for something to happen. We can take advantage of this to make the things we need to happen. There are a lot of possible events!
+Browsers operate by events. Most of the time they sit waiting for something to happen. They notice everything that does happen, and there are a lot of possible events...but they won't do anything about it unless we tell them to.
 
 The next section is taken directly from MDN...
 

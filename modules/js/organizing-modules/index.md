@@ -25,6 +25,7 @@ ESModules added the ability to Javascript to easily bundle up related parts of o
 ## Prerequisites
 
 - Understanding of [JS Functions](../../js/organizing-functions)
+- Understanding of [JS Objects](../../js/objects)
 
 ## Prepare
 
