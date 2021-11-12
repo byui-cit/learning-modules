@@ -127,7 +127,7 @@ The object created with the javascript above contains most of the functionality 
 1. Create a new file to hold our module. Name it `Course.js`
 2. Copy the `aCourse` object and the `setCourseInfo` and `renderSections` functions into the new file. Leave the addEventListeners and everything below them.
 3. Make the `aCourse` object the `default export`
-4. Import `aCourse` into the `modules.js` file
+4. Import `aCourse` into the `modules.js` file. Once we have done that we can use it just as if it were created locally. This means we could use it multiple places in a large application while only having to write the code once! This type of re-use is why modules are such a powerful feature.
 5. Make sure to change the line in your HTML that looks like this:
 
    ```html
