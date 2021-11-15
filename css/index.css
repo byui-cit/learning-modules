@@ -80,7 +80,7 @@ main,
   margin-right: auto;
 }
 main :first-child {
-  margin-top: 0;
+  /* margin-top: 0; */
 }
 header {
   border-bottom: 1px dashed var(--lightgray);

@@ -237,7 +237,7 @@ We need to fix the rest of our app. When the page loads we should see the course
 
 Which way we go becomes somewhat of a philisophical debate. Should those functions belong to the course?
 
-The activity had you leave them out of the Object because they felt different than the other things we were doing. The other methods we added to the object were responsible for changing parts of the Object. `setCourseInfo` and `renderSections` were not changing anything, but just displaying the information in the Object. That felt different enough that the functions were placed outside.
+The original activity had you leave them out of the Object because they felt different than the other things we were doing. The other methods we added to the object were responsible for changing parts of the Object. `setCourseInfo` and `renderSections` were not changing anything, but just displaying the information in the Object. That felt different enough that the functions were placed outside.
 
 You might argue though that they are related to the Object and should just be packaged up with it...and you might be right. That would make those functions public however...and someone using our module could call them anytime they wanted. Sometimes that can cause problems. It is good to expose only what is necessary and no more when creating modules.
 
