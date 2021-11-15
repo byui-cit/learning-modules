@@ -17,7 +17,7 @@ This list provides a basic list of items that should be included on any web page
 
 [Front-End-Checklist Repo](https://github.com/thedaviddias/Front-End-Checklist)
 
-## Courses where this is used
+## Where this knowledge is utilized
 
 - WDD 130
 - WDD 230

@@ -13,7 +13,7 @@ layout: layouts/post.njk
 
 It turns out that one of the most common tasks in programming is making a list of something, then looping through the list, using or changing each item one at a time. Because of this Arrays (the most common list in JavaScript) come with many very helpful built in methods to make this easier. It will be worth your time to mastering the use of these functions!
 
-## Courses where this is used
+## Where this knowledge is utilized
 
 - CSE 121b
 - WDD 230

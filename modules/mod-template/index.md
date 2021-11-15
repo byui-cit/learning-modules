@@ -13,13 +13,14 @@ layout: layouts/post.njk
 
 Copy this folder into whichever category you want to create a module for. Create a prepare or ponder file for each resource you will build.
 
-## Courses where this is used
+## Where this knowledge is utilized
 
 - CSE 121b
 - WDD 130
 - WDD 230
 - WDD 330
 - WDD 430
+- CSE 341
 
 ## Prerequisites
 

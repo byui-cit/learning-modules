@@ -12,7 +12,7 @@ layout: layouts/post.njk
 
 HTML gives structure to our web page with a hierarchy that will help it be understandable to our readers or users. There are a number of different elements that make up the structure of our HTML page.
 
-## Where is this topic utilized?
+## Where this knowledge is utilized
 
 - WDD 130
 - WDD 230

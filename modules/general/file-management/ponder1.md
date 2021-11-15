@@ -21,4 +21,4 @@ This video will now cover how to start an HTML file and add two extensions to ou
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ae7npVLX938" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </figure>
 
-This module showed us how to install VSCode, manage our files, start and HTML file and use two VSCode extensions.
+This module showed us how to install VSCode, manage our files, start an HTML file and use two VSCode extensions.
