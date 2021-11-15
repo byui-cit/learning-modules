@@ -5,48 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Module Name - Resource name</title>
     <meta name="description" content="Getting started with making asynchronous requests with Fetch">
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/prism-coy.css">
-    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="BYU-I WDD Learning Modules">
-    <link rel="alternate" href="/feed/feed.json" type="application/json" title="BYU-I WDD Learning Modules">
+    <link rel="stylesheet" href="/learning-modules/css/index.css">
+    <link rel="stylesheet" href="/learning-modules/css/prism-coy.css">
+    <link rel="alternate" href="/learning-modules/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="/learning-modules/feed/feed.json" type="application/json" title="WDD Learning Modules">
   </head>
   <body>
     <header>
       <div class="branding">
-        <a href="/index.html">
-          <img src="/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        <a href="/learning-modules/">
+          <img src="/learning-modules/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
         </a>
-        <h1 class="vertical-text">BYU-I WDD Learning Modules</h1>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
       </div>
-      
       <nav>
         <ul class="nav">
             <li class="nav-item">
-              <a href="/">Home</a>
+              <a href="/learning-modules/">Home</a>
             </li>
             <li class="nav-item">
-              <a href="/modules/js/">JS</a>
+              <a href="/learning-modules/modules/html/">HTML</a>
             </li>
             <li class="nav-item">
-              <a href="/modules/html/">HTML</a>
+              <a href="/learning-modules/modules/js/">JS</a>
             </li>
             <li class="nav-item">
-              <a href="/modules/css/">CSS</a>
+              <a href="/learning-modules/modules/css/">CSS</a>
             </li>
             <li class="nav-item">
-              <a href="/modules/design/">Design</a>
+              <a href="/learning-modules/modules/design/">Design</a>
             </li>
             <li class="nav-item">
-              <a href="/modules/general/">General</a>
+              <a href="/learning-modules/modules/general/">General</a>
             </li>
-          
         </ul>
       </nav>
-    </header>
-    <main  class="tmpl-post" >
-      <h1>Module Name - Resource name</h1>
+    </body>
+  </body>
+</html></header><main  class="tmpl-post" >
+<h1>Module Name - Resource name</h1>
 
-<a href="/tags/prepare/" class="post-tag">Prepare</a>
+
 
 <h2 id="ajax:-asynchronous-requests" tabindex="-1">AJAX: asynchronous requests <a class="direct-link" href="#ajax:-asynchronous-requests" aria-hidden="true">#</a></h2>
 <p><strong>AJAX</strong> stands for Asynchronous Javascript And Xml. It is a collection of technologies that allow a webpage to make a request to a server after it has loaded for additional information. The requests are Asynchronous in that the program the made them does not wait around doing nothing until they come back...it will move on and do more stuff, the requests are made with Javascript, but they don't often return XML anymore. Most often now you will get the information back as JSON.</p>
@@ -70,9 +69,4 @@
 <p>Note that this would often be done with anonymous functions...without the comments and condensed the code above could look like this:</p>
 <pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">"https://pokeapi.co/api/v2/pokemon/ditto"</span><span class="token punctuation">;</span><br><span class="token keyword">let</span> results <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span><br><span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><br>  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>    <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>ok<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>      <span class="token keyword">return</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span><br>      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"error:"</span><span class="token punctuation">,</span> response<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token punctuation">}</span><br>  <span class="token punctuation">}</span><span class="token punctuation">)</span><br>  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>    results <span class="token operator">=</span> data<span class="token punctuation">;</span><br>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"first: "</span><span class="token punctuation">,</span> results<span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"second: "</span><span class="token punctuation">,</span> results<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 
-
-    </main>
-    <footer></footer>
-    <!-- Current page: /modules/general/mod-template/prepare1/ -->
-  </body>
-</html>
+</main><footer></footer><!-- Current page: /learning-modules/modules/general/mod-template/prepare1/ --></body></html>

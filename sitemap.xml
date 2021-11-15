@@ -37,17 +37,22 @@
   </url>
   
   <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/html/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/semantics/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/tags/general/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
   <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/tags/validation/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/html/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
@@ -72,12 +77,12 @@
   </url>
   
   <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/prepare/</loc>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/teams/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
   <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/semantics/</loc>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/prepare/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
@@ -188,6 +193,11 @@
   
   <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/modules/general/frontend-basic-checksheet/ponder1/</loc>
+    <lastmod>2021-10-15</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/modules/general/team-work/</loc>
     <lastmod>2021-10-15</lastmod>
   </url>
   
@@ -524,5 +534,10 @@
   <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/modules/general/hosting-git-gihub/prepare1/</loc>
     <lastmod>2021-11-12</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/modules/general/naming-conventions/</loc>
+    <lastmod>2021-11-15</lastmod>
   </url>
 </urlset>

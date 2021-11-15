@@ -40,10 +40,9 @@
             </li>
         </ul>
       </nav>
-    </body>
-  </body>
-</html></header><main  class="tmpl-post" >
-<h1>Array Methods - Core concepts</h1>
+    </header>
+    <main  class="tmpl-post" >
+      <h1>Array Methods - Core concepts</h1>
 
 
 
@@ -109,4 +108,11 @@ Value to use as this when executing callbackFn.</p>
 <h2 id="examples" tabindex="-1">Examples <a class="direct-link" href="#examples" aria-hidden="true">#</a></h2>
 <pre class="language-javascript"><code class="language-javascript"><span class="token comment">// example 1</span><br><span class="token keyword">const</span> steps <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"one"</span><span class="token punctuation">,</span> <span class="token string">"two"</span><span class="token punctuation">,</span> <span class="token string">"three"</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br><span class="token comment">// callback declaration</span><br><span class="token keyword">function</span> <span class="token function">makeList</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">const</span> listElement <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"myList"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  listElement<span class="token punctuation">.</span>innerHTML <span class="token operator">+=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;li></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>item<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/li></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br>steps<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>makeList<span class="token punctuation">)</span><span class="token punctuation">;</span><br><br><span class="token comment">// example 2</span><br><span class="token comment">// is the luckyNumber in the list?</span><br><span class="token keyword">const</span> myArray <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">34</span><span class="token punctuation">,</span> <span class="token number">21</span><span class="token punctuation">,</span> <span class="token number">54</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> luckyNumber <span class="token operator">=</span> <span class="token number">21</span><span class="token punctuation">;</span><br><span class="token keyword">let</span> luckyIndex <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span><br>myArray<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">item<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">if</span> <span class="token punctuation">(</span>item <span class="token operator">===</span> luckyNumber<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    luckyIndex <span class="token operator">=</span> index<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 
-</main><footer></footer><!-- Current page: /learning-modules/modules/js/array-methods/prepare1/ --></body></html>
+</main>
+    <footer>
+      This work is licensed under a
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+        Creative Commons Attribution 4.0 International License</a>
+      .
+    </footer><!-- Current page: /learning-modules/modules/js/array-methods/prepare1/ --></body>
+</html>
