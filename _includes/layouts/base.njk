@@ -28,7 +28,13 @@
           {%- endfor %}
         </ul>
       </nav>
-    </body>
-  </body>
-</html></header><main {% if templateClass %} class="{{ templateClass }}" {% endif %}>
-{{ content | safe }}</main><footer></footer><!-- Current page: {{ page.url | url }} --></body></html>
+    </header>
+    <main {% if templateClass %} class="{{ templateClass }}" {% endif %}>
+      {{ content | safe }}</main>
+    <footer>
+      This work is licensed under a
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+        Creative Commons Attribution 4.0 International License</a>
+      .
+    </footer><!-- Current page: {{ page.url | url }} --></body>
+</html>

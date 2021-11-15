@@ -40,7 +40,6 @@ If your module can be communicated effectively in one page, the prepareX.md and 
 - Using the CLI (mac/linux and windows version)
 - Intro to Git
 - Using Github pages
-- Making Teams work
 - Frontend development workflow
 
 ### Design
