@@ -72,7 +72,7 @@
   </url>
   
   <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/vs-code/</loc>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/teams/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
@@ -82,7 +82,7 @@
   </url>
   
   <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/teams/</loc>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/vs-code/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
@@ -108,6 +108,11 @@
   
   <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/tags/fetch/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/loops/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
@@ -142,12 +147,12 @@
   </url>
   
   <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/variables/</loc>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/esmodules/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
   <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/esmodules/</loc>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/variables/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
@@ -303,6 +308,21 @@
   
   <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/modules/js/fetch-basics/prepare1/</loc>
+    <lastmod>2021-10-15</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/modules/js/loops/</loc>
+    <lastmod>2021-10-15</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/modules/js/loops/ponder1/</loc>
+    <lastmod>2021-10-15</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/modules/js/loops/prepare1/</loc>
     <lastmod>2021-10-15</lastmod>
   </url>
   

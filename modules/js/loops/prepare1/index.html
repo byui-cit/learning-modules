@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Loops</title>
+    <meta name="description" content="Becoming familiar with the methods or looping in JavaScript">
+    <link rel="stylesheet" href="/learning-modules/css/index.css">
+    <link rel="stylesheet" href="/learning-modules/css/prism-coy.css">
+    <link rel="alternate" href="/learning-modules/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="/learning-modules/feed/feed.json" type="application/json" title="WDD Learning Modules">
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <a href="/learning-modules/">
+          <img src="/learning-modules/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        </a>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
+      </div>
+      <nav>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="/learning-modules/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/html/">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/js/">JS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/css/">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/design/">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/general/">General</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+    <main  class="tmpl-post" >
+      <h1>Javascript Loops</h1>
+
+
+
+<h2 id="getting-loopy" tabindex="-1">Getting Loopy <a class="direct-link" href="#getting-loopy" aria-hidden="true">#</a></h2>
+<p>One thing that often confuses people learning how to program in any language is that there is often many different ways to accomplsih something. Loops in JavaScript are no exception. This module will review some of the more common and talk about when each might be appropriate.</p>
+<h2 id="looping-over-arrays" tabindex="-1">Looping over Arrays <a class="direct-link" href="#looping-over-arrays" aria-hidden="true">#</a></h2>
+<p>One of the most common looping tasks is that of taking a list of things, and looping over them doing something with each item in the list. JavaScript has built in map, reduce, and filter functions for arrays. It also has a forEach loop that is used with arrays. Visit the <a href="../../array-methods/">Array Methods</a> module if you need a review.</p>
+<p>Maybe, you are asked to print each of the like values from a list to the console. You could use the forEach function to do this.</p>
+<pre class="language-javascript"><code class="language-javascript">likeCounts<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">aCount</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>aCount<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Here is an important piece of advice. If you are looping over an array use map, filter, reduce, forEach, or some combination of them to accomplish your task. <code>forEach</code> should probably be the last one you reach for as well. It should rarely ever be used.</p>
+<h2 id="the-for-in-loop" tabindex="-1">The for-in Loop <a class="direct-link" href="#the-for-in-loop" aria-hidden="true">#</a></h2>
+<p>This is NOT the same as the python for-in loop. Its purpose is to iterate over the properties of an object, allowing you to manipulate or print out the property values associated with each key. We'll use the Lactated Ringers medication object from last week in this example. You could print out each of the values for Lactated Ringers like this.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> medications <span class="token operator">=</span> <span class="token punctuation">{</span><br>  <span class="token string">"Lactated Ringers"</span><span class="token operator">:</span> <span class="token punctuation">{</span><br>    id<span class="token operator">:</span> <span class="token string">"13ab7"</span><span class="token punctuation">,</span><br>    amount<span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">,</span><br>    amountType<span class="token operator">:</span> <span class="token string">"L"</span><span class="token punctuation">,</span><br>    expDate<span class="token operator">:</span> <span class="token string">"12/30/2029"</span><span class="token punctuation">,</span><br>  <span class="token punctuation">}</span><span class="token punctuation">,</span><br>  Levothyroxine<span class="token operator">:</span> <span class="token punctuation">{</span><br>    id<span class="token operator">:</span> <span class="token string">"at342"</span><span class="token punctuation">,</span><br>    amount<span class="token operator">:</span> <span class="token number">2000</span><span class="token punctuation">,</span><br>    amountType<span class="token operator">:</span> <span class="token string">"ct"</span><span class="token punctuation">,</span><br>    expDate<span class="token operator">:</span> <span class="token string">"03/18/2021"</span><span class="token punctuation">,</span><br>  <span class="token punctuation">}</span><span class="token punctuation">,</span><br>  Rosuvastatin<span class="token operator">:</span> <span class="token punctuation">{</span><br>    id<span class="token operator">:</span> <span class="token string">"gr5423"</span><span class="token punctuation">,</span><br>    amount<span class="token operator">:</span> <span class="token number">1500</span><span class="token punctuation">,</span><br>    amountType<span class="token operator">:</span> <span class="token string">"ct"</span><span class="token punctuation">,</span><br>    expDate<span class="token operator">:</span> <span class="token string">"09/01/2020"</span><span class="token punctuation">,</span><br>  <span class="token punctuation">}</span><span class="token punctuation">,</span><br>  Albuterol<span class="token operator">:</span> <span class="token punctuation">{</span><br>    id<span class="token operator">:</span> <span class="token string">"iuy6532"</span><span class="token punctuation">,</span><br>    amount<span class="token operator">:</span> <span class="token number">1325</span><span class="token punctuation">,</span><br>    amountType<span class="token operator">:</span> <span class="token string">"ct"</span><span class="token punctuation">,</span><br>    expDate<span class="token operator">:</span> <span class="token string">"01/01/2023"</span><span class="token punctuation">,</span><br>  <span class="token punctuation">}</span><span class="token punctuation">,</span><br>  Esomeprazole<span class="token operator">:</span> <span class="token punctuation">{</span><br>    id<span class="token operator">:</span> <span class="token string">"mnb78932"</span><span class="token punctuation">,</span><br>    amount<span class="token operator">:</span> <span class="token number">23145</span><span class="token punctuation">,</span><br>    amountType<span class="token operator">:</span> <span class="token string">"ct"</span><span class="token punctuation">,</span><br>    expDate<span class="token operator">:</span> <span class="token string">"10/01/2021"</span><span class="token punctuation">,</span><br>  <span class="token punctuation">}</span><span class="token punctuation">,</span><br><span class="token punctuation">}</span><span class="token punctuation">;</span><br><br><span class="token keyword">let</span> aMedication <span class="token operator">=</span> medications<span class="token punctuation">[</span><span class="token string">"Lactated Ringers"</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br><span class="token keyword">for</span> <span class="token punctuation">(</span>propertyName <span class="token keyword">in</span> aMedication<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>aMedication<span class="token punctuation">[</span>propertyName<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p><code>for-in</code> is very helpful when you do need to loop over an object, but if you find yourself needing it often you might want to review how your data in structured in your application. Try to structure it in such a way that you do not need to iterate over objects often.</p>
+<h2 id="the-for-of-loop" tabindex="-1">The for-of Loop <a class="direct-link" href="#the-for-of-loop" aria-hidden="true">#</a></h2>
+<p>The for-of loop IS the same as the Python for-in loop. It can, but shouldn't, be used to iterate over the elements of a list, set, map, or other type of data structure. It won't iterate over the properties of a defined object.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> ages <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br><span class="token keyword">for</span> <span class="token punctuation">(</span>anAge <span class="token keyword">of</span> ages<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>anAge<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<h2 id="the-for-loop" tabindex="-1">The for Loop <a class="direct-link" href="#the-for-loop" aria-hidden="true">#</a></h2>
+<p>Here is the traditional C-like for loop. If you are looping over an array (the most common thing we do with loops) please don't use this! You should really look at .map, .filter, .reduce or .forEach as they are MUCH better suited to that. Sometimes you just need to do something (not dealing with arrays) a known number of times. The for loop is good for that.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> i <span class="token operator">&lt;=</span><span class="token number">10</span><span class="token punctuation">,</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span><br>	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><br><span class="token punctuation">}</span></code></pre>
+<h2 id="the-while-loop" tabindex="-1">The while Loop <a class="direct-link" href="#the-while-loop" aria-hidden="true">#</a></h2>
+<p>Like Python's while loop, JavaScript's while loop works with a single boolean logic check to assess the state of your application by assessing one or more boolean logic statements. As long as the logic statements are true, the loop continues looping. Otherwise it stops. This is useful when you need to loop an unknown number of times, but again, you will rarely need to use this loop if you wisely apply map, filter, and reduce.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> total <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span><br><span class="token keyword">while</span> <span class="token punctuation">(</span>total <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>total<span class="token punctuation">)</span><span class="token punctuation">;</span><br>  total<span class="token operator">++</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+
+</main>
+    <footer>
+      <p class="license">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/></a><br/>This work is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+          International License</a>.</p>
+    </footer><!-- Current page: /learning-modules/modules/js/loops/prepare1/ --></body>
+</html>
