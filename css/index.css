@@ -74,8 +74,7 @@ main {
 }
 main,
 .nav,
-.branding,
-footer {
+.branding {
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
@@ -83,9 +82,27 @@ footer {
 main :first-child {
   /* margin-top: 0; */
 }
-header {
+header,
+footer {
   border-bottom: 1px dashed var(--lightgray);
   background-color: var(--blue);
+}
+.license {
+  color: white;
+  padding: 0.5em;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 0.7em;
+}
+.license a:link,
+.license a:visited {
+  color: white;
+}
+
+.license a[href^="http"]::after {
+  display: none;
 }
 .branding {
   /* width: 100vw; */
