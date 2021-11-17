@@ -79,7 +79,7 @@ Let's break down our functionality a bit further:
 <p id="output"></p>
 ```
 
-3. If we review our list of steps above, we have many things to accomplish. Think about how you might organize all of that into functions. How many do we need? what should each function do? After you have considered this and formed a few opinions check out one possibility below.
+3. If we review our list of steps above, we have many things to accomplish. Think about how you might organize all of that into functions. How many do we need? what should each function do? Remember that good functions should only do one thing. After you have considered this and formed a few opinions check out one possibility below.
 
 <details>
 <summary>Function List</summary>

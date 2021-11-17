@@ -20,6 +20,12 @@ Functions are used all over the place. Certain tasks are so common to developmen
 
 Python and JavaScript, being related languages, both have functions as a fundamental organizational structure. When you truly begin thinking in JavaScript, you will be thinking in functions. You will think of how functions are related to each other. You will have thoughts along these lines, "If this function calls that one..." You will be able to do this since you will eventually realize that when you are designing solutions in JavaScript, how a function accomplishes something is not as important as that it will, and that you can wait to figure out how to complete the function later.
 
+### Well built functions
+
+A well thought out and constructed function should be rather small. A function should ideally do **one** thing, and do it well. As you are writing functions, stop often to evaluate how many different things your functions are being asked to do. If the list becomes long, stop and break some of the functionality out into another function.
+
+## Declaring functions
+
 In Python and JavaScript there are similarities and differences between the languages regarding how you declare functions. In JavaScript, the 'function' keyword is used instead of 'def'. Also, JavaScript the convention usually used for names of functions and variables is called 'camel case'. To create a name, the first word of the name starts with a lower-case letter, and the first letter of all the rest of the words making up the name begin with an upper-case letter. For example, a function that averages two numbers could be defined like this.
 
 ```javascript
@@ -46,7 +52,7 @@ JavaScript does have another keyword, var, that can be used to 'hoist' the varia
 
 ## Another way to Write Functions
 
-Having seen the traditional way of declaring a function, it is important that you know there are other ways to create functions. The one we'll look at this week is called 'function expressions' in the JavaScript community. Here is the averageTwoNumbers function written using the expression type syntax.
+Having seen the traditional way of declaring a function, it is important that you know there are other ways to create functions. In JavaScript functions are Objects. That means that anything we can do with an Object, we can do with a function. Including assigning them to variables. When we do this it is called a 'function expressions' in the JavaScript community. Here is the averageTwoNumbers function written using the expression type syntax.
 
 ```javascript
 let averageTwoNumbers = function (firstNum, secondNum) {

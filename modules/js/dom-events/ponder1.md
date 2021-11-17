@@ -118,6 +118,13 @@ These activities will be most effective if you TRY them first before you look at
 There are 3 functions to be written, and some events to listen for to complete this simple Todo list application. Begin by reviewing the code you were given. Pay attention to the comments!
 
 1. Start with the `newTask` function. Get the value entered in the '#todo' input, then add it to the `tasks` array, and finally call the `renderTasks` function.
+
+   We need to store two bits of information about each task. The details of the task, and whether or not it has been completed. The best way to do this is with an Object
+
+   ```javascript
+   { detail: task, completed: false}
+   ```
+
 2. After completing that attach an event listener to the '#submitTask' button that will call the `newTask` function when it is clicked.
 3. After making sure that it is working, complete the `renderTasks` function next. You can use the following for the markup for each task:
    ```javascript
