@@ -10,7 +10,7 @@ layout: layouts/post.njk
 
 ## Description
 
-Visual Studio Code is one of many code editors that allow you to write your HTML and CSS code. In fact you can write many different types of code with VSCode, including JavaScript and backend languages as well.
+Visual Studio Code is one of many code editors that allows you to write your HTML and CSS code. In fact you can write many different types of code with VSCode, including JavaScript and backend languages.
 
 In this module we will also be looking at basic File Management using VSCode. And under Ponder we will look at installing two extensions you can use with VSCode.
 
@@ -25,7 +25,7 @@ In this module we will also be looking at basic File Management using VSCode. An
 
 ## Prepare
 
-The following videos step you through how to install VSCode on your computer.
+The following videos step you through how to install VSCode on your computer. You will go to the <a href="https://code.visualstudio.com/">Visual Studio website</a> to begin the installation.
 
 <figure class="video-container">
 
