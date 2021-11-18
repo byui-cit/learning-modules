@@ -32,6 +32,4 @@ styles/main.css
 
 Because index.html is at the root level of our project folder and main.css is inside the styles folder. We'd have to reference the folder and the file inside the styles folder called main.css.
 
-We will get more practice on how to reference file paths from within code as we start HTML and CSS later.
-
 See the Ponder activity to see how to start an HTML file in VSCode and adding extensions to VSCode. 
