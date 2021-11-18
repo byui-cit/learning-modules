@@ -2,7 +2,8 @@
 title: Web File Managment using VSCode
 description: Getting started Web File Management
 date: 2021-11-08
-
+tags:
+  - file management
 layout: layouts/post.njk
 ---
 
