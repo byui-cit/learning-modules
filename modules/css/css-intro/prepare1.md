@@ -28,7 +28,6 @@ Let's copy the following code into an html file.
 <html>
   <head>
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
@@ -62,14 +61,19 @@ Inside the head element, let's add the link tag to the HTML page
 
 ```html
 <head>
+  <<<<<<< HEAD
   <title>My Web Page</title>
   <link rel="stylesheet" href="styles.css" />
+  =======
+  <title>My Web Page</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  >>>>>>> 7d48584df6d086fc5a508176ac20c856fae7570a
 </head>
 ```
 
-The link tag has two attributes. The rel specifies the relationship between the current document and the linked document. The href or hypertext reference shows where the document is located. Since our value for the href is just the file name, that indicates it is located at the same level or area that our HTML file is located.
+The link tag has two attributes. The rel specifies the relationship between the current document and the linked document. The href or hypertext reference shows where the document is located. It is inside a styles folder and is called styles.css.
 
-Let's create the CSS file called styles.css. Open a new blank document and let's save it as styles.css in the same place you have the HTML file. Let's add our first rule-set to the CSS file:
+Let's create the folder called styles with a CSS file called styles.css inside that folder. The styles folder will be at the same level as our HTML file. Open the styles.css and let's add our first rule-set to the CSS file:
 
 ```css
 body {

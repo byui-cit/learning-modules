@@ -8,7 +8,7 @@ layout: layouts/post.njk
 
 ## HTML: Hypertext Markup Language
 
-**HTML** stands for hypertext markup language. Hypertext refers to the way we can place hypertext links in our document that allows our users to move from one page to another. Markup is a set of symbols or codes for displaying content on the Internet. HTML tells web browsers the structure of a web page's words and images. This markup language allows you to code around the content, the browser will use this code to display or render our pages correctly. The code or tags we use are the markup.
+**HTML** stands for hypertext markup language. Hypertext refers to the way we can place hypertext links in our document that allows our users to move from one page to another. Markup is a set of symbols or codes for displaying content on the Internet. HTML tells web browsers the structure of a web page's words and images. This markup language allows you to code around the content, the browser will use this code to display or render our page correctly. The code or tags we use are the markup.
 
 The following video introduces more HTML elements and attributes you use with elements.
 
@@ -87,7 +87,7 @@ Let's move on to the main part of our web page with a header level one title for
 
 ## Note
 
-Again, we are using an attribute value for the src propertly that is taking us to an image that is located externally to our site. Normally you would want to use an internal path to your own images folder where your website images are located. Something like src="images/map-banner.jpg" This would assume that you have a folder called images with a jpg image called 'map-banner.jpg' located in that images folder of your site. But for ease of this prepare practice we will use the external image.
+Again, we are using an attribute value for the src property that is taking us to an image that is located externally to our site. Normally you would want to use an internal path to your own images folder where your website images are located. Something like src="images/map-banner.jpg" This would assume that you have a folder called images with a jpg image called 'map-banner.jpg' located in that images folder of your site. But for ease of this prepare practice we will use the external image.
 
 ## Example Continued
 
@@ -101,6 +101,6 @@ Lastly, let's add a p tag to our footer with a bit of information for the bottom
 
 The &copy will create an HTML symbol copyright entity for us. See <a href="https://www.w3schools.com/html/html_symbols.asp">HTML Symbols</a>for more examples.
 
-There we have our first simple HTML page. If we had multiple page that we created for the same website, the header and footer section that would remain the same for every page our our website and the main section would change from page to page of our website.
+There we have our first simple HTML page. If we had multiple page that we created for the same website, the header and footer section would remain the same for every page of our website and the main section would change from page to page of our website.
 
 We've practiced with some of the elements that make up the structure of a simple web page. And we see that some elements need attributes within their opening tags to display and function properly.
