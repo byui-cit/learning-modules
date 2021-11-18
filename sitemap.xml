@@ -322,11 +322,6 @@
   </url>
   
   <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/colors/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/tags/fonts/</loc>
     <lastmod>2021-11-03</lastmod>
   </url>
@@ -338,11 +333,6 @@
   
   <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/tags/general/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/file-management/</loc>
     <lastmod>2021-11-03</lastmod>
   </url>
   
@@ -372,7 +362,7 @@
   </url>
   
   <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/vs-code/</loc>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/prepare/</loc>
     <lastmod>2021-11-03</lastmod>
   </url>
   
@@ -382,12 +372,12 @@
   </url>
   
   <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/prepare/</loc>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/vs-code/</loc>
     <lastmod>2021-11-03</lastmod>
   </url>
   
   <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/semantics/</loc>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/file-management/</loc>
     <lastmod>2021-11-03</lastmod>
   </url>
   
@@ -398,6 +388,11 @@
   
   <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/tags/arrays/</loc>
+    <lastmod>2021-11-03</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/semantics/</loc>
     <lastmod>2021-11-03</lastmod>
   </url>
   
@@ -422,11 +417,6 @@
   </url>
   
   <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/objects/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/tags/operators/</loc>
     <lastmod>2021-11-03</lastmod>
   </url>
@@ -442,7 +432,7 @@
   </url>
   
   <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/functions/</loc>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/objects/</loc>
     <lastmod>2021-11-03</lastmod>
   </url>
   
@@ -458,6 +448,16 @@
   
   <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/tags/variables/</loc>
+    <lastmod>2021-11-03</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/colors/</loc>
+    <lastmod>2021-11-03</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/functions/</loc>
     <lastmod>2021-11-03</lastmod>
   </url>
   
