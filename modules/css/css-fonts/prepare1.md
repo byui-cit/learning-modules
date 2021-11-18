@@ -53,7 +53,9 @@ Let's copy the following code into an html file.
 ```
 Right now, any font styling on this page is from browser default CSS styles. 
 
-Let's create the CSS file called styles.css. Open a new blank document and let's save it as styles.css in the same place you have the HTML file. Let's change the font-family property of the body. We'll use a very different style of font so you can see easily see it change.
+Let's create a CSS file. Create a folder at the same level as our HTML file and call it styles. Within that folder, let's create a styles.css file. Open that styles.css in the editor. (If you've completed other learning modules you may already have these files. You can just add to them.)
+
+Let's change the font-family property of the body. We'll use a very different style of font so you can see easily see it change.
 
 ```css
 body {
@@ -92,8 +94,6 @@ Let's look at importing fonts from a very common font library, Google Fonts, tha
 
 Where the video left off we can now use that copied @import rule and paste it in the very top of our CSS file.
 
-Let's make that CSS file so we can paste the @import into it. So let's create that folder at the same level as our HTML file and call it styles. Within that folder, let's create a styles.css file. (If you've completed other learning modules you may already have these files. You can just add to them.)
-
 At the top of the file let's paste our @import we copied from Google Fonts.
 
 ```css
@@ -126,13 +126,13 @@ h1 {
 }
 ```
 
-This is best practice to have a few font backups for the font-family property. 
+This is 'best practice' to have a few font backups for the font-family property. 
 
 ## Example 2
 
 In this example we will be using Font Squirrel to download actual font files that you can use in your web project. With this example your font styles would work even if your web pages are viewed without an internet connection (offline) because you have the actual font files downloaded in your project and you don't have to rely on a Content Delivery Network font library (like Google Fonts) that is only available if you have an Internet connection. 
 
-Using the same HTML file code available above in Example 1, make a CSS file. If you already have a CSS file or did Example 1 delete the @import rule and font-family property values. We won't need them when we download fonts in this example.
+Using the same HTML file code available above in Example 1, make a CSS file. If you already have a CSS file or did Example 1, delete the @import rule and font-family property values. We won't need them when we download fonts in this example.
 
 Visit <a href="https://www.fontsquirrel.com/" target='_blank'>Font Squirrel</a> and watch this video to follow along with downloading and using your fonts.
 
