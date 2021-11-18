@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Fonts</title>
+    <meta name="description" content="Using Google Font @import with CSS">
+    <link rel="stylesheet" href="/learning-modules/css/index.css">
+    <link rel="stylesheet" href="/learning-modules/css/prism-coy.css">
+    <link rel="alternate" href="/learning-modules/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="/learning-modules/feed/feed.json" type="application/json" title="WDD Learning Modules">
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <a href="/learning-modules/">
+          <img src="/learning-modules/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        </a>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
+      </div>
+      <nav>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="/learning-modules/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/html/">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/js/">JS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/css/">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/design/">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/general/">General</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+    <main  class="tmpl-post" >
+      <h1>CSS - Fonts</h1>
+
+
+
+<h2 id="css:-cascading-style-sheets" tabindex="-1">CSS: Cascading Style Sheets <a class="direct-link" href="#css:-cascading-style-sheets" aria-hidden="true">#</a></h2>
+<p><strong>Fonts</strong> let us display our text characters in a specific style. We will often want to choose our own font for the text in our web page. It's always best to keep the different styles of fonts to 2 or at the most 3 per web page. Title, or heading fonts that are larger can have a more unique looking font. But keep your paragraph text or smaller fonts with a more common, easy-to-read, type of font.</p>
+<p>The following video introduces different ways to change your font style and a few font properties you might use..</p>
+<h2 id="css-fonts" tabindex="-1">CSS Fonts <a class="direct-link" href="#css-fonts" aria-hidden="true">#</a></h2>
+<figure class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/e59Ll82X6Vk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
+<h2 id="example" tabindex="-1">Example <a class="direct-link" href="#example" aria-hidden="true">#</a></h2>
+<p>In this example we will be looking at Google Fonts and how to use the @import rule you can copy from there to style your web page text.</p>
+<p>Let's copy the following code into an html file.</p>
+<pre class="language-html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>styles/styles.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span><span class="token punctuation">></span></span><br>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span><span class="token punctuation">></span></span><br>            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.churchofjesuschrist.org<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Church of Jesus Christ<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><br>            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.churchofjesuschrist.org/temples<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Temples<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><br>            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.churchofjesuschrist.org/study/scriptures<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Scriptures<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><br>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span><span class="token punctuation">></span></span><br>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>Brigham Young University Idaho<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span><br>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.byui.edu/images/service-sites/map-banner.jpg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>BYU-Idaho is a comfortable place to learn and grow as a disciple of Jesus Christ because students, faculty, and employees share a commitment to live the gospel.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>footer</span><span class="token punctuation">></span></span><br>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>My Web Page 20XX &amp;copy<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>footer</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<p>Right now, any font styling on this page is from browser default CSS styles.</p>
+<p>Let's create the CSS file called styles.css. Open a new blank document and let's save it as styles.css in the same place you have the HTML file. Let's change the font-family property of the body. We'll use a very different style of font so you can see easily see it change.</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">body</span> <span class="token punctuation">{</span><br>    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Brush Script MT'</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p>Notice that all the fonts on the page changed because the child of body inherited that property value. The font Brush Script MT is not very readable for a large amount of text like a paragraph, so it's not a great choice. Let's try 'Georgia' instead. Notice, I don't have to put quotes around Georgia because there are not spaced in the font name.</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">body</span> <span class="token punctuation">{</span><br>    <span class="token property">font-family</span><span class="token punctuation">:</span> Georgia<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p>Let's add another CSS rule set for the font of just our h1 tag.</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">h1</span> <span class="token punctuation">{</span><br>    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Arial Black'</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p>Now when you look at the rendered page in the browser, you will see one font style for most text is Georgia and the h1 has a different font of Arial Black.</p>
+<p>Brush Script MT, Georgia, and Arial Black are all web-safe fonts. This means that all browsers recognize these fonts and they can be used safely as a value for the font-family at any time.</p>
+<p>But what if you wanted a font style that is not included in the list of web-safe fonts? You would need to either download or import the font to be available to use on your web page.</p>
+<p>Let's look at importing fonts from a very common font library, Google Fonts, that contains over a thousand free licensed fonts. The following shows how you can choose and get an @import rule to use different styles of fonts. The video shows getting two font styles for a page.</p>
+<figure class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fK79MA4Mwc8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
+<p>Where the video left off we can now use that copied @import rule and paste it in the very top of our CSS file.</p>
+<p>Let's make that CSS file so we can paste the @import into it. So let's create that folder at the same level as our HTML file and call it styles. Within that folder, let's create a styles.css file. (If you've completed other learning modules you may already have these files. You can just add to them.)</p>
+<p>At the top of the file let's paste our @import we copied from Google Fonts.</p>
+<pre class="language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@import</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'https://fonts.googleapis.com/css2?family=Roboto&amp;family=Rock+Salt&amp;display=swap'</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span></span></code></pre>
+<p>Bringing in the @import rule doesn't change our fonts, we have to now select which fonts on our page to apply the fonts to. We can use the font names as the values in a font-family property throughout our CSS. Let's style the body with Roboto and our h1 with the Rock Salt font.</p>
+<pre class="language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@import</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'https://fonts.googleapis.com/css2?family=Roboto&amp;family=Rock+Salt&amp;display=swap'</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span></span><br><span class="token selector">body</span> <span class="token punctuation">{</span><br>    <span class="token property">font-family</span><span class="token punctuation">:</span> Roboto<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token selector">h1</span> <span class="token punctuation">{</span><br>    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Rock Salt'</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p>Now take a look at your page rendered in the browser and you should see that the fonts have changed.</p>
+<p>If for some reason Google Fonts was down or our web page was being viewed offline (no internet connection), our reference to <a href="http://fonts.googleapis.com">fonts.googleapis.com</a> would not work and our imported font styles would not work. The way we have it right now our browser would then use its default font styles. We might want to choose our own backup fonts styles and not leave it to the browser. So let's type in some backup web-safe fonts that would be available to all computers. And then a final backup of a generic font that fits our style the best.</p>
+<pre class="language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@import</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'https://fonts.googleapis.com/css2?family=Roboto&amp;family=Rock+Salt&amp;display=swap'</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span></span><br><span class="token selector">body</span> <span class="token punctuation">{</span><br>    <span class="token property">font-family</span><span class="token punctuation">:</span> Roboto<span class="token punctuation">,</span> Helvetica<span class="token punctuation">,</span> sans-serif<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token selector">h1</span> <span class="token punctuation">{</span><br>    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Rock Salt'</span><span class="token punctuation">,</span> <span class="token string">'Bradley Hand'</span><span class="token punctuation">,</span> cursive<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p>This is best practice to have a few font backups for the font-family property.</p>
+
+</main>
+    <footer>
+      <p class="license">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/></a><br/>This work is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+          International License</a>.</p>
+    </footer><!-- Current page: /learning-modules/modules/css/css-fonts/prepare1/ --></body>
+</html>
