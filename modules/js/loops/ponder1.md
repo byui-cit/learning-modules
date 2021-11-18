@@ -168,7 +168,7 @@ What if we needed to output the contents of multiple different Arrays? Can you m
 1. Create a function that will take a food string and return that string embedded in some html. (`<li>food</li>`)
 2. Create a function that will take a place string and return that string embedded in some html. The place is a bit more complex. We have the location and the length. You can use the following for the template: `<dt>${place.place}</dt><dd>${place.length}</dd>`)
 3. Create a function that will take a list, and a callback function to produce an HTML template. The function should transform our list by looping over it calling the template function once for each item in the list. The function should return all of the HTML strings flattened into one long string.
-4. Call the function above once for the `placesLived` list and again for the `favoriteFoods` list. Set the innerHTML of the appropriate HTML element to the results of the functino call.
+4. Call the function above once for the `placesLived` list and again for the `favoriteFoods` list. Set the innerHTML of the appropriate HTML element to the results of the function call.
 
 <details>
 <summary>Solution 3</summary>

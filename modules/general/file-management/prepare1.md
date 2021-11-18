@@ -6,7 +6,7 @@ date: 2021-11-08
 layout: layouts/post.njk
 ---
 
-## File Management 
+## File Management
 
 - [MDN Dealing with Files](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
 
@@ -33,4 +33,4 @@ Because index.html is at the root level of our project folder and main.css is in
 
 We will get more practice on how to reference file paths from within code as we start HTML and CSS later.
 
-See the Ponder activity to see how to start an HTML file in VSCode and adding extensions to VSCode. 
+See the Ponder activity to see how to start an HTML file in VSCode and adding extensions to VSCode.
