@@ -62,7 +62,7 @@ Inside the head element, let's add the link tag to the HTML page
 
 The link tag has two attributes. The rel specifies the relationship between the current document and the linked document. The href or hypertext reference shows where the document is located. It is inside a styles folder and is called styles.css. 
 
-Let's create the folder called styles with a CSS file called styles.css inside that folder. Open the styles.css and let's add our first rule-set to the CSS file:
+Let's create the folder called styles with a CSS file called styles.css inside that folder. The styles folder will be at the same level as our HTML file. Open the styles.css and let's add our first rule-set to the CSS file:
 
 ```css
 body {
