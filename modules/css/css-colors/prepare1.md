@@ -81,7 +81,7 @@ a {
 }
 ```
 
-We could even give our whole body a background color. This time let's rgb values.
+We could even give our whole body a background color. This time let's use rgb values.
 
 ```css
 body {
