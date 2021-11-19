@@ -1,5 +1,5 @@
 ---
-title: HTML - Understanding HTML
+title: Understanding HTML
 description: Getting started HTML
 date: 2021-11-01
 
