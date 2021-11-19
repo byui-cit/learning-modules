@@ -2,10 +2,6 @@
 title: Module Name - Resource name
 description: Getting started with making asynchronous requests with Fetch
 date: 2021-10-15
-tags:
-  - cat
-  - topic
-  - Prepare
 layout: layouts/post.njk
 ---
 

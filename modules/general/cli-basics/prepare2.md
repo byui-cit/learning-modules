@@ -34,9 +34,9 @@ dir
 
 Try that now.
 
-Let's assume that the directory I need to get to is at `Documents/school-stuff/project1`. when you did the list command earlier you probably saw that the Documents folder is inside the directory we are currently in. In fact the full path to the directory I want is `/Users/username/Documents/school-stuff/project1`
+Lets assume that the directory I have my activity files in is at \Documents\web-stuff\scss-demo. When you did the list command earlier you probably saw that the Documents folder is inside the directory we are currently in. In fact the full path to the directory I want is C:\Users\username\Documents\web-stuff\scss-demo
 
-To change directories in the Terminal we use the `cd` (change directory) command. If I want to enter the Documents directory (and I see it when I type `dir`) I simply type:
+To change directories in the command prompt we use the 'cd' (change directory) command. If I want to enter the Documents directory (and I see it when I type 'dir') I simply type:
 
 ```bash
 cd Documents
@@ -53,7 +53,7 @@ cd ..
 I can also change multiple directories at once. like so:
 
 ```bash
-cd Documents/school-stuff/project1
+cd Documents\web-stuff\scss-demo
 ```
 
 One trick that can help you as you are navigating with the Terminal is the 'tab' key. 'tab' autocompletes what you are typing if it can. So if I started typing
@@ -71,18 +71,18 @@ cd Documents
 Then I could keep typing:
 
 ```bash
-cd Documents/scho
+cd Documents/web
 ```
 
 hit 'tab' again and it should autocomplete to:
 
 ```bash
-cd Documents/school-stuff
+cd Documents/web-stuff
 ```
 
-If you hit 'tab' and nothing happens then it means the computer either can't find a match or there is more than one match. The command line is also case sensitive...meaning 'doc' is different than 'Doc'. Remember that 'ls' is your friend. It will always show you the contents of whatever directory you are in.
+If you hit 'tab' and nothing happens then it means the computer either can't find a match or there is more than one match. The command line is also case sensitive...meaning 'doc' is different than 'Doc'. Remember that 'dir' is your friend. It will always show you the contents of whatever directory you are in.
 
-One last tip. Apple has actually put a bit of work on making the Terminal aware of what is going on in the Finder. Another way you can get to a specific folder in Terminal would be to type
+One last tip. Microsoft has actually put a bit of work on making the command prompt aware of what is going on in the Explorer. Another way you can get to a specific folder in the command prompt would be to type
 
 ```bash
 cd
@@ -91,12 +91,12 @@ cd
 then drag the folder you want from the Finder window onto the Terminal window. In the case of this example if you have done correctly it should show something like this:
 
 ```bash
-cd /Users/username/Documents/school-stuff/project1
+cd C:\Users\username\Documents\web-stuff\scss-demo
 ```
 
 The advantage of this is that it doesn't matter what directory you started in...it will always take you to the directory specified.
 
 Here are a couple of additional resources to look over if you feel you need more help.
 
-- [Treehouse: Intro to Mac command line](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)
-- [Youtube: How to use Mac Terminal](https://www.youtube.com/watch?v=I65C4ZXK4ek)
+- [How to use the Windows command line](http://www.computerhope.com/issues/chusedos.htm)
+- [Youtube: Command prompt basics](https://www.youtube.com/watch?v=OHeJRYgdyik)
