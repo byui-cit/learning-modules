@@ -104,3 +104,10 @@ The &copy will create an HTML symbol copyright entity for us. See <a href="https
 There we have our first simple HTML page. If we had multiple page that we created for the same website, the header and footer section would remain the same for every page of our website and the main section would change from page to page of our website.
 
 We've practiced with some of the elements that make up the structure of a simple web page. And we see that some elements need attributes within their opening tags to display and function properly.
+
+This next video covers some HTML file basics that are also good to know as you start creating HTML files.
+
+<figure class="video-container">
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bvSfWtaWhOY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
