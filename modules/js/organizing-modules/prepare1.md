@@ -84,9 +84,9 @@ This course attempts to teach a lot of JavaScript best practices. Using ES Modul
 
 2. The Why? or When? of modules. This is harder for early programmers to see, and sometimes makes the concept of Modules or libraries feel hard.
 
-Here is a recommendation: Treat your coding like writing an essay. Getting your code working is your rough draft. Get it done any way you can. Once you have it working then do a second pass. This is called _refactoring_ and is a common practice.
+Here is a recommendation: Treat your coding like writing an essay. Getting your code working is your rough draft. It's ok if it turns out a bit messy at first. It should be your own work, but seek for help if you need it, and **get it done**. Once you have it working then do a second pass. This is called _refactoring_ and is a **common** practice.
 
-The second pass is where we will start applying our best practices. Look at your functions. Are there any that seem really long becuase they are trying to do too many things? Break them up! (Remember that a good function will do one thing and do it well) Have you declared lots of global variables? Try to get them into a more localized scope. Is there some code that feels like it should be re-usable? Extract it into a module.
+The second pass is where we will start applying our best practices. Look at your functions. Are there any that seem really long because they are trying to do too many things? Break them up! (Remember that a good function will do one thing and do it well) Have you declared lots of global variables? Try to get them into a more localized scope. Is there some code that feels like it should be re-usable? Extract it into a module.
 
 Focus on getting the problem solved first...then refine. Working in this manner will help you from becoming paralyzed by the _fear of doing it wrong_
 
