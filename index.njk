@@ -4,7 +4,7 @@ eleventyNavigation:
   key: Home
   order: 1
 ---
-<h2>Tags</h2>
+<h2>Topics</h2>
 {% for tag in collections.tagList %}
   {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
   <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
