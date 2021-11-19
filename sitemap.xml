@@ -2,6 +2,221 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/about/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/posts/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/page-list/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/css/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/components/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/architecture/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/bem/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/colors/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/fonts/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/general/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/cli/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/css-layout/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/file-management/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/validation/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/html/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/git/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/github/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/github-pages/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/teams/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/vs-code/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/js/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/debugging/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/arrays/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/dom/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/fetch/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/loops/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/objects/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/operators/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/coercion/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/conditionals/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/functions/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/organizing/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/esmodules/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/variables/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/semantics/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/mycustomsort/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/jstags/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/csstags/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/htmltags/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/designtags/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/generaltags/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/modules/css/bloatedcarcus/ponder1/</loc>
     <lastmod>2021-10-15</lastmod>
   </url>
@@ -327,221 +542,6 @@
   </url>
   
   <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/about/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/posts/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/page-list/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/css/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/colors/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/components/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/architecture/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/bem/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/fonts/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/general/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/cli/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/css-layout/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/file-management/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/validation/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/html/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/git/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/github/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/github-pages/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/teams/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/vs-code/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/prepare/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/js/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/arrays/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/semantics/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/debugging/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/dom/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/fetch/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/loops/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/objects/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/operators/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/coercion/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/conditionals/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/functions/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/organizing/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/esmodules/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/variables/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/mycustomsort/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/jstags/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/csstags/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/htmltags/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/designtags/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/tags/generaltags/</loc>
-    <lastmod>2021-11-03</lastmod>
-  </url>
-  
-  <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/modules/css/</loc>
     <lastmod>2021-11-03</lastmod>
   </url>
@@ -627,17 +627,17 @@
   </url>
   
   <url>
+    <loc>https://byui-hackweek.netlify.app/learning-modules/modules/general/naming-conventions/</loc>
+    <lastmod>2021-11-15</lastmod>
+  </url>
+  
+  <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/modules/css/css-fonts/</loc>
     <lastmod>2021-11-17</lastmod>
   </url>
   
   <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/modules/css/css-fonts/prepare1/</loc>
-    <lastmod>2021-11-17</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/modules/general/naming-conventions/</loc>
     <lastmod>2021-11-17</lastmod>
   </url>
   
@@ -654,10 +654,5 @@
   <url>
     <loc>https://byui-hackweek.netlify.app/learning-modules/modules/css/css-colors/prepare1/</loc>
     <lastmod>2021-11-18</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-hackweek.netlify.app/learning-modules/</loc>
-    <lastmod>2021-11-19</lastmod>
   </url>
 </urlset>

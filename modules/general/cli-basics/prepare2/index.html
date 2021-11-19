@@ -59,32 +59,32 @@
 <p>That will take you back to your home directory. If I wanted to see what folders and files were in my current directory I could type:</p>
 <pre class="language-bash"><code class="language-bash"><span class="token function">dir</span></code></pre>
 <p>Try that now.</p>
-<p>Let's assume that the directory I need to get to is at <code>Documents/school-stuff/project1</code>. when you did the list command earlier you probably saw that the Documents folder is inside the directory we are currently in. In fact the full path to the directory I want is <code>/Users/username/Documents/school-stuff/project1</code></p>
-<p>To change directories in the Terminal we use the <code>cd</code> (change directory) command. If I want to enter the Documents directory (and I see it when I type <code>dir</code>) I simply type:</p>
+<p>Lets assume that the directory I have my activity files in is at \Documents\web-stuff\scss-demo. When you did the list command earlier you probably saw that the Documents folder is inside the directory we are currently in. In fact the full path to the directory I want is C:\Users\username\Documents\web-stuff\scss-demo</p>
+<p>To change directories in the command prompt we use the 'cd' (change directory) command. If I want to enter the Documents directory (and I see it when I type 'dir') I simply type:</p>
 <pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> Documents</code></pre>
 <p>If I want to go back to where I was I can type:</p>
 <pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> <span class="token punctuation">..</span></code></pre>
 <p>('..' is a shortcut for parent directory)</p>
 <p>I can also change multiple directories at once. like so:</p>
-<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> Documents/school-stuff/project1</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> Documents<span class="token punctuation">\</span>web-stuff<span class="token punctuation">\</span>scss-demo</code></pre>
 <p>One trick that can help you as you are navigating with the Terminal is the 'tab' key. 'tab' autocompletes what you are typing if it can. So if I started typing</p>
 <pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> Doc</code></pre>
 <p>then hit 'tab' it would autocomplete to:</p>
 <pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> Documents</code></pre>
 <p>Then I could keep typing:</p>
-<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> Documents/scho</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> Documents/web</code></pre>
 <p>hit 'tab' again and it should autocomplete to:</p>
-<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> Documents/school-stuff</code></pre>
-<p>If you hit 'tab' and nothing happens then it means the computer either can't find a match or there is more than one match. The command line is also case sensitive...meaning 'doc' is different than 'Doc'. Remember that 'ls' is your friend. It will always show you the contents of whatever directory you are in.</p>
-<p>One last tip. Apple has actually put a bit of work on making the Terminal aware of what is going on in the Finder. Another way you can get to a specific folder in Terminal would be to type</p>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> Documents/web-stuff</code></pre>
+<p>If you hit 'tab' and nothing happens then it means the computer either can't find a match or there is more than one match. The command line is also case sensitive...meaning 'doc' is different than 'Doc'. Remember that 'dir' is your friend. It will always show you the contents of whatever directory you are in.</p>
+<p>One last tip. Microsoft has actually put a bit of work on making the command prompt aware of what is going on in the Explorer. Another way you can get to a specific folder in the command prompt would be to type</p>
 <pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span></code></pre>
 <p>then drag the folder you want from the Finder window onto the Terminal window. In the case of this example if you have done correctly it should show something like this:</p>
-<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /Users/username/Documents/school-stuff/project1</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>username<span class="token punctuation">\</span>Documents<span class="token punctuation">\</span>web-stuff<span class="token punctuation">\</span>scss-demo</code></pre>
 <p>The advantage of this is that it doesn't matter what directory you started in...it will always take you to the directory specified.</p>
 <p>Here are a couple of additional resources to look over if you feel you need more help.</p>
 <ul>
-<li><a href="http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line">Treehouse: Intro to Mac command line</a></li>
-<li><a href="https://www.youtube.com/watch?v=I65C4ZXK4ek">Youtube: How to use Mac Terminal</a></li>
+<li><a href="http://www.computerhope.com/issues/chusedos.htm">How to use the Windows command line</a></li>
+<li><a href="https://www.youtube.com/watch?v=OHeJRYgdyik">Youtube: Command prompt basics</a></li>
 </ul>
 
 </main>
