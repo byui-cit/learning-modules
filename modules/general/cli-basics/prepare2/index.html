@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLI basics - Windows</title>
+    <meta name="description" content="Getting started with the command line on Windows">
+    <link rel="stylesheet" href="/learning-modules/css/index.css">
+    <link rel="stylesheet" href="/learning-modules/css/prism-coy.css">
+    <link rel="alternate" href="/learning-modules/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="/learning-modules/feed/feed.json" type="application/json" title="WDD Learning Modules">
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <a href="/learning-modules/">
+          <img src="/learning-modules/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        </a>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
+      </div>
+      <nav>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="/learning-modules/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/html/">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/js/">JS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/css/">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/design/">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/general/">General</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+    <main  class="tmpl-post" >
+      
+<h1>CLI basics - Windows</h1>
+
+
+
+
+<h2 id="the-command-line" tabindex="-1">The command line <a class="direct-link" href="#the-command-line" aria-hidden="true">#</a></h2>
+<p>The command line on a Windows PC can be found by running the <code>cmd</code> app. The easiest way to do that is Start-&gt;Run-&gt;cmd. Cmd allows us to run special commands on the computer that cannot be found in the graphical user interface. These commands are usually short words that may be followed by one or more parameters...bits of other information that the command needs to run. These commands in the always run in the current directory. One of the most important tasks you can learn with the command line is changing working directories.</p>
+<p>Powershell is another command line interface app on Windows. You can also use Powershell for these tasks as well.</p>
+<h2 id="changing-directories" tabindex="-1">Changing directories <a class="direct-link" href="#changing-directories" aria-hidden="true">#</a></h2>
+<p>To change directories on a pc we first need to know where we currently are. The prompt will always show you this. If you have just opened up the cmd window you will probably see something like this:</p>
+<pre class="language-bash"><code class="language-bash">C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>username</code></pre>
+<p>If you didn't see something similar to that then type:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> %userprofile%</code></pre>
+<p>That will take you back to your home directory. If I wanted to see what folders and files were in my current directory I could type:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">dir</span></code></pre>
+<p>Try that now.</p>
+<p>Let's assume that the directory I need to get to is at <code>Documents/school-stuff/project1</code>. when you did the list command earlier you probably saw that the Documents folder is inside the directory we are currently in. In fact the full path to the directory I want is <code>/Users/username/Documents/school-stuff/project1</code></p>
+<p>To change directories in the Terminal we use the <code>cd</code> (change directory) command. If I want to enter the Documents directory (and I see it when I type <code>dir</code>) I simply type:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> Documents</code></pre>
+<p>If I want to go back to where I was I can type:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> <span class="token punctuation">..</span></code></pre>
+<p>('..' is a shortcut for parent directory)</p>
+<p>I can also change multiple directories at once. like so:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> Documents/school-stuff/project1</code></pre>
+<p>One trick that can help you as you are navigating with the Terminal is the 'tab' key. 'tab' autocompletes what you are typing if it can. So if I started typing</p>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> Doc</code></pre>
+<p>then hit 'tab' it would autocomplete to:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> Documents</code></pre>
+<p>Then I could keep typing:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> Documents/scho</code></pre>
+<p>hit 'tab' again and it should autocomplete to:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> Documents/school-stuff</code></pre>
+<p>If you hit 'tab' and nothing happens then it means the computer either can't find a match or there is more than one match. The command line is also case sensitive...meaning 'doc' is different than 'Doc'. Remember that 'ls' is your friend. It will always show you the contents of whatever directory you are in.</p>
+<p>One last tip. Apple has actually put a bit of work on making the Terminal aware of what is going on in the Finder. Another way you can get to a specific folder in Terminal would be to type</p>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span></code></pre>
+<p>then drag the folder you want from the Finder window onto the Terminal window. In the case of this example if you have done correctly it should show something like this:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /Users/username/Documents/school-stuff/project1</code></pre>
+<p>The advantage of this is that it doesn't matter what directory you started in...it will always take you to the directory specified.</p>
+<p>Here are a couple of additional resources to look over if you feel you need more help.</p>
+<ul>
+<li><a href="http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line">Treehouse: Intro to Mac command line</a></li>
+<li><a href="https://www.youtube.com/watch?v=I65C4ZXK4ek">Youtube: How to use Mac Terminal</a></li>
+</ul>
+
+</main>
+    <footer>
+      <p class="license">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/></a><br/>This work is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+          International License</a>.</p>
+    </footer><!-- Current page: /learning-modules/modules/general/cli-basics/prepare2/ --></body>
+</html>

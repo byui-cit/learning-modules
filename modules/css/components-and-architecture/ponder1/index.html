@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Components - Design a simple component</title>
+    <meta name="description" content="Websites are often just collections of pieces called components. Treating them this way helps us to write more re-usable code. It also can help reduce the complexity of redesigns. This activity will go through the process of designing and creating a reusable web component.">
+    <link rel="stylesheet" href="/learning-modules/css/index.css">
+    <link rel="stylesheet" href="/learning-modules/css/prism-coy.css">
+    <link rel="alternate" href="/learning-modules/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="/learning-modules/feed/feed.json" type="application/json" title="WDD Learning Modules">
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <a href="/learning-modules/">
+          <img src="/learning-modules/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        </a>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
+      </div>
+      <nav>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="/learning-modules/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/html/">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/js/">JS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/css/">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/design/">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/general/">General</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+    <main  class="tmpl-post" >
+      
+<h1>CSS Components - Design a simple component</h1>
+
+
+
+
+<h2 id="preparation" tabindex="-1">Preparation <a class="direct-link" href="#preparation" aria-hidden="true">#</a></h2>
+<p>Make sure you read through the Prepare section for this topic. You will also need your editor open with some html and the code from the Prepare activity:</p>
+<div class="bigSteps">
+<ol>
+<li>
+<h2 id="review-bem" tabindex="-1">Review BEM <a class="direct-link" href="#review-bem" aria-hidden="true">#</a></h2>
+<p>One issue we run into very early on with components is that CSS has global scope. What this means is that all CSS is visible EVERYWHERE! For something like a component that is designed to be reusable this can cause problems. You might include the component into the HTML and CSS and find out that you had the same class names in the component that you had in the existing CSS and something breaks.</p>
+<p>CSS naming conventions are designed to help with the global nature of CSS. One popular convention is called BEM - Block, Element, Modifier. Take a few minutes to familiarize yourself with <a href="http://getbem.com/introduction/">BEM's basic conventions</a>.</p>
+</li>
+<li>
+<h2 id="review-the-layout" tabindex="-1">Review the Layout <a class="direct-link" href="#review-the-layout" aria-hidden="true">#</a></h2>
+<p>Below is a screenshot of the component we would like to build. It is a simple article summary that you might find on a typical blog. Review it considering how the HTML should be structured, and how you might layout and name the different blocks and elements.</p>
+<p><img src="../../../../img/component-ponder-mobile.png" alt="Media Card mobile"> <em>Small/mobile</em></p>
+<p><img src="../../../../img/component-ponder-wide.png" alt="Media Card mobile"> <em>Large</em></p>
+</li>
+<li>
+<h2 id="identify-blocks-and-elements" tabindex="-1">Identify blocks and elements <a class="direct-link" href="#identify-blocks-and-elements" aria-hidden="true">#</a></h2>
+<p>Our component is made up of the following elements:</p>
+<ol>
+<li>An image</li>
+<li>A list of tags</li>
+<li>Title</li>
+<li>Date</li>
+<li>A short lead in to the article.</li>
+<li>A link to continue to the article.</li>
+</ol>
+<p>As we write our HTML we should keep semantics in mind as we choose our HTML tags, as well as the tenets of BEM as we determine classes</p>
+</li>
+<li>
+<h2 id="write-the-html" tabindex="-1">Write the HTML <a class="direct-link" href="#write-the-html" aria-hidden="true">#</a></h2>
+<p>Create a new file in your editor, or Codepen and attempt to write the HTML complete with appropriate classes. Then return and check out the instructor's solution below.</p>
+<details>
+<summary>One Solution</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>article</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>summary<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span><br>    <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>summary__img<span class="token punctuation">"</span></span><br>    <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://via.placeholder.com/320x240<span class="token punctuation">"</span></span><br>    <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>post image<span class="token punctuation">"</span></span><br>  <span class="token punctuation">/></span></span><br><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>summary__body<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>summary__tags<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Tags<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>summary__title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Title of Post<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>summary__date<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Feb 20<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>summary__para<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>      This is a wider card with supporting text below as a natural lead-in<br>      to additional content.<br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>summary__link<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Continue Reading<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>article</span><span class="token punctuation">></span></span></code></pre>
+</details>
+<p>Once you have reviewed the solution above, hopefully you noticed a few things:</p>
+<ol>
+<li>
+<p>First, this is not the only way to code this up. You may have differences in your code, and that is ok. You may have decided that a section would be a better wrapper than an article for example, and you may be right ;)</p>
+</li>
+<li>
+<p>Second notice that almost everything has a class on it. We start with our block class summary at the top, and then we name the elements. You might be saying to yourself &quot;why don't I just use complex selectors and get rid of half of those classes?&quot; If we are using a naming convention like BEM (and for this activity we should be), it specifies that we should not use element selectors in our CSS. The only way to avoid that is to use lots of classes.</p>
+<p>This is one of the biggest complaints most folks have with BEM...but it turns out that as projects become larger and more complex consistently adopting a naming convention like this makes the code much much easier to maintain over time.</p>
+</li>
+<li>
+<p>One word in favor of having classes on everything. It makes it really easy to differentiate between all of those paragraph elements, and it makes it clear in the HTML what content is contained in each element. They also provide nice hooks if we were using this as a template for a bunch of articles coming from a database. Getting the right information into each element becomes easy...and things won't break if a someone decides to re-order and re-style things without talking to anyone!</p>
+</li>
+<li>
+<p>This markup will also lend itself well to both our small and large screen views. For the small screen view in fact we will need very little positioning.</p>
+</li>
+</ol>
+</li>
+<li>
+<h2 id="style" tabindex="-1">Style <a class="direct-link" href="#style" aria-hidden="true">#</a></h2>
+<p>Add the CSS (SCSS if you have completed that module) to style the mobile view first. Then add whatever media queries you need to make the design responsive. Pay attention to padding, margins, font-sizes, placement, etc. You can just use helvetica, arial, san-serif for the font.</p>
+<details>
+<summary>Example with SCSS</summary>
+<p>If you are using SCSS you have a great tool to help you manage your BEM naming: nesting. Here is an example of how that might work:</p>
+<pre class="language-scss"><code class="language-scss"><span class="token selector">.summary </span><span class="token punctuation">{</span><br>  <span class="token property">box-shadow</span><span class="token punctuation">:</span> 1px 1px 4px 1px #888<span class="token punctuation">;</span><br>  <span class="token property">border-radius</span><span class="token punctuation">:</span> 3px<span class="token punctuation">;</span><br>  <span class="token property">max-width</span><span class="token punctuation">:</span> 360px<span class="token punctuation">;</span><br>  <span class="token selector"><span class="token parent important">&amp;</span>__title </span><span class="token punctuation">{</span><br>    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br>  <span class="token selector"><span class="token parent important">&amp;</span>__img </span><span class="token punctuation">{</span><br>    <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br>  <span class="token selector"><span class="token parent important">&amp;</span>__body </span><span class="token punctuation">{</span><br>    <span class="token property">padding</span><span class="token punctuation">:</span> 1em<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br>  <span class="token selector"><span class="token parent important">&amp;</span>__tags </span><span class="token punctuation">{</span><br>    <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span><br>    <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span><br>    <span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br>  <span class="token selector"><span class="token parent important">&amp;</span>__date </span><span class="token punctuation">{</span><br>    <span class="token property">color</span><span class="token punctuation">:</span> grey<span class="token punctuation">;</span><br>    <span class="token property">margin-top</span><span class="token punctuation">:</span> 0.3em<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br>  <span class="token selector"><span class="token parent important">&amp;</span>__link a </span><span class="token punctuation">{</span><br>    <span class="token property">text-decoration</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br><span class="token punctuation">}</span></code></pre>
+</details>
+<p>As you can see, the CSS to create the mobile layout is quite simple, and it really won't take us too many more lines to complete it.</p>
+<pre class="language-scss"><code class="language-scss"><span class="token atrule"><span class="token rule">@media</span> screen <span class="token operator">and</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 440px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span><br>  <span class="token selector">.summary </span><span class="token punctuation">{</span><br>    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span><br>    <span class="token property">max-width</span><span class="token punctuation">:</span> 500px<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br>  <span class="token selector">.summary__img </span><span class="token punctuation">{</span><br>    <span class="token property">width</span><span class="token punctuation">:</span> 40%<span class="token punctuation">;</span><br>    <span class="token property">order</span><span class="token punctuation">:</span> 2<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br><span class="token punctuation">}</span></code></pre>
+</li>
+<li>
+<h2 id="next-steps" tabindex="-1">Next Steps <a class="direct-link" href="#next-steps" aria-hidden="true">#</a></h2>
+<p>At this point we would be prepared to use our component in a single or multiple layouts. We would simply copy/paste the template and fill in with real content. The arrangement of the components is up to the layout they are placed in. The component is only concerned with what happens inside of it...not out.</p>
+</div>
+</li>
+</ol>
+
+</main>
+    <footer>
+      <p class="license">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/></a><br/>This work is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+          International License</a>.</p>
+    </footer><!-- Current page: /learning-modules/modules/css/components-and-architecture/ponder1/ --></body>
+</html>
