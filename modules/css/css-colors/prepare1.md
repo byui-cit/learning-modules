@@ -23,7 +23,7 @@ The following video introduces different ways apply colors to your web elements.
 
 In this example we will be adding colors to our HTML using CSS. 
 
-Let's copy the following code into an html file.
+Let's copy the following code into an html file. (If you've completed other learning modules you may already have these files. You can just add to them.)
 
 ```html
 <!DOCTYPE html>
@@ -51,9 +51,9 @@ Let's copy the following code into an html file.
 </body>
 </html>
 ```
-Right now, any colors on this page is from browser default CSS styles. Usually headings and paragraph text is black, background colors are white, and links are a bright blue or purple if visited.
+Right now, any colors on this page is from browser default CSS styles. Usually headings and paragraph text is black, background colors are white, and links are a bright blue or purple.
 
-Let's create a CSS file. Create a folder at the same level as our HTML file and call it styles. Within that folder, let's create a styles.css file. Open that styles.css in the editor. (If you've completed other learning modules you may already have these files. You can just add to them.)
+Let's create a CSS file. Create a folder at the same level as our HTML file and call it styles. Within that folder, let's create a styles.css file. Open that styles.css in the editor. (Again, if you already have this CSS file you can just add to it.)
 
 Let's change the color of the text of our h1 tag.
 

@@ -11,7 +11,7 @@ layout: layouts/post.njk
 
 ## Description
 
-Colors can add a great look to your web pages. There are many different ways to specify using colors in CSS. We also want to be careful to use colors that look good and also color for text that is legible. 
+Colors can add a great look to your web pages. There are many different ways to specify using colors in CSS. We need to be careful to use colors that look good and also color for text that is legible. 
 
 ## Where this knowledge is utilized
 
