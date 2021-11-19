@@ -5,7 +5,7 @@ date: 2021-10-15
 order: 3
 tags:
   - js
-  - Debugging
+  - debugging
 layout: layouts/post.njk
 ---
 

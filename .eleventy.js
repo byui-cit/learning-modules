@@ -61,7 +61,19 @@ module.exports = function (eleventyConfig) {
       Math.sign(a.data.order - b.data.order)
     );
   }
+  function sortTagsAlpha(tags) {
+    return (tags || []).sort((a, b) => {
+      if (a < b) {
+        return -1;
+      }
+      if (a > b) {
+        return 1;
+      }
+      return 0;
+    });
+  }
   eleventyConfig.addFilter("sortByOrder", sortByOrder);
+  eleventyConfig.addFilter("sortTagsAlpha", sortTagsAlpha);
   eleventyConfig.addFilter("filterTagList", filterTagList);
 
   // modules sorted by order

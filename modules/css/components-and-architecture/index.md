@@ -1,6 +1,6 @@
 ---
 title: CSS Components and Architecture
-description: Developers should have a goal of writing code that predictable, reusable, and maintainable. Applying a component based with with good architecture to our CSS can help accomplish that.
+description: Developers should have a goal of writing code that predictable, reusable, and maintainable. Applying a component based approach with with good architecture to our CSS can help accomplish that.
 date: 2021-10-15
 order: 30
 tags:

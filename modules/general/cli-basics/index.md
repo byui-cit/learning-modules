@@ -19,14 +19,13 @@ Understanding the basics of how to use the command line interface (CLI) for your
 
 ## Prerequisites
 
-- Understanding of [File systems](../../js/organizing-functions)
+- Understanding of [File systems](../../general/file-systems)
 
-## Prepare
+## Prepare/Ponder
 
-- [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 - [Basic CLI usage MAC](prepare1/) (If you are using Linux...read this one).
 - [Basic CLI usage Windows](prepare1/)
 
-## Ponder
+<!-- ## Ponder -->
 
-- [Practice with Fetch](ponder1/)
+<!-- - [Practice with Fetch](ponder1/) -->
