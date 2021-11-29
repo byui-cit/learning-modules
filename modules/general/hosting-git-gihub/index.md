@@ -13,7 +13,7 @@ layout: layouts/post.njk
 
 ## Description
 
-Git and GitHub are versioning control systems that let you keep track of your source code history. But in this module we are not learning about using them as a versioning control tool, but rather a means to host our web project live on the Internet through GitHub Pages. 
+Git and GitHub are versioning control systems that let you keep track of your source code history. But in this module we are not learning about using them as a versioning control tool, but rather a means to host our web project live on the Internet through GitHub Pages.
 
 ## Where this knowledge is utilized
 
@@ -25,9 +25,9 @@ Git and GitHub are versioning control systems that let you keep track of your so
 ## Prepare
 
 - [MDN Publishing your website](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-
 - [What is Git?](prepare1)
 
 ## Ponder
 
-- [Practice with Hosting using GitHub Pages](ponder1/)
+- [Setup Git and GitHub](ponder1/)
+- [Hosting using GitHub Pages](ponder2/)
