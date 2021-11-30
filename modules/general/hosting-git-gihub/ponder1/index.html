@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Hosting with GitHub Pages - Ponder activities.</title>
-    <meta name="description" content="Set up a way to host your web files on a server">
+    <title>Setup Git and GitHub</title>
+    <meta name="description" content="Install Git on your computer and create an account with Github.">
     <link rel="stylesheet" href="/learning-modules/css/index.css">
     <link rel="stylesheet" href="/learning-modules/css/prism-coy.css">
     <link rel="alternate" href="/learning-modules/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
@@ -43,7 +43,7 @@
     </header>
     <main  class="tmpl-post" >
       
-<h1>Web Hosting with GitHub Pages - Ponder activities.</h1>
+<h1>Setup Git and GitHub</h1>
 
 
 
@@ -51,9 +51,135 @@
 <h2 id="preparation" tabindex="-1">Preparation <a class="direct-link" href="#preparation" aria-hidden="true">#</a></h2>
 <p>Make sure you read through the Prepare section for this topic.</p>
 <h2 id="using-github-pages-to-host-our-website" tabindex="-1">Using GitHub Pages to host our website <a class="direct-link" href="#using-github-pages-to-host-our-website" aria-hidden="true">#</a></h2>
-<h3 id="activity-1" tabindex="-1">Activity 1 <a class="direct-link" href="#activity-1" aria-hidden="true">#</a></h3>
-<p>Open the following page in a new tab: <a href="https://byui-wdd.github.io/wdd130/activities/w02-hosting-setup-online.html" target='_blank'>GitHub Pages Hosting Setup</a> and follow the instructions.</p>
-<p>This is quite a lengthy set of steps but worth the effort. We get to know a little bit about Git and GitHub and have a free method to host our website and get a free <a href="http://github.io">github.io</a> domain.</p>
+<div class="bigSteps">
+<ol>
+<li>
+<h2 id="install-git" tabindex="-1">Install Git <a class="direct-link" href="#install-git" aria-hidden="true">#</a></h2>
+<figure class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/c42Z2mlJyis" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
+<p>Click on and Follow only the Windows, Mac, or Linux Instructions.</p>
+<details>
+<summary>For Windows users:</summary>
+<ol>
+<li>
+<p>Before downloading, check to make sure you don't already have Git installed on your computer</p>
+<ul>
+<li>Click on the 'Start' window icon on your computer in the bottom left of your screen.</li>
+<li>Type 'cmd' to open the Command Prompt app. You should get the Command Prompt terminal to open. It doesn't matter what your prompt path is.</li>
+<li>Type in <code>git --version</code> and hit enter.<br>
+You should now either see a git version number come up or a message that says something about how 'git' is not recognized. If you have a version number come up, you already have git installed and you don't need to install it. If you get the message that git is not recognized then you need to install it.</li>
+</ul>
+</li>
+<li>
+<p>To install Git for Windows. Go to <a href="http://git-scm.com/downloads">git-scm.com/downloads</a> and click on 'Windows' under Downloads. An .exe file should be downloaded.</p>
+</li>
+<li>
+<p>Click that .exe file to open it and it will begin the process of installing Git.</p>
+</li>
+<li>
+<p>Allow it to make changes to your device.</p>
+</li>
+<li>
+<p>Click 'Next' through all of the setup windows leaving all the defaults as they are. There will be quite a few windows.</p>
+</li>
+<li>
+<p>The last window will let you click 'Install' and click 'Finish'.</p>
+</li>
+<li>
+<p>Open up a new Command Prompt window by closing the first Command Prompt window and start a new one by typing 'cmd' at the Windows start button in the bottom left of your screen again. At the prompt, type: <code>git --version</code> again if you want to see that it installed. You should now see the version number. (If you don't use a new Command Prompt window, you could get the same message you had before you installed Git.)<br>
+While we are still in the Command Prompt we will type in two more commands to set up our username and email that are associated with our GitHub account. Again it doesn't matter what the path prompt is. These are global settings so you can type them from any path prompt.</p>
+</li>
+<li>
+<p>The command is listed below, but make sure you use your own username and email between the &quot;&quot; quotes. Use the username and your email you used for the GitHub account. It will be different for everyone. Type:</p>
+</li>
+</ol>
+<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> config --global user.name <span class="token string">"yourusername"</span></code></pre>
+<p>and then hit enter. Nothing will happen if you did it right. And then type:</p>
+<pre class="language-bash"><code class="language-bash">  <span class="token function">git</span> config --global user.email <span class="token string">"youremail@byui.edu"</span></code></pre>
+<p>and then hit enter again.<br>
+Now you have configured your Git to recognize your GitHub later.</p>
+<figure class="video-container">
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/3KpzB3ZZCZ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
+</details>
+<details>
+<summary>For Mac Users:</summary>
+<ol>
+<li>
+<p>Before downloading, check to make sure you don't already have Git installed on your computer</p>
+<ul>
+<li>Click 'Search' icon (looks like an magnifying glass) on your near the top right of your screen.</li>
+<li>Type in &quot;terminal&quot; and open the Terminal app.</li>
+<li>Type in <code>git --version</code> at the prompt and hit enter.<br>
+You should now either see a git version number come up, a message that says something about 'command not found', or a prompt asking you to install the command line developer tools. If you have a version number come up, you already have git installed and you don't need to install it. If you get the command line tools message click yes and install them then skip to step 12, if you get the message that the command is not found, then you need to install it. Continue below.</li>
+</ul>
+</li>
+<li>
+<p>To install Git for Mac. Go to <a href="http://git-scm.com/downloads">git-scm.com/downloads</a> and click on 'macOS' under Downloads. It will take you to a page with a few options.</p>
+</li>
+<li>
+<p>Click the 'installer' link under the Binary installer section next to the Tim Harper text. This will take you to a <a href="http://sourceforge.net">sourceforge.net</a> page.</p>
+</li>
+<li>
+<p>Don't sign up for anything or click anything except the 'Download' button. This will start a download of a .dmg file. Double-click the file to open it.</p>
+</li>
+<li>
+<p>You will see a few files, double-click the .pkg file. You should get a message saying it is coming from 'an unidentified developer'. This is a great warning but we will trust this one. Click 'OK'</p>
+</li>
+<li>
+<p>To allow our system to install Git we will need to go to our System Preferences (gear icon or type System Preferences from our Search magnifying icon).</p>
+</li>
+<li>
+<p>From System Preferences click the 'Security &amp; Privacy' icon.</p>
+</li>
+<li>
+<p>Now you should see the App listed under the 'Allow apps downloaded from:' section and you can click 'Open Anyway'.</p>
+</li>
+<li>
+<p>A similar window will pop up like before but you can now click 'Open'.</p>
+</li>
+<li>
+<p>You can now use all the defaults for the installation with 'Continue' on the first screen. Install on the next (it will have you enter your Mac password again), and click Close. It might ask if you want to send the file you downloaded to the Trash and you can keep it with 'Keep' or delete it with 'Move to Trash'. We shouldn't need it again.</p>
+</li>
+<li>
+<p>Open up the Terminal again. At the prompt, type: <code>git --version</code> again if you want to see that it installed. You should now see the version number. (If you don't use a new Terminal window, you could get the same message you had before you installed Git.)<br>
+While we are still in Terminal we will type in two more commands to set up our username and email that are associated with our GitHub account. Again it doesn't matter what the path prompt is. These are global settings so you can type them from any path prompt.</p>
+</li>
+<li>
+<p>The command is listed below, but make sure you use your own username and email between the &quot;&quot; quotes. Use the username and your email you used for the GitHub account. It will be different for everyone. Type:</p>
+</li>
+</ol>
+<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> config --global user.name <span class="token string">"yourusername"</span></code></pre>
+<p>and then hit enter. Nothing will happen if you did it right. And then type:</p>
+<pre class="language-bash"><code class="language-bash">  <span class="token function">git</span> config --global user.email <span class="token string">"youremail@byui.edu"</span></code></pre>
+<p>and then hit enter again.<br>
+Now you have configured your Git to recognize your GitHub later.</p>
+</details>
+<details>
+<summary>For Linux Users:</summary>
+<p><a href="https://github.com/git-guides/install-git#install-git-on-linux">Linux Git Install</a><br>
+Install Git with the link above and then follow the last few steps from the Windows or Mac instructions to set up your global config username and email settings to match your GitHub account.</p>
+</details>
+</li>
+<li>
+<h2 id="sign-up-for-a-github-account" tabindex="-1">Sign up for a GitHub Account <a class="direct-link" href="#sign-up-for-a-github-account" aria-hidden="true">#</a></h2>
+<ol>
+<li>Visit the <a href="https://github.com/">Github.com</a> website and click the 'Sign Up' button.</li>
+<li>You'll enter an email. Your BYUI email is a good one to use here. Then click 'Continue'.</li>
+<li>Create a password that has to be at least 15 characters or 8 characters with a number and lowercase letter. Then click 'Continue'.</li>
+<li>Enter a username. Use a professional name since this username will show up in the domain of your web projects. You might show these links to future prospective employers. If you get a red 'X' to the left of your username, then someone else has already used that username and you need to choose a different one. Don't forget the email, password, and username you used for this new GitHub account. We will need them later.</li>
+<li>Enter 'n' for the next step unless you want email from them.</li>
+<li>At this point it wants to make sure you are human and it has you solve a few simple puzzles. Click 'Start puzzle' and follow the directions. Click 'Create account'.</li>
+<li>It will send a launch code to the email you listed. Use that launch code and enter it.</li>
+</ol>
+<p>The following video demonstrates the steps above.</p>
+<figure class="video-container">
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/B0-WyDcOAls" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
+</li>
+</ol>
+</div>
 
 </main>
     <footer>
