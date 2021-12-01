@@ -21,7 +21,7 @@ The following video introduces more CSS and the rule-sets you can make and how p
 
 ## Example
 
-Let's copy the following code into an html file.
+Let's copy the following code into an html file. If you already have this file from an previous learning module, you can use that same file instead.
 
 ```html
 <!DOCTYPE html>
@@ -62,13 +62,8 @@ Inside the head element, let's add the link tag to the HTML page
 
 ```html
 <head>
-  <<<<<<< HEAD
-  <title>My Web Page</title>
-  <link rel="stylesheet" href="styles.css" />
-  =======
   <title>My Web Page</title>
   <link rel="stylesheet" href="styles/styles.css" />
-  >>>>>>> 7d48584df6d086fc5a508176ac20c856fae7570a
 </head>
 ```
 
