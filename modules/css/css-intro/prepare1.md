@@ -32,7 +32,7 @@ Let's copy the following code into an html file.
   <body>
     <header>
       <nav>
-        <a href="http://index.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="https://www.churchofjesuschrist.org">Church of Jesus Christ</a>
         <a href="https://www.churchofjesuschrist.org/temples">Temples</a>
         <a href="https://www.churchofjesuschrist.org/study/scriptures"
