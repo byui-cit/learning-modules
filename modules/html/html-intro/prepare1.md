@@ -59,6 +59,7 @@ The nav element will contain menu links. These links are created with an a tag.
 If we look at our rendered page now in a browser window, the content of the a tag shows but they are not links. When we click on the content text, nothing happens. We have to add an attribute to the opening a tag that shows where to take the user when they click on the content. Add attributes to each opening a tag as follows.
 
 ```html
+<a href="http://index.html">Home</a>
 <a href="https://www.churchofjesuschrist.org">Church of Jesus Christ</a>
 <a href="https://www.churchofjesuschrist.org/temples">Temples</a>
 <a href="https://www.churchofjesuschrist.org/study/scriptures">Scriptures</a>
