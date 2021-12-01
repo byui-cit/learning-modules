@@ -24,7 +24,16 @@ Class and ID attributes can be specified in HTML and then used in CSS to select 
 
 - [MDN Type, class, and ID selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
 
-- [Overview of using Selectors and IDs](prepare1)
+The following video introduces different ways to use classes and IDs.
+
+## Class and ID Attributes
+
+<figure class="video-container">
+
+<iframe title="YouTube video player" src="https://www.youtube.com/embed/TIpGj3uul18" width="560" height="315" allowfullscreen="allowfullscreen" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+</figure>
+
+- [Using Class and ID Selectors](prepare1)
 
 ## Ponder
 
