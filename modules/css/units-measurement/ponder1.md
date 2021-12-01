@@ -37,5 +37,5 @@ Copy the HTML code below into your own HTML file. You may already have this HTML
 </html>
 ```
 
-Resize elements, font-sizes, etc with different values and units of measurement. 
+Using the styles.css file in the styles folder, resize elements, font-sizes, etc with different values and units of measurement. 
 
