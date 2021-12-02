@@ -48,7 +48,7 @@ Let's copy the following code into an html file. (If you've completed other lear
 
 Let's create a CSS file. Create a folder at the same level as our HTML file and call it styles. Within that folder, let's create a styles.css file. Open that styles.css in the editor. (Again, if you already have this CSS file you can just add to it.)
 
-Our page has some elements that are inline and some that are block. The a tags and the img tag are inline elements. That is why the nav links line up on after another. If we had two images with smaller width next to each other they would line up next to each other as well. Let's add another image and give them a small width so you can see that. Copy and paste the img tag so you have two of the same image.
+Our page has some elements that are inline and some that are block. The img and a tags are inline elements. That is why the nav links line up one after another on one line. If we had two images with smaller width next to each other they would also line up next to each other as well. Let's add another image and give them a small width so you can see that. Copy and paste the img tag so you have two of the same image.
 
 ```html
 <main>
@@ -99,13 +99,14 @@ The nav and h1 or example take up all the room available from left to right. The
 
 In this example we will be centering block and inline elements on our page. 
 
-To center content inside their container we can use text-align: center. We want to center our h1 with text-align: center and it will center within it's container because there is space left over after the text and before the end of the element. 
+To center content inside their container we can use text-align: center. We can center our h1 with text-align: center and it will center within it's container because there is space left over after the text and before the end of the element. 
 
 ```css
 h1 {
     text-align: center;
 }
 ```
+Now our h1 text should be centered.
 
 If we try to center the img element the same way, with text-align: center, it won't work because there is no extra space inside it's container. Text-align center will center the content of its container. With images we want to center the container itself. To give it some extra space, let's have it take the whole amount available and change its display property to display: block. Now to center it we can center the container itself with margin: 0 auto. Remember, however, if the image itself takes up 100% of the space it won't appear to center either. So it's a good idea to give it a width and use margin: 0 auto together.
 
@@ -116,6 +117,8 @@ img {
     margin: 0 auto;
 }
 ```
+
+Now the image should be centered. The zero in margin: 0 auto, refers to the top and bottom margin and the auto will automatically place an equal amount of space on the right and left to center it.
 
 Let's center the paragraph container, that is inside main, in the same way. Give it a width of 80% and give it a margin: 0 auto.
 
@@ -137,7 +140,9 @@ main p {
     text-align: center;
 }
 ```
-I like it left aligned inside the container so I won't add the text-align: center. But you get the idea with centering containers and content of containers now. And the elements inside our main section are centered nicely.
+I like it left aligned inside the container so I won't add the text-align: center.  But you can leave it if you like. 
+
+Now we can see how to center containers and content of containers. And the elements inside our main section are centered nicely.
 
 Let's take off the borders if you haven't already. Delete the following rule-set:
 
@@ -147,4 +152,4 @@ Let's take off the borders if you haven't already. Delete the following rule-set
 }
 ```
 
-So there we have a few different ways to center items on your page keeping in mind the difference between block and inline.
+So there we have a few different ways to center items on your page keeping in mind the difference between block and inline elements.
