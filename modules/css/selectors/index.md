@@ -1,5 +1,5 @@
 ---
-title: CSS Selectors, Specificity, Psuedo-selectors, and Psuedo-classes
+title: CSS Selectors
 description: Understanding different ways to target our elements
 date: 2021-12-02
 tags:
