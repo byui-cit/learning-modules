@@ -21,7 +21,7 @@ The following video introduces more CSS and the rule-sets you can make and how p
 
 ## Example
 
-Let's copy the following code into an html file. If you already have this file from an previous learning module, you can use that same file instead.
+Let's copy the following code into an html file. If you already have this file from a previous learning module, you can use that same file instead.
 
 ```html
 <!DOCTYPE html>
@@ -58,7 +58,7 @@ Let's copy the following code into an html file. If you already have this file f
 
 Right now, any styling on this page is from browser default CSS styles. For example the h1 element is styled as bigger and bolder. If we want to add our own styles to this page we will use an external CSS file that will link up to the HTML page. We use the link tag inside the HTML to tell which CSS file will be used with that HTML page.
 
-Inside the head element, let's add the link tag to the HTML page
+Inside the head element, let's add the link tag to the HTML page.
 
 ```html
 <head>
@@ -119,4 +119,4 @@ footer {
 }
 ```
 
-Don't worry if you don't understand some of the units of measurement like px or the % sign. We will learn more about units of measurement in a different learning module. What we see from this activity is the proper syntax for creating rule-sets in our CSS file and how a little CSS styling can make a different in how our page looks.
+Don't worry if you don't understand some of the units of measurement like px or the % sign. We will learn more about units of measurement in a different learning module. What we see from this activity is the proper syntax for creating rule-sets in our CSS file and how a little CSS styling can make a difference in how our page looks.
