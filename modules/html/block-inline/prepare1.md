@@ -142,6 +142,16 @@ main p {
 ```
 I like it left aligned inside the container so I won't add the text-align: center.  But you can leave it if you like. 
 
+If I wanted to add some more margin to the top and bottom of my paragraph I can increase the zero and add a pixel size.
+
+```css
+main p {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+```
+
 Now we can see how to center containers and content of containers. And the elements inside our main section are centered nicely.
 
 Let's take off the borders if you haven't already. Delete the following rule-set:

@@ -10,7 +10,7 @@ layout: layouts/post.njk
 
 **Wireframing** is an important part of the web design process. It makes it easier for the designer to plan the layout and information hierarchy of the web page. 
 
-The following video introduces different ways create a wireframe using a few free online tools.
+The following video introduces different ways to create a wireframe using a few free online tools.
 
 ## Layout and Composition
 
