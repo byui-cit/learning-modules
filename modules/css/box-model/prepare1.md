@@ -116,7 +116,7 @@ a {
 
 Now they look so much better with the extra space around them. You can add some space around your main paragraphs as well if it needs some. Depending on what other modules you've done you may already have a margin: 0 auto for your paragraph. You can just change the zero to 50px. For example: margin: 50px auto; Play around with padding and margins of different elements to get it how you like it.
 
-You may have noticed that little bit of space all around the whole page. That is default CSS margins on the body element. If you want your header and footer to start at the very top and stretch out all the way to the left and right with no gap, you can set the body element to a margin of 0.
+You may have noticed that little bit of space all around the edge of the whole page. That is default CSS margins on the body element. If you want your header and footer to start at the very top and stretch out all the way to the left and right with no gap, you can set the body element to a margin of 0.
 
 ```css
 body {

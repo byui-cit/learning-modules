@@ -3,6 +3,7 @@ title: Box Model
 description: Understanding the Box Model 
 date: 2021-12-03
 tags:
+  - box model
   - margin
   - padding
   - border
@@ -12,7 +13,7 @@ layout: layouts/post.njk
 
 ## Description
 
-There are different ways to select the elements you want to style on your page with CSS. These include by element name and by class or ID name. But you can also select them based on their relationship to other elements or by a certain state that the element is in (pseudo). And depending on how you have targeted your elements some rules are more specific than others and it's important to understand this specificity order.
+The Box Model is used to represent what surrounds every element of your HTML page. The Box Model contains the content, padding, border, and margin of each element. In order to get the proper layout of your page and all the elements, you will need to know about the Box Model.
 
 ## Where this knowledge is utilized
 
@@ -32,7 +33,7 @@ There are different ways to select the elements you want to style on your page w
 
 ## Prepare
 
-The following video introduces the box model with content, padding, border, and margin. 
+The following video introduces the box model with content, padding, border, margin, and box-sizing. 
 
 ## The Box Model
 
