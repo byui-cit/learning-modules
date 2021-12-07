@@ -5,8 +5,8 @@ date: 2021-12-02
 tags:
   - selectors
   - specificity
-  - psuedo-selectors
-  - psuedo-classes
+  - pseudo-selectors
+  - pseudo-classes
 layout: layouts/post.njk
 ---
 

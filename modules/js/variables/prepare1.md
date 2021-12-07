@@ -170,4 +170,42 @@ let myString = "This is my String!";
 myString[2]; // "i"  - remember that indexes start counting with 0!
 ```
 
-Much of the detail above comes from [You Don't Know JS Yet Ch 2](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/get-started/ch2.md). Highly recommend reading to learn more.
+### String delimiters
+
+Strings can be delimited in three ways:
+
+1. double quotes '
+2. single quotes "
+3. Backtick `
+
+Double quotes and single quotes are completely interchangable. Pick one and stick with it. Backticks are used to form what are know as [template literal strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) These strings have the added feature of allowing the embedding of variables and other bits of code inside of a string with placeholders `${ }`. For example we can add variable values into a string with concatination like this:
+
+```javascript
+const hello = "Hello";
+const world = "World";
+const complexString = hello + " " + world;
+```
+
+Or we can use a template literal string and do it this way:
+
+```javascript
+const hello = "Hello";
+const world = "World";
+const complexString = `${hello} ${world}`;
+```
+
+This becomes particularly helpful when creating strings of HTML to be inserted into the DOM:
+
+```javascript
+const myArray = ["one", "two", "three"];
+const htmlString = `
+<ol>
+  <li>${myarray[0]}</li>
+  <li>${myarray[1]}</li>
+  <li>${myarray[2]}</li>
+</ol>`;
+```
+
+Template literals allow for the use of formatting in these cases as well which aids readability.
+
+Some of the detail above comes from [You Don't Know JS Yet Ch 2](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/get-started/ch2.md). Highly recommend reading to learn more.

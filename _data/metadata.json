@@ -1,13 +1,13 @@
 {
   "title": "WDD Learning Modules",
-  "url": "https://byui-hackweek.netlify.app",
+  "url": "https://byui-cit.github.io/learning-modules",
   "language": "en",
   "description": "",
   "feed": {
     "subtitle": "",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "id": "https://byui-hackweek.netlify.app"
+    "id": "https://byui-cit.github.io/learning-modules"
   },
   "author": {
     "name": "Faculty",
@@ -16,6 +16,6 @@
   },
   "jsonfeed": {
     "path": "/feed/feed.json",
-    "url": "https://byui-hackweek.netlify.app/feed/feed.json"
+    "url": "https://byui-cit.github.io/learning-modules/feed/feed.json"
   }
 }

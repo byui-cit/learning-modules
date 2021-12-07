@@ -6,7 +6,11 @@ date: 2021-10-15
 layout: layouts/post.njk
 ---
 
-## Array helper methods
+## Built in functions
+
+Most programming languages are faced with similar problems that need to be solved. Eventually solutions to some of the most common problems get added directly into the language as built in functions. Some of the common areas where you will see this in JavaScript are [Dates](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date), [Math operations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math), and [Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
+## Array built in functions
 
 If we enter something like `[1,2,3]` in the console of a browser we will see our array show up with an arrow, if we expand the array by clicking on the arrow we see the values in our array and something that looks like this: `__proto__`. Open that up and we see a bunch of stuff associated with every array. Most of the list is helper functions, methods that do useful things with arrays.
 
@@ -77,11 +81,46 @@ That is the official syntax for the method. How do we read that?
    3. Third (optional) the entire array.
 5. Nothing will be returned from this method.
 
-## Callbacks
+## Callback functions
 
 We have mentioned that in Javascript functions are special objects...but since they are objects we can do anything with functions that we can a normal object. This includes assigning functions to variables, and passing functions into other functions as arguments, as well as returning functions from functions.
 
 When we pass a function into another function we call it a 'callback'. Many of the Array methods we will be looking at use callbacks.
+
+The basic form for a function declaration in JavaScript is below.
+
+```javascript
+// function declaration
+function square(number) {
+  return number * number;
+}
+```
+
+A function declaration starts with the `function` keyword, then a name, then `()` with zero or more parameters. Then there is a block `{}` where the code that we want executed when we call the function goes.
+
+We can also make an anonymous version of this function. We just leave off the name. We could then assign that anonymous function to a variable (this is called a function expression) or pass it as an argument to a function.
+
+```javascript
+// function expression
+const square = function (number) {
+  return number * number;
+};
+```
+
+There is also one more form functions can take that is often used in callbacks. That is the [Arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions). It would look like this:
+
+```javascript
+// arrow function
+const square = (number) => {
+  return number * number;
+};
+
+// or when your function is simply returning a value
+// it can be simplified even further:
+const square = (number) => number * number;
+```
+
+Anonymous functions and arrow functions are used very often as callbacks. See examples below.
 
 ## Examples
 

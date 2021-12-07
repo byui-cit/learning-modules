@@ -88,7 +88,7 @@ These activities will be most effective if you TRY them first before you look at
 
 ## Activity 1
 
-The code above will output the elements in an Array to the DOM. The provided solution above showed doing that one list element at a time, but this produces a lot of duplicated code and is tedious even for short lists. Loops would be a much better way to approach that problem. How can we use loops to make thi smore DRY?
+The code above will output the elements in an Array to the DOM. The provided solution above showed doing that one list element at a time, but this produces a lot of duplicated code and is tedious even for short lists. Loops would be a much better way to approach that problem. How can we use loops to make this more DRY?
 
 1. Decide which type of loop would be best for this task.
 
