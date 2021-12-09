@@ -110,6 +110,7 @@ nav a:hover {
     border: 15px solid #97bebe;
     width: 350px;
     display: block;
+    margin: 0 auto;
 }
 .visit_us h2 {
     text-align: center;
@@ -153,18 +154,18 @@ With this grid in mind, let's set up our grid in CSS. The parent of the grid is 
 
 ```html
 <main class="beach-grid">
-        <video class="path_video" autoplay muted >
-            <source src="https://byui-wdd.github.io/wdd130/images/path_beach.mp4" type="video/mp4">
-        </video>
-        <h1 class="path_title">Path to the Beach</h1>
-        <aside class="visit_us">
-            <img src="https://byui-wdd.github.io/wdd130/images/palm_beach.jpg" alt="Beach house">
-            <h2>Visit Us</h2>
-            <p>Beautiful island, palm trees, beach, sand, exotic, sea, and water.</p>
-        </aside>
-        <img class="icon1" src="https://byui-wdd.github.io/wdd130/images/beachchair.png" alt="icon beach chair">
-        <img class="icon2" src="https://byui-wdd.github.io/wdd130/images/flipflops.png" alt="icon flip flops">
-    </main>
+    <video class="path_video" autoplay muted >
+        <source src="https://byui-wdd.github.io/wdd130/images/path_beach.mp4" type="video/mp4">
+    </video>
+    <h1 class="path_title">Path to the Beach</h1>
+    <aside class="visit_us">
+        <img src="https://byui-wdd.github.io/wdd130/images/palm_beach.jpg" alt="Beach house">
+        <h2>Visit Us</h2>
+        <p>Beautiful island, palm trees, beach, sand, exotic, sea, and water.</p>
+    </aside>
+    <img class="icon1" src="https://byui-wdd.github.io/wdd130/images/beachchair.png" alt="icon beach chair">
+    <img class="icon2" src="https://byui-wdd.github.io/wdd130/images/flipflops.png" alt="icon flip flops">
+</main>
 ```
 
 Targeting the parent element in CSS we use the display property with a value of grid. We also set up the columns in the parent element with the grid-template-columns property. Since we know we need 3 equal width columns, we will give 3 equal fractional units of measurement that allows each column to be one equal fraction of the whole space available to the grid.
@@ -178,9 +179,9 @@ Targeting the parent element in CSS we use the display property with a value of 
 
 Now you can see in your browsers that each of the 5 children elements were placed in order as they are in HTML into the grid with 3 on the first row and 2 on the next row. I would highly suggest you use your developer tools in your browser to take a look at the grid, it helps so much as you are trying to place your grid items. If you'd like to do this, right-click over your grid and choose 'Inspect'. In the HTML code that shows up in your developer tool, rest your mouse pointer over the main class='beach-grid' element and you should see the grid. This works best in Chrome or Firefox. Now you can see the grid and how the elements are being placed in it.
 
-Our children elements are not where we want them to be however, so let's place them in the right placed within the grid. 
+Our children elements are not where we want them to be however, so let's place them in the right place within the grid. 
 
-Our video will span 2 columns and one row in the upper left. We will use the grid-column shortcut value of 1/3 to indicate starting at grid line 1 and going to grid line 3 just like we saw in our above with the grid over the top of our wireframe. We could put grid-row: 1/2 as well with our video but it has implicitly placed it there already.
+Our video will span 2 columns and one row in the upper left. We will use the grid-column shortcut value of 1/3 to indicate starting at grid line 1 and going to grid line 3 just like we saw above with the grid over the top of our wireframe. We could put grid-row: 1/2 as well with our video element but it has implicitly placed it there already.
 
 ```css
 video {
@@ -216,7 +217,7 @@ video {
 }
 ```
 
-Now the h1 and the video are in the same spot on the grid. Because the h1 comes after the video in the HTML order, then it is behind the video. To bring it on top we could change the order in HTML or give the h1 a higher z-index than the default 0 to bring it forward. Let's do that.
+Now the h1 and the video are in the same spot on the grid. Because the h1 comes after the video in the HTML, it is behind the video. To bring it on top we could change the order in HTML or give the h1 a higher z-index than the default 0 to bring it forward. Let's do that.
 
 ```css
 h1 {
@@ -255,4 +256,4 @@ Let's also put a little bit of space between all the grid items with a grid-gap 
 }
 ```
 
-We have used grid to get it to layout like our wireframe.
+Now all the grid items should be in the right places according to our wireframe.
