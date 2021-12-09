@@ -3,10 +3,10 @@
 	<title>WDD Learning Modules</title>
 	<subtitle></subtitle>
 	
-	<link href="https://byui-hackweek.netlify.app/learning-modules/feed/feed.xml" rel="self"/>
-	<link href="https://byui-hackweek.netlify.app"/>
+	<link href="https://byui-cit.github.io/learning-modules/feed/feed.xml" rel="self"/>
+	<link href="https://byui-cit.github.io/learning-modules"/>
 	<updated>2021-10-15T00:00:00Z</updated>
-	<id>https://byui-hackweek.netlify.app</id>
+	<id>https://byui-cit.github.io/learning-modules</id>
 	<author>
 		<name>Faculty</name>
 		<email></email>
@@ -14,10 +14,10 @@
 	
 	<entry>
 		<title>Fall 2021 Hackathon</title>
-		<link href="https://byui-hackweek.netlify.app/learning-modules/posts/fall2021/"/>
+		<link href="https://byui-cit.github.io/learning-modules/posts/fall2021/"/>
 		<updated>2021-10-15T00:00:00Z</updated>
-		<id>https://byui-hackweek.netlify.app/learning-modules/posts/fall2021/</id>
-		<content type="html">&lt;div&gt;&lt;img src=&quot;https://byui-hackweek.netlify.app/img/f21-ilift-logo_600.png&quot; alt=&quot;Fall 2021 theme: I lift&quot; class=&quot;f21-logo&quot; /&gt;&lt;/div&gt;
+		<id>https://byui-cit.github.io/learning-modules/posts/fall2021/</id>
+		<content type="html">&lt;div&gt;&lt;img src=&quot;https://byui-cit.github.io/img/f21-ilift-logo_600.png&quot; alt=&quot;Fall 2021 theme: I lift&quot; class=&quot;f21-logo&quot; /&gt;&lt;/div&gt;
 &lt;!-- ![img/f21-hackathon-logo.jpg](../../img/f21-ilift-logo.png &quot;Fall 2021 theme: I lift&quot;) --&gt;
 &lt;p&gt;The theme for this round is &#39;I-Lift&#39;. We hope you’ll come up with creative projects that can help lift others.&lt;/p&gt;
 &lt;p&gt;The initial round of reviews is done and we have our top ten teams. They are (in no certain order):&lt;/p&gt;
@@ -33,7 +33,7 @@
 &lt;li&gt;I-survive&lt;/li&gt;
 &lt;li&gt;Les Belges&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;To see results visit &lt;a href=&quot;https://byui-hackweek.netlify.app/fall2021/&quot;&gt;the results page&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To see results visit &lt;a href=&quot;https://byui-cit.github.io/fall2021/&quot;&gt;the results page&lt;/a&gt;&lt;/p&gt;
 </content>
 	</entry>
 </feed>
