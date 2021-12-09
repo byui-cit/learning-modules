@@ -4,7 +4,7 @@ description: A basic review of CSS Grid layout essentials.
 date: 2021-11-01
 order: 99
 tags:
-  - css
+  - grid
   - css layout
 layout: layouts/post.njk
 ---
