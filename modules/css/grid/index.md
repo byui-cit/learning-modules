@@ -37,6 +37,18 @@ display: grid;
 ## Prepare
 
 - 📚 Read [click](URL).
+
+<figure class="video-container">
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1FyVcc1pIVU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
+
+<figure class="video-container">
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/e3_70BJglG4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
+
+- [Understanding Grid](prepare1)
 - [Using Grid Area](prepare2/)
 - [Using Grid Templates versus Column/Row](prepare3/)
 
