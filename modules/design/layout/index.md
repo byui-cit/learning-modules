@@ -46,4 +46,4 @@ The following video introduces different ways to take elements out of their norm
 
 ## Ponder
 
-- [Practice with the Box Model](ponder1/)
+- [Practice with CSS Layout](ponder1/)
