@@ -14,7 +14,7 @@ Review the following web page to learn more about these topics.
 
 - [MDN Git and GitHub](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/GitHub)
 
-## Web Development Basics
+## What is Git?
 
 <figure class="video-container">
 
