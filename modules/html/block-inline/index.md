@@ -3,6 +3,7 @@ title: Block and Inline Elements
 description: Understanding and centering block and inline elements
 date: 2021-12-02
 tags:
+  - html
   - inline
   - block
   - centering

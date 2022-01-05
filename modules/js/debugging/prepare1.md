@@ -20,7 +20,7 @@ Javascript was originally created to be run in a browser and much of it still is
 
 1. Open a sandbox folder up in your editor. In the sandbox folder create an html file called `debugging.html` with the html for a basic page. (Hint: In VS Code type ! in your blank .html file...then press the tab key. You are welcome...;)
 2. Create a file called `debugging.js`
-3. Add a script element to your `week1.html` file. The script element is how we let the browser know that there is some Javascript code that it needs to fetch and execute.
+3. Add a script element to your `debugging.html` file. The script element is how we let the browser know that there is some Javascript code that it needs to fetch and execute.
 
   <div class="callout">
 
