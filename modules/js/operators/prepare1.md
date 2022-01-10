@@ -8,9 +8,23 @@ layout: layouts/post.njk
 
 ## Operators
 
+Write a Javascript snippet to do the following. Make your best guess if you don't know. Make sure to put some sort of response on each:
+
+1. Add two numbers
+2. Multiply two numbers
+3. Add one to a number
+4. Subtract one from a number
+5. assign a value to a variable
+6. increment the value in a variable by 3
+7. concatinate two strings together.
+8. compare two values to see if they are the same
+9. check to see if one number is less than another number
+10. Check to see if two values are NOT equal
+11. check to see if a value is less than 10 and greater than 0
+
 ### Arithmetic and Assignment Operators
 
-Make sure you have reviewed the [JS operators](https://www.w3schools.com/jsref/jsref_operators.asp).
+Next review [JS operators](https://www.w3schools.com/jsref/jsref_operators.asp). How many of the questions above did you get correct?
 
 ### Comparison Operators
 
