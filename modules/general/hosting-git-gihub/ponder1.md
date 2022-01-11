@@ -39,7 +39,7 @@ Make sure you read through the Prepare section for this topic.
     5. Click 'Next' through all of the setup windows leaving all the defaults as they are. There will be quite a few windows.
     6. The last window will let you click 'Install' and click 'Finish'.
     7. Open up a new Command Prompt window by closing the first Command Prompt window and start a new one by typing 'cmd' at the Windows start button in the bottom left of your screen again. At the prompt, type: `git --version` again if you want to see that it installed. You should now see the version number. (If you don't use a new Command Prompt window, you could get the same message you had before you installed Git.)
-       While we are still in the Command Prompt we will type in two more commands to set up our username and email that are associated with our GitHub account. Again it doesn't matter what the path prompt is. These are global settings so you can type them from any path prompt.
+       While we are still in the Command Prompt we will type in two more commands to set up our username and email that will be used with our GitHub account. Use a professional username since this username will show up in the domain of your web projects. Again it doesn't matter what the path prompt is. These are global settings so you can type them from any path prompt.
 
     8. The command is listed below, but make sure you use your own username and email between the "" quotes. Use the username and your email you used for the GitHub account. It will be different for everyone. Type:
 
@@ -82,9 +82,9 @@ Make sure you read through the Prepare section for this topic.
     9. A similar window will pop up like before but you can now click 'Open'.
     10. You can now use all the defaults for the installation with 'Continue' on the first screen. Install on the next (it will have you enter your Mac password again), and click Close. It might ask if you want to send the file you downloaded to the Trash and you can keep it with 'Keep' or delete it with 'Move to Trash'. We shouldn't need it again.
     11. Open up the Terminal again. At the prompt, type: `git --version` again if you want to see that it installed. You should now see the version number. (If you don't use a new Terminal window, you could get the same message you had before you installed Git.)
-        While we are still in Terminal we will type in two more commands to set up our username and email that are associated with our GitHub account. Again it doesn't matter what the path prompt is. These are global settings so you can type them from any path prompt.
+        While we are still in Terminal we will type two more commands to set up our username and email that will be used with our GitHub account. Use a professional username since this username will show up in the domain of your web projects. Again it doesn't matter what the path prompt is. These are global settings so you can type them from any path prompt.
 
-    12. The command is listed below, but make sure you use your own username and email between the "" quotes. Use the username and your email you used for the GitHub account. It will be different for everyone. Type:
+    12. The command is listed below, but make sure you use your own username and email between the "" quotes. Use the username and your email you will use or did use for the GitHub account. It will be different for everyone. Type:
 
     ```bash
     git config --global user.name "yourusername"
@@ -111,9 +111,9 @@ Make sure you read through the Prepare section for this topic.
 2.  ## Sign up for a GitHub Account
 
     1. Visit the [Github.com](https://github.com/) website and click the 'Sign Up' button.
-    2. You'll enter an email. Your BYUI email is a good one to use here. Then click 'Continue'.
+    2. You'll enter an email. Use the email you use in the git config global settings. Then click 'Continue'.
     3. Create a password that has to be at least 15 characters or 8 characters with a number and lowercase letter. Then click 'Continue'.
-    4. Enter a username. Use a professional name since this username will show up in the domain of your web projects. You might show these links to future prospective employers. If you get a red 'X' to the left of your username, then someone else has already used that username and you need to choose a different one. Don't forget the email, password, and username you used for this new GitHub account. We will need them later.
+    4. Enter a username, the same username you used when setting up your git config global settings. It should be a professional name since this username will show up in the domain of your web projects. You might show these links to future prospective employers. If you get a red 'X' to the left of your username, then someone else has already used that username and you need to choose a different one. Don't forget the email, password, and username you used for this new GitHub account. We will need them later.
     5. Enter 'n' for the next step unless you want email from them.
     6. At this point it wants to make sure you are human and it has you solve a few simple puzzles. Click 'Start puzzle' and follow the directions. Click 'Create account'.
     7. It will send a launch code to the email you listed. Use that launch code and enter it.
