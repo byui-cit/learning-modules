@@ -98,7 +98,7 @@ a {
 }
 ```
 
-Our list items (li) elements need some breating room. Because I want some space around the links themselves and more of the navy blue color showing I will want padding not only on the (a) elements but also on the nav itself. 
+Our list items (li) elements need some breathing room. Because I want some space around the links themselves and more of the navy blue color showing I will want padding not only on the (a) elements but also on the nav itself. 
 
 ```css
 nav {
