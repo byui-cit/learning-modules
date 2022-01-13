@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography for the Web - Fundamentals</title>
+    <meta name="description" content="The Principles behind good typography for the web.">
+    <link rel="stylesheet" href="/learning-modules/css/index.css">
+    <link rel="stylesheet" href="/learning-modules/css/prism-coy.css">
+    <link rel="alternate" href="/learning-modules/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="/learning-modules/feed/feed.json" type="application/json" title="WDD Learning Modules">
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <a href="/learning-modules/">
+          <img src="/learning-modules/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        </a>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
+      </div>
+      <nav>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="/learning-modules/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/html/">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/js/">JS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/css/">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/design/">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/general/">General</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+    <main  class="tmpl-post" >
+      
+<h1>Typography for the Web - Fundamentals</h1>
+
+
+
+
+<h2 id="fonts" tabindex="-1">Fonts <a class="direct-link" href="#fonts" aria-hidden="true">#</a></h2>
+<p>If you search online about typography on the web, you will find a lot of information. The purpose of most websites is to deliver information. Most of that information comes in the form of text. Typography is a vast subject and so it is common to see attempts to simplify it into lists of best practices. Most of these give good advice. Here is an example of what you will commonly see on these lists: (<a href="https://blog.hubspot.com/website/website-typography">https://blog.hubspot.com/website/website-typography</a>)</p>
+<ol>
+<li>Limit the number of typefaces per website.</li>
+<li>Use a sans serif font for body text.</li>
+<li>Stick to standard fonts at first.</li>
+<li>Size your text appropriately.</li>
+<li>Don’t use all caps.</li>
+<li>Use colors carefully and intentionally.</li>
+<li>Stay between around 40 and 80 characters per line.</li>
+<li>Provide sufficient spacing between lines.</li>
+<li>Eliminate text animations.</li>
+</ol>
+<p>Here are some more <a href="https://cdn2.hubspot.net/hubfs/2799924/Design-Infographics/Infographic-Guide-to-Web-Typography-Toptal.pdf">guidelines on Web Typography</a> from <a href="https://www.toptal.com/designers/typography/web-typography-infographic">Toptal</a></p>
+<h3 id="choosing-a-font" tabindex="-1">Choosing a font <a class="direct-link" href="#choosing-a-font" aria-hidden="true">#</a></h3>
+<p>The list above lists some general guidelines about font usage. Read the section starting with &quot;How to choose the perfect font&quot; from <a href="https://elementor.com/blog/guide-to-web-typography/">Elementor: Web Typography</a> for some additional tips.</p>
+<p>For the advice of respected designer Massimo Vignelli, read pages 54-72 of <a href="../../../../img/VignelliCanon.pdf">The Vignelli Canon</a>. The whole document is great. He has some very strong opinions!</p>
+<h3 id="@font-face" tabindex="-1">@font-face <a class="direct-link" href="#@font-face" aria-hidden="true">#</a></h3>
+<p>Once you have found that perfect font for your project, you often must make that font available in your CSS before you can use it. This is the role of <code>@font-face</code></p>
+<p>Most of you have used this before, even if you don't realize it. For example if you have included a font from Google fonts you might have added a line like this to your CSS: <code>@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&amp;display=swap');</code> Have you ever looked at the .CSS file that you imported? If you do that now you will see something like this:</p>
+<pre class="language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@font-face</span></span> <span class="token punctuation">{</span><br>  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">"Open Sans"</span><span class="token punctuation">;</span><br>  <span class="token property">font-style</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span><br>  <span class="token property">font-weight</span><span class="token punctuation">:</span> 400<span class="token punctuation">;</span><br>  <span class="token property">font-stretch</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span><br>  <span class="token property">font-display</span><span class="token punctuation">:</span> swap<span class="token punctuation">;</span><br>  <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span>https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2<span class="token punctuation">)</span></span><br>    <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"woff2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token property">unicode-range</span><span class="token punctuation">:</span> U+0000-00FF<span class="token punctuation">,</span> U+0131<span class="token punctuation">,</span> U+0152-0153<span class="token punctuation">,</span> U+02BB-02BC<span class="token punctuation">,</span> U+02C6<span class="token punctuation">,</span> U+02DA<span class="token punctuation">,</span><br>    U+02DC<span class="token punctuation">,</span> U+2000-206F<span class="token punctuation">,</span> U+2074<span class="token punctuation">,</span> U+20AC<span class="token punctuation">,</span> U+2122<span class="token punctuation">,</span> U+2191<span class="token punctuation">,</span> U+2193<span class="token punctuation">,</span> U+2212<span class="token punctuation">,</span> U+2215<span class="token punctuation">,</span><br>    U+FEFF<span class="token punctuation">,</span> U+FFFD<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p><code>@font-face</code> is what really does the magic of making a custom font available to your page.</p>
+<p>For more information about the specifics of writing your own <code>@font-face</code> rules read <a href="https://css-tricks.com/snippets/css/using-font-face-in-css/">Using @font-face</a> (CSS Tricks)</p>
+<h3 id="variable-fonts" tabindex="-1">Variable fonts <a class="direct-link" href="#variable-fonts" aria-hidden="true">#</a></h3>
+<p>Variable Fonts are an exciting new addition to CSS. They help us solve the problem of excessive weight added to a page when several styles of custom fonts are required (bold, italic, etc).</p>
+<p>Review the following resources on CSS Variable Fonts</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide">Variable Fonts Guide</a> MDN</li>
+<li><a href="https://24ways.org/2019/an-introduction-to-variable-fonts/">Introduction to Variable Fonts</a> 24 Ways</li>
+</ul>
+<h2 id="scale-with-harmony" tabindex="-1">Scale with Harmony <a class="direct-link" href="#scale-with-harmony" aria-hidden="true">#</a></h2>
+<p>Read about the principle of Scale and Harmony with typography in <a href="http://webtypography.net/3.1.1">section 3.1.1</a> of <a href="http://webtypography.net/toc/">The Elements of Typographic Style Applied to the Web</a>. Then continue with a very nice article about how one might implement a <a href="https://every-layout.dev/rudiments/modular-scale/">modular scale</a> with CSS</p>
+<h2 id="measure" tabindex="-1">Measure <a class="direct-link" href="#measure" aria-hidden="true">#</a></h2>
+<p>The width of a line of text, in characters, is known as its <strong>measure</strong>. If you read <a href="http://webtypography.net/2.1.2">section 2.1.2</a> from <em>The Elements of Typographic Style Applied to the Web</em>, it suggests that a measure of 45 - 75 characters is good, with 66 being ideal. How can we best apply that to our designs? Read about <a href="https://every-layout.dev/rudiments/axioms/">Axioms</a> on <em>Every Layout</em> for some great ideas.</p>
+<h2 id="whitespace-and-flow" tabindex="-1">Whitespace and flow <a class="direct-link" href="#whitespace-and-flow" aria-hidden="true">#</a></h2>
+<p>As stated earlier, a websites main purpose is very often to distribute information, and type is the medium by which this is usually done. <strong>Whitespace</strong> is the space between design elements, and is very important. If we go back and consult <a href="../../../../img/VignelliCanon.pdf">The Vignelli Canon</a> again, this time around page 92. We learn about several elements that make up the whitespace in a design. We should know how to modify each of these in CSS:</p>
+<ul>
+<li><strong>leading</strong>: this controlled by <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height">line-height</a> in our css.</li>
+<li>tight or loose <strong>type setting</strong>: would be controlled with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing">word-spacing</a></li>
+<li><strong>padding</strong>: the internal space on an element is controlled with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding">padding</a></li>
+<li><strong>margin</strong>: the external spacing of an element is <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin">margin</a></li>
+<li><strong>letter spacing</strong> (kearning): <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing">letter-spacing</a></li>
+</ul>
+<p>Finally read <a href="http://webtypography.net/2.2.1">section 2.2.1</a> and <a href="http://webtypography.net/2.2.2">section 2.2.2</a> from <em>The Elements of Typographic Style Applied to the Web</em> to learn the importance of vertical space in establishing a good flow.</p>
+<hr>
+<h2 id="text-orientation-and-writing-modes" tabindex="-1">Text orientation and Writing modes <a class="direct-link" href="#text-orientation-and-writing-modes" aria-hidden="true">#</a></h2>
+<p>Sometimes it becomes necessary to display our text in something other than the default (for most western countries) of left to right, top to bottom. This might be for a creative reason as you see in <a href="https://labs.jensimmons.com/#writing-modes">these examples</a> from Jen Simmons, or it might be because your site needs to be read in a language that functions differently than the one the site was created in.</p>
+<p>Read more about <a href="https://24ways.org/2016/css-writing-modes/">CSS Writing Modes</a> to learn more.</p>
+<p>You may also want to review the following CSS articles:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-orientation">text-orientation</a> MDN</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode">writing-mode</a> MDN</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different Text Directions</a> MDN</li>
+</ul>
+
+</main>
+    <footer>
+      <p class="license">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/></a><br/>This work is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+          International License</a>.</p>
+    </footer><!-- Current page: /learning-modules/modules/design/typography/prepare1/ --></body>
+</html>
