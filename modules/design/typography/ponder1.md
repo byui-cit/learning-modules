@@ -12,7 +12,7 @@ Make sure you read through the Prepare section for this topic. You will also nee
 
 ### html
 
-[starter HTML]() (right click - save as)
+[starter HTML](https://byui-cit.github.io/advcss/modules/examples/syllabus/index.html) (right click - save as)
 
 These activities will be most effective if you TRY them first before you look at the solution. And after you do look at the solution...DO NOT copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.
 
