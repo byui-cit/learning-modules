@@ -4,6 +4,7 @@ description: Creating wireframes and using them to create HTML
 date: 2021-11-30
 order: 2
 tags:
+  - design
   - wireframes
 layout: layouts/post.njk
 ---

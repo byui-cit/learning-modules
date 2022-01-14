@@ -12,7 +12,7 @@ First thing...the Document Object Model is NOT Javascript. But Javascript can in
 
 The DOM is the representation of the nodes or elements of a web page in code. The DOM is exposed through a special object to Javascript: document.
 
-Create a new html file in your sandbox directory for this activity. Call it `dom-basics.html`. Enter the following HTML into it (remember if you are in VS Code you can type '!' then hit the tab key to get some HTML boilerplate as a starting point):
+Create a new html file in your sandbox directory for this activity. Call it `dom-basics.html`. Enter the following HTML into it:
 
 ### html
 
@@ -39,7 +39,6 @@ Create a new html file in your sandbox directory for this activity. Call it `dom
         <p class="green">This is a paragraph with an class</p>
       </div>
     </section>
-    <script src="dom-basics.js"></script>
   </body>
 </html>
 ```
@@ -74,13 +73,28 @@ Open the page in the browser, then open the developer tools (right-click->inspec
 
 We can modify the elements in the DOM as we saw above. We can also add new elements.
 
-1. Lets add some content to the body. This will be much easier in a javascript file. Create a file called dom-basics.js and enter the following:
+1. Lets add some content to the body. This will be much easier in a javascript file. Create a file called `dom-basics.js`. and enter the following:
 
 ```javascript
 const newParagraph = document.createElement("p");
 newParagraph.innerText = "Added with Javascript!";
 document.body.appendChild(newParagraph);
 ```
+
+You will also need to attach the script to our HTML. Add the following line to the `<head>` of your html file, right below the `<title>`:
+
+```html
+<script src="dom-basics.js"></script>
+```
+
+Check the page in the browser. Did the new paragraph show? Check the console. You should see an error like this: "TypeError: null is not an object (evaluating 'document.body.appendChild')"
+
+When we add a `script` element to our page, as soon as the browser sees the link, it will stop processing the HTML, download the resource and run any Javascript it can. The problem is that `<body>` hasn't been built yet, so when we tried to access it `document.body.appendChild(newParagraph);` It could not be found. We need to tell the browser to wait to execute the code until **after** the DOM has been built. There are two ways we can do this:
+
+- Place the `<script>` element at the bottom of the body. This works, and has been done for years, but these days option 2 is better...
+- Add the keyword `defer` to your script...ie `<script src="dom-basics.js" defer></script>`
+
+Add `defer` to your script, then check to make sure it worked.
 
 2. Try adding an image. We would need to create the `img` element, then set the `src` and `alt` attributes, and finally append the image to the body. You should use
    `element.setAttribute('src', 'path/to/image')` to set those attributes. Try it. You can use
