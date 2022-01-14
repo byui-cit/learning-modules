@@ -15,7 +15,6 @@ At the end of the day the purpose of most websites is to share information. That
 
 ## Where this knowledge is utilized
 
-- WDD 130
 - WDD 230
 - WDD 330
 - WDD 430
