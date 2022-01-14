@@ -22,9 +22,6 @@ Open the file you downloaded above in your editor, then create a .css file (or .
 
 when you open the HTML you will see that it is the text for a Syllabus. It currently has a lot of important information. Some hierarchy has been provided with the semantics of the HTML, but more should be provided to make the page more effective at delivering it's message.
 
-https://fonts.google.com/specimen/Archivo#standard-styles
-https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@1,62..125,100..900&display=swap
-
 1. Start with the font. We will use the [Recursive font](https://fonts.google.com/specimen/Recursive?vfaxis=slnt#standard-styles) from Google fonts. Select the font and then take the URL that google provides to look at the `@font-face` declarations it provides. You will see something like this:
 
 ```css
