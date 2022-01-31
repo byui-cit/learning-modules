@@ -5,6 +5,7 @@ date: 2021-10-15
 order: 1
 tags:
   - design
+  - css
   - typography
 layout: layouts/post.njk
 ---
@@ -17,7 +18,7 @@ At the end of the day the purpose of most websites is to share information. That
 
 - WDD 230
 - WDD 330
-- WDD 430
+- WDD 331
 
 ## Prerequisites
 

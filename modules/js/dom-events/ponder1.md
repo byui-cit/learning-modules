@@ -179,14 +179,14 @@ function newTask() {
 
 function removeTask(taskElement) {
   tasks = tasks.filter(
-    (task) => task.detail != taskElement.childNodes[0].innerText
+    (task) => task.detail != taskElement.childNodes[1].innerText
   );
   taskElement.remove();
 }
 
 function completeTask(taskElement) {
   const taskIndex = tasks.findIndex(
-    (task) => task.detail === taskElement.childNodes[0].innerText
+    (task) => task.detail === taskElement.childNodes[1].innerText
   );
   tasks[taskIndex].completed = tasks[taskIndex].completed ? false : true;
   taskElement.classList.toggle("strike");
