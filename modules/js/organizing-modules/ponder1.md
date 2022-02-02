@@ -21,7 +21,7 @@ Make sure you read through the Prepare section for this topic. You will also nee
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Courses and sections</title>
-    <script src="courses.js" defer></script>
+    <script src="modules.js" defer></script>
   </head>
   <body>
     <h1 id="courseName"></h1>
@@ -131,13 +131,13 @@ The object created with the javascript above contains most of the functionality 
 5. Make sure to change the line in your HTML that looks like this:
 
    ```html
-   <script src="courses.js" defer></script>
+   <script src="modules.js" defer></script>
    ```
 
    to this:
 
    ```html
-   <script src="courses.js" type="module"></script>
+   <script src="modules.js" type="module"></script>
    ```
 
    This will allow the browser to load our module. It will give you an error if you forget this step!

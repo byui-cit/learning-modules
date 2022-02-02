@@ -19,21 +19,27 @@ Meeting those goals shows up in two important ways in CSS. First by applying som
 
 ## Where this knowledge is utilized
 
+- WDD 230
 - WDD 330
-- WDD 331
+- \*WDD 331
 - CSE 340
-- CSE 341
 
 ## Prerequisites
 
-- Understanding of [JS Functions](../../js/organizing-functions)
+- Understanding of [CSS](../css-intro)
+- It would also be helpful to have some knowledge of a CSS preprocessor like Sass.
 
 ## Prepare
 
-- Study [CSS Master Ch 1](https://www.sitepoint.com/premium/books/css-master-2nd-edition/read/1) CSS Architecture and Organization (Sitepoint).
 - Read [CSS Architecture](https://philipwalton.com/articles/css-architecture/) Phillip Walton
+- Study [CSS Guidelines](https://cssguidelin.es/)
 - Read the [introduction to BEM](http://getbem.com/introduction/) at Get BEM
-- Review [Atomic Design Ch1](http://atomicdesign.bradfrost.com/chapter-1/).
+<!-- - Review [Atomic Design Ch1](http://atomicdesign.bradfrost.com/chapter-1/). -->
+
+### Optional
+
+If you have access to Sitepoint the following is a great resource as well:
+
 - [Become the CSS Hero of Your Office with CSS Architecture](https://www.sitepoint.com/premium/courses/become-the-css-hero-of-your-office-with-css-architecture-2969/). The whole course is good, but quite long (2h34m). Start with watching the first two lessons, then pick at least 2-3 parts from lesson 3 to watch.
 
 ## Ponder
