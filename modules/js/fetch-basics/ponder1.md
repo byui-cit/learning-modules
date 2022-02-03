@@ -103,7 +103,7 @@ As interesting as Ditto is...it would be more fun to get information on lots of 
 ```javascript
 function doStuffList(data) {
   console.log(data);
-  const pokeListElement = document.querySelector("#pokeList");
+  const pokeListElement = document.querySelector("#outputList");
   const pokeList = data.results;
   pokeList.forEach((currentItem) => {
     const html = `<li>${currentItem.name}</li>`;
@@ -156,7 +156,7 @@ function sortPokemon(list) {
 function doStuffList(data) {
   console.log(data);
   const pokeListElement = document.querySelector("#outputList");
-  const pokeList = data.results;
+  let pokeList = data.results;
   // sort our list before output it
   pokeList = sortPokemon(pokeList);
   pokeList.forEach((currentItem) => {
