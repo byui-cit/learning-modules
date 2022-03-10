@@ -62,7 +62,19 @@ let averageTwoNumbers = function (firstNum, secondNum) {
 };
 ```
 
-Regardless of if you used a function declaration or expression to create it, you would still call averageTwoNumbers using exactly the same syntax, averageTwoNumbers(15,10). So what then is the difference? Why would you choose one way over the other?
+There is also now a shorthand form of an anonymous function called an Arrow function. It would look like this:
+
+```javascript
+let averageTwoNumbers = (firstNum, secondNum) => {
+  let sum = firstNum + secondNum;
+  let avg = sum / 2;
+  return avg;
+};
+```
+
+Arrow functions have become very popular when used as callback functions (a function passed into another function), but they will also be seen used for function expressions as well.
+
+Regardless of which method you use to create it, you would still call averageTwoNumbers using exactly the same syntax, averageTwoNumbers(15,10). So what then is the difference? Why would you choose one way over the other?
 
 The JavaScript language has a concept called 'global scope'. When you use the traditional function declaration syntax, your function is created and lives in this global scope. An advantage of this is that you could write code using the function declaration that used the function BEFORE the function declaration like many other languages allow. Here's a simple, syntactically correct example.
 
@@ -116,7 +128,7 @@ let averageTwoNumbers = function (firstNum, secondNum) {
 averageTwoNumbers(15, 20);
 ```
 
-When you use the function expression syntax, the use of the function HAS to happen AFTER the function is created.
+When you use the function expression syntax (with a normal anonymous function OR an arrow function), the use of the function HAS to happen AFTER the function is created.
 
 One question that usually comes up when using the expression syntax is, "Hey...aren't we just storing a function in a variable? If so, could we change the function stored in the variable?" The answer is yes though this is often an advanced JavaScript programming concept. If, on the other hand, your variable was a const instead of a let, no such change could be made.
 
