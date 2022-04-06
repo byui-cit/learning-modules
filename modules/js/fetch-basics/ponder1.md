@@ -17,7 +17,7 @@ Make sure you read through the Prepare section for this topic. You will also nee
 <html>
   <head>
     <title>Fetch Activities</title>
-    <script src="main.js"></script>
+    <script src="fetch.js"></script>
   </head>
   <body></body>
 </html>
@@ -26,27 +26,24 @@ Make sure you read through the Prepare section for this topic. You will also nee
 ### Javascript
 
 ```javascript
-// main.js
+// fetch.js
 const url = "https://pokeapi.co/api/v2/pokemon/ditto";
 let results = null;
-// takes a fetch response and checks to make sure it was OK.
-// then returns the body of the response as a PROMISE to some JSON.
-function convertToJson(response) {
+async function getPokemon(url) {
+  const response = await fetch(url);
+  //check to see if the fetch was successful
   if (response.ok) {
-    return response.json();
-  } else {
-    console.log("error:", response);
+    // the API will send us JSON...but we have to convert the response before we can use it
+    // .json() also returns a promise...so we await it as well.
+    const data = await response.json();
+    doStuff(data);
   }
 }
-// this is where we would do whatever we needed to do with the resulting data.
 function doStuff(data) {
   results = data;
   console.log("first: ", results);
 }
-// read this as: make a request to URL, WHEN it finishes THEN run convertToJson
-// WHEN it finishes THEN run doStuff
-fetch(url).then(convertToJson).then(doStuff);
-// meanwhile...continue with the rest of the program...
+getPokemon(url);
 console.log("second: ", results);
 ```
 
@@ -87,20 +84,54 @@ As interesting as Ditto is...it would be more fun to get information on lots of 
 
 1. Add a ul element to our html to hold the list. (`<ul id="outputList"></ul>`)
 2. Get that element with Javascript
-3. Change the url that we are using to make the request to
-   `const url = "https://pokeapi.co/api/v2/pokemon";`
-4. Create a function: `function doStuffList(data) {}`
-5. Change your fetch call to use the `doStuffList` function instead of `doStuff`
-6. In the function start by console.logging **data**. Save everything and open your file in the browser. Take a look in the console at the structure of what got sent back. Notice that our list is inside of a property called **results**
+3. Add a new url that will return a list of pokemon instead of just one
+   `const urlList = "https://pokeapi.co/api/v2/pokemon";`
+4. Create two functions: `function doStuffList(data) {}` and `function getPokemonList(url) {}`
+5. Write the code for getPokemonList first. It should do the following:
+   1. Make a fetch request to the url passed in.
+   2. When the request finishes check to make sure it was ok.
+   3. If it was ok then convert the response to json.
+   4. Call the `doStuffList` function, passing in the data.
+6. Move to the `doStuffList` function next. In the function start by console.logging **data**. Save everything and open your file in the browser. Take a look in the console at the structure of what got sent back. Notice that our list is inside of a property called **results**
 7. Create a variable called `pokeList` in the doStuffList function and set it equal to `data.results`
 8. for each of the pokemon in the list: create a line of html to output it
    `<li>${pokeList.name}</li>`
 9. Add the new list to what was already in our output element.
+10. Run the new `getPokemonList` function, passing in `urlList`.
 
 <details>
 <summary>Solution 2</summary>
 
 ```javascript
+const url = "https://pokeapi.co/api/v2/pokemon/ditto";
+const urlList = "https://pokeapi.co/api/v2/pokemon";
+let results = null;
+
+async function getPokemon(url) {
+  const response = await fetch(url);
+  //check to see if the fetch was successful
+  if (response.ok) {
+    // the API will send us JSON...but we have to convert the response before we can use it
+    // .json() also returns a promise...so we await it as well.
+    const data = await response.json();
+    doStuff(data);
+  }
+}
+async function getPokemonList(url) {
+  const response = await fetch(url);
+  if (response.ok) {
+    const data = await response.json();
+    doStuffList(data);
+  }
+}
+function doStuff(data) {
+  results = data;
+  const outputElement = document.querySelector("#output");
+  const html = `<h2>${data.name}</h2><img src="${data.sprites.front_default}" alt="${data.name}">`;
+  outputElement.innerHTML = html;
+  console.log("first: ", results);
+}
+
 function doStuffList(data) {
   console.log(data);
   const pokeListElement = document.querySelector("#outputList");
@@ -111,6 +142,62 @@ function doStuffList(data) {
     pokeListElement.innerHTML += html;
   });
 }
+getPokemon(url);
+console.log("second: ", results);
+
+getPokemonList(urlList);
+```
+
+</details>
+
+## NOTE
+
+Did it bother any of you that our `getPokemon` function and `getPokemonList` function are almost identical? It should as it breaks the DRY principle...we are definately repeating ourselves! How can we fix this to remove the duplicated code? Think about it (hint: callbacks), then check out the alternate solution below.
+
+<details>
+<summary>Solution 2 - alternate</summary>
+
+```javascript
+const url = "https://pokeapi.co/api/v2/pokemon/ditto";
+const urlList = "https://pokeapi.co/api/v2/pokemon";
+let results = null;
+
+async function getPokemon(url, doThis) {
+  const response = await fetch(url);
+  //check to see if the fetch was successful
+  if (response.ok) {
+    // the API will send us JSON...but we have to convert the response before we can use it
+    // .json() also returns a promise...so we await it as well.
+    const data = await response.json();
+    // execute the callback
+    doThis(data);
+  }
+}
+
+function doStuff(data) {
+  results = data;
+  const outputElement = document.querySelector("#output");
+  const html = `<h2>${data.name}</h2><img src="${data.sprites.front_default}" alt="${data.name}">`;
+  outputElement.innerHTML = html;
+  console.log("first: ", results);
+}
+
+function doStuffList(data) {
+  console.log(data);
+  const pokeListElement = document.querySelector("#outputList");
+  const pokeList = data.results;
+  pokeList.forEach((currentItem) => {
+    const html = `<li data-url="${item.url}">${currentItem.name}</li>`;
+    // note the += here...
+    pokeListElement.innerHTML += html;
+  });
+}
+getPokemon(url, doStuff);
+console.log("second: ", results);
+// Notice that by just passing a different callback function in
+// we can totally change what happens when the data comes back.
+// It's like we gave the getPokemon function superpowers!
+getPokemon(urlList, doStuffList);
 ```
 
 </details>
@@ -165,7 +252,6 @@ function doStuffList(data) {
     pokeListElement.innerHTML += html;
   });
 }
-fetch(url).then(convertToJson).then(doStuffList);
 ```
 
 </details>

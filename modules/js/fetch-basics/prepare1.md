@@ -34,67 +34,53 @@ const results = fetch(url);
 console.log(results);'
 ```
 
-There is a lot going on in that simple line of code. With it we made a request for some specific information from a remote server. Check the console and you will find however that we did not get the information yet. Just as was mentioned above fetch returns a Promise. We have to tell it what we want it to do once the promise **fulfills** or finishes what it is doing. We do that with the [.then()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) method.
+There is a lot going on in that simple line of code. With it we made a request for some specific information from a remote server. Check the console and you will find however that we did not get the information yet. Just as was mentioned above fetch returns a Promise. By default Javascript will not wait for a Promise to finish before it moves on to the next line. This can cause big problems if the next line needs the results of the Promise to do it's job. Take the following example:
 
 ```javascript
-promise.then(onFulfilled[, onRejected]);
-
-  promise.then(value => {
-    // fulfillment
-  }, reason => {
-    // rejection
-  });
+const url = "https://pokeapi.co/api/v2/pokemon/ditto";
+const results = fetch(url);
+doStuff(results);
 ```
 
-`.then()` takes two parameters...one required that contains what should happen if the request was successful, and one optional that contains what should happen if the request fails.
+Javascript would run the line with fetch. Results would get set to a Promise initially. Then the execution would move immediately on to the line `doStuff(results)` The problem is that our function expects **results** to be the data NOT a Promise! It won't work. We need a way to delay the execution of `doStuff(results)` UNTIL fetch finishes and the Promise resolves.
 
-`fetch` does not return usable data initially. Instead we have to tell it what we were expecting...and ask it to convert the response into the right kind of data. The three types it understands are `json()`, `text()` (HTML and XML would be considered text), and `blob()` (blob is anything that isn't text or json). We are expecting JSON back from the api we made the request to. So we should convert it to that.
+The easiest way to do that is with [async/await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function). Though it can also be done with the [.then()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) method, Async/await code is more readable in general and easier to follow so we will use that method.
+
+So how do we use async/await? First, async/await **can only be used in functions**. This is very important. We must first declare a function as an asynchronous function with the `async` keyword, then put our code inside of that. This is not a big drawback since we really should have put this in a function anyway ;)
+
+Once we have done that we can instruct Javascript to delay moving to the next line by using the `await` keyword. With the example above it would look like this:
+
+```javascript
+const url = "https://pokeapi.co/api/v2/pokemon/ditto";
+async function getPokemon(url) {
+  const results = await fetch(url);
+  doStuff(results);
+}
+
+getPokemon(url);
+```
+
+We are getting closer, but our example is still not complete. It turns out that `fetch` does not return usable data initially. It returns what is known as a data stream. We have to tell fetch what we were expecting...and ask it to convert the response into the right kind of data. The three types it understands are `json()`, `text()` (HTML and XML would be considered text), and `blob()` (blob is anything that isn't text or json). We are expecting JSON back from the api we made the request to. So we should convert it to that.
 
 ```javascript
 const url = "https://pokeapi.co/api/v2/pokemon/ditto";
 let results = null;
-// takes a fetch response and checks to make sure it was OK.
-// then returns the body of the response as a PROMISE to some JSON.
-function convertToJson(response) {
+async function getPokemon(url) {
+  const response = await fetch(url);
+  //check to see if the fetch was successful
   if (response.ok) {
-    return response.json();
-  } else {
-    console.log("error:", response);
+    // the API will send us JSON...but we have to convert the response before we can use it
+    // .json() also returns a promise...so we await it as well.
+    const data = await response.json();
+    doStuff(data);
   }
 }
-// this is where we would do whatever we needed to do with the resulting data.
 function doStuff(data) {
   results = data;
   console.log("first: ", results);
 }
-
-// read this as: make a request to URL, WHEN it finishes THEN run convertToJson
-// WHEN it finishes THEN run doStuff
-fetch(url).then(convertToJson).then(doStuff);
-// meanwhile...continue with the rest of the program...
+getPokemon(url);
 console.log("second: ", results);
 ```
 
-Note that the second console.log ran first...then the first one. Remember that in async programming Javascript does not wait for everything to finish before moving on. If we had tried to use `results` immediately it would have failed. Instead we do whatever we need to do with `results` in the callback that gets called by `.then()`.
-
-## Note
-
-Note that this would often be done with anonymous functions...without the comments and condensed the code above could look like this:
-
-```javascript
-const url = "https://pokeapi.co/api/v2/pokemon/ditto";
-let results = null;
-fetch(url)
-  .then((response) => {
-    if (response.ok) {
-      return response.json();
-    } else {
-      console.log("error:", response);
-    }
-  })
-  .then((data) => {
-    results = data;
-    console.log("first: ", results);
-  });
-console.log("second: ", results);
-```
+Run the code above then check out the console. Note that the second console.log ran first...then the first one. Remember that in async programming Javascript does not wait for everything to finish before moving on. If we had tried to use `results` immediately it would have failed. Instead we control the execution of functions to make sure that `results` is ready BEFORE we use it.

@@ -8,13 +8,13 @@ layout: layouts/post.njk
 
 ## Preparation
 
-This exercise will walk through creating the HTML and CSS to display a quote. It is based off of the customer quote found on the [Stackblitz webstite](https://stackblitz.com) We will have a few guidelines that we will follow:
+This exercise will walk through creating the HTML and CSS to display a quote. It is based off of the customer quote found on the [Stackblitz website](https://stackblitz.com) We will have a few guidelines that we will follow:
 
 1. We want the HTML and SCSS we write to be as reusable as possible.
 2. This means that it should adapt easily to different sized screens, and large and small quotes.
 3. You should put some sort of thought into your SCSS structure. BEM is always a good starting point.
 4. It should adapt easily to a light or dark theme.
-5. As an additional goal we will try to use as few media quries as possible, instead using CSS custom properties, or SCSS variables to achieve our flexibility.
+5. As an additional goal we will try to use as few media queries as possible, instead using CSS custom properties, or SCSS variables to achieve our flexibility.
 6. This implies that we should use custom properties, and it would be good to use some of the other CSS functions as well such as `clamp`, `calc`, `min`, or `max`.
 
 Make sure you read through the Prepare section for this topic.
