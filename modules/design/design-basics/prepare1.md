@@ -64,4 +64,4 @@ At this point we should have a basic wireframe for our site. Our next list of st
 
 ## Example
 
-For an example of how this might look with an actual website proceed on to the [Ponder activity](ponder1/)
+For an example of how this might look with an actual website proceed on to the [Ponder activity](../ponder1/)

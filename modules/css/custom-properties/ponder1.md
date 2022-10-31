@@ -26,7 +26,7 @@ These activities will be most effective if you TRY them first before you look at
 The first part will see us set up our project structure, and get the HTML written for our block.
 
 1. Create a new directory called something like _quotes_ and open it in your editor. Create three new files: `index.html`, `styles.scss`, and `_quote-box.scss`.
-2. Add some boilerplate HTML to create a valid document and ass a `link` element for your css.
+2. Add some boilerplate HTML to create a valid document and add a `link` element for your css.
 3. Add a `@use` statement to the top of your `styles.scss` file to link up your quote-box partial.
 4. Goto a site like [Goodreads](https://www.goodreads.com/quotes) or some other online source where you can find some good quotes. Select 2-3 quotes of varying lengths, along with the author of the quote, and an image.
 5. Write the HTML needed to create the structure of our quote box. Each quote will consist of the quote, the author, and the image. See the image below for an example of where we are heading to give you some help in structuring your HTML.

@@ -34,7 +34,6 @@ Review the list of action items from the [Applying the principles of Design](../
 - Purpose: Create a site with detailed reviews of young adult books that parents and youth can use to find new reading material.
 - Audience: Primarily parents of children ages 10-16, also children 10-16. But also anyone who likes to read.
 - Parents and youth will come to the site to find new books to read. Their purposes will likely be slightly different however. Parents will primarily be concerned with if the book is appropriate for their child. This could involve questions about reading level and/or content. Youth will probably be more interested in whether the book sounds interesting and is well written. The site needs to accomodate both groups.
--
 
 </details>
 
