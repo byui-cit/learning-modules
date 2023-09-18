@@ -98,13 +98,13 @@ Add `defer` to your script, then check to make sure it worked.
 
 2. Try adding an image. We would need to create the `img` element, then set the `src` and `alt` attributes, and finally append the image to the body. You should use
    `element.setAttribute('src', 'path/to/image')` to set those attributes. Try it. You can use
-   `https://placeimg.com/200/200/animals` for the image path.
+   `https://picsum.photos/200` for the image path.
 
 <details><summary>Solution</summary>
 
 ```javascript
 const newImage = document.createElement("img");
-newImage.setAttribute("src", "https://placeimg.com/200/200/animals");
+newImage.setAttribute("src", "https://picsum.photos/200");
 newImage.setAttribute("alt", "Description of image");
 document.body.appendChild(newImage);
 ```
