@@ -43,18 +43,18 @@ Create a new html file in your sandbox directory for this activity. Call it `dom
 </html>
 ```
 
-Open the page in the browser, then open the developer tools (right-click->inspect), goto the console tab, and enter `document` in the prompt, then hit 'return'.
+Open the page in the browser, then open the developer tools (right-click->inspect), go to the console tab, and enter `document` in the prompt, then hit 'return'.
 
 ## Activity 1
 
-1. Type `document.` (don't forget the . at the end) in the prompt area of the console (should be at the bottom of the console) in the browser developer tools. But don't hit 'enter/return'. Notice the long list of options that pops up. Those are all things we can do with the document. Review the list.
-2. Since all of the elements the users sees live in the `body` element, we are provided a shortcut to it: `document.body`.
-3. Notice that we can also look at the `children` and `parentElement` of body. We could if we wanted traverse anywhere in our page by using these...it's a bit tedious though, so we have been given shortcuts: `document.getElementById` and `document.querySelector`
+1. Type `document.` (don't forget the period at the end) in the prompt area of the console (should be at the bottom of the console) in the browser developer tools. But don't hit 'enter/return'. Notice the long list of options that pops up. Those are all things we can do with the document. Review the list.
+2. Since all of the elements the user sees live in the `body` element, we are provided a shortcut to it: `document.body`.
+3. Notice that we can also look at the `children` and `parentElement` of body. If we wanted we could traverse anywhere in our page by using these...it's a bit tedious though, so we have been given shortcuts: `document.getElementById` and `document.querySelector`
 4. Type `document.body.innerText` then 'enter', then try `document.body.innerHTML` and 'enter'. Notice the difference.
 5. Try doing this: `document.body.innerHTML = 'Hello World'` What happened?
 6. Refresh your browser to get the page back.
 7. Now try this: `document.getElementById('p2').innerText = 'Hello World'` That worked a bit better.
-8. `querySelector` is more flexible that `getElementById`. It uses valid CSS selectors. To get the element with id='p2' with quertSelector we would need to add a '#' like this:
+8. `querySelector` is more flexible that `getElementById`. It uses valid CSS selectors. To get the element with id='p2' with querySelector we would need to add a '#' like this:
    `document.querySelector('#p2')`
 9. You can also get elements with classes. Try `document.querySelector('.green')` The '.' tells the browser to look for a class.
 10. What if we wanted figure out which section the paragraph in the last step belonged to? for the first section since the &lt;section&gt; is the parent in this case we could do `document.querySelector('.green').parent`, but that won't work for the second. Instead we can also do something like this:
@@ -66,7 +66,7 @@ Open the page in the browser, then open the developer tools (right-click->inspec
 
     That will traverse up the DOM starting with the green P until it finds an ancestor that is a section. Very useful!
 
-11. to get all paragraphs we could do this: `document.querySelector('p')`
+11. To get all paragraphs we could do this: `document.querySelector('p')`
 12. Did you notice that there is also a document.querySelectorAll? Try it with 'p'
 
 ## Activity 2
@@ -89,7 +89,7 @@ You will also need to attach the script to our HTML. Add the following line to t
 
 Check the page in the browser. Did the new paragraph show? Check the console. You should see an error like this: "TypeError: null is not an object (evaluating 'document.body.appendChild')"
 
-When we add a `script` element to our page, as soon as the browser sees the link, it will stop processing the HTML, download the resource and run any Javascript it can. The problem is that `<body>` hasn't been built yet, so when we tried to access it `document.body.appendChild(newParagraph);` It could not be found. We need to tell the browser to wait to execute the code until **after** the DOM has been built. There are two ways we can do this:
+When the browser finds a `script` element on a page, it will stop processing the HTML, download the resource, and run any Javascript it can. The problem is that `<body>` hasn't been built yet, so when we tried to access it (`document.body.appendChild(newParagraph);`) it could not be found. We need to tell the browser to wait to execute the code until **after** the DOM has been built. There are two ways we can do this:
 
 - Place the `<script>` element at the bottom of the body. This works, and has been done for years, but these days option 2 is better...
 - Add the keyword `defer` to your script...ie `<script src="dom-basics.js" defer></script>`

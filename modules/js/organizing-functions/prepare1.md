@@ -8,13 +8,13 @@ layout: layouts/post.njk
 
 ## Organization and Access
 
-All computer languages are ways to organize your communication and thinking. In this, they are very similar to spoken languages. Each spoken language, or family of spoken languages, does this organization differently. English sentences often have a structure of Subject-Helper Verb-Verb-Predicate...The boy will bite the dog, for example. German, a language closely related to English, organizes things differently. Sometimes German sentences have a Subject-Helper Verb-Predicate-Verb structure... Ich werde das Buch bald lesen, which if translated word-by-word is "I will the book soon read." Spanish has adjectives after the nouns they modify.
+All computer languages are ways to organize your communication and thinking. In this, they are very similar to spoken languages. Each spoken language, or family of spoken languages, does this organization differently. English sentences often have a structure of Subject-Helper Verb-Verb-Predicate...The boy will bite the dog, for example. German, a language closely related to English, organizes things differently. Sometimes German sentences have a Subject-Helper Verb-Predicate-Verb structure... <span lang="de">Ich werde das Buch bald lesen</span>, which if translated word-by-word is "I will the book soon read." Spanish has adjectives after the nouns they modify.
 
 While each language has its own organizational rules, they all do the same thing. They allow us to organize and express our thinking.
 
 ## Built in Functions
 
-Functions are used all over the place. Certain tasks are so common to development in fact that they are added to the language for all to use instead of forcing the developer to recreate the wheel over and over. If you have ever added an item to an array with `push()` you have used one of these pre-built function provided as part of JavaScript. If you need a review of some of the other built in functions for Arrays visit [Array Built in methods](../../array-methods/).
+Functions are used all over the place. In fact, certain tasks are so common to development that they are added to the language for all to use instead of forcing the developer to "reinvent the wheel" over and over. If you have ever added an item to an array with `push()` you have used one of these pre-built function provided as part of JavaScript. If you need a review of some of the other built in functions for Arrays visit [Array Built in methods](../../array-methods/).
 
 ## Functions - a fundamental organization concept of JavaScript
 
@@ -26,7 +26,7 @@ A well thought out and constructed function should be rather small. A function s
 
 ## Declaring functions
 
-In Python and JavaScript there are similarities and differences between the languages regarding how you declare functions. In JavaScript, the 'function' keyword is used instead of 'def'. Also, JavaScript the convention usually used for names of functions and variables is called 'camel case'. To create a name, the first word of the name starts with a lower-case letter, and the first letter of all the rest of the words making up the name begin with an upper-case letter. For example, a function that averages two numbers could be defined like this.
+In Python and JavaScript there are similarities and differences between the languages regarding how you declare functions. In JavaScript, the 'function' keyword is used instead of 'def'. Also, in JavaScript the convention usually used for names of functions and variables is called 'camel case'. To create a name, the first word of the name starts with a lower-case letter, and the first letter of all the rest of the words making up the name begin with an upper-case letter. For example, a function that averages two numbers could be defined like this.
 
 ```javascript
 function averageTwoNumbers(firstNum, secondNum) {
@@ -46,11 +46,11 @@ function averageTwoNumbers(firstNum, secondNum) {
 }
 ```
 
-It does exactly the same thing, it's just broken up into multiple lines of code. There is something of great importance to note in his little example. JavaScript and Python share the same scope rules. When let or const are used within the scope operators in JavaScript, the variable or constant exists only within that scope. In other words, the sum and avg variables declared between the scope operators for this function can not be used outside of this function.
+It does exactly the same thing, it's just broken up into multiple lines of code. There is something of great importance to note in his little example. JavaScript and Python share the same scope rules. When let or const are used within the scope operators in JavaScript, the variable or constant exists only within that scope. In other words, the sum and avg variables declared between the scope operators for this function cannot be accessed outside of this function.
 
-JavaScript does have another keyword, var, that can be used to 'hoist' the variable outside of its declaring scope, but it can cause logic errors in your code and has fallen out of favor with most developers and engineers. You should rarely use it, and only when you have a great deal of experience with JavaScript.
+JavaScript does have another keyword, var, that can be used to [hoist](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting) the variable outside of its declaring scope, but it can cause logic errors in your code and has fallen out of favor with most developers and engineers. You should rarely use it, and only when you have a great deal of experience with JavaScript.
 
-## Another way to Write Functions
+## Another Way to Write Functions
 
 Having seen the traditional way of declaring a function, it is important that you know there are other ways to create functions. In JavaScript functions are Objects. That means that anything we can do with an Object, we can do with a function. Including assigning them to variables. When we do this it is called a 'function expressions' in the JavaScript community. Here is the averageTwoNumbers function written using the expression type syntax.
 
@@ -72,9 +72,9 @@ let averageTwoNumbers = (firstNum, secondNum) => {
 };
 ```
 
-Arrow functions have become very popular when used as callback functions (a function passed into another function), but they will also be seen used for function expressions as well.
+Arrow functions have become very popular when used as callback functions (a function passed into another function), but you may also see them used for function expressions.
 
-Regardless of which method you use to create it, you would still call averageTwoNumbers using exactly the same syntax, averageTwoNumbers(15,10). So what then is the difference? Why would you choose one way over the other?
+Regardless of which method you use to create it, you would still call averageTwoNumbers using exactly the same syntax, `averageTwoNumbers(15,10)`. So what then is the difference? Why would you choose one way over the other?
 
 The JavaScript language has a concept called 'global scope'. When you use the traditional function declaration syntax, your function is created and lives in this global scope. An advantage of this is that you could write code using the function declaration that used the function BEFORE the function declaration like many other languages allow. Here's a simple, syntactically correct example.
 
@@ -128,7 +128,7 @@ let averageTwoNumbers = function (firstNum, secondNum) {
 averageTwoNumbers(15, 20);
 ```
 
-When you use the function expression syntax (with a normal anonymous function OR an arrow function), the use of the function HAS to happen AFTER the function is created.
+When you use the function expression syntax (with a normal anonymous function OR an arrow function), the use of the function has to happen *after* the function is created.
 
 One question that usually comes up when using the expression syntax is, "Hey...aren't we just storing a function in a variable? If so, could we change the function stored in the variable?" The answer is yes though this is often an advanced JavaScript programming concept. If, on the other hand, your variable was a const instead of a let, no such change could be made.
 

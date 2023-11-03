@@ -66,7 +66,8 @@ You can use the wireframe above as your starting point, or you can use the wiref
 2. Move to alignment next. On the example above the alignment is all over the place. Start with the form. Notice that there are no clear lines in that space. How can that be fixed?
 3. Next look at your whitespace? Are there any portions of the site that could use some breathing room? Add it.
 4. Next specifically address hierarchy and scannability. What information on the page do we need to make stand out? You can use contrast to make the important bits stand out. Contrast can be created easily with size, color or by changing fonts.
-5. After making all the improvements that you can think of, review the example below in solution 3. Compare the one below with the wireframe from activity 2. Can you see where the design principles were applied? Compare it also to your version of the wireframe. What further improvements could you make to yours? Did you make changes that were not represented below? Great!
+5. While thinking about the last point consider accessibility as well. Are your link names and headlines meaningful?
+6. After making all the improvements that you can think of, review the example below in solution 3. Compare the one below with the wireframe from activity 2. Can you see where the design principles were applied? Compare it also to your version of the wireframe. What further improvements could you make to yours? Did you make changes that were not represented below? Great!
 
 <details>
 <summary>Solution 3</summary>
