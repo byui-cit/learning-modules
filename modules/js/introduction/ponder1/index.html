@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Introduction - Ponder activities.</title>
+    <meta name="description" content="Running Javascript">
+    <link rel="apple-touch-icon" sizes="180x180" href="/learning-modules/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="/learning-modules/img/favicon/favicon.ico">
+    <link rel="stylesheet" href="/learning-modules/css/index.css">
+    <link rel="stylesheet" href="/learning-modules/css/prism-coy.css">
+    <link rel="alternate" href="/learning-modules/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="/learning-modules/feed/feed.json" type="application/json" title="WDD Learning Modules">
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <a href="/learning-modules/">
+          <img src="/learning-modules/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        </a>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
+      </div>
+      <nav>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="/learning-modules/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/html/">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/js/">JS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/css/">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/design/">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/general/">General</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+    <main  class="tmpl-post" >
+      
+<h1>JS Introduction - Ponder activities.</h1>
+
+
+
+
+<h2 id="preparation" tabindex="-1">Preparation <a class="direct-link" href="#preparation" aria-hidden="true">#</a></h2>
+<p>Make sure you read through the Prepare section for this topic.</p>
+<p>These activities will be most effective if you TRY them first before you look at the solution. And after you do look at the solution...DO NOT copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.</p>
+<h2 id="activity-1" tabindex="-1">Activity 1 <a class="direct-link" href="#activity-1" aria-hidden="true">#</a></h2>
+<ol>
+<li>Open up your editor. This example will use VS Code.</li>
+<li>Create two new files called <code>running.html</code> and <code>running.js</code></li>
+<li>In the <code>running.html</code> file add the HTML markup you would need for a valid document. (Hint: in VS Code you can enter a '!' then press the 'tab' key)</li>
+<li>In the <code>head</code> of the document add a <code>script</code> tag with the <code>src</code> pointing to the <code>running.js</code></li>
+<li>In the <code>running.js</code> file add the following code:<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> apples <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> oranges <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span><br><span class="token keyword">let</span> total <span class="token operator">=</span> apples <span class="token operator">+</span> oranges<span class="token punctuation">;</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"total:"</span><span class="token punctuation">,</span> total<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<blockquote>
+<p>Even if you have never seen Javascript before, as long as you have done some programming the code above should feel somewhat familiar. We start by declaring two variables and setting values to them.<br>
+Then we add the values in the variables together and store the total in another variable.<br>
+<code>console.log()</code> is a builtin Javascript browser tool for outputting (logging) values to a console. It is used mostly for debugging or error handling purposes. Here we are using it to output our total to check if the program is working correctly.</p>
+</blockquote>
+</li>
+<li>Open the HTML file in a browser. In VS Code it is recommended to use something like the Live Server extension to do this. You will notice that there is nothing showing in the browser window. This is expected as we had nothing in the <code>body</code> of our HTML file.</li>
+<li>Open up the developer tools in the browser (Right-click anywhere in the browser window and select the &quot;Inspect&quot; option.) and switch to the &quot;Console&quot; tab. you should see something like this: <code>total:8</code>. If you do not, check to make sure that your <code>script</code> tag in the HTML file has the correct filename in it. Second make sure that you have no errors in your code in the JS file.</li>
+</ol>
+<details>
+<summary>Solution 1</summary>
+<pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- running.html --></span><br><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Running JS solution<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>running.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">// running.js</span><br><span class="token keyword">const</span> apples <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> oranges <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span><br><span class="token keyword">let</span> total <span class="token operator">=</span> apples <span class="token operator">+</span> oranges<span class="token punctuation">;</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"total:"</span><span class="token punctuation">,</span> total<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</details>
+<h2 id="activity-2" tabindex="-1">Activity 2 <a class="direct-link" href="#activity-2" aria-hidden="true">#</a></h2>
+<p>Repetition is good when learning new things, and so the next activity will have you repeat what you did before.</p>
+<ol>
+<li>
+<p>Create another HTML file and another JS file. Name them whatever you would like</p>
+<blockquote>
+<p>Be aware that when naming things for use on the web you should only use letters (a-z), numbers (0-9), and the underscore (_), or dash (-). Avoid all other characters, especially the space!...they will cause you problems. It is also highly recommended that you stick to all lowercase letters. Web servers are case-sensitive.</p>
+</blockquote>
+</li>
+<li>
+<p>Add the HTML you need for a valid document. Make sure to add a <code>script</code> element!</p>
+</li>
+<li>
+<p>This time add a headline to your page. The headline shuold read something like &quot;Javascript example 2&quot;. Below that headline add a paragraph that looks like this:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>If you have <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>myApples<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span> apples,<br> and your friend has <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>friendApples<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>.<br>  Then together you have <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>total<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span> apples!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span></code></pre>
+</li>
+<li>
+<p>Add the following code to your JS file:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> myApples <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> friendApples <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span><br><span class="token keyword">let</span> total <span class="token operator">=</span> myApples <span class="token operator">+</span> friendApples<span class="token punctuation">;</span><br><br>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"myAppleElement"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent <span class="token operator">=</span> myApples<span class="token punctuation">;</span><br>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"friendAppleElement"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent <span class="token operator">=</span> friendApples<span class="token punctuation">;</span><br>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"totalApplesElement"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent <span class="token operator">=</span> total<span class="token punctuation">;</span></code></pre>
+<blockquote>
+<p>This code is similar to the code earlier, but this time we are using <code>document.getElementById()</code> to grab part of our HTML in order to modify it. For example we should get the element with the id of <code>myAppleElement</code> and change the <code>textContent</code> of that element to be whatever is in the <code>myApples</code> variable.<br>
+Then we do the same for the other elements.</p>
+</blockquote>
+</li>
+<li>
+<p>Open your HTML page in a browser. Do you see what you expected? There are no values! If you look in the console you will see and error that looks something like this: <code>null is not an object (evaluating 'document.getElementById(&quot;myAppleElement&quot;).textContent = myApples')</code>. This illustrates a common Javascript error. The problem is that when the browser downloads the HTML file it starts to parse through it to be able to build and render the page.<br>
+Well, as soon as it hits the <code>script</code> element it stops what it is doing, downloads the JS file, and runs any code it finds. The problem is that the <code>script</code> element was <em>before</em> the <code>body</code> element, and so the elements we are trying to grab in our Javascript don't exist yet!<br>
+We need to tell the browser to wait to run the Javascript it finds until <em>after</em> it finishes building the whole page. The easiest way to do that is to add <code>defer</code> to our <code>script</code> element.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>myjsfile.js<span class="token punctuation">"</span></span> <span class="token attr-name">defer</span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+</li>
+</ol>
+<p>Get used to using that <code>defer</code> command. We will do it with every <code>script</code> we load.</p>
+<details>
+<summary>Solution 2</summary>
+<pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- HTML file --></span><br><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Running JS solution<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>running.js<span class="token punctuation">"</span></span> <span class="token attr-name">defer</span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><br>      If you have <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>myAppleElement<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span> apples, and your friend has<br>      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>friendAppleElement<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>. Then together you have<br>      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>totalApplesElement<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span> apples!<br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">// Javascript file</span><br><span class="token keyword">const</span> myApples <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> friendApples <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span><br><span class="token keyword">let</span> total <span class="token operator">=</span> myApples <span class="token operator">+</span> friendApples<span class="token punctuation">;</span><br><br>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"myAppleElement"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent <span class="token operator">=</span> myApples<span class="token punctuation">;</span><br>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"friendAppleElement"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent <span class="token operator">=</span> friendApples<span class="token punctuation">;</span><br>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"totalApplesElement"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent <span class="token operator">=</span> total<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+</details>
+
+</main>
+    <footer>
+      <p class="license">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/> </a><br/>This work is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+          International License</a>.</p>
+    </footer><!-- Current page: /learning-modules/modules/js/introduction/ponder1/ --></body>
+</html>

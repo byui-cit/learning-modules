@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries - Practice.</title>
+    <meta name="description" content="Practice using Media Queries">
+    <link rel="apple-touch-icon" sizes="180x180" href="/learning-modules/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="/learning-modules/img/favicon/favicon.ico">
+    <link rel="stylesheet" href="/learning-modules/css/index.css">
+    <link rel="stylesheet" href="/learning-modules/css/prism-coy.css">
+    <link rel="alternate" href="/learning-modules/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="/learning-modules/feed/feed.json" type="application/json" title="WDD Learning Modules">
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <a href="/learning-modules/">
+          <img src="/learning-modules/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        </a>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
+      </div>
+      <nav>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="/learning-modules/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/html/">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/js/">JS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/css/">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/design/">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/general/">General</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+    <main  class="tmpl-post" >
+      
+<h1>Media Queries - Practice.</h1>
+
+
+
+
+<h2 id="preparation" tabindex="-1">Preparation <a class="direct-link" href="#preparation" aria-hidden="true">#</a></h2>
+<p>Make sure you read through the Prepare section for this topic. You will also need your editor open to create some new files to contain the work on this exercise.</p>
+<p>These activities will be most effective if you TRY them first before you look at the solution. And after you do look at the solution...DO NOT copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.</p>
+<h2 id="step-1:-file-and-folder-setup" tabindex="-1"><strong>Step 1</strong>: File and Folder Setup <a class="direct-link" href="#step-1:-file-and-folder-setup" aria-hidden="true">#</a></h2>
+<ol>
+<li>Create a new HTML file named &quot;media-query.html&quot;.</li>
+<li>Add a CSS file named &quot;media-query.css&quot;.</li>
+</ol>
+<h2 id="step-2:-html" tabindex="-1"><strong>Step 2:</strong> HTML <a class="direct-link" href="#step-2:-html" aria-hidden="true">#</a></h2>
+<ol>
+<li>
+<p>In your media-query.html file, create a valid HTML page with standard head content including:</p>
+<ul>
+<li>Meta Charset Attribute</li>
+<li>Meta Viewport Element</li>
+<li>Title Element</li>
+<li>Meta Description Element</li>
+<li>Meta Author Element</li>
+<li>Link to a Google Font named &quot;Roboto&quot;.</li>
+<li>Link references to your CSS file.</li>
+</ul>
+</li>
+<li>
+<p>In the <code>body</code> of the HTML document, add a <code>header</code> with an <code>h1</code>, a <code>main</code> element with two <code>section</code> elements, and a <code>footer</code> element.</p>
+<ul>
+<li>The h1 element should contain the words &quot;Media Query Example&quot;.</li>
+<li>Each section h2 heading contains a scripture with book, chapter, and verse.</li>
+<li>The section paragraph contains a copy of the actual scripture referenced in the heading.</li>
+<li>The footer should contain your name.</li>
+</ul>
+</li>
+</ol>
+<details>
+<summary>Solution 1</summary>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">doStuff</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">const</span> outputElement <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#output"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  results <span class="token operator">=</span> data<span class="token punctuation">;</span><br>  <span class="token keyword">const</span> html <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;h2></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>results<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/h2><br>                &lt;img src="</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>results<span class="token punctuation">.</span>sprites<span class="token punctuation">.</span>front_default<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">" alt="Image of </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>results<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">"></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span><br>  outputElement<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> html<span class="token punctuation">;</span><br>  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"first: "</span><span class="token punctuation">,</span> results<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+</details>
+<h2 id="activity-2" tabindex="-1">Activity 2 <a class="direct-link" href="#activity-2" aria-hidden="true">#</a></h2>
+<p>As interesting as Ditto is...it would be more fun to get information on lots of pokemon...if we make a slight change to the URL we are making the request to, we can get a list of pokemon instead of just one. Let's do that and then make a new function called <code>doStuffList</code> that will output the list.</p>
+<ol>
+<li>Add a ul element to our html to hold the list. (<code>&lt;ul id=&quot;outputList&quot;&gt;&lt;/ul&gt;</code>)</li>
+<li>Get that element with Javascript</li>
+<li>Change the url that we are using to make the request to <code>const url = &quot;https://pokeapi.co/api/v2/pokemon&quot;;</code></li>
+<li>Create a function: <code>function doStuffList(data) {}</code></li>
+<li>In the function start by console.logging <strong>data</strong>. Take a look at the structure of what got sent back. Notice that our list is inside of a property called results</li>
+<li>Create a variable called <code>pokeList</code> and set it equal to <code>data.results</code></li>
+<li>for each of the pokemon in the list: create a line of html to output it (<code>&lt;li&gt;${pokeList.name}&lt;/li&gt;</code></li>
+<li>Add the new list to what was already in our output element.</li>
+<li>Change your fetch call to use the <code>doStuffList</code> function instead of <code>doStuff</code></li>
+</ol>
+<details>
+<summary>Solution 2</summary>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">doStuffList</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token keyword">const</span> pokeListElement <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#pokeList"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token keyword">const</span> pokeList <span class="token operator">=</span> data<span class="token punctuation">.</span>results<span class="token punctuation">;</span><br>  pokeList<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">currentItem</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>    <span class="token keyword">const</span> html <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;li></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>currentItem<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/li></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span><br>    <span class="token comment">// note the += here...</span><br>    pokeListElement<span class="token punctuation">.</span>innerHTML <span class="token operator">+=</span> html<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+</details>
+<h2 id="activity-3-stretch!" tabindex="-1">Activity 3 - Stretch! <a class="direct-link" href="#activity-3-stretch!" aria-hidden="true">#</a></h2>
+<p>Our pokemon list is not alphabetized...we should fix that.</p>
+<p>Create a function: <code>function sortPokemon(list) {}</code><br>
+Check out some documentation on <code>Array.sort</code>. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">MDN: Sort</a>. Notice that it provides an example compare function at the bottom...we can use that as a model.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">compare</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">if</span> <span class="token punctuation">(</span>a is less than b by some ordering criterion<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br>  <span class="token keyword">if</span> <span class="token punctuation">(</span>a is greater than b by the ordering criterion<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br>  <span class="token comment">// a must be equal to b</span><br>  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<details>
+<summary>Solution 3</summary>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">compare</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">.</span>name <span class="token operator">></span> b<span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token comment">// sort b before a</span><br>    <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">.</span>name <span class="token operator">&lt;</span> b<span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token comment">// a and b different but unchanged (already in the correct order)</span><br>    <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">// a and b are equal</span><br><span class="token punctuation">}</span><br><br><span class="token keyword">function</span> <span class="token function">sortPokemon</span><span class="token punctuation">(</span><span class="token parameter">list</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">let</span> sortedList <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>compare<span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token keyword">return</span> sortedList<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token keyword">function</span> <span class="token function">doStuffList</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token keyword">const</span> pokeListElement <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#outputList"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token keyword">const</span> pokeList <span class="token operator">=</span> data<span class="token punctuation">.</span>results<span class="token punctuation">;</span><br>  <span class="token comment">// sort our list before output it</span><br>  pokeList <span class="token operator">=</span> <span class="token function">sortPokemon</span><span class="token punctuation">(</span>pokeList<span class="token punctuation">)</span><span class="token punctuation">;</span><br>  pokeList<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">currentItem</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>    <span class="token keyword">const</span> html <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;li></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>currentItem<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/li></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span><br>    <span class="token comment">//note the += here</span><br>    pokeListElement<span class="token punctuation">.</span>innerHTML <span class="token operator">+=</span> html<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>convertToJson<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>doStuffList<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</details>
+
+</main>
+    <footer>
+      <p class="license">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/> </a><br/>This work is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+          International License</a>.</p>
+    </footer><!-- Current page: /learning-modules/modules/css/media-queries/ponder1/ --></body>
+</html>

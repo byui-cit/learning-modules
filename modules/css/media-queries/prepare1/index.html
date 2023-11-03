@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries - What are Media Queries?</title>
+    <meta name="description" content="Learn what a media qury is and how to use them.">
+    <link rel="apple-touch-icon" sizes="180x180" href="/learning-modules/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="/learning-modules/img/favicon/favicon.ico">
+    <link rel="stylesheet" href="/learning-modules/css/index.css">
+    <link rel="stylesheet" href="/learning-modules/css/prism-coy.css">
+    <link rel="alternate" href="/learning-modules/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="/learning-modules/feed/feed.json" type="application/json" title="WDD Learning Modules">
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <a href="/learning-modules/">
+          <img src="/learning-modules/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        </a>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
+      </div>
+      <nav>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="/learning-modules/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/html/">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/js/">JS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/css/">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/design/">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/general/">General</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+    <main  class="tmpl-post" >
+      
+<h1>Media Queries - What are Media Queries?</h1>
+
+
+
+
+<h2 id="overview" tabindex="-1">Overview <a class="direct-link" href="#overview" aria-hidden="true">#</a></h2>
+<p>Over the last few years we have had an explosion in screen sizes for devices used to view websites. This has meant that we have had to build these sites so that they could <em>respond</em> to the screen size to reformat itself so that it was still usable. One of the important tools we have to make our pages responsive is <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries">CSS Media Queries</a>.</p>
+<p>CSS Media Queries are used to provide alternative CSS declarations for rendering content in different viewports (screen sizes). Web designers use media queries to decide when a design or layout change/transformation is needed based upon the site content. Web developers code breakpoints based upon conditions such as a minimum viewport width to meet the intent of the design.</p>
+<blockquote>
+<p>&quot;Do NOT define breakpoints based on device classes. Defining breakpoints based on specific devices, products, brand names, or operating systems that are in use today can result in a maintenance nightmare. Instead, the content itself should determine how the layout adjusts to its container.&quot;<br>
+<a href="https://web.dev/articles/responsive-web-design-basics">How to choose breakpoints</a> - Responsive Web - Google Web Fundamentals</p>
+</blockquote>
+<h2 id="viewport-meta" tabindex="-1">Viewport Meta <a class="direct-link" href="#viewport-meta" aria-hidden="true">#</a></h2>
+<p>Sometimes when a webpage is wider than the available viewport, or size of the window in which web content can be seen, the browser will zoom out to show all the content...often at a very small size.  For a webpage that has been designed in such a way to accomodate large and small viewports, this is a bad thing.</p>
+<p>We can control the behavior of the browser in this case to keep it from zooming in or out...by adding a viewport meta tag. A typical tag will look like the following:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<blockquote>
+<p>To learn more about options with the viewport meta you can read about the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag">Viewport meta tag</a> on MDN.</p>
+</blockquote>
+<p>You should begin adding this tag to the <code>&lt;head&gt;</code> of all your pages moving forward!</p>
+<h2 id="media-query-syntax" tabindex="-1">Media Query Syntax <a class="direct-link" href="#media-query-syntax" aria-hidden="true">#</a></h2>
+<p>CSS media queries are essential to responsive web design. The @media at-rule specifies condition(s) to create a block of CSS rules that are applied if the condition(s) evaluates to true. This is extremely useful as selected elements can be repositioned, resized, hidden, exposed, etc. based upon the user's viewport size.<br>
+Here is the general syntax is setting up a CSS @media query:</p>
+<pre class="language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@media</span> <span class="token keyword">not</span>|<span class="token keyword">only</span> mediatype <span class="token keyword">and</span> <span class="token punctuation">(</span>expressions<span class="token punctuation">)</span></span> <span class="token punctuation">{</span><br>  <span class="token comment">/* CSS rules go here inside the @media query's opening and closing curly brackets {} */</span><br><span class="token punctuation">}</span></code></pre>
+<p>Here is an example CSS media query which could be embedded in a CSS file or be the entire contents of a CSS file if wanted. This example only has one CSS rule.</p>
+<pre class="language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@media</span> screen <span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 640px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span><br>  <span class="token selector">h1</span> <span class="token punctuation">{</span><br>    <span class="token property">font-size</span><span class="token punctuation">:</span> 2.5rem<span class="token punctuation">;</span><br>    <span class="token property">margin</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span><br>    <span class="token property">color</span><span class="token punctuation">:</span> navy<span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br><span class="token punctuation">}</span></code></pre>
+<blockquote>
+<p>Note that curly brackets { } are used to contain a specific media query and are also used to define CSS Rules. Be sure to keep track of your bracket scope (start and end). Using automatic VS Code Format Document features will help you recognize issues with your structure.</p>
+</blockquote>
+<h3 id="sample-code-explanation" tabindex="-1">Sample code explanation <a class="direct-link" href="#sample-code-explanation" aria-hidden="true">#</a></h3>
+<p>1️⃣ The <code>@media screen and (min-width: 640px) {</code> is the signature line of the @media query block of CSS rules to be applied if the conditions are met. In this case the conditions are if the media type is a screen and the viewport minimum width is at least 640 pixels wide.</p>
+<p>2️⃣ The <code>h1 {</code> is a heading 1 (<code>&lt;h1&gt;</code>) element selector which starts the defined CSS rule.</p>
+<p>3️⃣-5️⃣ The @font-size: 2.5rem; margin: 1rem; color: navy; are declarations to be applied to any <code>&lt;h1&gt;</code> elements if the @media query conditions are met.</p>
+<p>6️⃣ The first <code>}</code> closes the CSS rule for <code>&lt;h1&gt;</code> code elements.</p>
+<p>7️⃣ The last <code>}</code> closes the media query.</p>
+<blockquote>
+<p>🎦 <a href="https://video.byui.edu/media/t/0_oacos9ak">Media Query Demonstration</a></p>
+</blockquote>
+
+</main>
+    <footer>
+      <p class="license">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/> </a><br/>This work is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+          International License</a>.</p>
+    </footer><!-- Current page: /learning-modules/modules/css/media-queries/prepare1/ --></body>
+</html>

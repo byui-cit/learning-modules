@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Variables - Understanding variables in Javascript</title>
     <meta name="description" content="Declaring and using variables in Javascript">
+    <link rel="apple-touch-icon" sizes="180x180" href="/learning-modules/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="/learning-modules/img/favicon/favicon.ico">
     <link rel="stylesheet" href="/learning-modules/css/index.css">
     <link rel="stylesheet" href="/learning-modules/css/prism-coy.css">
     <link rel="alternate" href="/learning-modules/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
@@ -49,7 +53,7 @@
 
 
 <h2 id="values" tabindex="-1">Values <a class="direct-link" href="#values" aria-hidden="true">#</a></h2>
-<p>The most fundamental unit of information in a program is a value. Values are data. They're how the program maintains state. Values come in two forms in JS: primitive and object.</p>
+<p>The most fundamental unit of information in a program is a value. Values are data. They're how the program maintains state (current status of data or a process). Values come in two forms in JS: primitive and object.</p>
 <h3 id="primitives" tabindex="-1">Primitives <a class="direct-link" href="#primitives" aria-hidden="true">#</a></h3>
 <ul>
 <li>string</li>
@@ -60,18 +64,18 @@
 </ul>
 <h3 id="objects" tabindex="-1">Objects <a class="direct-link" href="#objects" aria-hidden="true">#</a></h3>
 <ul>
-<li>object literals</li>
+<li>Object literals</li>
 <li>Arrays</li>
 <li>Functions</li>
 <li>Classes</li>
 <li>...basically everything that is not a primitive!</li>
 </ul>
-<p>Values are embedded in programs using literals. Different types of values use different <strong>delimeters</strong> to indicate where the value begins and ends. A common delimiter used for strings that you are probably familar with is quotations. In Javascript we have 'single quotes', &quot;double quotes&quot;, and `back-ticks`. Single and double quotes function exactly the same...pick one and stick with it. Back-ticks are used to form template literal strings where interpolation can happen.</p>
-<p><code>typeof</code> can be used to see what type a stored value is given by Javascript. See if you can identify the delimeters used for the different types of values:</p>
+<p>Values are embedded in programs using literals. Different types of values use different <strong>delimeters</strong> to indicate where the value begins and ends. A common delimiter used for strings that you are probably familar with is quotations. Quotations then could be referred to as string literals. In Javascript we have 'single quotes', &quot;double quotes&quot;, and `back-ticks`. Single and double quotes function exactly the same...pick one and stick with it. Back-ticks are used to form template literal strings where <a href="https://en.wikipedia.org/wiki/String_interpolation#:~:text=In%20computer%20programming%2C%20string%20interpolation,replaced%20with%20their%20corresponding%20values">interpolation</a> can happen.</p>
+<p><code>typeof</code> can be used to see what type a stored value is given by Javascript. You can enter the following statements in the console of any browser to see what they return. See if you can identify the delimeters used for the different types of values:</p>
 <pre class="language-javascript"><code class="language-javascript"><span class="token keyword">typeof</span> <span class="token number">42</span><span class="token punctuation">;</span><br><span class="token keyword">typeof</span> <span class="token string">"abc"</span><span class="token punctuation">;</span><br><span class="token keyword">typeof</span> <span class="token boolean">true</span><span class="token punctuation">;</span><br><span class="token keyword">typeof</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span><br><span class="token keyword">typeof</span> <span class="token keyword">null</span><span class="token punctuation">;</span><br><span class="token keyword">typeof</span> <span class="token punctuation">{</span> a<span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">;</span><br><span class="token keyword">typeof</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br><span class="token keyword">typeof</span> <span class="token keyword">function</span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 <p>Any surprises? What does a literal for a basic Object look like? An Array?</p>
 <h2 id="variables" tabindex="-1">Variables <a class="direct-link" href="#variables" aria-hidden="true">#</a></h2>
-<ol>
+<ul>
 <li>
 <p>Variables are containers for values</p>
 </li>
@@ -88,17 +92,17 @@
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></p>
 </li>
 <li>
+<p><code>const</code> declared variables are not &quot;unchangeable&quot;, they just cannot be re-assigned.</p>
+</li>
+<li>
 <p>Differences (Which should I use?)</p>
 <pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> adult <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span><br><br><span class="token keyword">if</span> <span class="token punctuation">(</span>adult<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">var</span> myName <span class="token operator">=</span> <span class="token string">"Bob"</span><span class="token punctuation">;</span><br>  <span class="token keyword">let</span> age <span class="token operator">=</span> <span class="token number">24</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>myName<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token comment">// Bob</span><br><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token comment">// Error!</span></code></pre>
 <p>Why did we get an error on line 11?</p>
 </li>
-<li>
-<p><code>const</code> declared variables are not &quot;unchangeable&quot;, they just cannot be re-assigned.</p>
-</li>
-</ol>
+</ul>
 <h2 id="strongly-typed-weakly-typed-what-does-that-even-mean" tabindex="-1">Strongly Typed? Weakly typed? What does that even mean? <a class="direct-link" href="#strongly-typed-weakly-typed-what-does-that-even-mean" aria-hidden="true">#</a></h2>
 <p>Python is considered a strongly typed language. If you assign a value to a variable Python will not change the type of that variable. For example something like this would throw an error in Python:</p>
-<pre class="language-javascript"><code class="language-javascript"><span class="token string">'foo'</span> <span class="token operator">+</span> <span class="token number">3</span> <span class="token operator">--</span><span class="token operator">></span> TypeError<span class="token operator">:</span> cannot concatenate <span class="token string">'str'</span> and <span class="token string">'int'</span> objects</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token string">'foo'</span> <span class="token operator">+</span> <span class="token number">3</span><br><span class="token comment">// TypeError: cannot concatenate 'str' and 'int' objects</span></code></pre>
 <p>Javascript is weakly typed...so if you tried the same thing it would work:</p>
 <pre class="language-javascript"><code class="language-javascript"><span class="token string">"foo"</span> <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">;</span> <span class="token comment">// 'foo3'</span></code></pre>
 <p>Javascript knows that it cannot add a string and an integer...but it does know that it can add 2 strings, so it 'coerces' the integer value into a string so the operation will work. Sometimes this is helpful...but sometimes it can cause weird bugs.</p>
@@ -151,7 +155,7 @@
 </main>
     <footer>
       <p class="license">
-        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/></a><br/>This work is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/> </a><br/>This work is licensed under a
         <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
           International License</a>.</p>
     </footer><!-- Current page: /learning-modules/modules/js/variables/prepare1/ --></body>
