@@ -2,7 +2,7 @@
 title: Design - Typography for the Web
 description: Learn principles for improving your designs through your type.
 date: 2021-10-15
-order: 1
+order: 4
 tags:
   - design
   - css

@@ -20,14 +20,11 @@ These activities will be most effective if you TRY them first before you look at
 ## **Step 2:** HTML
 
 1. In your media-query.html file, create a valid HTML page with standard head content including:
-
-    - Meta Charset Attribute
+    - Meta with a Charset Attribute
     - Meta Viewport Element
     - Title Element
-    - Meta Description Element
-    - Meta Author Element
     - Link to a Google Font named "Roboto".
-    - Link references to your CSS file.
+    - Link reference to your CSS file.
 
 2. In the `body` of the HTML document, add a `header` with an `h1`, a `main` element with two `section` elements, and a `footer` element.
     - The h1 element should contain the words "Media Query Example".
@@ -38,102 +35,76 @@ These activities will be most effective if you TRY them first before you look at
 <details>
 <summary>Solution 1</summary>
 
-```javascript
-function doStuff(data) {
-  const outputElement = document.querySelector("#output");
-  results = data;
-  const html = `<h2>${results.name}</h2>
-                <img src="${results.sprites.front_default}" alt="Image of ${results.name}">`;
-  outputElement.innerHTML = html;
-  console.log("first: ", results);
-}
+```html
+<header>
+  <h1>Media Query Example</h1>
+</header>
+<main>
+  <section>
+    <h2>2 Nephi 32:9</h2>
+    <p>But behold, I say unto you that ye must pray always, and not faint; that ye must not perform any thing unto the Lord save in the first place ye shall pray unto the Father in the name of Christ, that he will consecrate thy performance unto thee, that thy performance may be for the welfare of thy soul.</p>
+  </section>
+  <section>
+    <h2>Helaman 12:24</h2>
+    <p>And may God grant, in his great fulness, that men might be brought unto repentance and good works, that they might be restored unto grace for grace, according to their works.</p>
+  </section>
+</main>
+<footer>
+  [Your Full Name Here]
+</footer>
 ```
 
 </details>
 
-## Activity 2
+## **Step 3:** CSS
 
-As interesting as Ditto is...it would be more fun to get information on lots of pokemon...if we make a slight change to the URL we are making the request to, we can get a list of pokemon instead of just one. Let's do that and then make a new function called `doStuffList` that will output the list.
+Style the document as shown in the example screenshots given below.
 
-1. Add a ul element to our html to hold the list. (`<ul id="outputList"></ul>`)
-2. Get that element with Javascript
-3. Change the url that we are using to make the request to `const url = "https://pokeapi.co/api/v2/pokemon";`
-4. Create a function: `function doStuffList(data) {}`
-5. In the function start by console.logging **data**. Take a look at the structure of what got sent back. Notice that our list is inside of a property called results
-6. Create a variable called `pokeList` and set it equal to `data.results`
-7. for each of the pokemon in the list: create a line of html to output it (`<li>${pokeList.name}</li>`
-8. Add the new list to what was already in our output element.
-9. Change your fetch call to use the `doStuffList` function instead of `doStuff`
+1. use the Google Font - Roboto in the body rule,
+2. the header, main, and footer each
+    - have a maximum width of 640 pixels
+    - are centered on the page using margin: 1rem auto
+    - include a faint border and appropriate padding
+    - have a blueish background color of your choice
+3. set the main element to be a CSS grid with a grid template of only one column, and a equal gap of 1rem, and
+4. set the section elements to also have padding and a white background.
 
 <details>
-<summary>Solution 2</summary>
+<summary>Partial Solution</summary>
 
-```javascript
-function doStuffList(data) {
-  console.log(data);
-  const pokeListElement = document.querySelector("#pokeList");
-  const pokeList = data.results;
-  pokeList.forEach((currentItem) => {
-    const html = `<li>${currentItem.name}</li>`;
-    // note the += here...
-    pokeListElement.innerHTML += html;
-  });
+```css
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header, main, footer {
+  max-width: 640px;
+  margin: 1rem auto;
+  border: 1px solid #bbb;
+  padding: 1rem;
+  background-color: #e6f2ff;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+section {
+  padding: 1rem;
+  background-color: #fff;
 }
 ```
 
 </details>
 
-## Activity 3 - Stretch!
+5. write a containing media query to be applied at a viewport width of 500px or greater (`@media screen and (min-width: 500px)`).
+6. change the `header` to black background with white text
+7. change the `main` element to display two columns of equal size.
 
-Our pokemon list is not alphabetized...we should fix that.
+## Example Screenshots
 
-Create a function: `function sortPokemon(list) {}`
-Check out some documentation on `Array.sort`. [MDN: Sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort). Notice that it provides an example compare function at the bottom...we can use that as a model.
+![Figure 1: Mobile View Screenshot](../../../../img/media-query-sm.png)
 
-```javascript
-function compare(a, b) {
-  if (a is less than b by some ordering criterion) {
-    return -1;
-  }
-  if (a is greater than b by the ordering criterion) {
-    return 1;
-  }
-  // a must be equal to b
-  return 0;
-}
-```
-
-<details>
-<summary>Solution 3</summary>
-
-```javascript
-function compare(a, b) {
-  if (a.name > b.name) {
-    // sort b before a
-    return 1;
-  } else if (a.name < b.name) {
-    // a and b different but unchanged (already in the correct order)
-    return -1;
-  } else return 0; // a and b are equal
-}
-
-function sortPokemon(list) {
-  let sortedList = list.sort(compare);
-  return sortedList;
-}
-function doStuffList(data) {
-  console.log(data);
-  const pokeListElement = document.querySelector("#outputList");
-  const pokeList = data.results;
-  // sort our list before output it
-  pokeList = sortPokemon(pokeList);
-  pokeList.forEach((currentItem) => {
-    const html = `<li>${currentItem.name}</li>`;
-    //note the += here
-    pokeListElement.innerHTML += html;
-  });
-}
-fetch(url).then(convertToJson).then(doStuffList);
-```
-
-</details>
+![Figure 2: Wide View Screenshot](../../../../img/media-query-lg.png)
