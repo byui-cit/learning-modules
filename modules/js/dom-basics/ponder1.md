@@ -61,7 +61,7 @@ Open the page in the browser, then open the developer tools (right-click->inspec
 
     ```javascript
     const greenP = document.querySelector('.green');
-    const parentSection = greenP.closest('section');`.
+    const parentSection = greenP.closest('section');
     ```
 
     That will traverse up the DOM starting with the green P until it finds an ancestor that is a section. Very useful!
