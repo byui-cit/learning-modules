@@ -27,5 +27,5 @@ Node JS has become a popular platform for development and many courses will requ
 
 ## Prepare
 
-- [NVM Installation for Windows](../../../docs/nvm/nvm-windows-installation.pdf)
-- [NVM Installation for Mac](../../../docs/nvm/nvm-mac-installation.pdf)
+- [NVM Installation for Windows](prepare2/) or [pdf](../../../docs/nvm/nvm-windows-installation.pdf)
+- [NVM Installation for Mac](prepare1/) or [pdf](../../../docs/nvm/nvm-mac-installation.pdf)
