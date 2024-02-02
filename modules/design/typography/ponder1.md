@@ -18,9 +18,9 @@ These activities will be most effective if you TRY them first before you look at
 
 ## Activity 1
 
-Open the file you downloaded above in your editor, then create a .css file (or .scss if you have studied that). Copy the provided CSS above into that file and add a `link` to the html to attach the CSS.
+Open the file you downloaded above in your editor, then create a .css file (or .scss if you have studied that). Add a `link` to the html to attach the CSS.
 
-when you open the HTML you will see that it is the text for a Syllabus. It currently has a lot of important information. Some hierarchy has been provided with the semantics of the HTML, but more should be provided to make the page more effective at delivering it's message.
+When you open the HTML you will see that it is the text for a Syllabus. It currently has a lot of important information. Some hierarchy has been provided with the semantics of the HTML, but more should be provided to make the page more effective at delivering it's message.
 
 1. Start with the font. We will use the [Recursive font](https://fonts.google.com/specimen/Recursive?vfaxis=slnt#standard-styles) from Google fonts. Select the font and then take the URL that google provides to look at the `@font-face` declarations it provides. You will see something like this:
 
@@ -77,7 +77,7 @@ Get a new url that allows us access to all of the font's features
   --casl: "CASL" 0; /* Casual: Linear to Casual */
   --wght: "wght" 600; /* Weight: Light to ExtraBlack; usually set with `font-weight` */
   --slnt: "slnt" 0; /* Slant: 0 to -15 degrees, auto cursive at -14 */
-  --CRSV: "CRSV" 0.5; /* Cursive: always roman (0), auto substitution (.5), or always cursive (1) */
+  --crsv: "CRSV" 0.5; /* Cursive: always roman (0), auto substitution (.5), or always cursive (1) */
 }
 * {
   font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt),

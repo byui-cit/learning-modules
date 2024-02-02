@@ -10,9 +10,12 @@ layout: layouts/post.njk
 
 **Grid** is a way to layout web pages with rows and columns without having to use float or position.
 
+Grid displays, like Flexbox, are applied to the <strong>parent container</container> and only the immediate children are Grid items.
+
+
 ## Example
 
-Let's copy the following code into an html file. 
+Let's copy the following code into an html file.
 
 ```html
 <!DOCTYPE html>
@@ -22,7 +25,7 @@ Let's copy the following code into an html file.
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid</title>
-    
+
 </head>
 <body>
     <header>
@@ -33,7 +36,7 @@ Let's copy the following code into an html file.
             <a href="#">Fun</a>
         </nav>
     </header>
-    
+
     <main class="beach-grid">
         <video class="path_video" autoplay muted >
             <source src="https://byui-wdd.github.io/wdd130/images/path_beach.mp4" type="video/mp4">
@@ -140,7 +143,7 @@ footer p {
 
 This CSS quickly gave our page some styles but we want to layout the main with class 'beach-grid' in a grid.
 
-Let's add our grid CSS under the /* Grid */ comment at the bottom of our CSS. 
+Let's add our grid CSS under the /* Grid */ comment at the bottom of our CSS.
 
 It's very helpful to be looking at our wireframe as we set up a grid. Here is what ours looked like:
 
@@ -179,7 +182,7 @@ Targeting the parent element in CSS we use the display property with a value of 
 
 Now you can see in your browsers that each of the 5 children elements were placed in order as they are in HTML into the grid with 3 on the first row and 2 on the next row. I would highly suggest you use your developer tools in your browser to take a look at the grid, it helps so much as you are trying to place your grid items. If you'd like to do this, right-click over your grid and choose 'Inspect'. In the HTML code that shows up in your developer tool, rest your mouse pointer over the main class='beach-grid' element and you should see the grid. This works best in Chrome or Firefox. Now you can see the grid and how the elements are being placed in it.
 
-Our children elements are not where we want them to be however, so let's place them in the right place within the grid. 
+Our children elements are not where we want them to be however, so let's place them in the right place within the grid.
 
 Our video will span 2 columns and one row in the upper left. We will use the grid-column shortcut value of 1/3 to indicate starting at grid line 1 and going to grid line 3 just like we saw above with the grid over the top of our wireframe. We could put grid-row: 1/2 as well with our video element but it has implicitly placed it there already.
 
@@ -199,7 +202,7 @@ h1 {
 }
 ```
 
-Take a look at what happened. The h1 is now taking 2 columns, but it is on the second row. It implicitly placed it in the next open columns of 1 to 3. So we will need to explicitly place it in row line one to row line two. 
+Take a look at what happened. The h1 is now taking 2 columns, but it is on the second row. It implicitly placed it in the next open columns of 1 to 3. So we will need to explicitly place it in row line one to row line two.
 
 ```css
 h1 {
@@ -238,12 +241,12 @@ h1 {
 }
 ```
 
-If you look at the grid now in your developer tools, you see that the next child, the aside looks like it's in the right place however, notice it is only taking one row and we need it to take two rows. So let's give it a grid-row of grid row line 1 to grid row line 3. Again, we would explicitly place the aside into grid-column lines 3 to 4, but it has implicitly already gone there and notice the last two img children also are going into the right places as well. 
+If you look at the grid now in your developer tools, you see that the next child, the aside looks like it's in the right place however, notice it is only taking one row and we need it to take two rows. So let's give it a grid-row of grid row line 1 to grid row line 3. Again, we would explicitly place the aside into grid-column lines 3 to 4, but it has implicitly already gone there and notice the last two img children also are going into the right places as well.
 
 ```css
 aside {
     grid-row: 1/3;
-} 
+}
 ```
 
 Let's also put a little bit of space between all the grid items with a grid-gap value of 40px placed in the grid parent element CSS.

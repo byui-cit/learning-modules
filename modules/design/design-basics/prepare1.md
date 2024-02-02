@@ -54,14 +54,14 @@ At this point we should be well on our way to having a usable site. The next ste
 
 At this point we should have a basic wireframe for our site. Our next list of steps is really a list of questions that we will apply to our design. They might look something like this:
 
-1. Can Proximity (how close together or far apart elements on the page are) be used to help the user to know which elements are related to each other and which are not in our wireframe? Make adjustments in the wireframe to strengthen or weaken relationships.
-2. Are there any parts of our design that feel crowded? Add whitespace to open things up. Be generous :)
-3. Alignment. Do we have strong lines connecting the elements on our page? Eyes love to follow lines. If you used something like [wireframe.cc](https://wireframe.cc) to build your wireframe make sure that the grid-lines are turned on. This will help you to establish a strong structure.
-4. Contrast. What needs to be emphasized? Review the purpose of the site, and review the wireframe again. Are there headlines that should be extra big? Are there places where adding color would help to establish our hierarchy? Sometimes this is hard to show on a wireframe...it's ok to make notes :)
-5. Repetition is a little hard to assess at this point. For now we will keep it in the back of our mind as something to add as we start to actually build the site.
-6. Color. With your purpose and audience in mind choose a color pallette. Tools such as [coolors.co](https://coolors.co) are very helpful with this. Keep in mind that some colors tend to be calm and others energetic. What type of vibe do you think will appeal to your audience?
-7. Fonts. Choose one or two fonts that you think will work well with your purpose, content, and audience. You can either pick something off of the [web safe font list](https://blog.hubspot.com/website/web-safe-html-css-fonts). Or you could use a font off of a service like [Google Fonts](https://fonts.google.com) or [Font Squirrel](https://www.fontsquirrel.com).
+- Can Proximity (how close together or far apart elements on the page are) be used to help the user to know which elements are related to each other and which are not in our wireframe? Make adjustments in the wireframe to strengthen or weaken relationships.
+- Are there any parts of our design that feel crowded? Add whitespace to open things up. Be generous :)
+- Alignment. Do we have strong lines connecting the elements on our page? Eyes love to follow lines. If you used something like [wireframe.cc](https://wireframe.cc) to build your wireframe make sure that the grid-lines are turned on. This will help you to establish a strong structure.
+- Contrast. What needs to be emphasized? Review the purpose of the site, and review the wireframe again. Are there headlines that should be extra big? Are there places where adding color would help to establish our hierarchy? Sometimes this is hard to show on a wireframe...it's ok to make notes :)
+- Repetition is a little hard to assess at this point. For now we will keep it in the back of our mind as something to add as we start to actually build the site.
+- Color. With your purpose and audience in mind choose a color pallette. Tools such as [coolors.co](https://coolors.co) are very helpful with this. Keep in mind that some colors tend to be calm and others energetic. What type of vibe do you think will appeal to your audience?
+- Fonts. Choose one or two fonts that you think will work well with your purpose, content, and audience. You can either pick something off of the [web safe font list](https://blog.hubspot.com/website/web-safe-html-css-fonts). Or you could use a font off of a service like [Google Fonts](https://fonts.google.com) or [Font Squirrel](https://www.fontsquirrel.com).
 
 ## Example
 
-For an example of how this might look with an actual website proceed on to the [Ponder activity](ponder1/)
+For an example of how this might look with an actual website proceed on to the [Ponder activity](../ponder1/)

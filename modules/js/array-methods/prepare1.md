@@ -12,7 +12,7 @@ Most programming languages are faced with similar problems that need to be solve
 
 ## Array built in functions
 
-If we enter something like `[1,2,3]` in the console of a browser we will see our array show up with an arrow, if we expand the array by clicking on the arrow we see the values in our array and something that looks like this: `__proto__`. Open that up and we see a bunch of stuff associated with every array. Most of the list is helper functions, methods that do useful things with arrays.
+If we enter something like `[1,2,3]` in the console of a browser we will see our array show up with an arrow, if we expand the array by clicking on the arrow we see the values in our array and something that looks like this: `Prototype` or `__proto__`. Open that up and we see a bunch of stuff associated with every array. Most of the list is helper functions, methods that do useful things with arrays.
 
 An easier way to see that list is to refer to the [Array Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) at MDN.
 

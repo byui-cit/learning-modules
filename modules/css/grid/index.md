@@ -1,27 +1,17 @@
 ---
-title: CSS Grid Display
+title: CSS Grid
 description: A basic review of CSS Grid layout essentials.
 date: 2021-11-01
 order: 99
 tags:
   - grid
-  - css layout
+  - css
 layout: layouts/post.njk
 ---
 
 ## Description
 
-CSS Grid Layout is known as CSS Grid or just Grid. A web frontend developer should use Grid on any page component that requires a two-dimensional layout. However, Grid works perfectly for small one dimensional containers as much as CSS Flex, which is often categorized as the choice for a one-dimensional, dynamic, and wrapping optional but not uniformly, which may be desired. Grid
-
-Compare CSS Flexbox to CSS Grid:
-
-Grid displays, like Flexbox, are applied to the <strong>parent container</container> and only the immediate children are Grid items.
-
-To apply
-
-```css
-display: grid;
-```
+CSS Grid Layout is known as CSS Grid or just Grid. A web frontend developer should use Grid on any page component that requires a two-dimensional layout. However, Grid works perfectly for small one dimensional containers as much as CSS Flex, which is often categorized as the choice for a one-dimensional, dynamic, and wrapping optional but not uniformly, which may be desired.
 
 ## Where this knowledge is utilized
 

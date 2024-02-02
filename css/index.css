@@ -9,10 +9,11 @@
   --blue: #056cb6;
   --f2021: #c92436;
   --white: #fff;
-  --code-color: #1990b8;
-  --callout-background-color: #c4baa5;
+  --code-color: #157c9e;
+  --callout-background-color: rgb(230, 243, 254);
   --font-body: Garamond, -apple-system, system-ui, sans-serif;
   --font-headline: "Titillium web";
+  --bord: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Global stylesheet */
@@ -40,9 +41,9 @@ h4 {
   /* text-transform: uppercase; */
 }
 
-p:last-child {
+/* p:last-child {
   margin-bottom: 0;
-}
+} */
 @media screen and (min-width: 40em) {
   p,
   .tmpl-post li,
@@ -140,6 +141,8 @@ code {
     "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
     "Courier New", Courier, monospace;
   line-height: 1.5;
+  word-wrap: normal;
+  color: var(--code-color);
 }
 pre {
   font-size: 14px;
@@ -160,10 +163,6 @@ pre {
   margin: 0.5em 0;
   background-color: #f6f6f6;
 }
-code {
-  word-break: break-all;
-  color: var(--code-color);
-}
 
 pre {
   counter-reset: lineNumber;
@@ -183,8 +182,8 @@ code .highlight-line:before {
 }
 
 blockquote {
-  border-left: 4px solid var(--callout-background-color);
-  padding-left: 0.5em;
+  /* border-left: 4px solid var(--callout-background-color);
+  padding-left: 0.5em; */
 }
 .highlight-line {
   display: block;
@@ -408,17 +407,22 @@ details {
   border: 1px solid;
 }
 
-.callout {
+.callout,
+blockquote {
   display: block;
 
   margin: 15px auto;
   width: 90%;
-  padding: 10px;
-  border: 1px solid black;
+  padding: 0.5em;
+  border: var(--bord);
   color: #171717;
   background: var(--callout-background-color);
 }
-
+blockquote > p,
+.callout > p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
 .bigSteps > ol {
   list-style: none;
   counter-reset: my-counter;

@@ -8,7 +8,7 @@ layout: layouts/post.njk
 
 ## Values
 
-The most fundamental unit of information in a program is a value. Values are data. They're how the program maintains state. Values come in two forms in JS: primitive and object.
+The most fundamental unit of information in a program is a value. Values are data. They're how the program maintains state (current status of data or a process). Values come in two forms in JS: primitive and object.
 
 ### Primitives
 
@@ -20,15 +20,15 @@ The most fundamental unit of information in a program is a value. Values are dat
 
 ### Objects
 
-- object literals
+- Object literals
 - Arrays
 - Functions
 - Classes
 - ...basically everything that is not a primitive!
 
-Values are embedded in programs using literals. Different types of values use different **delimeters** to indicate where the value begins and ends. A common delimiter used for strings that you are probably familar with is quotations. In Javascript we have 'single quotes', "double quotes", and \`back-ticks\`. Single and double quotes function exactly the same...pick one and stick with it. Back-ticks are used to form template literal strings where interpolation can happen.
+Values are embedded in programs using literals. Different types of values use different **delimeters** to indicate where the value begins and ends. A common delimiter used for strings that you are probably familar with is quotations. Quotations then could be referred to as string literals. In Javascript we have 'single quotes', "double quotes", and \`back-ticks\`. Single and double quotes function exactly the same...pick one and stick with it. Back-ticks are used to form template literal strings where [interpolation](https://en.wikipedia.org/wiki/String_interpolation#:~:text=In%20computer%20programming%2C%20string%20interpolation,replaced%20with%20their%20corresponding%20values) can happen.
 
-`typeof` can be used to see what type a stored value is given by Javascript. See if you can identify the delimeters used for the different types of values:
+`typeof` can be used to see what type a stored value is given by Javascript. You can enter the following statements in the console of any browser to see what they return. See if you can identify the delimeters used for the different types of values:
 
 ```javascript
 typeof 42;
@@ -45,12 +45,14 @@ Any surprises? What does a literal for a basic Object look like? An Array?
 
 ## Variables
 
-1. Variables are containers for values
-2. Must be declared (created) to be used
-3. [var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
-4. [let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
-5. [const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
-6. Differences (Which should I use?)
+- Variables are containers for values
+- Must be declared (created) to be used
+- [var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
+- [let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
+- [const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
+- `const` declared variables are not "unchangeable", they just cannot be re-assigned.
+- Differences (Which should I use?)
+
 
    ```javascript
    var adult = true;
@@ -69,14 +71,15 @@ Any surprises? What does a literal for a basic Object look like? An Array?
 
    Why did we get an error on line 11?
 
-7. `const` declared variables are not "unchangeable", they just cannot be re-assigned.
+
 
 ## Strongly Typed? Weakly typed? What does that even mean?
 
 Python is considered a strongly typed language. If you assign a value to a variable Python will not change the type of that variable. For example something like this would throw an error in Python:
 
 ```javascript
-'foo' + 3 --> TypeError: cannot concatenate 'str' and 'int' objects
+'foo' + 3
+// TypeError: cannot concatenate 'str' and 'int' objects
 ```
 
 Javascript is weakly typed...so if you tried the same thing it would work:

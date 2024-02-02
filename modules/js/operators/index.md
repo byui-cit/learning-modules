@@ -2,7 +2,7 @@
 title: JS Operators, Conditionals, and Coercion
 description: Understanding how operators and conditional statements work in Javascript and the role that coercion plays when using them.
 date: 2021-10-15
-order: 2
+order: 3
 tags:
   - js
   - operators
