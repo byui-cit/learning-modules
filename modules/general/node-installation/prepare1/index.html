@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Module Name - Resource name</title>
-    <meta name="description" content="Getting started with making asynchronous requests with Fetch">
+    <title>Node NVM Installation - Mac</title>
+    <meta name="description" content="Installing Node JS with the NVM utility on a Mac">
     <link rel="apple-touch-icon" sizes="180x180" href="/learning-modules/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-16x16.png" sizes="16x16">
@@ -47,32 +47,74 @@
     </header>
     <main  class="tmpl-post" >
       
-<h1>Module Name - Resource name</h1>
+<h1>Node NVM Installation - Mac</h1>
 
 
 
 
-<h2 id="ajax:-asynchronous-requests" tabindex="-1">AJAX: asynchronous requests <a class="direct-link" href="#ajax:-asynchronous-requests" aria-hidden="true">#</a></h2>
-<p><strong>AJAX</strong> stands for Asynchronous Javascript And Xml. It is a collection of technologies that allow a webpage to make a request to a server after it has loaded for additional information. The requests are Asynchronous in that the program the made them does not wait around doing nothing until they come back...it will move on and do more stuff, the requests are made with Javascript, but they don't often return XML anymore. Most often now you will get the information back as JSON.</p>
-<p>Originally the requests were made using <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">XmlHttpRequest</a>, and you will still see that around, but more and more developers are turning to the newer <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">fetch</a> command to make their requests.</p>
-<h2 id="promises" tabindex="-1">Promises <a class="direct-link" href="#promises" aria-hidden="true">#</a></h2>
-<figure class="video-container">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/a3Srum6o5Oo" title="BYU-I Hackathon 2021" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
-<h2 id="example" tabindex="-1">Example <a class="direct-link" href="#example" aria-hidden="true">#</a></h2>
-<p>We will use fetch to pull some data from a remote API (application programming interface). An API is essentially what happens when an organization decides to expose part of a program they own to the world. Why would they do this? Well let's take Calendly for example. It is an online scheduling application. A student can go sign up for an appointment with their instructor easily with it. The University uses Microsoft Exchange for calendaring. If something doesn't show up there...I will miss it. Luckily Exchange has an API. Through this API Calendly can log into my Exchange account and add things directly to my calendar if I give it permission to.</p>
-<p>So as soon as a student signs up for an appointment in Calendly, the appointment automatically gets added to my calendar. This is one example of when an API is very useful.</p>
-<p>We are going to use a fairly simple free API called <a href="https://pokeapi.co/">pokeapi</a>. If you visit that website you will find the documentation on how to request data, and examples. Let's use the example it has to pull information about the Pokemon Ditto.</p>
-<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'https://pokeapi.co/api/v2/pokemon/ditto'</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> results <span class="token operator">=</span> <span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>results<span class="token punctuation">)</span><span class="token punctuation">;</span>'</code></pre>
-<p>There is a lot going on in that simple line of code. With it we made a request for some specific information from a remote server. Check the console and you will find however that we did not get the information yet. Just as was mentioned above fetch returns a Promise. We have to tell it what we want it to do once the promise <strong>fulfills</strong> or finishes what it is doing. We do that with the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">.then()</a> method.</p>
-<pre class="language-javascript"><code class="language-javascript">promise<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>onFulfilled<span class="token punctuation">[</span><span class="token punctuation">,</span> onRejected<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br>  promise<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">value</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>    <span class="token comment">// fulfillment</span><br>  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token parameter">reason</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>    <span class="token comment">// rejection</span><br>  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<p><code>.then()</code> takes two parameters...one required that contains what should happen if the request was successful, and one optional that contains what should happen if the request fails.</p>
-<p><code>fetch</code> does not return usable data initially. Instead we have to tell it what we were expecting...and ask it to convert the response into the right kind of data. The three types it understands are <code>json()</code>, <code>text()</code> (HTML and XML would be considered text), and <code>blob()</code> (blob is anything that isn't text or json). We are expecting JSON back from the api we made the request to. So we should convert it to that.</p>
-<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">"https://pokeapi.co/api/v2/pokemon/ditto"</span><span class="token punctuation">;</span><br><span class="token keyword">let</span> results <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span><br><span class="token comment">// takes a fetch response and checks to make sure it was OK.</span><br><span class="token comment">// then returns the body of the response as a PROMISE to some JSON.</span><br><span class="token keyword">function</span> <span class="token function">convertToJson</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>ok<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token keyword">return</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span><br>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"error:"</span><span class="token punctuation">,</span> response<span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><br><span class="token punctuation">}</span><br><span class="token comment">// this is where we would do whatever we needed to do with the resulting data.</span><br><span class="token keyword">function</span> <span class="token function">doStuff</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  results <span class="token operator">=</span> data<span class="token punctuation">;</span><br>  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"first: "</span><span class="token punctuation">,</span> results<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token comment">// read this as: make a request to URL, WHEN it finishes THEN run convertToJson</span><br><span class="token comment">// WHEN it finishes THEN run doStuff</span><br><span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>convertToJson<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>doStuff<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token comment">// meanwhile...continue with the rest of the program...</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"second: "</span><span class="token punctuation">,</span> results<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<p>Note that the second console.log ran first...then the first one. Remember that in async programming Javascript does not wait for everything to finish before moving on. If we had tried to use <code>results</code> immediately it would have failed. Instead we do whatever we need to do with <code>results</code> in the callback that gets called by <code>.then()</code>.</p>
-<h2 id="note" tabindex="-1">Note <a class="direct-link" href="#note" aria-hidden="true">#</a></h2>
-<p>Note that this would often be done with anonymous functions...without the comments and condensed the code above could look like this:</p>
-<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">"https://pokeapi.co/api/v2/pokemon/ditto"</span><span class="token punctuation">;</span><br><span class="token keyword">let</span> results <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span><br><span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><br>  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>    <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>ok<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>      <span class="token keyword">return</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span><br>      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"error:"</span><span class="token punctuation">,</span> response<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token punctuation">}</span><br>  <span class="token punctuation">}</span><span class="token punctuation">)</span><br>  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>    results <span class="token operator">=</span> data<span class="token punctuation">;</span><br>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"first: "</span><span class="token punctuation">,</span> results<span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"second: "</span><span class="token punctuation">,</span> results<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h2 id="01-prerequisite-install-xcode-tools" tabindex="-1">01 Prerequisite - Install XCode tools <a class="direct-link" href="#01-prerequisite-install-xcode-tools" aria-hidden="true">#</a></h2>
+<blockquote>
+<p>Starting with MacOS 10.9, XCode command line tools must be installed, prior to installing NVM.</p>
+</blockquote>
+<h3 id="1a-xcode-developer-tools-only" tabindex="-1">1a XCode Developer tools only <a class="direct-link" href="#1a-xcode-developer-tools-only" aria-hidden="true">#</a></h3>
+<p><strong>Recommended for most!</strong> If you don't want to download and install the full XCode, you can install just the developer tools (much smaller than the full install) by doing the following:</p>
+<ol>
+<li>Open Spotlight with Command + spacebar.</li>
+<li>Type &quot;Terminal&quot;, press Enter.</li>
+<li>Type <code>xcode-select -p</code>, press Enter. If this returns something like <code>/Library/Developer/CommandLineTools</code> then you already have the tools and you can move to step 02</li>
+<li>Otherwise type <code>xcode-select --install</code>, press Enter and follow the prompts.</li>
+</ol>
+<h3 id="1b-xcode-full-install-(optional)" tabindex="-1">1b XCode Full Install (optional) <a class="direct-link" href="#1b-xcode-full-install-(optional)" aria-hidden="true">#</a></h3>
+<p>If you think you will ever want to build native MacOs or IOS apps download and install XCode. Apple’s XCode development software is used to build Mac and iOS apps, but it also includes the tools you need to compile software for use on your Mac. XCode is free and you can find it in the  <a href="https://apps.apple.com/us/app/xcode/id497799835?mt=12">Apple App Store</a> but it is quite large (Over 3.5G!)  After you install it, open it at least once to accept the Terms.  The next step won't work unless you do.</p>
+<h2 id="02-nvm-github-installation" tabindex="-1">02 - NVM GitHub Installation <a class="direct-link" href="#02-nvm-github-installation" aria-hidden="true">#</a></h2>
+<ol>
+<li>Go to <a href="https://github.com/nvm-sh/nvm">https://github.com/nvm-sh/nvm</a>.</li>
+<li>Scroll down to the &quot;Installing and Updating&quot; heading.</li>
+<li>Locate the curl Install and update script and click the copy icon on the right. (Should look something like this: <code>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash</code>)</li>
+<li>Open the terminal (Command + spacebar, type &quot;terminal&quot;, press Enter).</li>
+<li>Paste the script into the terminal, press Enter.</li>
+<li>Expect the installation process to take ~ 15 seconds, depending on your Internet<br>
+connection.</li>
+<li>When the process is complete, close and reopen the terminal.</li>
+<li>Type <code>nvm -V</code>, press Enter. A long list of nvm commands will appear. This means nvm is installed and ready to be used.</li>
+<li>If an error appears, return to the github location and scroll down to the<br>
+&quot;Troubleshooting on macOS&quot; section and see if you can identify your error and how to deal with it.</li>
+</ol>
+<h2 id="03---install-the-long-term-support-(lts)-version-of-nodejs" tabindex="-1">03 – Install the Long Term Support (LTS) version of NodeJS <a class="direct-link" href="#03---install-the-long-term-support-(lts)-version-of-nodejs" aria-hidden="true">#</a></h2>
+<ol>
+<li>In the terminal, type <code>nvm install --lts</code>, press Enter.</li>
+<li>A message should appear indicating the version number of node being downloaded.</li>
+<li>When done, a message will appear like &quot;Now using node v20.11.0 (npm v10.2.4)&quot;.</li>
+</ol>
+<h2 id="04---installing-and-using-a-different-node-version" tabindex="-1">04 – Installing and using a different Node version <a class="direct-link" href="#04---installing-and-using-a-different-node-version" aria-hidden="true">#</a></h2>
+<p>If you need to download and use a different version of Nodejs, do the following:</p>
+<ol>
+<li>Open the terminal.</li>
+<li>Type &quot;nvm install version number&quot; (e.g. <code>nvm install 19</code>), press Enter.</li>
+<li>When done, you will see a message like &quot;Now using node v19.9.0 (npm v9.6.3)&quot;.</li>
+</ol>
+<h3 id="04a---list-all-versions-of-node-that-are-available-to-install" tabindex="-1">04a – List all versions of Node that are available to install <a class="direct-link" href="#04a---list-all-versions-of-node-that-are-available-to-install" aria-hidden="true">#</a></h3>
+<ol>
+<li>Open the terminal.</li>
+<li>Type <code>nvm ls-remote</code>, press Enter.</li>
+<li>The list will appear.</li>
+<li>Repeat the installation steps, using the version number as needed.</li>
+</ol>
+<h2 id="05-list-node-versions-installed-on-your-computer" tabindex="-1">05 - List Node Versions Installed on your computer <a class="direct-link" href="#05-list-node-versions-installed-on-your-computer" aria-hidden="true">#</a></h2>
+<ol>
+<li>Open the terminal as an administrator.</li>
+<li>Type <code>nvm ls</code>, press Enter.</li>
+<li>A list of all installed versions of Node, that NVM is tracking, appears.</li>
+<li>To see the current version of Node, type <code>node -v</code>, press Enter.</li>
+</ol>
+<h2 id="06-switch-node-versions" tabindex="-1">06 - Switch Node Versions <a class="direct-link" href="#06-switch-node-versions" aria-hidden="true">#</a></h2>
+<p>If needing a different Node version for another project, just switch after opening the project.</p>
+<ol>
+<li>In VS Code, or any tool, open the project.</li>
+<li>Open a terminal and type, &quot;nvm use version number&quot; (appropriate to your required<br>
+node version), press &quot;Enter&quot;.</li>
+<li>You should now be switched to that version of Node.</li>
+</ol>
 
 </main>
     <footer>
