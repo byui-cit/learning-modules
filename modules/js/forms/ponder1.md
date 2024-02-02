@@ -295,7 +295,7 @@ document
 
 ## Activity 3 - Stretch!
 
-We can go quite far with the built in HTML form validation...but it has it's limits. For example we made sure that our credit card number was 16 digits...but not all 16 digit numbers are valid credit card numbers. For that we nee dto add another layer of validation. For this we will use the incomplete `validateForm` function.
+We can go quite far with the built in HTML form validation...but it has it's limits. For example we made sure that our credit card number was 16 digits...but not all 16 digit numbers are valid credit card numbers. For that we need to add another layer of validation. For this we will use the incomplete `validateForm` function.
 
 1. Add an event listener to the form that will call `validateForm` on submit.
 2. By default when a form is submitted, it looks at the `action` attribute on the form and sends the data from the form to that URL. If it does not find an action it reloads the current page. Normally the URL in the `action` would be a server somewhere that would be able to process the form. We don't have a server to work with, and so our form is just pointing to a normal HTML page, which means it won't really do anything when we submit.
