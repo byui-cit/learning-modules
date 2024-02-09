@@ -100,7 +100,7 @@ Lastly, let's add a p tag to our footer with a bit of information for the bottom
 </footer>
 ```
 
-The &copy will create an HTML symbol copyright entity for us. See <a href="https://www.w3schools.com/html/html_symbols.asp">HTML Symbols</a>for more examples.
+The &copy will create an HTML symbol copyright entity for us. See <a href="https://www.w3schools.com/html/html_symbols.asp">HTML Symbols</a> for more examples.
 
 There we have our first simple HTML page. If we had multiple page that we created for the same website, the header and footer section would remain the same for every page of our website and the main section would change from page to page of our website.
 

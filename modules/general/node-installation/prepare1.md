@@ -21,7 +21,7 @@ layout: layouts/post.njk
 
 ### 1b XCode Full Install (optional)
 
-If you think you will ever want to build native MacOs or IOS apps download and install XCode. Apple’s XCode development software is used to build Mac and iOS apps, but it also includes the tools you need to compile software for use on your Mac. XCode is free and you can find it in the  [Apple App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12) but it is quite large (Over 3.5G!)  After you install it, open it at least once to accept the Terms.  Step 02 will not work, after doing the full Xcode install, unless you have accepted the terms.
+If you think you will ever want to build native MacOs or IOS apps, download and install XCode. Apple’s XCode development software is used to build Mac and iOS apps, but it also includes the tools you need to compile software for use on your Mac. XCode is free and you can find it in the  [Apple App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12) but it is quite large (Over 3.5G!)  After you install it, open it at least once to accept the Terms.  Step 02 will not work, after doing the full Xcode install, unless you have accepted the terms.
 
 
 ## 02 - NVM GitHub Installation

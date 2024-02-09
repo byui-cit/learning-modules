@@ -8,9 +8,9 @@ layout: layouts/post.njk
 
 ## Preparation
 
-Make sure you read through the Prepare section for this topic.
+<!-- Make sure you read through the Prepare section for this topic. -->
 
-These activities will be most effective if you TRY them first before you look at the solution. And after you do look at the solution...DO NOT copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.
+These activities will be most effective if you **try** them first before you look at the solution. And after you do look at the solution...**do not** copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.
 
 ## Activity 1
 
@@ -29,7 +29,7 @@ These activities will be most effective if you TRY them first before you look at
     >Then we add the values in the variables together and store the total in another variable.
     >`console.log()` is a builtin Javascript browser tool for outputting (logging) values to a console. It is used mostly for debugging or error handling purposes. Here we are using it to output our total to check if the program is working correctly.
 6. Open the HTML file in a browser. In VS Code it is recommended to use something like the Live Server extension to do this. You will notice that there is nothing showing in the browser window. This is expected as we had nothing in the `body` of our HTML file.
-7. Open up the developer tools in the browser (Right-click anywhere in the browser window and select the "Inspect" option.) and switch to the "Console" tab. you should see something like this: `total:8`. If you do not, check to make sure that your `script` tag in the HTML file has the correct filename in it. Second make sure that you have no errors in your code in the JS file.
+7. Open up the developer tools in the browser (Right-click anywhere in the browser window and select the "Inspect" option.) and switch to the "Console" tab. You should see something like this: `total:8`. If you do not, check to make sure that your `script` tag in the HTML file has the correct filename in it. Second make sure that you have no errors in your code in the JS file.
 
 <details>
 <summary>Solution 1</summary>
@@ -65,7 +65,7 @@ Repetition is good when learning new things, and so the next activity will have 
 1. Create another HTML file and another JS file. Name them whatever you would like
     >Be aware that when naming things for use on the web you should only use letters (a-z), numbers (0-9), and the underscore (_), or dash (-). Avoid all other characters, especially the space!...they will cause you problems. It is also highly recommended that you stick to all lowercase letters. Web servers are case-sensitive.
 2. Add the HTML you need for a valid document. Make sure to add a `script` element!
-3. This time add a headline to your page. The headline shuold read something like "Javascript example 2". Below that headline add a paragraph that looks like this:
+3. This time add a headline to your page. The headline should read something like "Javascript example 2". Below that headline add a paragraph that looks like this:
     ```html
     <p>If you have <span id="myApples"></span> apples,
      and your friend has <span id="friendApples"></span>.
@@ -81,10 +81,10 @@ Repetition is good when learning new things, and so the next activity will have 
     document.getElementById("friendAppleElement").textContent = friendApples;
     document.getElementById("totalApplesElement").textContent = total;
     ```
-    >This code is similar to the code earlier, but this time we are using `document.getElementById()` to grab part of our HTML in order to modify it. For example we should get the element with the id of `myAppleElement` and change the `textContent` of that element to be whatever is in the `myApples` variable.
+    >This code is similar to the code earlier, but this time we are using `document.getElementById()` to grab part of our HTML in order to modify it. For example, we should get the element with the id of `myAppleElement` and change the `textContent` of that element to be whatever is in the `myApples` variable.
     >Then we do the same for the other elements.
 
-5. Open your HTML page in a browser. Do you see what you expected? There are no values! If you look in the console you will see and error that looks something like this: `null is not an object (evaluating 'document.getElementById("myAppleElement").textContent = myApples')`. This illustrates a common Javascript error. The problem is that when the browser downloads the HTML file it starts to parse through it to be able to build and render the page.
+5. Open your HTML page in a browser. Do you see what you expected? There are no values! If you look in the console you will see and error that looks something like this: `null is not an object (evaluating 'document.getElementById("myAppleElement").textContent = myApples')`. This illustrates a common Javascript error. The problem is that when the browser downloads the HTML file, it starts to parse through the file to be able to build and render the page.
 Well, as soon as it hits the `script` element it stops what it is doing, downloads the JS file, and runs any code it finds. The problem is that the `script` element was *before* the `body` element, and so the elements we are trying to grab in our Javascript don't exist yet!
 We need to tell the browser to wait to run the Javascript it finds until *after* it finishes building the whole page. The easiest way to do that is to add `defer` to our `script` element.
     ```html

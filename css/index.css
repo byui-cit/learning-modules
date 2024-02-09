@@ -475,3 +475,7 @@ img ~ em {
   margin-top: -10px;
   display: block;
 }
+.uppercase,
+strong {
+  text-transform: uppercase;
+}

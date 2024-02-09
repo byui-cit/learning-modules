@@ -8,7 +8,7 @@ layout: layouts/post.njk
 
 ## Preparation
 
-First thing...the Document Object Model is NOT Javascript. But Javascript can interact with the DOM with a bunch of built in functions that are available in all browsers.
+First thing...the Document Object Model is *not* Javascript. But Javascript can interact with the DOM with a bunch of built in functions that are available in all browsers.
 
 The DOM is the representation of the nodes or elements of a web page in code. The DOM is exposed through a special object to Javascript: document.
 
