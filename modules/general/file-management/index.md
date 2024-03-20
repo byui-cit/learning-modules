@@ -43,7 +43,7 @@ Mac users can use this video to step them through the installation for the MacOS
 
 <figure class="video-container">
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZJtjwRsSaqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KiU3Hf5FsLU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </figure>
 
 - [File Management with VSCode](prepare1)
