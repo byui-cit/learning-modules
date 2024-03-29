@@ -53,8 +53,8 @@
 
 
 <h2 id="preparation" tabindex="-1">Preparation <a class="direct-link" href="#preparation" aria-hidden="true">#</a></h2>
-<p>Make sure you read through the Prepare section for this topic. You will also need your editor open to create some new files to contain the work on this exercise.</p>
-<p>These activities will be most effective if you TRY them first before you look at the solution. And after you do look at the solution...DO NOT copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.</p>
+<p>You will need your editor open to create some new files to contain the work on this exercise.</p>
+<p>These activities will be most effective if you <strong>try</strong> them first before you look at the solution. And after you do look at the solution...<strong>do not</strong> copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.</p>
 <h2 id="step-1:-file-and-folder-setup" tabindex="-1"><strong>Step 1</strong>: File and Folder Setup <a class="direct-link" href="#step-1:-file-and-folder-setup" aria-hidden="true">#</a></h2>
 <ol>
 <li>Create a new HTML file named &quot;media-query.html&quot;.</li>
@@ -89,8 +89,11 @@
 <h2 id="step-3:-css" tabindex="-1"><strong>Step 3:</strong> CSS <a class="direct-link" href="#step-3:-css" aria-hidden="true">#</a></h2>
 <p>Style the document as shown in the example screenshots given below.</p>
 <ol>
-<li>use the Google Font - Roboto in the body rule,</li>
-<li>the header, main, and footer each
+<li>
+<p>Use the Google Font - Roboto in the body rule,</p>
+</li>
+<li>
+<p>The header, main, and footer each</p>
 <ul>
 <li>have a maximum width of 640 pixels</li>
 <li>are centered on the page using margin: 1rem auto</li>
@@ -98,18 +101,26 @@
 <li>have a blueish background color of your choice</li>
 </ul>
 </li>
-<li>set the main element to be a CSS grid with a grid template of only one column, and a equal gap of 1rem, and</li>
-<li>set the section elements to also have padding and a white background.</li>
+<li>
+<p>Set the main element to be a CSS grid with a grid template of only one column, and a equal gap of 1rem, and</p>
+</li>
+<li>
+<p>Set the section elements to also have padding and a white background.</p>
+</li>
+<li>
+<p>Write a containing media query to be applied at a viewport width of 500px or greater (<code>@media screen and (min-width: 500px)</code>).</p>
+</li>
+<li>
+<p>Change the <code>header</code> to black background with white text</p>
+</li>
+<li>
+<p>Change the <code>main</code> element to display two columns of equal size.</p>
+</li>
 </ol>
 <details>
 <summary>Partial Solution</summary>
 <pre class="language-css"><code class="language-css"><span class="token selector">body</span> <span class="token punctuation">{</span><br>  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Roboto'</span><span class="token punctuation">,</span> sans-serif<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token selector">header, main, footer</span> <span class="token punctuation">{</span><br>  <span class="token property">max-width</span><span class="token punctuation">:</span> 640px<span class="token punctuation">;</span><br>  <span class="token property">margin</span><span class="token punctuation">:</span> 1rem auto<span class="token punctuation">;</span><br>  <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #bbb<span class="token punctuation">;</span><br>  <span class="token property">padding</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span><br>  <span class="token property">background-color</span><span class="token punctuation">:</span> #e6f2ff<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token selector">main</span> <span class="token punctuation">{</span><br>  <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span><br>  <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 1fr<span class="token punctuation">;</span><br>  <span class="token property">grid-gap</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token selector">section</span> <span class="token punctuation">{</span><br>  <span class="token property">padding</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span><br>  <span class="token property">background-color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
 </details>
-<ol start="5">
-<li>write a containing media query to be applied at a viewport width of 500px or greater (<code>@media screen and (min-width: 500px)</code>).</li>
-<li>change the <code>header</code> to black background with white text</li>
-<li>change the <code>main</code> element to display two columns of equal size.</li>
-</ol>
 <h2 id="example-screenshots" tabindex="-1">Example Screenshots <a class="direct-link" href="#example-screenshots" aria-hidden="true">#</a></h2>
 <p><img src="../../../../img/media-query-sm.png" alt="Figure 1: Mobile View Screenshot"></p>
 <p><img src="../../../../img/media-query-lg.png" alt="Figure 2: Wide View Screenshot"></p>

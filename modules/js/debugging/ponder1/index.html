@@ -53,16 +53,16 @@
 
 
 <h2 id="preparation" tabindex="-1">Preparation <a class="direct-link" href="#preparation" aria-hidden="true">#</a></h2>
-<p>Make sure you read through the Prepare section for this topic. You will also need your editor open with some html and the code from the Prepare activity:</p>
+<p>You will need your editor open with some html and the code:</p>
 <h3 id="html" tabindex="-1">html <a class="direct-link" href="#html" aria-hidden="true">#</a></h3>
 <pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- debugging.html --></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Debug Activities<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>debugging.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
 <h3 id="javascript" tabindex="-1">Javascript <a class="direct-link" href="#javascript" aria-hidden="true">#</a></h3>
 <pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token constant">PI</span> <span class="token operator">=</span> <span class="token number">3.14</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> radius <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span><br><span class="token keyword">let</span> area <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span><br>area <span class="token operator">=</span> radius <span class="token operator">*</span> radius <span class="token operator">*</span> pi<span class="token punctuation">;</span><br>radius <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span><br>area <span class="token operator">=</span> radius <span class="token operator">*</span> radius <span class="token operator">*</span> pi<span class="token punctuation">;</span></code></pre>
-<p>These activities will be most effective if you TRY them first before you look at the solution. And after you do look at the solution...DO NOT copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.</p>
+<p>These activities will be most effective if you <strong>try</strong> them first before you look at the solution. And after you do look at the solution...<strong>do not</strong> copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.</p>
 <h2 id="activity-1" tabindex="-1">Activity 1 <a class="direct-link" href="#activity-1" aria-hidden="true">#</a></h2>
 <p>We have a few errors to fix in the code above.</p>
 <ol>
-<li>First we must address the initial syntax error: &quot;pi is not defined&quot;. Why are we getting that error. Review the code and fix it.</li>
+<li>First we must address the initial syntax error: &quot;pi is not defined&quot;. Why are we getting that error? Review the code and fix it.</li>
 <li>Once that error is fixed we will find that there is another syntax error: &quot;Assignment to constant variable.&quot; Fix this one as well.</li>
 <li>After that the code runs with no errors. But there is no indication of whether it worked correctly. Insert some <code>console.log()</code> statements to review what is happening.</li>
 </ol>
@@ -81,15 +81,9 @@
 </ol>
 <pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token constant">PI</span> <span class="token operator">=</span> <span class="token number">3.14</span><span class="token punctuation">;</span><br><span class="token keyword">let</span> area <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span><br><span class="token keyword">function</span> <span class="token function">circleArea</span><span class="token punctuation">(</span><span class="token parameter">radius</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token keyword">const</span> area <span class="token operator">=</span> radius <span class="token operator">*</span> <span class="token constant">PI</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br>area <span class="token operator">=</span> <span class="token function">circleArea</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>area<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <ol start="3">
-<li>
-<p>If you use the function above, you will notice that we get 'undefined' as our result. We have another error. but this one is not showing up in the Console. Put a breakpoint on the line where we use our function. Then refresh the page and this time instead of <strong>Step Over</strong> use the <strong>Step Into</strong> button (It will be an arrow pointing down right next to Step Over)</p>
-</li>
-<li>
-<p>See if you can figure out what is wrong and Fix it.</p>
-</li>
-<li>
-<p>Once you have solved that there is one more logic error. See if you can find it!</p>
-</li>
+<li>If you use the function above, you will notice that we get 'undefined' as our result. We have another error. but this one is not showing up in the Console. Put a breakpoint on the line where we use our function. Then refresh the page and this time instead of <strong>Step Over</strong> use the <strong>Step Into</strong> button (It will be an arrow pointing down right next to Step Over)</li>
+<li>See if you can figure out what is wrong and Fix it.</li>
+<li>Once you have solved that there is one more logic error. See if you can find it!</li>
 </ol>
 <details>
 <summary>Solution 2</summary>
