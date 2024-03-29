@@ -8,9 +8,9 @@ layout: layouts/post.njk
 
 ## Preparation
 
-Make sure you read through the Prepare section for this topic. You will also need your editor open to create some new files to contain the work on this exercise.
+You will need your editor open to create some new files to contain the work on this exercise.
 
-These activities will be most effective if you TRY them first before you look at the solution. And after you do look at the solution...DO NOT copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.
+These activities will be most effective if you **try** them first before you look at the solution. And after you do look at the solution...**do not** copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.
 
 ## **Step 1**: File and Folder Setup
 
@@ -60,14 +60,18 @@ These activities will be most effective if you TRY them first before you look at
 
 Style the document as shown in the example screenshots given below.
 
-1. use the Google Font - Roboto in the body rule,
-2. the header, main, and footer each
+1. Use the Google Font - Roboto in the body rule,
+2. The header, main, and footer each
     - have a maximum width of 640 pixels
     - are centered on the page using margin: 1rem auto
     - include a faint border and appropriate padding
     - have a blueish background color of your choice
-3. set the main element to be a CSS grid with a grid template of only one column, and a equal gap of 1rem, and
-4. set the section elements to also have padding and a white background.
+3. Set the main element to be a CSS grid with a grid template of only one column, and a equal gap of 1rem, and
+4. Set the section elements to also have padding and a white background.
+
+5. Write a containing media query to be applied at a viewport width of 500px or greater (`@media screen and (min-width: 500px)`).
+6. Change the `header` to black background with white text
+7. Change the `main` element to display two columns of equal size.
 
 <details>
 <summary>Partial Solution</summary>
@@ -98,10 +102,6 @@ section {
 ```
 
 </details>
-
-5. write a containing media query to be applied at a viewport width of 500px or greater (`@media screen and (min-width: 500px)`).
-6. change the `header` to black background with white text
-7. change the `main` element to display two columns of equal size.
 
 ## Example Screenshots
 

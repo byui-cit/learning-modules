@@ -16,6 +16,7 @@ In this module we will also be looking at basic File Management using VSCode. An
 
 ## Where this knowledge is utilized
 
+- ITM 101
 - WDD 130
 - WDD 230
 - WDD 330
