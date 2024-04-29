@@ -67,9 +67,9 @@ Repetition is good when learning new things, and so the next activity will have 
 2. Add the HTML you need for a valid document. Make sure to add a `script` element!
 3. This time add a headline to your page. The headline should read something like "Javascript example 2". Below that headline add a paragraph that looks like this:
     ```html
-    <p>If you have <span id="myApples"></span> apples,
-     and your friend has <span id="friendApples"></span>.
-      Then together you have <span id="total"></span> apples!</p>
+    <p>If you have <span id="myAppleElement"></span> apples, and your friend has
+      <span id="friendAppleElement"></span>. Then together you have
+      <span id="totalApplesElement"></span> apples!</p>
     ```
 3. Add the following code to your JS file:
     ```javascript
