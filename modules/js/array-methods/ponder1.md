@@ -8,9 +8,9 @@ layout: layouts/post.njk
 
 ## Preparation
 
-Make sure you read through the Prepare section for this topic. You will also need your editor open with some html:
+Make sure you read through [Array Methods: core concepts](../prepare1). You will also need your editor open with some HTML and JS:
 
-### html
+### HTML
 
 ```html
 <!-- arrays.html -->
@@ -25,7 +25,19 @@ Make sure you read through the Prepare section for this topic. You will also nee
 </html>
 ```
 
-These activities will be most effective if you TRY them first before you look at the solution. And after you do look at the solution...DO NOT copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.
+### JS
+
+```javascript
+//  arrays.js
+const steps = ["one", "two", "three"];
+const listTemplate(step) {
+  return //the html string made from step
+}
+const stepsHtml = // use map to convert the list from strings to HTML
+document.querySelector("#myList").innerHTML = // set the innerHTML
+```
+
+These activities will be most effective if you **try** them first before you look at the solution. And after you do look at the solution...**do not** copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.
 
 ## Activity 1 - Map
 
@@ -39,9 +51,11 @@ let new_array = arr.map(function callback( currentValue[, index[, array]]) {
 
 The syntax looks very similar to `forEach`, but notice that it needs a variable to store the new array it will return. We also need to make sure that the callback function we provide returns a value...usually the modified version of the array element.
 
-1. Declare an array with value = `['one', 'two', 'three']`
-2. Convert our array of strings into an array of HTML strings. Each string should be turned into a list item. For example: "&lt;li&gt;one&lt;/li&gt;"
-3. Set our list of HTML strings into the **myList** list. (Hint...checkout the [.join()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join) method.)
+You were given some of the code to complete activity 1. Look through it then follow the instructions below.
+
+1. The `listTemplate` function should take a step and return the HTML to turn that step (a string) into a list item (HTML). For example: "one" will get converted to "&lt;li&gt;one&lt;/li&gt;" Template literal strings are great for this.
+2. Use your template function and the `map` method to convert the whole list to HTML. Store the result in a variable.
+3. Set our list of HTML strings into the `myList` list. (Hint...checkout the [.join()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join) method.)
 
 <details>
 <summary>Solution 1</summary>
@@ -49,10 +63,11 @@ The syntax looks very similar to `forEach`, but notice that it needs a variable 
 ```javascript
 // example 1
 const steps = ["one", "two", "three"];
-const stepsHtml = steps.map(function (step) {
+const listTemplate(step) {
   return `<li>${step}</li>`;
-});
-document.getElementById("myList").innerHTML = stepsHtml.join();
+}
+const stepsHtml = steps.map(listTemplate);
+document.querySelector("#myList").innerHTML = stepsHtml.join();
 ```
 
 </details>
@@ -138,7 +153,7 @@ const shortWords = words.filter((word) => word.length < 6);
 [indexOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) returns the first index at which a given element can be found in the array, or -1 if it is not present.
 
 1. Declare an array with the following value: `[12, 34, 21, 54]`
-2. Declare a luckNumber variable with the value 21;
+2. Declare a luckyNumber variable with the value 21;
 3. Use `indexOf` to see if the luckyNumber is in the Array.
 
 <details>

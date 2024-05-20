@@ -14,7 +14,7 @@ Encapsulation: "The goal of encapsulation is the bundling or co-location of info
 
 There is a concept in programming called DRY. Don't Repeat Yourself. Which means that if we are coding and find ourselves doing the exact same thing more than once...we should find a way to re-use. Functions are made for this.
 
-Make sure you read through the Prepare section for this topic. In particular remember the three ways to declare functions in JavaScript:
+It is recommended to review [Introduction to Functions](../prepare1) before you start.. In particular remember the three ways to declare functions in JavaScript:
 
 1. Function Declaration
 
@@ -44,11 +44,11 @@ const mySuperFunction = () => {
 
 ## GPA Calculator
 
-If we think about a gpa Calculator app that runs in the browser, how would we organize the code for that? What does it need to do?
+If we think about a GPA Calculator app that runs in the browser, how would we organize the code for that? What does it need to do?
 
 1. Display the options for the user
 2. Accept input from the user
-3. Perform the requested operation with the user provided arguments
+3. Perform an operation with the arguments provided by the user.
 4. Display the result of the operation
 
 Our program could be organized into two sets of functionality: code that is responsible to receive and display information, and code that will calculate the GPA with the user supplied input.
@@ -58,15 +58,15 @@ Let's break down our functionality a bit further:
 1. Display input box for user to enter grades along with a button to kick off the calculation.
 2. Add an event listener to the button that will do the following when clicked:
    1. Get the string of grades from the input
-   2. Convert the string to an array (String.split(',')), clean up any extra spaces, and make the grades all uppercase.
-   3. Do a lookup on each grade to convert it to it's point value (ie A = 4.0)
+   2. Convert the string to an array (`String.split(',')`), clean up any extra spaces, and make the grades all uppercase.
+   3. Do a lookup on each grade to convert it to it's point value (for example A = 4.0)
    4. Total up all the point values, and divide by the number of grades to get the GPA
    5. Output the GPA to the browser
 
 ## Steps
 
-1. Start by creating two files in the sandbox: gpa.html, and gpa.js. Just like before add the HTML for a basic page, and a script element linking our JS to our HTML
-2. Copy the following HTML into the <body> of your HTML file:
+1. Start by creating two files in your editor: gpa.html, and gpa.js. Just like before add the HTML for a basic page, and a script element linking our JS to our HTML
+2. Copy the following HTML into the `<body>` of your HTML file:
 
 ```html
 <h1>GPA Calculator</h1>
@@ -79,7 +79,7 @@ Let's break down our functionality a bit further:
 <p id="output"></p>
 ```
 
-3. If we review our list of steps above, we have many things to accomplish. Think about how you might organize all of that into functions. How many do we need? what should each function do? Remember that good functions should only do one thing. After you have considered this and formed a few opinions check out one possibility below.
+3. If we review our list of steps above, we have many things to accomplish. Think about how you might organize all of that into functions. How many do we need? What should each function do? Remember that good functions should only do one thing. After you have considered this and formed a few opinions check out one possibility below.
 
 <details>
 <summary>Function List</summary>
@@ -127,7 +127,7 @@ function clickHandler() {
      .addEventListener("click", clickHandler);
    ```
 
-6. Move onto the 'lookupGrade()` function. In this case a long if-else statement should work. To keep it simpler don't worry about the + and - grades. Make sure to test your function to make sure it works!
+6. Move onto the `lookupGrade()` function. In this case a long if-else statement should work. To keep it simpler don't worry about the + and - grades. Make sure to test your function to make sure it works!
 
 7. Next is the `calculateGpa()` function. It should use the `lookupGrade()` function that we just finished. We will need to loop through our list of grades and call lookupGrade on each. Then we will need to **reduce** the list of gpa points to a total and divide it by the number of grades to get the average. Finally round the gpa to 2 decimal points.
 
@@ -139,7 +139,7 @@ function clickHandler() {
 ```javascript
 function getGrades(inputSelector) {
   // get grades from the input box
-  const grades = document.querySelector("#grades").value;
+  const grades = document.querySelector(inputSelector).value;
   // split them into an array (String.split(','))
   const gradesArray = grades.split(",");
   // clean up any extra spaces, and make the grades all uppercase. (Array.map())
@@ -184,7 +184,7 @@ function outputGpa(gpa, selector) {
 function clickHandler() {
   // when the button in our html is clicked
   // get the grades entered into the input
-  const grades = getGrades();
+  const grades = getGrades("#grades");
   // calculate the gpa from the grades entered
   const gpa = calculateGpa(grades);
   // display the gpa

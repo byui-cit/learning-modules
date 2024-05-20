@@ -8,7 +8,7 @@ layout: layouts/post.njk
 
 ## Preparation
 
-This activity will walk us through building a simple To-do application that will allow you to add a task, mark a task as completed, and remove a task.
+This activity will walk us through building a simple To-do application that will allow you to add a task, mark a task as completed, and remove a task. It is recommended to review [Event Driven Programmming](../prepare1) before you start.
 
 You will need your editor open to create a couple of new files for the following code:
 
