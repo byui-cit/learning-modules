@@ -8,9 +8,9 @@ layout: layouts/post.njk
 
 ## Preparation
 
-Make sure you read through the Prepare section for this topic. You will also need your editor open with some html :
+It is recommended to review [Objects - Representing data](../prepare1) before you start. You will also need your editor open with some HTML:
 
-### html
+### HTML
 
 ```html
 <!-- courses.html -->
@@ -57,13 +57,13 @@ const aCourse = {
 };
 ```
 
-These activities will be most effective if you TRY them first before you look at the solution. And after you do look at the solution...DO NOT copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.
+These activities will be most effective if you **try** them first before you look at the solution. And after you do look at the solution...**do not** copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.
 
 ## Activity 1
 
 Use objects and encapsulation to create a representation of a school schedule
 
-1. Create an object literal to represent a course. It should include the course name and course number.
+1. Review the object literal you were given represent a course. It includes the course name and course number.
 
    ```javascript
    const aCourse = {
@@ -76,19 +76,20 @@ Use objects and encapsulation to create a representation of a school schedule
 
    Notice a couple of things.
 
-   - The keys are strings and do not always need to be quoted (it's never an error to quote them, but becomes necessary if the key has a space in it).
-   - After the key is a colon, then the value.
+   - This is similar to a Dictionary in Python. Objects in Javascript are collections of `key:value` pairs.
+   - The keys are strings but do not always need to be quoted. It's never an error to quote them, but becomes necessary if the key has a space in it. For example if instead of `code` we wanted to make the key more specific and call it `course code` we would need to do this: `"course code": "CSE121b"`. But in most cases you would be better off to use `courseCode` instead.
+   - The `key` is on the left side of the colon and the value is on the right.
    - The values can be anything that can be assigned to a variable in Javascript: primitives, arrays, other objects, functions...
-   - keys that store data are called properties, keys that store functions are called methods
+   - Keys that store data are called properties, keys that store functions are called methods
 
     </div>
 
-2. In order to assign students to a course so it can be taught one or more sections must be created. Add a `sections` property to the object. Since a course can have more than one section make this an array. A section will look like this:
+2. In order to assign students to a course so it can be taught one or more sections must be created. Add a `sections` property to the object (a new `key:value` pair). Since a course can have more than one section, make this an array. A section will look like this:
 
-```javascript
-{ sectionNum: 1, roomNum: 'STC 353', enrolled: 26, days: 'TTh', instructor: 'Bro T'},
-{ sectionNum: 2, roomNum: 'STC 347', enrolled: 28, days: 'TTh', instructor: 'Sis A'}
-```
+  ```javascript
+  { sectionNum: 1, roomNum: 'STC 353', enrolled: 26, days: 'TTh', instructor: 'Bro T'},
+  { sectionNum: 2, roomNum: 'STC 347', enrolled: 28, days: 'TTh', instructor: 'Sis A'}
+  ```
 
 3. Create a function to set the name and number of the course in the HTML. Pass the course object into your function (remember that you can use the dot notation to access the parts of an object.)
 4. Create another function that will output the sections into the table identified by `#sections`. You should pass the sections you want rendered into the function.
@@ -120,20 +121,22 @@ const aCourse = {
 
 function setCourseInfo(course) {
   const courseName = document.querySelector("#courseName");
-  const coursecode = document.querySelector("#courseCode");
+  const courseCode = document.querySelector("#courseCode");
   courseName.textContent = course.name;
-  coursecode.textContent = course.code;
+  courseCode.textContent = course.code;
 }
 
-function renderSections(sections) {
-  const html = sections.map(
-    (section) => `<tr>
+function sectionTemplate(section) {
+  return `<tr>
     <td>${section.sectionNum}</td>
     <td>${section.roomNum}</td>
     <td>${section.enrolled}</td>
     <td>${section.days}</td>
     <td>${section.instructor}</td></tr>`
-  );
+}
+
+function renderSections(sections) {
+  const html = sections.map(sectionTemplate);
   document.querySelector("#sections").innerHTML = html.join("");
 }
 
@@ -149,7 +152,7 @@ The next part will see us add a method to our object that can be used to modify 
 
 <div class="callout">
 
-One important concept when using Object Literals like this is `this`. When you create an object it creates a reference to itself. That reference is called `this`. We will need to use that reference in our methods for them to work
+One important concept when using Object Literals is `this`. "`this`" is a keyword in Javascript. When you create an object it creates a reference to itself. That reference is called `this`. We will need to use that reference in our methods for them to work.
 
 For example inside our `enrollStudent` method we will need to access the `sections` portion of our object. We have to tell the code where to look for `sections`. In english it would sound like this: 'Look inside of the current object for a property called `sections`'. In code it looks thus:
 
@@ -159,7 +162,7 @@ this.sections;
 
 </div>
 
-1. Add a method to the object that will allow us to add a student to a section. The method should take as argument the section number we are enrolling the student in. Call it `enrollstudent(sectionNum)`
+1. Add a a new key to your object called `enrollStudent`. The value of this key should be an anonymous function that takes one argument: `sectionNum`. Functions added to objects like this are commonly referred to as methods. This method will allow us to add a student to a section.
 
 <div class="callout">
 

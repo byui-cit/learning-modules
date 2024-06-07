@@ -8,14 +8,16 @@ layout: layouts/post.njk
 
 ## Preparation
 
-Make sure you read through the Prepare section for this topic. Create a folder in your editor. Inside of that folder create four files:
+Create a folder in your editor. Inside of that folder create four files:
 
 1. `form-demo.html`
 2. `form-demo.js`
 3. `completed.html`
-4. `style.css`
+4. `form-demo.css`
 
 Copy and paste the code below into the appropriate file.
+
+### form-demo.html
 
 ```html
 <!-- form-demo.html -->
@@ -25,7 +27,7 @@ Copy and paste the code below into the appropriate file.
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout Form</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="form-demo.css" />
     <script src="form-demo.js" defer></script>
   </head>
   <body>
@@ -37,6 +39,8 @@ Copy and paste the code below into the appropriate file.
   </body>
 </html>
 ```
+
+### form-demo.js
 
 ```javascript
 // form-demo.js
@@ -69,9 +73,9 @@ function togglePaymentDetails(e) {
   const creditCardContainer = ;
   const paypalContainer = ;
 
-  // Hide all containers by adding the '.hide' class to each of them
+  // Hide payment containers by adding the '.hide' class to each of them
 
-  // Disable required for all fields...if we hide a required field the browser will throw an error when we try to submit!
+  // Disable required for payment fields...if we hide a required field the browser will throw an error when we try to submit!
 
 
   // Show the container based on the selected payment method, and add the required attribute back.
@@ -90,6 +94,8 @@ function showErrors(errors) {
 
 ```
 
+### completed.html
+
 ```html
 <!-- completed.html -->
 <!DOCTYPE html>
@@ -98,7 +104,7 @@ function showErrors(errors) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Order Complete</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="form-demo.css" />
   </head>
   <body>
     <h2>Thank you for your order!</h2>
@@ -107,8 +113,10 @@ function showErrors(errors) {
 
 ```
 
+### form-demo.css
+
 ```css
-/* style.css */
+/* form-demo.css */
 * {
   box-sizing: border-box;
 }
@@ -146,17 +154,19 @@ select {
 
 ```
 
-These activities will be most effective if you TRY them first before you look at the solution. And after you do look at the solution...DO NOT copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.
+You will see some errors in the Javascript file until we complete the code there.
+
+These activities will be most effective if you **try** them first before you look at the solution. And after you do look at the solution...DO NOT copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.
 
 ## Activity 1
 
 The first thing we need to do is to build out our form in HTML. We should also take advantage of the built in HTML validation.
 
-1. Open the starter HTML file you were provided. Review the mockup below and create the form it shows.
+1. Open the `form-demo.html` file you were provided. Review the mockup below and create the form it shows.
 ![example of a simple checkout form](../../../../img/form-demo-mockup.webp)
 2. Make sure to have a `label` for each element as well as adding a `name` and `id` to each. Finally make each of the form inputs required.
 3. Credit card numbers are always 16 digits. We can use a `pattern` to make sure the value entered it exactly 16 digits. Add `pattern="[0-9]{16}"` to the input for the creditcard number
-    >The `[0-9]{16}` is a simple Regular Expression. The first part: `[0-9]` means that only the characters 0-9 are allowed. The second part: `{16}` means we should have 16 of them.
+    >The `[0-9]{16}` is a simple [Regular Expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions). The first part: `[0-9]` means that only the characters 0-9 are allowed. The second part: `{16}` means we should have 16 of them.
 4. Initially we don't want to see the credit card number or Paypay username inputs. Use the `.hide` class to hide them.
 5. Finally open up `style.css` and add the css necessary to make your form look like the mockup. You will notice that you have been given some CSS. Part of that is to handle styling of the `select` elements in the different browsers...`selects` can be stubborn.
 
@@ -182,7 +192,7 @@ The first thing we need to do is to build out our form in HTML. We should also t
   </select>
 
   <!-- Container for credit card details -->
-  <div id="creditCardNumberContainer" class="hide">
+  <p id="creditCardNumberContainer" class="hide">
     <label for="creditCardNumber">Credit Card Number:</label>
     <input
       type="text"
@@ -192,10 +202,10 @@ The first thing we need to do is to build out our form in HTML. We should also t
       placeholder="Enter 16 digits"
       required
     />
-  </div>
+  </p>
 
   <!-- Container for PayPal details -->
-  <div id="paypalUsernameContainer" class="hide">
+  <p id="paypalUsernameContainer" class="hide">
     <label for="paypalUsername">PayPal Username:</label>
     <input
       type="text"
@@ -204,14 +214,17 @@ The first thing we need to do is to build out our form in HTML. We should also t
       placeholder="Enter PayPal username"
       required
     />
-  </div>
+  </p>
 
   <button type="submit">Place Order</button>
 </form>
 ```
 
+If you are looking at those `<p>` tags being used to group up the labels and inputs and wondering why I didn't just use a `<div>`, it's partly a matter of preference, but partly because of the definition of a `p` element from MDN: "Paragraphs are usually represented in visual media as blocks of text separated from adjacent blocks by blank lines and/or first-line indentation, but HTML paragraphs can be any structural grouping of related content, such as images or form fields."
+
+
 ```css
-/* style.css */
+/* form-demo.css */
 
 label {
   display: block;
@@ -242,14 +255,14 @@ button {
 
 ## Activity 2
 
-If you try submitting the form you will see that it prompts us to fill in all of the required elements before it will proceed. If you fill it all out and submit we get an error however. We currently have 2 hidden required fields. The browser considers this an error...as it should. We need to add some Javascript to first hide and show the appropriate fields, and remove the `required` attribute from the one that stays hidden.
+If you try submitting the form you will see that it prompts us to fill in all of the required elements before it will proceed. However, if you fill it all out and submit we get an error. We currently have 2 hidden required fields. The browser considers this an error...as it should. We need to add some Javascript to first hide and show the appropriate fields, and remove the `required` attribute from the one that stays hidden.
 
 Open the `form-demo.js` file. It contains several incomplete functions. Start with the `togglePaymentDetails` function. Follow the comments to complete it.
 
 Here are a few tips:
 
 1. You can add and remove classes to elements through `element.classList.add("classname")` and `element.classList.remove("classname")`
-2. `required` is a bit of a funny attribute since it doesn't have a value. You can actually remove it by doing `element.required = false` OR by using `element.removeAttribute("required")`. You can add it back with either `element.required = true` OR `element.setAttribute("required", "")`
+2. `required` is a bit of a funny attribute since it doesn't have a value. You can actually remove it by doing `element.required = false` **or** by using `element.removeAttribute("required")`. You can add it back with either `element.required = true` **or** `element.setAttribute("required", "")`
 3. Remember that when working with form inputs the stuff typed into the input can be found in `element.value`
 
 One you have finished writing the function, add a `change` event listener to the `paymentMethod` form input that will call our `togglePaymentDetails` function on change.
@@ -267,10 +280,10 @@ function togglePaymentDetails(e) {
   );
   const paypalContainer = document.getElementById("paypalUsernameContainer");
 
-  // Hide all containers
+  // Hide payment containers
   creditCardContainer.classList.add("hide");
   paypalContainer.classList.add("hide");
-  // Disable required for all fields...if we hide a required field the browser will throw an error when we try to submit!
+  // Disable required for the hidden fields...if we hide a required field the browser will throw an error when we try to submit!
   theForm.creditCardNumber.required = false;
   theForm.paypalUsername.required = false;
 
@@ -295,7 +308,7 @@ document
 
 ## Activity 3 - Stretch!
 
-We can go quite far with the built in HTML form validation...but it has it's limits. For example we made sure that our credit card number was 16 digits...but not all 16 digit numbers are valid credit card numbers. For that we need to add another layer of validation. For this we will use the incomplete `validateForm` function.
+We can go quite far with the built in HTML form validation...but it has it's limits. For example we made sure that our credit card number was 16 digits...but not all 16 digit numbers are valid credit card numbers. For that we need to add another layer of validation. For this we will use the currently incomplete `validateForm` function.
 
 1. Add an event listener to the form that will call `validateForm` on submit.
 2. By default when a form is submitted, it looks at the `action` attribute on the form and sends the data from the form to that URL. If it does not find an action it reloads the current page. Normally the URL in the `action` would be a server somewhere that would be able to process the form. We don't have a server to work with, and so our form is just pointing to a normal HTML page, which means it won't really do anything when we submit.

@@ -8,9 +8,9 @@ layout: layouts/post.njk
 
 ## Preparation
 
-Make sure you read through the Prepare section for this topic. You will also need your editor open with some html and JS code. This is the finished code from the Ponder section of the [Objects module](../../objects). Create two files: `modules.html` and `modules.js`, then copy paste the code below into them.
+It is recommended to review [Introduction to Libraries with ES Modules](../prepare1) before you start. You will also need your editor open with some HTML and JS code. This is the finished code from the Ponder section of the [Objects module](../../objects). Create two files: `modules.html` and `modules.js`, then copy paste the code below into them.
 
-### html
+### HTML
 
 ```html
 <!-- modules.html -->
@@ -118,13 +118,15 @@ setCourseInfo(aCourse);
 renderSections(aCourse.sections);
 ```
 
-These activities will be most effective if you TRY them first before you look at the solution. And after you do look at the solution...DO NOT copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.
+These activities will be most effective if you **try** them first before you look at the solution. And after you do look at the solution...**do not** copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.
 
 ## Activity 1
 
-The object created with the javascript above contains most of the functionality we would need to create and manage a course. This seems like a good candidate for encapsulating into a module.
+>Open the HTML file in your browser and make sure that everything is working before you start. You should see the course info and sections listed, and you should be able to change the enrollment in the sections. Then we are going to re-organize it (also know as refactoring), which will break it, and hopefully fix it again. 😂
 
-1. Create a new file to hold our module. Name it `Course.js`
+The object created with the provided Javascript contains most of the functionality we would need to create and manage a course. This seems like a good candidate for [encapsulating](https://developer.mozilla.org/en-US/docs/Glossary/Encapsulation) into a module.
+
+1. Create a new file to hold our module. Name it `Course.mjs` (see the note below about the name)
 2. Copy the `aCourse` object and the `setCourseInfo` and `renderSections` functions into the new file. Leave the addEventListeners and everything below them.
 3. Make the `aCourse` object the `default export`
 4. Import `aCourse` into the `modules.js` file. Once we have done that we can use it just as if it were created locally. This means we could use it multiple places in a large application while only having to write the code once! This type of re-use is why modules are such a powerful feature.
@@ -150,11 +152,13 @@ The object created with the javascript above contains most of the functionality 
    Since we moved those functions we will get an error if we don't. We will add that back in later.
 7. Use the LiveServer extension to view your page. You should notice that we do not see the course name, or the sections. But if you put 1 in the section number input and click enroll or drop student the sections will show up and the number of enrolled should change.
 
+>Javascript module files can be named with a normal `.js` extention, or they can be named with a new `.mjs` extention. The browser and your editor will treat them the same. I like using the `.mjs` however because it makes very clear how the file should be used. Code from `.mjs` files will always be imported. Code from `.js` files sometimes is imported and sometimes is not.
+
 <details>
 <summary>Solution 1</summary>
 
 ```javascript
-// Course.js
+// Course.mjs
 const aCourse = {
   code: "CSE121b",
   name: "Javascript Language",
@@ -214,7 +218,7 @@ export default aCourse;
 
 ```javascript
 // modules.js
-import aCourse from "./Course.js";
+import aCourse from "./Course.mjs";
 
 document.querySelector("#enrollStudent").addEventListener("click", function () {
   const sectionNum = document.querySelector("#sectionNumber").value;
@@ -230,12 +234,15 @@ document.querySelector("#dropStudent").addEventListener("click", function () {
 
 ## Activity 2
 
-We need to fix the rest of our app. When the page loads we should see the course name, and the list of all sections that are part of the course. Because those are not part of the `aCourse` object, and we did not export them, they are not visible outside of the `Course.js` module. There are two ways we could fix this.
+We need to fix the rest of our app. When the page loads we should see the course name, and the list of all sections that are part of the course. Because those are not part of the `aCourse` object, and we did not export them, they are not visible outside of the `Course.mjs` module. There are three ways we could fix this.
 
-1. We could add the functions to our object. This would make them visible.
-2. We could add another method to the object to run them both as needed.
+1. We could export the additional functions to make them available outside the module.
+2. We could add the functions to our object. This would make them visible.
+3. We could add another method to the object to run them both as needed.
 
-Which way we go becomes somewhat of a philisophical debate. Should those functions belong to the course?
+The first option is a little dangerous. If we export them and make them publicly available then we lose control over how and when they are used. This can often lead to things breaking. So I would recommend avoiding this option in most cases.
+
+For the other two options, which way we go becomes somewhat of a philisophical debate. Should those functions belong to the course?
 
 The original activity had you leave them out of the Object because they felt different than the other things we were doing. The other methods we added to the object were responsible for changing parts of the Object. `setCourseInfo` and `renderSections` were not changing anything, but just displaying the information in the Object. That felt different enough that the functions were placed outside.
 
@@ -243,7 +250,7 @@ You might argue though that they are related to the Object and should just be pa
 
 To complete this activity we will go with option 2.
 
-1. Add a new method to `aCourse` called `init()`
+1. Add a new method (function) to the `aCourse` object called `init()`
 2. In the `init` method call both `setCourseInfo` and `renderSections` (Remember `this`!)
 3. In `modules.js` call `aCourse.init()`
 
@@ -251,7 +258,7 @@ To complete this activity we will go with option 2.
 <summary>Solution 2</summary>
 
 ```javascript
-// Course.js
+// Course.mjs
 const aCourse = {
   code: "CSE121b",
   name: "Javascript Language",
@@ -271,7 +278,7 @@ const aCourse = {
       instructor: "Sis A",
     },
   ],
-  init() {
+  init: function() {
     setCourseInfo(this);
     renderSections(this.sections);
   },
@@ -314,7 +321,7 @@ export default aCourse;
 
 ```javascript
 // modules.js
-import aCourse from "./Course.js";
+import aCourse from "./Course.mjs";
 
 aCourse.init();
 document.querySelector("#enrollStudent").addEventListener("click", function () {
