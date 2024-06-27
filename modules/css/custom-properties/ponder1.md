@@ -153,7 +153,8 @@ As you review that code think about the following questions:
   }
   &__author-image {
     & img {
-      margin-top: -4em;
+      position: relative;
+      top: -4em;
       border: 4px solid var(--quoteColor);
       box-shadow: 10px 10px 0 var(--quoteColor);
     }
@@ -267,8 +268,8 @@ p {
       align-self: flex-end;
     }
     & img {
-      margin-top: -4em;
-
+      position: relative;
+      top: -4em;
       border: 4px solid var(--quoteColor);
       box-shadow: 10px 10px 0 var(--quoteColor);
       @media (max-width: 680px) {
