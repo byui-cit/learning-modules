@@ -22,36 +22,6 @@
   </url>
   
   <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/css/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/class/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/id/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/components/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/architecture/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/bem/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
     <loc>https://byui-cit.github.io/learning-modules/tags/box-model/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
@@ -77,12 +47,47 @@
   </url>
   
   <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/css/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/components/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/architecture/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/bem/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/class/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/id/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
     <loc>https://byui-cit.github.io/learning-modules/tags/colors/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
   <url>
     <loc>https://byui-cit.github.io/learning-modules/tags/fonts/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/flexbox/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
@@ -102,7 +107,7 @@
   </url>
   
   <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/flexbox/</loc>
+    <loc>https://byui-cit.github.io/learning-modules/tags/media-query/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
@@ -127,77 +132,7 @@
   </url>
   
   <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/media-query/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
     <loc>https://byui-cit.github.io/learning-modules/tags/units/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/general/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/cli/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/validation/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/html/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/file-management/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/teams/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/git/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/github/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/github-pages/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/vs-code/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/design/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/design-principles/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/wireframes/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
@@ -217,7 +152,92 @@
   </url>
   
   <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/design/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/design-principles/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
     <loc>https://byui-cit.github.io/learning-modules/tags/typography/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/file-management/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/wireframes/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/general/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/validation/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/html/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/git/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/github/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/github-pages/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/node/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/teams/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/vs-code/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/inline/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/block/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/centering/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/semantics/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
@@ -237,21 +257,6 @@
   </url>
   
   <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/node/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/introduction/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/forms/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
     <loc>https://byui-cit.github.io/learning-modules/tags/dom/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
@@ -262,7 +267,12 @@
   </url>
   
   <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/objects/</loc>
+    <loc>https://byui-cit.github.io/learning-modules/tags/forms/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/introduction/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
@@ -272,12 +282,12 @@
   </url>
   
   <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/functions/</loc>
+    <loc>https://byui-cit.github.io/learning-modules/tags/objects/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
   <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/organizing/</loc>
+    <loc>https://byui-cit.github.io/learning-modules/tags/cli/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
@@ -293,6 +303,11 @@
   
   <url>
     <loc>https://byui-cit.github.io/learning-modules/tags/conditionals/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/organizing/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
@@ -317,22 +332,7 @@
   </url>
   
   <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/semantics/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/inline/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/block/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/centering/</loc>
+    <loc>https://byui-cit.github.io/learning-modules/tags/functions/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
@@ -403,21 +403,6 @@
   
   <url>
     <loc>https://byui-cit.github.io/learning-modules/modules/css/custom-properties/prepare1/</loc>
-    <lastmod>2021-10-15</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/modules/css/flexbox/</loc>
-    <lastmod>2021-10-15</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/modules/css/flexbox/ponder1/</loc>
-    <lastmod>2021-10-15</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/modules/css/flexbox/prepare1/</loc>
     <lastmod>2021-10-15</lastmod>
   </url>
   
@@ -1059,5 +1044,20 @@
   <url>
     <loc>https://byui-cit.github.io/learning-modules/modules/js/introduction/prepare1/</loc>
     <lastmod>2023-10-15</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/modules/css/flexbox/</loc>
+    <lastmod>2024-07-09</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/modules/css/flexbox/ponder1/</loc>
+    <lastmod>2024-07-09</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/modules/css/flexbox/prepare1/</loc>
+    <lastmod>2024-07-09</lastmod>
   </url>
 </urlset>
