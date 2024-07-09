@@ -82,9 +82,9 @@ Review the image below to see what we are  trying to accomplish.
 ![Navbar](../../../../img/flexbox-nav.webp)
 
 1. Set the flex parent to `display: flex`;
-2. Notice that already our links have moved into a horizontal line, but they are all squished together and the bullets from our list makr it hard to read.
+2. Notice that already our links have moved into a horizontal line, but they are all squished together and the bullets from our list make it hard to read.
 3. Remove the bullets from the list, and set the horizontal alignment to `flex-end`
-4. We need to spread the links apart now. There are several ways we could do this...but in this case we will use `flex-grow`, `flex-shrink`, and `flex-basis` to control their size. Those three properties can be conmbined into one: `flex: grow shrink basis` Try adding a rule to the `li` elements that will not allow them to grow if there is available space, will allow them to shrink, and give them a starting size of `5em` (`flex: 0 1 5em`)
+4. We need to spread the links apart now. There are several ways we could do this...but in this case we will use `flex-grow`, `flex-shrink`, and `flex-basis` to control their size. Those three properties can be combined into one: `flex: grow shrink basis` Try adding a rule to the `li` elements that will not allow them to grow if there is available space, will allow them to shrink, and give them a starting size of `5em` (`flex: 0 1 5em`)
 5. Another way we could have spaced out our links would be to add some `gap`. Try commenting out the `flex` property we added to the flex items, and add `gap: 1em;` to the flex container. Play around and notice the differences.
 
 <details>
@@ -112,8 +112,8 @@ Another common layout task for Flexbox is to control the format of blocks of con
 
 ![Media card large](../../../../img/flexbox-media-card-lg.webp)
 
-1. Inside of the section `media-card__container` add a `section` with a class of `media-card`. The crad is going to be made up of an image and a title and text. Add two more `div`s to hold that content.
-2. Add a class of `media-card__image` to the first div, then add an `img` element to it. You can use `` for the source.
+1. Inside of the section `media-card__container` add a `section` with a class of `media-card`. The card is going to be made up of an image and a title and text. Add two more `div`s to hold that content.
+2. Add a class of `media-card__image` to the first div, then add an `img` element to it. You can use `https://byui-cit.github.io/learning-modules/img/bechler-topo.png` for the source, or any image you want really.
 3. Add a class of `media-card__content` to the other div. Add an `h3` and a `p`. Those can really say anything. Grab some of these instructions if you can't think of anything to add.
 4. Write the styles to format for the smaller screen first. Remember to identify the flex parent or container. Then add `display: flex;` to that element. Initially we want a direction of `column`, a `gap` between the flex items, and things centered horizontally.
 5. Check out our component. On small screens it actually looks just like we want it to...but as the screen gets wider the elements just get bigger and bigger. The easiest way to fix this would be to use a simple media query.
@@ -153,7 +153,7 @@ Another common layout task for Flexbox is to control the format of blocks of con
 
 ## Activity 3
 
-Finally let's take our media card from part 2 and add lots of them. We can use flexbox to either stack them on small screens, or tile them on wider screens. Check out the screenshots below.
+Finally let's take our media card from part 2 and add more of them. We can use flexbox to either stack them on small screens, or tile them on wider screens. Check out the screenshots below.
 
 ![Cards stacked up on a small screen](../../../../img/flexbox-gallery-sm.webp)
 
