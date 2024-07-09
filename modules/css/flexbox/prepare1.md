@@ -1,7 +1,7 @@
 ---
 title: Flexbox - Introduction
 description: Getting started with using CSS Flexbox
-date: 2021-10-15
+date: 2024-07-09
 
 layout: layouts/post.njk
 ---
