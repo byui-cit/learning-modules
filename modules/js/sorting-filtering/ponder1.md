@@ -163,8 +163,8 @@ These activities will be most effective if you *try* them first before you look 
 Instead of sorting, sometimes we need to reduce a list by some criteria. Unlike `sort()`, there is no simple version of `filter()`. We always have to provide a callback function that returns a "truthy" value if we want to keep an item in the array, or a "falsy" value if we want to get rid of it. `filter()` returns a new array and does not change the original, unlike `sort`.
 
 1. We want to be able to search our list. Begin by writing a function called `searchList` that will take a list and a query string. We need to check to see if the query string can be found inside of each string in the list.
-2. *Inside* of the `searchList` function, declare another function called `stringContains`. It should expect a string and a query string. It should return true if the query string is inside of the string, false otherwise.  [String.includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) will be very helpful here.
-3. As you test your `searchList` function, try using "b" as the query string. What do you get?
+2. *Inside* of the `searchList` function, declare another function called `searchCallback`. It should expect a string and a query string. It should return true if the query string is inside of the string, false otherwise.  [String.includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) will be very helpful here.
+3. Call `filter` on the passed in `list`. Use the `searchCallback` when you do this. Returnthe results of the `filter` from the function. As you test your `searchList` function, try using "b" as the query string. What do you get?
 4. Fix your callback function so that character case does not matter.
 
 
