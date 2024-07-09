@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - Introduction</title>
+    <meta name="description" content="Getting started with using CSS Flexbox">
+    <link rel="apple-touch-icon" sizes="180x180" href="/learning-modules/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="/learning-modules/img/favicon/favicon.ico">
+    <link rel="stylesheet" href="/learning-modules/css/index.css">
+    <link rel="stylesheet" href="/learning-modules/css/prism-coy.css">
+    <link rel="alternate" href="/learning-modules/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="/learning-modules/feed/feed.json" type="application/json" title="WDD Learning Modules">
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <a href="/learning-modules/">
+          <img src="/learning-modules/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        </a>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
+      </div>
+      <nav>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="/learning-modules/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/html/">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/js/">JS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/css/">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/design/">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/general/">General</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+    <main  class="tmpl-post" >
+      
+<h1>Flexbox - Introduction</h1>
+
+
+
+
+<h2 id="flexbox-and-css-grid" tabindex="-1">Flexbox and CSS Grid <a class="direct-link" href="#flexbox-and-css-grid" aria-hidden="true">#</a></h2>
+<p>Flexbox and CSS Grid are fairly recent additions to CSS that allow for much better control over our layouts. They are intended to work together and have different roles. They do however have several simularities. They both for example has the concept of a container or parent, and an item or child. When you enable flexbox or grid for a container it makes all of the immediate children of that container flex or grid items. Only the direct children can be manipulated!</p>
+<p>CSS Grid gives us great control over two dimensions. We can exactly place items in both column and row. Flexbox is more one dimensional. We have good control over either the row placement or the column placement...but not both.</p>
+<p>That does not mean that Flexbox is not powerful.  You can accomplish a lot with it. It is important to understand it's limitations however.</p>
+<h2 id="flexbox-fundamentals" tabindex="-1">Flexbox fundamentals <a class="direct-link" href="#flexbox-fundamentals" aria-hidden="true">#</a></h2>
+<p>Core to flexbox is the concept of the primary and secondary axis.  This is controlled by the <code>flex-direction</code> property. By default it is set to <code>row</code>. It can also be set to <code>column</code>, <code>row-reverse</code>, or <code>column-reverse</code>. We are manipulating the flow of the items with the <code>flex-direction</code>.  Essentially by default block elements flow vertically top to bottom which is why paragraphs for example move vertically down the page. With flexbox we can switch that flow.  We can also control how items wrap as well as grow or shrink to fill the available space.</p>
+<p>One other powerful feature that Flexbox brought is great alignment tools for vertical as well as horizontal alignment.  It shares some of the property names with CSS Grid. <code>justify-content</code>, <code>align-content</code>, <code>justify-items</code>, and <code>align-items</code>.  Visit <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox</a> to learn more about all the properties we can use.</p>
+<p>One important difference with Flexbox and Grid however, is that with Flexbox <code>justify</code> and <code>align</code> don't always behave how we would expect. We expect them to always do the same thing...horizontal or vertical. Instead they are tied to the primary and secondary axes. <code>justify</code> always aligns along the primary axis, and <code>align</code> always does the other. So if you set <code>flex-direction:row</code> then <code>justify</code> will align horizontally, but if you do <code>flex-direction:column</code> then it will adjust the vertical alignment.</p>
+<h2 id="example" tabindex="-1">Example <a class="direct-link" href="#example" aria-hidden="true">#</a></h2>
+<p>Move onto the <a href="../ponder1">practice activity</a> for some examples of how to use Flexbox.</p>
+
+</main>
+    <footer>
+      <p class="license">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/> </a><br/>This work is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+          International License</a>.</p>
+    </footer><!-- Current page: /learning-modules/modules/css/flexbox/prepare1/ --></body>
+</html>

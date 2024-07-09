@@ -89,8 +89,8 @@
 <p>Instead of sorting, sometimes we need to reduce a list by some criteria. Unlike <code>sort()</code>, there is no simple version of <code>filter()</code>. We always have to provide a callback function that returns a &quot;truthy&quot; value if we want to keep an item in the array, or a &quot;falsy&quot; value if we want to get rid of it. <code>filter()</code> returns a new array and does not change the original, unlike <code>sort</code>.</p>
 <ol>
 <li>We want to be able to search our list. Begin by writing a function called <code>searchList</code> that will take a list and a query string. We need to check to see if the query string can be found inside of each string in the list.</li>
-<li><em>Inside</em> of the <code>searchList</code> function, declare another function called <code>stringContains</code>. It should expect a string and a query string. It should return true if the query string is inside of the string, false otherwise.  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes">String.includes()</a> will be very helpful here.</li>
-<li>As you test your <code>searchList</code> function, try using &quot;b&quot; as the query string. What do you get?</li>
+<li><em>Inside</em> of the <code>searchList</code> function, declare another function called <code>searchCallback</code>. It should expect a string and a query string. It should return true if the query string is inside of the string, false otherwise.  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes">String.includes()</a> will be very helpful here.</li>
+<li>Call <code>filter</code> on the passed in <code>list</code>. Use the <code>searchCallback</code> when you do this. Returnthe results of the <code>filter</code> from the function. As you test your <code>searchList</code> function, try using &quot;b&quot; as the query string. What do you get?</li>
 <li>Fix your callback function so that character case does not matter.</li>
 </ol>
 <details>
