@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON - Introduction</title>
+    <meta name="description" content="Getting started with JSON">
+    <link rel="apple-touch-icon" sizes="180x180" href="/learning-modules/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="/learning-modules/img/favicon/favicon.ico">
+    <link rel="stylesheet" href="/learning-modules/css/index.css">
+    <link rel="stylesheet" href="/learning-modules/css/prism-coy.css">
+    <link rel="alternate" href="/learning-modules/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="/learning-modules/feed/feed.json" type="application/json" title="WDD Learning Modules">
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <a href="/learning-modules/">
+          <img src="/learning-modules/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        </a>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
+      </div>
+      <nav>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="/learning-modules/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/html/">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/js/">JS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/css/">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/design/">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/general/">General</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+    <main  class="tmpl-post" >
+      
+<h1>JSON - Introduction</h1>
+
+
+
+
+<h2 id="json:-javascript-object-notation" tabindex="-1">JSON: JavaScript Object Notation <a class="direct-link" href="#json:-javascript-object-notation" aria-hidden="true">#</a></h2>
+<p>With web development there is a common need to send information to and from servers. This often needs to happen after the web page has loaded, asynchronously. One of the problems is that the data needs to be sent in a way that is somewhat generic so that many different platforms and languages can use it. Plain text is about as generic as it gets.</p>
+<p>A few years ago this would be with something like an XML (eXtensible Markup Language) string. XML is a format similar to HTML...in fact HTML could be considered a subset of XML. It is very flexible, but also very verbose and hard to convert to and from the format.</p>
+<p>JSON was developed to be a lightweight format that would be easier to work with. An important thing to remember about JSON is that it is a simple string!  A string with specific rules about how it is formatted.</p>
+<h3 id="json-is:" tabindex="-1">JSON is: <a class="direct-link" href="#json-is:" aria-hidden="true">#</a></h3>
+<ul>
+<li>text-based,</li>
+<li>stored in with the extension .json,</li>
+<li>closely paired to a literal JavaScript object and is converted to a native JavaScript object.</li>
+<li>not dependent on a particular programming language,</li>
+<li>pure property formatted data, there are no methods,</li>
+<li>written using basic key/value pairs in this format: key:pair data types of strings, numbers, arrays, Booleans, and other object literals,</li>
+<li>requires double quotes to be used around string and property names and follows strict adherence to comma or colon placement,</li>
+<li>can be accessed using JavaScript object notation,</li>
+<li>can be checked with a linter like <a href="http://jsonlint.com">jsonlint.com</a> to validate the structure, and</li>
+<li>does not allow comments.</li>
+</ul>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a> object has methods that allow you to convert or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse">parse</a> the string to an native object and we can <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">stringify()</a> a native object to a string using that same, built-in JSON object.</p>
+<p>A common task would be to take a Javascript object in code like the following:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> aCourse <span class="token operator">=</span> <span class="token punctuation">{</span><br>  code<span class="token operator">:</span> <span class="token string">"CSE121b"</span><span class="token punctuation">,</span><br>  name<span class="token operator">:</span> <span class="token string">"Javascript Language"</span><span class="token punctuation">,</span><br>  sections<span class="token operator">:</span> <span class="token punctuation">[</span><br>    <span class="token punctuation">{</span><br>      sectionNum<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span><br>      roomNum<span class="token operator">:</span> <span class="token string">"STC 353"</span><span class="token punctuation">,</span><br>      enrolled<span class="token operator">:</span> <span class="token number">26</span><span class="token punctuation">,</span><br>      days<span class="token operator">:</span> <span class="token string">"TTh"</span><span class="token punctuation">,</span><br>      instructor<span class="token operator">:</span> <span class="token string">"Bro T"</span><span class="token punctuation">,</span><br>    <span class="token punctuation">}</span><span class="token punctuation">,</span><br>    <span class="token punctuation">{</span><br>      sectionNum<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span><br>      roomNum<span class="token operator">:</span> <span class="token string">"STC 347"</span><span class="token punctuation">,</span><br>      enrolled<span class="token operator">:</span> <span class="token number">25</span><span class="token punctuation">,</span><br>      days<span class="token operator">:</span> <span class="token string">"TTh"</span><span class="token punctuation">,</span><br>      instructor<span class="token operator">:</span> <span class="token string">"Sis A"</span><span class="token punctuation">,</span><br>    <span class="token punctuation">}</span><span class="token punctuation">,</span><br>  <span class="token punctuation">]</span><span class="token punctuation">,</span><br><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<p>And use <code>JSON.stringify(aCourse)</code> which will convert it into a string. It would look like this:</p>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span><br>  <span class="token property">"code"</span><span class="token operator">:</span> <span class="token string">"CSE121b"</span><span class="token punctuation">,</span><br>  <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Javascript Language"</span><span class="token punctuation">,</span><br>  <span class="token property">"sections"</span><span class="token operator">:</span> <span class="token punctuation">[</span><br>    <span class="token punctuation">{</span><br>      <span class="token property">"sectionNum"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span><br>      <span class="token property">"roomNum"</span><span class="token operator">:</span> <span class="token string">"STC 353"</span><span class="token punctuation">,</span><br>      <span class="token property">"enrolled"</span><span class="token operator">:</span> <span class="token number">26</span><span class="token punctuation">,</span><br>      <span class="token property">"days"</span><span class="token operator">:</span> <span class="token string">"TTh"</span><span class="token punctuation">,</span><br>      <span class="token property">"instructor"</span><span class="token operator">:</span> <span class="token string">"Bro T"</span><br>    <span class="token punctuation">}</span><span class="token punctuation">,</span><br>    <span class="token punctuation">{</span><br>      <span class="token property">"sectionNum"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span><br>      <span class="token property">"roomNum"</span><span class="token operator">:</span> <span class="token string">"STC 347"</span><span class="token punctuation">,</span><br>      <span class="token property">"enrolled"</span><span class="token operator">:</span> <span class="token number">25</span><span class="token punctuation">,</span><br>      <span class="token property">"days"</span><span class="token operator">:</span> <span class="token string">"TTh"</span><span class="token punctuation">,</span><br>      <span class="token property">"instructor"</span><span class="token operator">:</span> <span class="token string">"Sis A"</span><br>    <span class="token punctuation">}</span><br>  <span class="token punctuation">]</span><br><span class="token punctuation">}</span></code></pre>
+<p>Note how similar the JSON is to the object! The primary difference is that the keys must be quoted with double quotes. The computer would actually view that like this:</p>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span><span class="token property">"code"</span><span class="token operator">:</span> <span class="token string">"CSE121b"</span><span class="token punctuation">,</span><span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Javascript Language"</span><span class="token punctuation">,</span><span class="token property">"sections"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token property">"sectionNum"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span><span class="token property">"roomNum"</span><span class="token operator">:</span> <span class="token string">"STC 353"</span><span class="token punctuation">,</span><span class="token property">"enrolled"</span><span class="token operator">:</span> <span class="token number">26</span><span class="token punctuation">,</span><span class="token property">"days"</span><span class="token operator">:</span> <span class="token string">"TTh"</span><span class="token punctuation">,</span><span class="token property">"instructor"</span><span class="token operator">:</span> <span class="token string">"Bro T"</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token property">"sectionNum"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span><span class="token property">"roomNum"</span><span class="token operator">:</span> <span class="token string">"STC 347"</span><span class="token punctuation">,</span><span class="token property">"enrolled"</span><span class="token operator">:</span> <span class="token number">25</span><span class="token punctuation">,</span><span class="token property">"days"</span><span class="token operator">:</span> <span class="token string">"TTh"</span><span class="token punctuation">,</span><span class="token property">"instructor"</span><span class="token operator">:</span> <span class="token string">"Sis A"</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">}</span></code></pre>
+<p>This string could now be sent to a server using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch">fetch</a>, or stored in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a>.</p>
+<p>Conversely when a server sends you data back in JSON, we need to convert the string back into an actual object that we can manipulate. <code>JSON.parse(dataFromServer)</code></p>
+<blockquote>
+<p>Since we usually use <code>fetch</code> to get that data from the server, we commonly use it's built-in helper method to do our conversion. It would look something like this: <code>response.json()</code></p>
+<p><code>JSON.stringify(myData)</code> and <code>response.json()</code> do pretty much the same thing. You do not want to use both!</p>
+</blockquote>
+<h2 id="example" tabindex="-1">Example <a class="direct-link" href="#example" aria-hidden="true">#</a></h2>
+<p>Here is an example JSON file. Directly open this file with your browser: <a href="https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json">JSON &quot;Hero&quot; Data Example</a> - MDN</p>
+<details>
+<summary>Can you identify the properties and the data types?</summary>
+<p>Here are some example property names and corresponding data types from this JSON file.</p>
+<ul>
+<li><strong>property</strong>: &quot;squadName&quot;, <strong>data type</strong>: string</li>
+<li><strong>property</strong>: &quot;formed&quot;, <strong>data type</strong>: number</li>
+<li><strong>property</strong>: &quot;active&quot;, <strong>data type</strong>: Boolean</li>
+<li><strong>property</strong>: &quot;members&quot;, <strong>data type</strong>: holds an array of objects (the object has four properties)</li>
+</ul>
+</details>
+
+</main>
+    <footer>
+      <p class="license">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/> </a><br/>This work is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+          International License</a>.</p>
+    </footer><!-- Current page: /learning-modules/modules/js/json/prepare1/ --></body>
+</html>
