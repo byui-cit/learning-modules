@@ -14,7 +14,7 @@ Most APIs are designed according to certain rules to make them consistent and ea
 
 Web servers are designed to accept different types of requests. For example if we wanted to view a webpage that a server had, we would make a `GET` request to the URL of that page. The browser handles the request for us, so we normally don't have to worry about the request type.  We could also make a `POST` request. This usually involves sending data to a URL. This is commonly used by HTML forms. Other common request types include `PUT`, and `DELETE`.
 
-We accessing an API we might make a `GET` request to the following URL: `https://some.server.com/users`  This would most likely return a list (usually in JSON format) of users from the server. But we could also make a `POST` request to the same URL, and if we sent the data representing a new user along with the request then the server would insert that user into where ever it was storing users.
+When accessing an API we might make a `GET` request to the following URL: `https://some.server.com/users`  This would most likely return a list (usually in JSON format) of users from the server. But we could also make a `POST` request to the same URL, and if we sent the data representing a new user along with the request then the server would insert that user into where ever it was storing users.
 
 Likewise we might make a `put` request to this URL: `https://some.server.com/user/1`  This would indicate that we were sending some updated user information for the user with an ID of 1, and that the server should update that user accordingly.  Finally if we made a `delete` request to that same URL, the server would delete user 1.
 
@@ -38,7 +38,7 @@ Poke around some more in the documentation to get a feel for what else you can r
 
 ## Parameters
 
-Some API endpoints allow you to further customize your request through a query string parameter. These are added onto the end of the URL with a `?`. For example the PokeApi restricts it's responses to 20 records by default.  If you wanted to get more than 20  records, you could add a `limit` parameter to your request. For example: `https://pokeapi.co/api/v2/pokemon/?limit=100`  This would return the first 100 records.  You can also use the `offset` parameter to skip over records. For example: `https://pokeapi.co/api/v2/pokemon/?offset=20&limit=100`  This would return records 21-120.
+Some API endpoints allow you to further customize your request through a query string parameter. These are added onto the end of the URL with a `?`. For example the PokeApi restricts it's responses to 20 records by default.  If you wanted to get more than 20 records, you could add a `limit` parameter to your request. For example: `https://pokeapi.co/api/v2/pokemon/?limit=100`  This would return the first 100 records.  You can also use the `offset` parameter to skip over records. For example: `https://pokeapi.co/api/v2/pokemon/?offset=20&limit=100`  This would return records 21-120.
 
 ## CORS
 
@@ -46,11 +46,11 @@ When we make a request to an API, the browser will automatically add a header to
 
 ## Authentication
 
-Some APIs are totally public and can be used by anyone, the PokeApi is one example of these. Other APIs are protected and you need to prove that you shuold be allowed to access it. This can happen in many forms, but often involves a unique API key that is issued to you that you must send with every request.
+Some APIs are totally public and can be used by anyone, the PokeApi is one example of these. Other APIs are protected and you need to prove that you should be allowed to access it. This can happen in many forms, but often involves a unique API key that is issued to you that you must send with every request.
 
 The [NPS API](https://www.nps.gov/subjects/developer/get-started.htm) is one such API. You can request a key that you should then use.  Other APIs are more restrictive, you might have to pay and use a login to request access.
 
-You will need to look at the documentation for the API you want to use to see exactly how they wat you to send the key, but the NPS API uses a fairly common method, sending the key in the `header` information of the request. We will use the URL in the Getting started page as an example. It is requesting the alerts from two parks.
+You will need to look at the documentation for the API you want to use to see exactly how they want you to send the key, but the NPS API uses a fairly common method, sending the key in the `header` information of the request. We will use the URL in the Getting started page as an example. It is requesting the alerts from two parks.
 
 ```javascript
 const baseUrl = "https://developer.nps.gov/api/v1/";
@@ -72,6 +72,7 @@ async function getJson(endpoint) {
   const response = await fetch(url, options)
   const data = await response.json()
   console.log(data)
+  return data
 }
 
 getJson('alerts?parkCode=acad,dena`);

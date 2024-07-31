@@ -82,7 +82,7 @@ Now that we have identified some URLs with information of interest, let's use Ja
 2. Get that element with Javascript
 3. Change the url that we are using to make the request to `activities/parks?q=climbing`. Check out the data that was returned to make sure you understand what is available. Note that the results we need are in a property called `data` which is an array of objects. Then inside of that we have a property called `parks` which is also an array of objects. This is the array we will need to loop over to output the results.
 4. Create two functions: `async function renderClimbingList() {}` and `function listTemplate(item) {}`
-5. Write the template function first. We should include the Name of the park, the state is is in, and make the name a link which links to the official URL for the park
+5. Write the template function first. We should include the Name of the park, the state it is in, and make the name a link which links to the official URL for the park
 6. In the `renderClimbingList` function we need to use the `getJson` function provided earlier to get the data we need. Then `map` over the list of parks using the template function. Then output the resulting HTML to the list created in step 1
 7. Call the `renderClimbingList` function at the end of the script.
 
@@ -118,10 +118,11 @@ function listTemplate(item) {
 
 async function renderClimbingList() {
   const endpoint = "activities/parks?q=climbing"
+  const listElement = document.getElementById("outputList")
   const data = await getJson(endpoint)
   const parks = data.data.parks
   const listHtml = parks.map(listTemplate).join("")
-  document.getElementById("outputList").innerHTML = listHtml;
+  listElement.innerHTML = listHtml;
 }
 renderClimbingList()
 
