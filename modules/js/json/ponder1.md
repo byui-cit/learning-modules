@@ -8,7 +8,7 @@ layout: layouts/post.njk
 
 ## Preparation
 
-It is recommended to review [JSON - Introduction](../prepare1) before you start.. You will also need your editor open with some code:
+It is recommended to review [JSON - Introduction](../prepare1) before you start. You will also need your editor open with some code:
 
 ### Javascript
 
@@ -53,7 +53,7 @@ Using the documentation above convert this recipe into JSON:
 
 1. Create a file called recipes.json
 2. Convert the recipe above to JSON format.
-3. Validate your file to make sure there are no errors.
+3. Validate your file to make sure there are no errors with something like [JSONLint](https://jsonlint.com)
 
 <details>
 <summary>Solution 1</summary>
@@ -150,7 +150,6 @@ Using the documentation above convert this recipe into JSON:
 ## Activity 2
 
 One recipe is not very interesting. It is very common to send lists of things. Make the changes necessary to your JSON file to have a list of recipes. You can just copy the recipe from part one. Make sure to validate again to make sure we didn't create any errors.
-
 
 <details>
 <summary>Solution 2</summary>

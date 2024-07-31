@@ -11,7 +11,7 @@ layout: layouts/post.njk
 
 ## Description
 
-
+Application Programming Interfaces or APIs as they are more commonly referred to are a key part of development these days. They allow developers to interact with other systems, services, and applications in a structured way. In this section, we will explore how to use APIs with Javascript.
 
 ## Where this knowledge is utilized
 
