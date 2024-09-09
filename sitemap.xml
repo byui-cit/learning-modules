@@ -27,21 +27,6 @@
   </url>
   
   <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/components/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/architecture/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/bem/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
     <loc>https://byui-cit.github.io/learning-modules/tags/class/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
@@ -77,12 +62,17 @@
   </url>
   
   <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/colors/</loc>
+    <loc>https://byui-cit.github.io/learning-modules/tags/components/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
   <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/grid/</loc>
+    <loc>https://byui-cit.github.io/learning-modules/tags/architecture/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/bem/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
@@ -92,12 +82,7 @@
   </url>
   
   <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/flexbox/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/units/</loc>
+    <loc>https://byui-cit.github.io/learning-modules/tags/colors/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
@@ -112,17 +97,7 @@
   </url>
   
   <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/design/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/design-principles/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/typography/</loc>
+    <loc>https://byui-cit.github.io/learning-modules/tags/grid/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
@@ -152,6 +127,26 @@
   </url>
   
   <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/flexbox/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/units/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/design/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/design-principles/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
     <loc>https://byui-cit.github.io/learning-modules/tags/layout/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
@@ -167,6 +162,21 @@
   </url>
   
   <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/compatibility/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/typography/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/wireframes/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
     <loc>https://byui-cit.github.io/learning-modules/tags/general/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
@@ -177,17 +187,17 @@
   </url>
   
   <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/file-management/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
     <loc>https://byui-cit.github.io/learning-modules/tags/validation/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
   <url>
     <loc>https://byui-cit.github.io/learning-modules/tags/html/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/file-management/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
@@ -217,11 +227,6 @@
   </url>
   
   <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/vs-code/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
     <loc>https://byui-cit.github.io/learning-modules/tags/inline/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
@@ -237,12 +242,12 @@
   </url>
   
   <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/semantics/</loc>
+    <loc>https://byui-cit.github.io/learning-modules/tags/vs-code/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
   <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/wireframes/</loc>
+    <loc>https://byui-cit.github.io/learning-modules/tags/semantics/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
@@ -272,22 +277,22 @@
   </url>
   
   <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/introduction/</loc>
-    <lastmod>2021-10-11</lastmod>
-  </url>
-  
-  <url>
     <loc>https://byui-cit.github.io/learning-modules/tags/forms/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
   <url>
-    <loc>https://byui-cit.github.io/learning-modules/tags/loops/</loc>
+    <loc>https://byui-cit.github.io/learning-modules/tags/introduction/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
   <url>
     <loc>https://byui-cit.github.io/learning-modules/tags/json/</loc>
+    <lastmod>2021-10-11</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/tags/loops/</loc>
     <lastmod>2021-10-11</lastmod>
   </url>
   
@@ -418,6 +423,16 @@
   
   <url>
     <loc>https://byui-cit.github.io/learning-modules/modules/design/design-basics/prepare1/</loc>
+    <lastmod>2021-10-15</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/modules/design/progressive/ponder1/</loc>
+    <lastmod>2021-10-15</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/modules/design/progressive/prepare1/</loc>
     <lastmod>2021-10-15</lastmod>
   </url>
   
@@ -1094,5 +1109,10 @@
   <url>
     <loc>https://byui-cit.github.io/learning-modules/modules/js/apis/ponder1/</loc>
     <lastmod>2024-07-31</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byui-cit.github.io/learning-modules/modules/design/progressive/</loc>
+    <lastmod>2024-08-05</lastmod>
   </url>
 </urlset>
