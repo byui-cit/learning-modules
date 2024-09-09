@@ -56,7 +56,7 @@ These activities will be most effective if you TRY them first before you look at
 
 ## Activity 1
 
-The key to being able to successfully use an API is spending time with it's documentation to that you understand what data it makes available, and how to get it. We will use the [NPS API](https://www.nps.gov/subjects/developer/get-started.htm) for this activity.  If you have not done so you will need to follw that link and request an API key to complete this activity.
+The key to being able to successfully use an API is spending time with it's documentation to that you understand what data it makes available, and how to get it. We will use the [NPS API](https://www.nps.gov/subjects/developer/get-started.htm) for this activity.  If you have not done so you will need to follow that link and request an API key to complete this activity.
 
 1. On the [documentation page](https://www.nps.gov/subjects/developer/api-documentation.htm) you should enter your api key in to be able to use their tools to more quickly test things. Click on the "Authenticate" button at the top of the page and enter your key.
 2. What URL would you use to get a list of parks involving Idaho?  You can use the "Try it out" tool to test your answer.

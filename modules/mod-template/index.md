@@ -16,8 +16,8 @@ Copy this folder into whichever category you want to create a module for. Create
 ## Where this knowledge is utilized
 
 - CSE 121b
-- WDD 130
-- WDD 230
+- WDD 131
+- WDD 231
 - WDD 330
 - WDD 430
 - CSE 341
