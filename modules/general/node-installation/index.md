@@ -15,6 +15,8 @@ Node JS has become a popular platform for development and many courses will requ
 
 ## Where this knowledge is utilized
 
+- ITM 101
+- WDD 231
 - WDD 330
 - WDD 331
 - WDD 430
