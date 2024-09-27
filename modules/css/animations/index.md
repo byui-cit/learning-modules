@@ -22,7 +22,7 @@ CSS transitions and animations allow us to create dynamic, interactive elements 
 ## Prerequisites
 
 - Understanding of [CSS](../css-intro)
-- Understanding of [JavaScript](../../js/javascript-intro)
+- Understanding of [JavaScript](../../js/introduction)
 - Understanding of [DOM Basics](../../js/dom-basics/)
 
 ## Prepare
