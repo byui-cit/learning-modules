@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modals - Introduction</title>
+    <meta name="description" content="What are modals, what are they used for and how are they made?">
+    <link rel="apple-touch-icon" sizes="180x180" href="/learning-modules/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="/learning-modules/img/favicon/favicon.ico">
+    <link rel="stylesheet" href="/learning-modules/css/index.css">
+    <link rel="stylesheet" href="/learning-modules/css/prism-coy.css">
+    <link rel="alternate" href="/learning-modules/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="/learning-modules/feed/feed.json" type="application/json" title="WDD Learning Modules">
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <a href="/learning-modules/">
+          <img src="/learning-modules/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        </a>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
+      </div>
+      <nav>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="/learning-modules/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/html/">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/js/">JS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/css/">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/design/">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/general/">General</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+    <main  class="tmpl-post" >
+      
+<h1>Modals - Introduction</h1>
+
+
+
+
+<h2 id="what-is-a-modal" tabindex="-1">What is a modal? <a class="direct-link" href="#what-is-a-modal" aria-hidden="true">#</a></h2>
+<p>A modal is a dialog box/pop-up that appears on top of the main content, usually to capture user input or display important information.</p>
+<p>Modals appear on top of the main content, often with a semi-transparent background to distinguish it from the underlying content. They can be closed by the user, usually by clicking on a close button or pressing the Esc key. They can be used to display a variety of content, such as text, images, forms, or other interactive elements.</p>
+<h3 id="common-use-cases" tabindex="-1">Common Use Cases <a class="direct-link" href="#common-use-cases" aria-hidden="true">#</a></h3>
+<ul>
+<li>Displaying additional information about a product or service.</li>
+<li>Prompting the user to log in or register.</li>
+<li>Providing a contact form or other interactive element.</li>
+<li>Displaying a warning or error message.</li>
+<li>Offering a special promotion or discount.</li>
+</ul>
+<h2 id="best-practices-for-modals" tabindex="-1">Best Practices for Modals <a class="direct-link" href="#best-practices-for-modals" aria-hidden="true">#</a></h2>
+<ul>
+<li>Accessibility: Ensure modals are keyboard navigable.</li>
+<li>Use ARIA roles and attributes, like role=&quot;dialog&quot; and aria-labelledby.</li>
+<li>Ensure focus is trapped within the modal while it’s open.</li>
+<li>Clearly indicate how to close the modal.</li>
+<li>Avoid overusing modals; they can disrupt the user experience.</li>
+<li>Make sure the content is relevant and concise.</li>
+</ul>
+<h2 id="example" tabindex="-1">Example <a class="direct-link" href="#example" aria-hidden="true">#</a></h2>
+<p>Below is markup for a simple modal dialog.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><br>  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>modal<span class="token punctuation">"</span></span><br>  <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>modal<span class="token punctuation">"</span></span><br>  <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dialog<span class="token punctuation">"</span></span><br>  <span class="token attr-name">aria-labelledby</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>modal-title<span class="token punctuation">"</span></span><br>  <span class="token attr-name">aria-modal</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><br>  <span class="token attr-name">aria-hidden</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><br><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>modal-content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>close-button<span class="token punctuation">"</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Close modal<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token entity named-entity" title="&times;">&amp;times;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>modal-title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Modal Title<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>modal-description<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>This is a simple modal example.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Your feedback<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">></span></span>Submit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+<ol>
+<li>The whole modal is wrapped in a <code>div</code> this div will normally be hidden by CSS when the page loads. Normally the <code>.modal</code> container will be styled to cover the entire window, and will have a background that obscures the other content so that the user will focus on the modal.
+<ul>
+<li>The <code>role=&quot;dialog&quot;</code> attribute is used to indicate that the modal is a dialog box</li>
+<li>The <code>aria-labelledby</code> attribute is used to link the modal to the title of the modal</li>
+<li>The <code>aria-modal=&quot;true&quot;</code> attribute is used to indicate that the modal is modal (</li>
+<li>The <code>aria-hidden=&quot;true&quot;</code> attribute is used to prevent the modal from being focusable</li>
+</ul>
+</li>
+<li>The modal content is wrapped in a <code>section</code> element. The modal should have a clear way to close it. This can be a button or the escape key (or both)
+<ul>
+<li>The <code>aria-label</code> attribute is used to provide a label for the close button that screen readers can announce to the user.</li>
+</ul>
+</li>
+<li>The modal should have a clear title and description. This can be a heading and a paragraph</li>
+<li>If the modal expects input there should be a clearly marked 'submit' button</li>
+<li>The modal should be positioned absolutely and have a z-index greater than the rest of the content. It needs to be on top!</li>
+<li>Javascript is generally needed to show the modal and later dismiss it. There should be a clearly labeled button to bring the modal up.</li>
+</ol>
+<p>Continue to the <a href="../ponder1">Practice with Modals</a> activity to actually build a functional modal.</p>
+
+</main>
+    <footer>
+      <p class="license">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/> </a><br/>This work is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+          International License</a>.</p>
+    </footer><!-- Current page: /learning-modules/modules/css/modals/prepare1/ --></body>
+</html>
