@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Search Parameters - Introduction</title>
+    <meta name="description" content="What are URL search parameters and how can we use them?">
+    <link rel="apple-touch-icon" sizes="180x180" href="/learning-modules/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="/learning-modules/img/favicon/favicon.ico">
+    <link rel="stylesheet" href="/learning-modules/css/index.css">
+    <link rel="stylesheet" href="/learning-modules/css/prism-coy.css">
+    <link rel="alternate" href="/learning-modules/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="/learning-modules/feed/feed.json" type="application/json" title="WDD Learning Modules">
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <a href="/learning-modules/">
+          <img src="/learning-modules/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        </a>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
+      </div>
+      <nav>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="/learning-modules/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/html/">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/js/">JS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/css/">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/design/">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/general/">General</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+    <main  class="tmpl-post" >
+      
+<h1>URL Search Parameters - Introduction</h1>
+
+
+
+
+<h2 id="what-are-url-search-parameters" tabindex="-1">What are URL search parameters? <a class="direct-link" href="#what-are-url-search-parameters" aria-hidden="true">#</a></h2>
+<p>URL search parameters serve as a mechanism to pass additional information to a web server or another web page, typically for the purpose of dynamic content generation or data retrieval.</p>
+<p>They are often used to:</p>
+<ul>
+<li>Perform searches: Specify search terms or criteria to filter results.</li>
+<li>Filter data: Apply conditions to narrow down the displayed information.</li>
+<li>Paginate results: Indicate the page number or offset for large datasets.</li>
+<li>Sort data: Determine the order in which results are presented.</li>
+<li>Submit forms: Transmit form data to the server for processing.</li>
+<li>State changes: Update the state of a web application, such as adding items to a cart or changing a user's preferences.</li>
+</ul>
+<h2 id="format" tabindex="-1">Format <a class="direct-link" href="#format" aria-hidden="true">#</a></h2>
+<p>URL search parameters are appended to the end of a URL, starting with a <code>?</code> character, followed by a series of key-value pairs separated by <code>&amp;</code> characters. Each key-value pair consists of a parameter name and its corresponding value.</p>
+<h3 id="example" tabindex="-1">Example <a class="direct-link" href="#example" aria-hidden="true">#</a></h3>
+<pre class="language-bash"><code class="language-bash">https://example.com/search?q<span class="token operator">=</span>hello+world<span class="token operator">&amp;</span><span class="token assign-left variable">lang</span><span class="token operator">=</span>en<span class="token operator">&amp;</span><span class="token assign-left variable">sort</span><span class="token operator">=</span>desc</code></pre>
+<p>In this example, the URL has three search parameters:</p>
+<ul>
+<li><code>q</code>: The search query, set to &quot;hello world&quot;.</li>
+<li><code>lang</code>: The language, set to &quot;en&quot; (English).</li>
+<li><code>sort</code>: The sort order, set to &quot;desc&quot;  (descending).</li>
+</ul>
+<p>Notice as well that the space character in &quot;hello world&quot; has been replaced by a <code>+</code>. A space is not a valid character that can be used in a parameter value (it would break the URL in fact), and so it is encoded to something else that is ok. Any special characters you use must be encoded! A special character is anything but letters, numbers, and <code>-</code>, <code>.</code>, <code>_</code>, <code>~</code></p>
+<h2 id="best-practices" tabindex="-1">Best Practices <a class="direct-link" href="#best-practices" aria-hidden="true">#</a></h2>
+<p>When working with URL search parameters, it's essential to:</p>
+<ul>
+<li>Use meaningful and consistent parameter names.</li>
+<li>URL-encode special characters in parameter values to ensure they are properly transmitted. (See <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent">encodURIComponent</a>)</li>
+<li>Keep parameter values concise and avoid using sensitive or confidential information.</li>
+</ul>
+<h2 id="using-search-parameters" tabindex="-1">Using search parameters <a class="direct-link" href="#using-search-parameters" aria-hidden="true">#</a></h2>
+<p>Search parameters always have the same format: <code>?someKey=someValue&amp;someotherKey=SomeOtherValue</code>.  Decodings these strings is a very common action with web development. Because of this the browser has built in functions to help.</p>
+<p>Information about a web page location is found in <code>window.location</code>. Open up a webpage, then open up the developer tools and switch to the console tab. Enter <code>window.location</code> into the prompt. You should see something like this:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token punctuation">{</span><br>    <span class="token string">"ancestorOrigins"</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span><br>    <span class="token string">"href"</span><span class="token operator">:</span> <span class="token string">"https://www.google.com/search?q=urlsearchparams&amp;sourceid=chrome&amp;ie=UTF-8"</span><span class="token punctuation">,</span><br>    <span class="token string">"origin"</span><span class="token operator">:</span> <span class="token string">"https://www.google.com"</span><span class="token punctuation">,</span><br>    <span class="token string">"protocol"</span><span class="token operator">:</span> <span class="token string">"https:"</span><span class="token punctuation">,</span><br>    <span class="token string">"host"</span><span class="token operator">:</span> <span class="token string">"www.google.com"</span><span class="token punctuation">,</span><br>    <span class="token string">"hostname"</span><span class="token operator">:</span> <span class="token string">"www.google.com"</span><span class="token punctuation">,</span><br>    <span class="token string">"port"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span><br>    <span class="token string">"pathname"</span><span class="token operator">:</span> <span class="token string">"/search"</span><span class="token punctuation">,</span><br>    <span class="token string">"search"</span><span class="token operator">:</span> <span class="token string">"?q=urlsearchparams&amp;sourceid=chrome&amp;ie=UTF-8"</span><span class="token punctuation">,</span><br>    <span class="token string">"hash"</span><span class="token operator">:</span> <span class="token string">""</span><br><span class="token punctuation">}</span></code></pre>
+<p>Notice that in the example there were some URL parameters. The browser helpfully has already parsed the URL to separate out the search string. We still need to take that string and break it up into the individual keys and values however. Luckily the browser is not done helping us.</p>
+<p>We can use <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams">URLSearchParams</a> to do this parsing for us. For example if we wanted to get the value sent for the query (q), we could do the following:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> paramsString <span class="token operator">=</span> window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>search<br><span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">UrlSearchParams</span><span class="token punctuation">(</span>paramsString<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token keyword">const</span> query <span class="token operator">=</span> params<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'q'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>This will give us the value of the q parameter. If there were no q parameter, it will return <code>null</code>. If you want to get all the parameters, you can use the <code>getAll()</code> method.</p>
+
+</main>
+    <footer>
+      <p class="license">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/> </a><br/>This work is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+          International License</a>.</p>
+    </footer><!-- Current page: /learning-modules/modules/js/url-params/prepare1/ --></body>
+</html>
