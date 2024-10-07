@@ -70,6 +70,7 @@ body {
   font-family: Comic Sans MS, sans-serif;
   background-color: hotpink;
   width: 1000px;
+  color: #aaa;
 }
 
 h1 {
@@ -83,7 +84,7 @@ img {
   height: auto;
 }
 
-p {
+form {
   background-color: white;
 }
 ul {
@@ -100,6 +101,7 @@ form {
   margin-top: 20px;
 }
 
+
 ```
 
 These activities will be most effective if you TRY them first before you look at the solution. And after you do look at the solution...DO NOT copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.
@@ -115,7 +117,7 @@ Make a list of all the issues you see with the page. After making your list revi
 
 - Overly large heading: The large h1 element can be overwhelming and difficult to read.
 - Poor color choices: The combination of hot pink background and green text creates a visually jarring experience.
-- Overall text readability: Text size is small, measure (length of a line of text) is too long, and Comic Sans. 🤦‍♂️
+- Overall text readability: Text size is small, measure (length of a line of text) is too long, contrast is poor, and Comic Sans. 🤦‍♂️
 - Lack of Whitespace: Text is pressed up close to the hard edges of the color changes.
 - Not responsive: The layout only works for one screen width
 - Blurred image: The blurred image provides no value and can be distracting. It is also very large leading to the user potentially missing the content below the image
