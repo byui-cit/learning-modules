@@ -73,7 +73,7 @@ These activities will be most effective if you TRY them first before you look at
 
 We need to first build out an `index.html` page. It will be very simple. It should have a header (see the product page for this), a heading saying "Featured Products", and then a list of product links.
 
-1. Add the markup to build out the index page.
+1. Add the markup to build out the index page: head, body, header (see product.html), main, and "Featured Products" headline.
 2. Link the CSS file to index.html
 3. For the product links we need to send the id of the product as part of the link. This looks like a perfect job for Url Search parameters. Build out 3 links. The links should take you to the `product.html` page, and send a `productId` parameter with the id cooresponding to each product. See the `params.js` file for the product names and ids.
 4. Test to make sure that your links open the `product.html` page, and that you can see the query string on the end of the URL
@@ -82,14 +82,22 @@ We need to first build out an `index.html` page. It will be very simple. It shou
 <summary>Solution 1</summary>
 
 ```html
-<section>
-        <h2>Featured Products</h2>
-        <ul>
-          <li><a href="product.html?productId=1">Product 1</a></li>
-          <li><a href="product.html?productId=2">Product 2</a></li>
-          <li><a href="product.html?productId=3">Product 3</a></li>
-        </ul>
-      </section>
+<header>
+      <a href="index.html" class="logo">
+        <div class="logoImg"></div>
+        <h1>SomeStore</h1>
+      </a>
+</header>
+<main>
+  <section>
+    <h2>Featured Products</h2>
+    <ul>
+      <li><a href="product.html?productId=1">Product 1</a></li>
+      <li><a href="product.html?productId=2">Product 2</a></li>
+      <li><a href="product.html?productId=3">Product 3</a></li>
+    </ul>
+  </section>
+</main>
 ```
 
 </details>
@@ -99,7 +107,7 @@ We need to first build out an `index.html` page. It will be very simple. It shou
 Next we need to figure out which product was requested on the `product.html` page. Then we will look up that product and output it's details.
 
 1. In the `params.js` file start by adding `console.log(window.location)` Review the output. Note especially the `search` property.
-2. Create a function called `getParams(param)` It should take a string (the parameter key we are interested in), and return a string (the key for the specified param). Using [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) complete the function.
+2. Create a function called `getParams(param)` It should take a string (the parameter key we are interested in), and return a string (the value for the specified param). Using [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) complete the function.
 3. Create another function called `productTemplate(product)` that takes a product object as an argument, and returns the HTML markup to output that product. You should include the name, image, and price in the HTML.
 4. Create another function called `getProductDetails`. This function should attempt to get the productId from the Url search parameter, then if it found an id it should look in the `products` array for that product. If it finds a match then it should create the markup to display the product, and insert it into the `main` element.
 5. Test your work to make sure the correct product shows.
@@ -142,6 +150,7 @@ function getProductDetails() {
 
 function output(selector, markup) {
   const element = document.querySelector(selector);
+  // using insertAdjacentHTML allows us to insert the new markup at the bottom of main...without losing the title that was already in there.
   element.insertAdjacentHTML("beforeEnd", markup);
 }
 
@@ -150,9 +159,9 @@ getProductDetails();
 
 </details>
 
-## Activity 3 - Stretch!
+## Activity 3 - Stretch
 
-Take the opportunity to practice your CSS by adding some styling to the product page. Match the images below.
+Take the opportunity to practice your CSS by adding some styling to the product page. Match the images below. Don't be afraid to adjust your HTML structure for a product as needed. It can often make the styling easier.
 
 <figure>
 
