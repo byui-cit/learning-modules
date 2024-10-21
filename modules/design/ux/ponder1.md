@@ -30,7 +30,7 @@ It is recommended to review [UX - Introduction](../prepare1) before you start. Y
       We're really bad at web design. We're really bad at web design. We're
       really bad at web design. We're really bad at web design.
     </p>
-    <img src="ux-bad.jpg" alt="A blurry image" />
+    <img src="https://byui-cit.github.io/learning-modules/img/ux-bad.jpg" />
     <div>
       <ul>
         <li>This</li>
@@ -143,7 +143,7 @@ For each task record the following:
 
 - How long it took
 - Any issues you encountered
-- Whether used the site navigation or the search function
+- Whether you used the site navigation or the search function
 - Any observations you made about the user experience
 - Any suggestions you have for improvement
 

@@ -124,7 +124,7 @@ These activities will be most effective if you *try* them first before you look 
 2. So another way to sort our list descending would be to provide the following compare function:
 
     ```javascript
-    function compareFunction(a,b) {
+    function compareFn(a,b) {
       if (a < b) {
         return -1;
       } else if (a > b) {

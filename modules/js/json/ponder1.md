@@ -26,7 +26,7 @@ Hopefully you will not spend a lot of time as a developer hand coding up JSON, b
 
 The backend team sends you this message:
 
->We are going to be using something similar to the [Open Recipe format]() for the application, but we will be using JSON instead of YAML. Check out this page [Getting started](https://open-recipe-format.readthedocs.io/en/latest/topics/tutorials/walkthrough.html) to see what a common recipe will look like. Oh, don't use the name of the ingredient as the key, just use `"name": "sugar"`
+>We are going to be using something similar to the [Open Recipe format](https://open-recipe-format.readthedocs.io/en/latest/) for the application, but we will be using JSON instead of YAML. Check out this page [Getting started](https://open-recipe-format.readthedocs.io/en/latest/topics/tutorials/walkthrough.html) to see what a common recipe will look like. Oh, don't use the name of the ingredient as the key, just use `"name": "sugar"`
 >
 >For now we know that a recipe will have a name, description, ingredient list, steps list. That might change later.
 

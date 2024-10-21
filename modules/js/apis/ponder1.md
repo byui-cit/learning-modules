@@ -17,7 +17,7 @@ It is recommended to review [APIs - Introduction](../prepare1) before you start.
 <html>
   <head>
     <title>API Activities</title>
-    <script src="api.js"></script>
+    <script src="api.js" defer></script>
   </head>
   <body></body>
 </html>
@@ -49,7 +49,7 @@ async function getJson(endpoint) {
   return data;
 }
 
-getJson('alerts?parkCode=acad,dena`);
+getJson('alerts?parkCode=acad,dena');
 ```
 
 These activities will be most effective if you TRY them first before you look at the solution. And after you do look at the solution...DO NOT copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.
@@ -58,7 +58,7 @@ These activities will be most effective if you TRY them first before you look at
 
 The key to being able to successfully use an API is spending time with it's documentation to that you understand what data it makes available, and how to get it. We will use the [NPS API](https://www.nps.gov/subjects/developer/get-started.htm) for this activity.  If you have not done so you will need to follow that link and request an API key to complete this activity.
 
-1. On the [documentation page](https://www.nps.gov/subjects/developer/api-documentation.htm) you should enter your api key in to be able to use their tools to more quickly test things. Click on the "Authenticate" button at the top of the page and enter your key.
+1. On the [documentation page](https://www.nps.gov/subjects/developer/api-documentation.htm) you should enter your api key in to be able to use their tools to more quickly test things. Click on the "Authorize" button at the top of the page and enter your key.
 2. What URL would you use to get a list of parks involving Idaho?  You can use the "Try it out" tool to test your answer.
 3. What URL would you use to find information about campgrounds available at City of Rocks?
 4. How could you find out which parks offer the activity: Climbing
@@ -120,7 +120,7 @@ async function renderClimbingList() {
   const endpoint = "activities/parks?q=climbing"
   const listElement = document.getElementById("outputList")
   const data = await getJson(endpoint)
-  const parks = data.data.parks
+  const parks = data.data
   const listHtml = parks.map(listTemplate).join("")
   listElement.innerHTML = listHtml;
 }
