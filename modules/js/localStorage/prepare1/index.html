@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage - Introduction</title>
+    <meta name="description" content="Sometimes it&#39;s nice for a web page to remember things about a user. LocalStorage is a simple way to get started with persisting data on a web page.">
+    <link rel="apple-touch-icon" sizes="180x180" href="/learning-modules/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="/learning-modules/img/favicon/favicon.ico">
+    <link rel="stylesheet" href="/learning-modules/css/index.css">
+    <link rel="stylesheet" href="/learning-modules/css/prism-coy.css">
+    <link rel="alternate" href="/learning-modules/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="/learning-modules/feed/feed.json" type="application/json" title="WDD Learning Modules">
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <a href="/learning-modules/">
+          <img src="/learning-modules/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        </a>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
+      </div>
+      <nav>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="/learning-modules/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/html/">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/js/">JS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/css/">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/design/">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/general/">General</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+    <main  class="tmpl-post" >
+      
+<h1>localStorage - Introduction</h1>
+
+
+
+
+<h2 id="what-is-localstorage" tabindex="-1">What is localStorage? <a class="direct-link" href="#what-is-localstorage" aria-hidden="true">#</a></h2>
+<p><code>localStorage</code> is a key-value storage system that allows you to store data locally in a user's browser. It is a part of the Web Storage API, which also includes <code>sessionStorage</code>. Data that is stored with the Web Storage API is unique per site. By design the data stored by one website cannot be accessed by another website. The data in fact can only be accessed in the same browser on the same computer.  Data set in localStorage for a site in Chrome cannot be seen in Firefox for example.</p>
+<h3 id="differences-with-sessionstorage" tabindex="-1">Differences with sessionStorage <a class="direct-link" href="#differences-with-sessionstorage" aria-hidden="true">#</a></h3>
+<p>There is another browser API called <code>sessionStorage</code> that is very similar to <code>localStorage</code>. The main difference between the two is that <code>sessionStorage</code> data is deleted when the user closes the browser (or browser tab), while <code>localStorage</code> data is preserved even after the browser is closed. This means that <code>localStorage</code> is useful for storing data that you want to persist across multiple sessions, while <code>sessionStorage</code> is better suited for storing data that is only relevant for a single session.</p>
+<p>One other difference is that <code>sessionStorage</code> can only store 5kb of information per key, while <code>localStorage</code> can store 5Mb.</p>
+<h3 id="what-is-localstorage-used-for" tabindex="-1">What is localStorage used for? <a class="direct-link" href="#what-is-localstorage-used-for" aria-hidden="true">#</a></h3>
+<p>localStorage is used to store data that should be persisted across page reloads and browser restarts. It is commonly used for:</p>
+<ul>
+<li>Storing user preferences, such as font size or color scheme</li>
+<li>Caching frequently-used data, such as API responses</li>
+<li>Storing small amounts of data that don't need to be sent to the server (such as items in a shopping cart)</li>
+<li>Implementing simple authentication mechanisms</li>
+<li>Creating offline-enabled web applications</li>
+</ul>
+<h2 id="how-does-localstorage-work" tabindex="-1">How does localStorage work? <a class="direct-link" href="#how-does-localstorage-work" aria-hidden="true">#</a></h2>
+<p>localStorage stores data as key-value pairs, where each key is a string and each value is a string, number, or boolean. You can store, retrieve, and remove data using the following methods:</p>
+<ul>
+<li><code>localStorage.setItem(key, value)</code>: stores a value under a given key</li>
+<li><code>localStorage.getItem(key)</code>: retrieves a value by its key</li>
+<li><code>localStorage.removeItem(key)</code>: removes a value by its key</li>
+<li><code>localStorage.clear()</code>: removes all stored values</li>
+</ul>
+<h2 id="example-use-case" tabindex="-1">Example Use Case <a class="direct-link" href="#example-use-case" aria-hidden="true">#</a></h2>
+<p>Here is an example of how to use localStorage to store a user's name:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">// Set the user's name</span><br>localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'username'</span><span class="token punctuation">,</span> <span class="token string">'John Doe'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br><span class="token comment">// Retrieve the user's name</span><br><span class="token keyword">const</span> username <span class="token operator">=</span> localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'username'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>username<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: "John Doe"</span><br></code></pre>
+<p>You can see what is currently stored in your browser's localStorage by opening up the developer tools in your browser and choosing &quot;Application&quot; if you are in Chrome, or &quot;Storage&quot; in most other browsers.</p>
+<p>Often we would like to store more complex data in <code>localStorage</code>, such as data stored in Arrays or Objects. <code>localStorage</code> has a limitation that only strings may be stored in a key. So to store more complex data it would have to first be converted to a simple string representation. Luckily in Javascript this is easy as it happens all the time. Data that has been converted to a simple string representation is called JSON and the tools to convert back and forth are built into the language.</p>
+<p>See an example of how this works below.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">// Set the user's name and age</span><br><span class="token keyword">const</span> user <span class="token operator">=</span> <span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">'John Doe'</span><span class="token punctuation">,</span> age<span class="token operator">:</span> <span class="token number">30</span> <span class="token punctuation">}</span><span class="token punctuation">;</span><br><span class="token comment">// make sure to convert the data to a string</span><br>localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'user'</span><span class="token punctuation">,</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br><span class="token comment">// get the name and age back from localStorage parsing it back into objects and Arrays.</span><br><span class="token keyword">const</span> getUser <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'user'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>getUser<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: "John Doe"</span></code></pre>
+<h3 id="security-considerations" tabindex="-1">Security Considerations <a class="direct-link" href="#security-considerations" aria-hidden="true">#</a></h3>
+<p><code>localStorage</code> is not suitable for storing sensitive data, such as passwords or credit card numbers, as it is accessible to any script running on the same origin (server URL). You should always validate and sanitize data stored in localStorage to prevent security vulnerabilities.</p>
+
+</main>
+    <footer>
+      <p class="license">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/> </a><br/>This work is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+          International License</a>.</p>
+    </footer><!-- Current page: /learning-modules/modules/js/localStorage/prepare1/ --></body>
+</html>
