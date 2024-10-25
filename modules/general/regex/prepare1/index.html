@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex - Introduction</title>
+    <meta name="description" content="Getting started with Regular Expressions">
+    <link rel="apple-touch-icon" sizes="180x180" href="/learning-modules/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="/learning-modules/img/favicon/favicon.ico">
+    <link rel="stylesheet" href="/learning-modules/css/index.css">
+    <link rel="stylesheet" href="/learning-modules/css/prism-coy.css">
+    <link rel="alternate" href="/learning-modules/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="/learning-modules/feed/feed.json" type="application/json" title="WDD Learning Modules">
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <a href="/learning-modules/">
+          <img src="/learning-modules/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        </a>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
+      </div>
+      <nav>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="/learning-modules/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/html/">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/js/">JS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/css/">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/design/">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/general/">General</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+    <main  class="tmpl-post" >
+      
+<h1>Regex - Introduction</h1>
+
+
+
+
+<h2 id="definition" tabindex="-1">Definition <a class="direct-link" href="#definition" aria-hidden="true">#</a></h2>
+<p>Regular expressions are a sequence of characters that defines a search pattern. They are used to match, find, replace, or split text based on the pattern.</p>
+<p>They are be very simple:</p>
+<p><code>^cat</code>: find the first thing that starts with the characters &quot;cat&quot;,</p>
+<p>or very complex:</p>
+<p><code>^(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$</code>: find valid formatting for dates.</p>
+<p>They use a series of metacharacters to build strings that when interpreted can match just about any sort of pattern. For example in the first example <code>^cat</code>, the <code>^</code> symbol means &quot;starts with&quot;, and in the second example you can see <code>\d</code> which indicates we are looking for a digit (0-9). Here is a <a href="https://www.rexegg.com/regex-quickstart.php">Regex cheat sheet</a> if you want to see them all.</p>
+<p>The best way to learn how to write and understand regular expressions is to actually use them. Go visit <a href="https://regexone.com">RegexOne</a>, complete the tutorial, then come back.</p>
+<h2 id="use-cases" tabindex="-1">Use cases <a class="direct-link" href="#use-cases" aria-hidden="true">#</a></h2>
+<ol>
+<li>Input Validation:
+<ul>
+<li>Email validation: Ensure that email addresses follow a valid format.</li>
+<li>Password validation: Check if passwords meet specific criteria (e.g., length, complexity).</li>
+<li>Phone number validation: Verify that phone numbers are in a correct format.</li>
+<li>Data format validation: Validate dates, times, and other data types.</li>
+</ul>
+</li>
+<li>Text Processing:
+<ul>
+<li>Search and replace: Find and replace specific patterns within text.</li>
+<li>Data extraction: Extract relevant information from text (e.g., URLs, phone numbers).</li>
+<li>Text formatting: Apply formatting rules to text (e.g., capitalization, hyphenation).</li>
+<li>Text sanitization: Remove unwanted characters or HTML tags.</li>
+</ul>
+</li>
+<li>URL Parsing:
+<ul>
+<li>Extract components: Extract parts of a URL like protocol, hostname, path, and query parameters.</li>
+<li>Validate URLs: Check if a URL is valid and well-formed.</li>
+</ul>
+</li>
+<li>Code Generation:
+<ul>
+<li>Template engines: Generate dynamic content based on templates and data.</li>
+<li>Code formatting: Apply consistent formatting rules to code.</li>
+</ul>
+</li>
+<li>Text Analysis:
+<ul>
+<li>Natural language processing: Analyze text for sentiment, keywords, or other linguistic features.</li>
+<li>Data mining: Extract patterns or insights from large datasets.</li>
+</ul>
+</li>
+<li>Security:
+<ul>
+<li>Input sanitization: Prevent injection attacks by filtering user input. (For example you could check some user input with <code>.*[&lt;].*</code> to see if it contains any HTML)</li>
+</ul>
+</li>
+</ol>
+<h2 id="using-regular-expressions-in-coding" tabindex="-1">Using regular expressions in coding <a class="direct-link" href="#using-regular-expressions-in-coding" aria-hidden="true">#</a></h2>
+<p>The tutorial makes it easy to try writing regular expressions, but how do we actually use them on real tasks?  We will show three different use cases. First in a modern code editor (VSCode), and second with HTML, and finally with a programming language...in this case Javascript.</p>
+<h3 id="regex-in-editors." tabindex="-1">Regex in editors. <a class="direct-link" href="#regex-in-editors." aria-hidden="true">#</a></h3>
+<p>Most modern code editors support regular expressions in their search and replace features. To see how this can work open up an HTML file in VSCode. Open the find dialog (cmd/ctrl-f). Notice that there are three icons in the box. The first if you press it will cause the search to match case, the second enables word matching instead of substring, and the last one that looks like <code>.*</code> enables regular expressions. Thats it...just click that button to toggle it on.</p>
+<p>Try entering <code>&lt;([A-Z][A-Z0-9]*)\b[^&gt;]*&gt;(.*?)&lt;/\1&gt;</code> This will identify any valid sets of opening and closing tags. Or <code>[ \t]+$</code> will find any lines that have trailing whitespace.</p>
+<h3 id="regex-in-html" tabindex="-1">Regex in HTML <a class="direct-link" href="#regex-in-html" aria-hidden="true">#</a></h3>
+<p>In HTML we can use regular expressions to check user input in forms.  HTML input elements have a <code>pattern</code> attribute we can add to specify the regex we want to apply to the input. For example we might want to make sure that the user enters a date in a specific format: &quot;yyyy/mm/dd&quot;: <code>^(19|20)\d\d[- \/.](0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])$</code></p>
+<blockquote>
+<p>Try to break down that regex to understand how it works. If you need a little help try using <a href="https://regex101.com">Regex101</a></p>
+</blockquote>
+<h3 id="regex-in-code" tabindex="-1">Regex in code <a class="direct-link" href="#regex-in-code" aria-hidden="true">#</a></h3>
+<p>Each programming language will have certain places where regular expressions can be used. In Javascript for example you can use them in the following built in methods:</p>
+<ul>
+<li><code>String.prototype.match()</code>: returns an array of matches</li>
+<li><code>String.prototype.replace()</code>: replaces matches with a string</li>
+<li><code>String.prototype.search()</code>: returns the index of the first match</li>
+<li><code>String.prototype.split()</code>: splits a string into an array of substrings</li>
+<li><code>RegExp.prototype.test()</code>: returns true if the string matches the regex</li>
+<li><code>RegExp.prototype.exec()</code>: returns an array of matches</li>
+</ul>
+<p>Here are some examples of how these can be used:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">hello</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span> <span class="token comment">// g flag for global matching</span><br><span class="token keyword">const</span> str <span class="token operator">=</span> <span class="token string">"hello world, hello again"</span><span class="token punctuation">;</span><br><br><span class="token comment">// Using test()</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>regex<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: true</span><br><br><span class="token comment">// Using exec()</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>regex<span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: ["hello", "index": 0, "input": "hello world, hello again"]</span><br><br><span class="token comment">// Using match()</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: ["hello", "hello"]</span><br><br><span class="token comment">// Using replace()</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>regex<span class="token punctuation">,</span> <span class="token string">"hi"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: "hi world, hi again"</span><br><br><span class="token comment">// Using search()</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">search</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: 0</span><br><br><span class="token comment">// Using split()</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: ["", " world, ", " again"]</span></code></pre>
+<blockquote>
+<p>Notice on the first line of the example the expression is not quoted!  Quotes are string literals. We use them to define strings. In Javascript Regular expressions are not strings, but are a special type of object. Just like we use the Array literals <code>[]</code> to initialize an Array, or the Object literals <code>{}</code> to create an Object, we use <code>/</code> to create a regular expression.</p>
+</blockquote>
+
+</main>
+    <footer>
+      <p class="license">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/> </a><br/>This work is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+          International License</a>.</p>
+    </footer><!-- Current page: /learning-modules/modules/general/regex/prepare1/ --></body>
+</html>
