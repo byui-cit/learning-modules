@@ -131,7 +131,7 @@ const gpa = gpaPoints.reduce((total, item) => total + item) / gpaPoints.length;
 [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Filter) is similar to map in that it returns a new array of elements. The elements in the calling array will be included in the new array if they pass a test that you include in the callback you pass in.
 
 1. Declare an array with the following value: `['watermelon', 'peach', 'apple', 'tomato', 'grape']`
-2. Using `filter` keep only the fruits that are longer than 6 characters.
+2. Using `filter` keep only the fruits that are smaller than 6 characters.
 
 <details>
 <summary>Solution 4</summary>
