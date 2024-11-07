@@ -91,7 +91,7 @@ Conversely when a server sends you data back in JSON, we need to convert the str
 
 >Since we usually use `fetch` to get that data from the server, we commonly use it's built-in helper method to do our conversion. It would look something like this: `response.json()`
 >
->`JSON.stringify(myData)` and `response.json()` do pretty much the same thing. You do not want to use both!
+> `JSON.parse(myData)` and `response.json()` do pretty much the same thing. You do not want to use both!
 
 ## Example
 
