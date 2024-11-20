@@ -60,7 +60,18 @@
 <li>Basic Functionality: Make sure essential features work regardless of the user’s browser or device.</li>
 <li>Enhancements: Add more advanced features and improvements that enhance the experience for those with modern browsers and devices.</li>
 </ol>
-<h2 id="examples" tabindex="-1">Examples <a class="direct-link" href="#examples" aria-hidden="true">#</a></h2>
+<h2 id="caniuse" tabindex="-1">CanIUse <a class="direct-link" href="#caniuse" aria-hidden="true">#</a></h2>
+<p>When new features are added to HTML, CSS, or Javascript it is a long process. First the W3C group must define exactly what the change is and how it should be work. Then after those rules are standardized the browser developers must implement the features in their code. Then users must update to the newer versions of browsers where the feature is supported. All of this means that we don't have any control over the environment where our code is run.</p>
+<p>Because of this problem there are groups who carefully track and monitor which browsers and versions are in use. <a href="https://caniuse.com">CanIUse</a> is one of those sites.  We can check any current feature of HTML, CSS, or Javascript to see where it is supported and use that information to help decide when it is safe to implement a new feature, or when we might need to apply something as an enhancement.</p>
+<p>Take a look at <a href="https://caniuse.com/?search=jpeg%20xl">JPEG XL</a> for example. It is a new image format that has much better compression than a JPEG.</p>
+<p><img src="../../../../img/caniuse-jpeg-xl.webp" alt="Caniuse example"></p>
+<ol>
+<li>Look in the top right corner. There is a label that says &quot;Global 13.44%&quot;. This is the percentage of browsers in use that support this feature.  It's not well supported.</li>
+<li>Below is a grid of boxes. Find the column for Safari. It is one of the few that is green. Note that Safari started supporting this feature with version 17, and the current version of Safari is 18.1.</li>
+<li>As things currently stand we should probably not use this feature yet...unless there is a way to help it fail gracefully.</li>
+</ol>
+<p>Take a look at the <a href="https://caniuse.com/?search=picture">picture element</a>.  It has very good support, and it's very purpose is to allow for different sizes and formats of images to be offered. Leveraging things like the picture element can allow us to use new improvements like jpeg-xl while still providing a good experience where it isn't supported. This is a very good application of the principle of progressive enhancement.</p>
+<h2 id="other-examples" tabindex="-1">Other Examples <a class="direct-link" href="#other-examples" aria-hidden="true">#</a></h2>
 <ol>
 <li>Google Search
 <ul>

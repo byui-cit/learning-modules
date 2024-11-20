@@ -80,7 +80,7 @@
 <p>Conversely when a server sends you data back in JSON, we need to convert the string back into an actual object that we can manipulate. <code>JSON.parse(dataFromServer)</code></p>
 <blockquote>
 <p>Since we usually use <code>fetch</code> to get that data from the server, we commonly use it's built-in helper method to do our conversion. It would look something like this: <code>response.json()</code></p>
-<p><code>JSON.stringify(myData)</code> and <code>response.json()</code> do pretty much the same thing. You do not want to use both!</p>
+<p><code>JSON.parse(myData)</code> and <code>response.json()</code> do pretty much the same thing. You do not want to use both!</p>
 </blockquote>
 <h2 id="example" tabindex="-1">Example <a class="direct-link" href="#example" aria-hidden="true">#</a></h2>
 <p>Here is an example JSON file. Directly open this file with your browser: <a href="https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json">JSON &quot;Hero&quot; Data Example</a> - MDN</p>
