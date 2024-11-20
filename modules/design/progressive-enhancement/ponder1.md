@@ -8,7 +8,7 @@ layout: layouts/post.njk
 
 ## Preparation
 
-It is recommended to review [Introduction to Progressive Enhancement](../prepare1) before you start. You will also need your editor open with some html and the code from the Prepare activity:
+It is recommended to review [Introduction to Progressive Enhancement](../prepare1) before you start. You will need your editor open to create a couple of new files for the following code:
 
 ### html
 
