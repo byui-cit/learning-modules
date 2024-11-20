@@ -145,7 +145,7 @@ Open the HTML in a browser, notice that with no styling all of the content on th
 
 1. We can use the [Picture element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) to make this happen. Review that link and return.
 2. Add a `picture` element around one of the images. Change the extention on the `img` element to `.jpeg`. This will be our default if none of the other formats we want are supported.
-3. Add a `source` element inside the `picture` element, above the existing `img`. The `source` element should reference the `.jxl` version of the image.
+3. Add a `source` element inside the `picture` element, above the existing `img`. The `source` element should reference the `.jxl` version of the image. You may need to add a type to the element as well for it to work: `type="image/jxl"`
 4. Add another `source` element inside the `picture` element, again above the existing `img`. This one should reference the `.webp` version of the image.
 5. Do the same for the other two images and check to make sure the images show now.
 
