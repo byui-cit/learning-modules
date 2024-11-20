@@ -68,7 +68,7 @@ Information about a web page location is found in `window.location`. Open up a w
 
 Notice that in the example there were some URL parameters. The browser helpfully has already parsed the URL to separate out the search string. We still need to take that string and break it up into the individual keys and values however. Luckily the browser is not done helping us.
 
-We can use [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) to do this parsing for us. For example if we wanted to get the value sent for the query (q), we could do the following:
+We can use [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/URLSearchParams) to do this parsing for us. For example if we wanted to get the value sent for the query (q), we could do the following:
 
 ```javascript
 const paramsString = window.location.search
