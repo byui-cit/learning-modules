@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS @import</title>
+    <meta name="description" content="As your codebase and teams grow, it becomes more and more important to apply some sort of organization to your CSS. @import is one way this can be done.">
+    <link rel="apple-touch-icon" sizes="180x180" href="/learning-modules/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="/learning-modules/img/favicon/favicon.ico">
+    <link rel="stylesheet" href="/learning-modules/css/index.css">
+    <link rel="stylesheet" href="/learning-modules/css/prism-coy.css">
+    <link rel="alternate" href="/learning-modules/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="/learning-modules/feed/feed.json" type="application/json" title="WDD Learning Modules">
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <a href="/learning-modules/">
+          <img src="/learning-modules/img/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        </a>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
+      </div>
+      <nav>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="/learning-modules/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/html/">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/js/">JS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/css/">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/design/">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/learning-modules/modules/general/">General</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+    <main  class="tmpl-post" >
+      <a href="/learning-modules/tags/css/" class="post-tag">css</a><a href="/learning-modules/tags/import/" class="post-tag">import</a>
+<h1>CSS @import</h1>
+
+
+
+
+<h2 id="description" tabindex="-1">Description <a class="direct-link" href="#description" aria-hidden="true">#</a></h2>
+<p>CSS, if left to itself will tend to turn into a big unorganized mess. If you are working alone on a project this can make it hard to find things, when on a team the problems get even bigger. Most teams will track changes in their code with something like <code>git</code>. If four teammates are making changes to one CSS file trouble will ensue.</p>
+<p>Luckily there are some easy things we can do to remedy this situation, simply put we need to enforce some level of organization to our code. Much has been written about this topic, and many many opinions exist about the best way to do this.  We however are going to keep it simple. Really what we need is a way to break our large messy CSS file into smaller pieces, where the code in each piece is related somehow.</p>
+<h2 id="where-this-knowledge-is-utilized" tabindex="-1">Where this knowledge is utilized <a class="direct-link" href="#where-this-knowledge-is-utilized" aria-hidden="true">#</a></h2>
+<ul>
+<li>WDD 231</li>
+<li>WDD 330</li>
+<li>WDD 331</li>
+<li>WDD 360</li>
+<li>CSE 340</li>
+</ul>
+<h2 id="prerequisites" tabindex="-1">Prerequisites <a class="direct-link" href="#prerequisites" aria-hidden="true">#</a></h2>
+<ul>
+<li>Understanding of <a href="../css-intro">CSS</a></li>
+</ul>
+<!-- ## Prepare
+
+- [Using @import](prepare1)
+
+## Ponder
+
+- [Design a simple component](ponder1). A well built component should be easily re-usable, and should fit in well with the rest of the layout the component will be placed in. This requires a bit of thought as you plan out your components. -->
+<h2 id="example" tabindex="-1">Example <a class="direct-link" href="#example" aria-hidden="true">#</a></h2>
+<p>Let's say you are building a website that is made up of several pages. A home page, an about page, and a contact page. Our file structure might look like this:</p>
+<pre class="language-bash"><code class="language-bash">css/<br>   styles.css<br>about.html<br>contact.html<br>index.html</code></pre>
+<p>Inside each of the HTML files we would expect to see a link: <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;css/styles.css&quot;&gt;</code>. All of the pages get all of the CSS, even though some of the CSS applies global styles (styles that are the same everywhere) and some CSS is for specific content sections on each page. This CSS file could easily be hundreds of lines long making it hard to find specific rules when we need to.</p>
+<p>A simple change we can make to our CSS to organize the CSS according to some set of rules. We can then add comments to show where one section starts and another ends.  Most people agree that this is a good idea, but they start disagreeing about what the <em>best</em> set of rules is. The reality is that is doesn't really matter. What matters is that you and your teammates use the <em>same</em> set of rules.</p>
+<p>In this case we might decide to organize our code like this:</p>
+<ul>
+<li>variables</li>
+<li>global styles</li>
+<li>header or navigation</li>
+<li>footer</li>
+<li>typography (font families, font sizes, line heights, default amounts of padding or margin around paragraphs/headlines/etc)</li>
+<li>page specific styles</li>
+</ul>
+<p>We can create a section in our CSS file for each of these categories, with bold comments marking where each section begins and ends. This is a good start. This will make it easier to find a certain rule, but it does not address the issues of multiple people working together on the same file. Conflicts will ensue!</p>
+<h2 id="@import" tabindex="-1">@import <a class="direct-link" href="#@import" aria-hidden="true">#</a></h2>
+<p>What we need for the next level of organization is a way to break our large single CSS file into multiple parts. Enter <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@import">@import</a>. This feature has been a part of CSS for many years, and it's purpose is to do exactly what we want to do: break our code down into smaller parts.  Using <code>@import</code> we might make this change to our project structure:</p>
+<pre class="language-bash"><code class="language-bash">css/<br>  partials/<br>    footer.css<br>    global.css<br>    header.css<br>    typography.css<br>    variables.css<br>  about.css<br>  base.css<br>  contact.css<br>  home.css<br>about.html<br>contact.html<br>index.html</code></pre>
+<p>The contents of <code>base.css</code> would look like this:</p>
+<pre class="language-css"><code class="language-css">@import <span class="token string">'partials/variables.css'</span><br>@import <span class="token string">'partials/typography.css'</span><br>@import <span class="token string">'partials/global.css'</span><br>@import <span class="token string">'partials/header.css'</span><br>@import <span class="token string">'partials/footer.css'</span></code></pre>
+<p>Essentially it would contain all the CSS that should apply to <strong>all</strong> pages.</p>
+<p>Then the <code>home.css</code>, <code>about.css</code>, and <code>contact.css</code> would contain the CSS that applies to only those pages. Our <code>link</code> elements will need to change as well. In <code>index.html</code> for example we would add:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>css/base.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>css/home.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre>
+<p>And in <code>about.html</code> we would add:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>css/base.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>css/about.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre>
+<p>We could even break things up further. Maybe we design our page as a collection of blocks, and make a CSS partial for each block. This approach would make our work even more reusable as often we find similar patterns used across many pages in a site.</p>
+<h2 id="disclaimer" tabindex="-1">Disclaimer <a class="direct-link" href="#disclaimer" aria-hidden="true">#</a></h2>
+<p>We have solved the problems of having a large, unorganized CSS file and made our jobs as developers easier. We have introduced a new problem however with our solution. We may have made our web pages load slower!  This is a negative side effect that sometimes shows up when <code>@import</code> is used.</p>
+<p>When the browser requests an HTML file it starts parsing through it as soon as it can. When it hits a <code>link</code> it immediately stops parsing and requests the resource and then begins working on the CSS it contains. If that resource has requests for other resources it can stall things even more. There are some things that can make this less severe. For example the fact that we only had import statements in our <code>base.css</code> file and no actual CSS will speed it up a bit, but it would still be better if we only had one CSS file. Turns out that requesting and downloading one large CSS file is usually faster than multiple small CSS files.</p>
+<p>Because of this possible performance hit, other solutions have been created to accomplish this splitting of code that we have done. We could use a CSS preprocessor for example like <a href="https://sass-lang.com">Sass</a>, a tool like <a href="https://postcss.org">postCSS</a>, or if we are using a Javascript framework like React, Vue, Angular, or Svelte then the framework will probably allow us to add CSS in our Javascript, and the framework will gather it all up for us. We could also use a build tool like a bundler. A bundler is a piece of software used to help manage all the resources that make up a web application. A popular one right now is <a href="https://vite.dev">Vite</a>.</p>
+<p>If your project is using Vite as the bundler then we can do something like the following to fix our <code>@import</code> problem.</p>
+<pre class="language-bash"><code class="language-bash">css/<br>  partials/<br>    footer.css<br>    global.css<br>    header.css<br>    typography.css<br>    variables.css<br>  about.css<br>  base.css<br>  contact.css<br>  home.css<br>js/<br>  about.js<br>  index.js<br>  contact.js<br>about.html<br>contact.html<br>index.html</code></pre>
+<p>We would first add some JS files. Then in <code>index.js</code> we would do the following:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token string">'../css/base.css'</span><span class="token punctuation">;</span><br><span class="token keyword">import</span> <span class="token string">'../css/home.css'</span><span class="token punctuation">;</span></code></pre>
+<p>In <code>index.html</code> we would <em>remove</em> the <code>link</code> element. Vite will insert it back in for us when it needs it. When we build our project, Vite will see those <code>import</code> statements and recognize that they don't look like normal ESModules imports. It will then go and grab the CSS from the files, including the @imports! Then it will add all the CSS into a new file, and create a <code>link</code> element inside the <code>index.html</code> file to the new CSS file. All of this happens automatically for us, handled by our bundler.</p>
+<p>This allows us to take advantage of the built in feature of CSS to break up our large CSS file into small organized partials, while minimizing the potential bad side effects.</p>
+
+</main>
+    <footer>
+      <p class="license">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/> </a><br/>This work is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+          International License</a>.</p>
+    </footer><!-- Current page: /learning-modules/modules/css/@import/ --></body>
+</html>
