@@ -1,6 +1,6 @@
 ---
-title: CSS @import - introduction
-description: As your codebase and teams grow, it becomes more and more important to apply some sort of organization to your CSS. @import is one way this can be done.
+title: CSS Components - Design a simple component
+description: Websites are often just collections of pieces called components. Treating them this way helps us to write more re-usable code. It also can help reduce the complexity of redesigns. This activity will go through the process of designing and creating a reusable web component.
 date: 2021-10-15
 
 layout: layouts/post.njk
