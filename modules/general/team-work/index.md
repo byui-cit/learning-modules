@@ -11,14 +11,9 @@ layout: layouts/post.njk
 
 ## Description
 
-We make a big deal about "Teach One Another" here. This often gets
-implemented as group work. This is not a bad thing, no matter how you
-personally may feel about it. Turns out most jobs
-**will** require you to work with others.
+We make a big deal about "Teach One Another" here. This often gets implemented as group work. This is not a bad thing, no matter how you personally may feel about it. Turns out most jobs **will** require you to work with others.
 
-Teachers often make too many assumptions however about how much our
-students know about <em>how</em> to work in a group. Here are a few
-tips and tricks to help you out with group projects.
+Teachers often make too many assumptions however about how much our students know about *how* to work in a group. Here are a few tips and tricks to help you out with group projects.
 
 ## Where this knowledge is utilized
 
@@ -62,12 +57,12 @@ Here are a few tools that the pros use to accomplish those things:
 
 2. Tracking and assigning tasks:
 
-   [Trello](https://trello.com/): I'm a big fan of Trello for tracking tasks. This is another free tool that you should take advantage of in your groups. Create a board with a minimum of the following lists: Backlog, Defects, Doing, and Done, then invite all the members of your group to the board.
+   [Trello](https://trello.com/): I'm a big fan of Trello for tracking tasks. This is another free tool that you should take advantage of in your groups. Create a board with a minimum of the following lists: Backlog, Defects, Doing, and Done, then invite all the members of your group to the board. Other options could be Jira or even Github Issues.
 
    ![Example of a Trello board](../../../img/trello-example.jpg)
    Example of a Trello project board.
 
-   At the beginning of the project the group's first job is to get together and fill out the Backlog list. This initial list building REALLY needs to be done synchronously (an 'all hands on deck' meeting). Every single task should be broken into as small of pieces as makes sense, and entered in there. (A good benchmark is that most tasks should take less than 30 minutes to complete.)
+   At the beginning of the project the group's first job is to get together and fill out the Backlog list. This initial list building REALLY needs to be done synchronously (an 'all hands on deck' meeting). Every single task should be broken into as small of pieces as makes sense, and entered in there. A good benchmark is that most tasks should take less than 30 minutes to complete. If you end up with any cards that you think will take longer than 30 minutes...split them up.
 
    Anytime someone thinks of something else that needs to be done it should immediately be added to the backlog list.
 
@@ -88,11 +83,12 @@ Let's look at an example of how this might look on any given day for a member of
 1. Login to Slack or Teams and see what updates there are from team members.
 2. Open Trello and look over the Backlog and the Doing lists.
 3. Assign myself to a new task and move it to Doing.
-4. Make sure to "Pull" from the code repository (either GitHub or Bitbucket) to get any changes my teammates might have finished.
-5. Open my editor and complete the Task I grabbed. (Complete means coded AND tested! Make sure you didn't break anything with your changes!)
-6. "Commit" and "Push" my code back up to the Repository for my teammates.
-7. Move the task I just finished in Trello over to Done.
-8. Make any updates to Slack or Teams that your group might need to know about what you did.
+4. Make sure to "Pull" from the code repository (either GitHub or Bitbucket) to get any changes my teammates might have finished *before* you start your work. **This is really important!!!**
+5. If you are using [branches](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches) in your workflow, create a new branch for your work.
+6. Open my editor and complete the Task I grabbed. (Complete means coded AND tested! Make sure you didn't break anything with your changes!)
+7. "Commit" and "Push" my code back up to the Repository for my teammates. If you are using a branch then make a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests). If there are any merge conflicts resolve them. You can do this by opening up the file which had the conflict and find the sections delineated with the conflict markers: `<<<<<<<, =======, >>>>>>>`  Decide which code to keep (often this is by combining the conflicting code), delete the markers.
+8. Move the task I just finished in Trello over to Done.
+9. Make any updates to Slack or Teams that your group might need to know about what you did.
 
 ## Wrapping Up
 
