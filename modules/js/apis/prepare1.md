@@ -10,13 +10,13 @@ layout: layouts/post.njk
 
 API stands for Application Programming Interface. It is a set of defined rules that enables different applications to communicate with each other. An API endpoint is accessed through a URL. You make a request to a specific URL, and data instead of HTML is returned.
 
-Most APIs are designed according to certain rules to make them consistent and easy to use. One of the most common set of rules used is called REST (Representational State of Resource). REST APIs are stateless, cacheable, and use HTTP methods to perform actions.
+Most APIs are designed according to certain rules to make them consistent and easy to use. One of the most common set of rules used is called REST (Representational State of Resource). REST APIs are stateless, cacheable, and use HTTP methods to perform actions. RESTful APIS should be all about resources that are available. Those resources show up as nouns in our URLs.
 
 Web servers are designed to accept different types of requests. For example if we wanted to view a webpage that a server had, we would make a `GET` request to the URL of that page. The browser handles the request for us, so we normally don't have to worry about the request type.  We could also make a `POST` request. This usually involves sending data to a URL. This is commonly used by HTML forms. Other common request types include `PUT`, and `DELETE`.
 
 When accessing an API we might make a `GET` request to the following URL: `https://some.server.com/users`  This would most likely return a list (usually in JSON format) of users from the server. But we could also make a `POST` request to the same URL, and if we sent the data representing a new user along with the request then the server would insert that user into where ever it was storing users.
 
-Likewise we might make a `put` request to this URL: `https://some.server.com/user/1`  This would indicate that we were sending some updated user information for the user with an ID of 1, and that the server should update that user accordingly.  Finally if we made a `delete` request to that same URL, the server would delete user 1.
+Likewise we might make a `put` request to this URL: `https://some.server.com/users/1`  This would indicate that we were sending some updated user information for the user with an ID of 1, and that the server should update that user accordingly.  Finally if we made a `delete` request to that same URL, the server would delete user 1.
 
 Most public APIs do not allow `post`, `put`, or `delete` requests, but restrict users to `get`. A good API will also have detailed documentation to help users to know which URLs to use to get the data they are looking for.
 
@@ -35,6 +35,9 @@ Open the [Documentation](https://pokeapi.co/docs/v2) page. What URL would you us
 </details>
 
 Poke around some more in the documentation to get a feel for what else you can request from this API.
+
+>If you make a request to `https://pokeapi.co/api/v2/pokemon` it will return a list of all the pokemon...or at least the first 20 in that list. Notice that it gives us a name and a url. If you think about what a user might want to do next that URL starts making a lot of sense.
+>If you pulled up a list of pokemon, your next step would probably be to get more information about a specific pokemon. That provided URL leads us to our most likely next step. This is another characteristic of REST. The API should guide you to what you might want to do next.
 
 ## Parameters
 

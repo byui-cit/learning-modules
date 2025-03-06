@@ -45,7 +45,7 @@ In order to do that, you will need a few things:
 
 Here are a few tools that the pros use to accomplish those things:
 
-1. Communication plans deal with two very important things: how a team will communicate, and how often a team member is expected to check in and give a report.
+1. Communication plans deal with two very important things: *how* a team will communicate, and *how often* a team member is expected to check in and give a report.
 
    On regular intervals your group should be checking in with each other to give progress updates. These meetings should be very quick. While they would be synchronous in the ideal setting, they can certainly be accomplished asynchronously as well.
 

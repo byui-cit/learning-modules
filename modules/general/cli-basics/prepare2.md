@@ -1,5 +1,5 @@
 ---
-title: CLI basics - Windows
+title: Command Line basics - Windows
 description: Getting started with the command line on Windows
 date: 2021-10-15
 

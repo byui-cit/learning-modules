@@ -1,5 +1,5 @@
 ---
-title: CLI basics - Mac
+title: Command Line basics - Mac
 description: Getting started with the command line on Mac
 date: 2021-10-15
 
