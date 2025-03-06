@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Module Name - Resource name</title>
-    <meta name="description" content="Getting started with making asynchronous requests with Fetch">
+    <title>DOM Basics - Introduction to the DOM</title>
+    <meta name="description" content="What is the DOM and how can we use it to make our web pages interactive?">
     <link rel="apple-touch-icon" sizes="180x180" href="/learning-modules/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="/learning-modules/img/favicon/favicon-16x16.png" sizes="16x16">
@@ -47,14 +47,16 @@
     </header>
     <main  class="tmpl-post" >
       
-<h1>Module Name - Resource name</h1>
+<h1>DOM Basics - Introduction to the DOM</h1>
 
 
 
 
-<h2 id="ajax:-asynchronous-requests" tabindex="-1">AJAX: asynchronous requests <a class="direct-link" href="#ajax:-asynchronous-requests" aria-hidden="true">#</a></h2>
-<p><strong>AJAX</strong> stands for Asynchronous Javascript And Xml. It is a collection of technologies that allow a webpage to make a request to a server after it has loaded for additional information. The requests are Asynchronous in that the program the made them does not wait around doing nothing until they come back...it will move on and do more stuff, the requests are made with Javascript, but they don't often return XML anymore. Most often now you will get the information back as JSON.</p>
-<p>Originally the requests were made using <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">XmlHttpRequest</a>, and you will still see that around, but more and more developers are turning to the newer <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">fetch</a> command to make their requests.</p>
+<h2 id="what-is-the-dom" tabindex="-1">What is the DOM? <a class="direct-link" href="#what-is-the-dom" aria-hidden="true">#</a></h2>
+<p>The DOM, or Document Object Model, is essentially a way for web browsers to represent and interact with the structure of an HTML document. It's like a map or a model of the page that the browser uses to display the content, and it allows JavaScript to manipulate that content dynamically.</p>
+<p>When you write an HTML file, you're creating the structure of a web page and providing the content. For example, you might create a simple page as shown below with paragraphs, headings, images, and links in your HTML file.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>Hello World<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>This is a paragraph.This is a <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>link<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> in a paragraph.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>image.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>An image<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<pre class="language-text"><code class="language-text">Document<br> └── html<br>     └── body<br>         ├── h1 ("Hello World")<br>         └── p ("This is a paragraph.")<br>            ├── text ("This is a ")<br>            ├── a ("link")<br>            └── text (" in a paragraph.")<br>         └── img<br></code></pre>
 <h2 id="promises" tabindex="-1">Promises <a class="direct-link" href="#promises" aria-hidden="true">#</a></h2>
 <figure class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/a3Srum6o5Oo" title="BYU-I Hackathon 2021" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
