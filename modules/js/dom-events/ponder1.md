@@ -91,7 +91,7 @@ function removeTask(taskElement) {
 function completeTask(taskElement) {
   // In this case we need to find the index of the task so we can modify it.
   const taskIndex = tasks.findIndex(
-    (task) => task.detail === taskElement.childNodes[0].innerText
+    (task) => task.detail === taskElement.querySelector('p').innerText
   );
   // once we have the index we can modify the complete field.
   // tasks[taskIndex].completed ? false : true is a ternary expression.
@@ -136,8 +136,8 @@ There are 3 functions to be written, and some events to listen for to complete t
    `<li ${task.completed ? 'class="strike"' : ""}>
       <p>${task.detail}</p>
       <div>
-        <span data-function="delete">❎</span>
-        <span data-function="complete">✅</span>
+        <span data-action="delete">❎</span>
+        <span data-action="complete">✅</span>
       </div>
     </li>`;
    ```
@@ -166,8 +166,8 @@ function taskTemplate(task) {
     <li ${task.completed ? 'class="strike"' : ""}>
       <p>${task.detail}</p>
       <div>
-        <span data-function="delete">❎</span>
-        <span data-function="complete">✅</span>
+        <span data-action="delete">❎</span>
+        <span data-action="complete">✅</span>
       </div>
     </li>`
 }
