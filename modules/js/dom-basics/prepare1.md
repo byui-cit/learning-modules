@@ -1,16 +1,39 @@
 ---
-title: Module Name - Resource name
-description: Getting started with making asynchronous requests with Fetch
-date: 2021-10-15
+title: DOM Basics - Introduction to the DOM
+description: What is the DOM and how can we use it to make our web pages interactive?
+date: 2025-02-15
 
 layout: layouts/post.njk
 ---
 
-## AJAX: asynchronous requests
+## What is the DOM?
 
-**AJAX** stands for Asynchronous Javascript And Xml. It is a collection of technologies that allow a webpage to make a request to a server after it has loaded for additional information. The requests are Asynchronous in that the program the made them does not wait around doing nothing until they come back...it will move on and do more stuff, the requests are made with Javascript, but they don't often return XML anymore. Most often now you will get the information back as JSON.
+The DOM, or Document Object Model, is essentially a way for web browsers to represent and interact with the structure of an HTML document. It's like a map or a model of the page that the browser uses to display the content, and it allows JavaScript to manipulate that content dynamically.
 
-Originally the requests were made using [XmlHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest), and you will still see that around, but more and more developers are turning to the newer [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) command to make their requests.
+When you write an HTML file, you're creating the structure of a web page and providing the content. For example, you might create a simple page as shown below with paragraphs, headings, images, and links in your HTML file.
+
+```html
+<html>
+  <body>
+    <h1>Hello World</h1>
+    <p>This is a paragraph.This is a <a href="#">link</a> in a paragraph.</p>
+    <img src="image.jpg" alt="An image">
+  </body>
+</html>
+```
+
+```text
+Document
+ └── html
+     └── body
+         ├── h1 ("Hello World")
+         └── p ("This is a paragraph.")
+            ├── text ("This is a ")
+            ├── a ("link")
+            └── text (" in a paragraph.")
+         └── img
+
+```
 
 ## Promises
 

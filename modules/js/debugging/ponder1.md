@@ -42,7 +42,8 @@ We have a few errors to fix in the code above.
 
 1. First we must address the initial syntax error: "pi is not defined". Why are we getting that error? Review the code and fix it.
 2. Once that error is fixed we will find that there is another syntax error: "Assignment to constant variable." Fix this one as well.
-3. After that the code runs with no errors. But there is no indication of whether it worked correctly. Insert some `console.log()` statements to review what is happening.
+3. After that the code runs with no errors. But there is no indication of whether it worked correctly. There are two ways we can get more visibility into how our code is running. The first is by inserting some logging in at key points. Insert some `console.log()` statements to review what is happening.
+4. The second way is to use a debugger. Open the developer tools in your browser, goto the Sources tab, make sure the Javascript file is selected, and set a breakpoint on line one of the code (Click on the number 1 next to the first line). Refresh the page and you will see the debugger stop at that line. Now you can step over the code line by line and see what is happening.
 
 <details>
 <summary>Solution 1</summary>
