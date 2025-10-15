@@ -10,7 +10,7 @@ layout: layouts/post.njk
 
 It can be a little intimidating after reading an article like [Breaking Down the Principles of Design](https://www.toptal.com/designers/gui/principles-of-design-infographic) or [10 Principles of Good Web Design](https://www.smashingmagazine.com/2008/01/10-principles-of-effective-web-design/) to then approach a new project and try and figure out how to apply all of the things mentioned. So where should we start?
 
-Massimo Vignelli, a very well respected designer, decided to try and capture what he had learned about design towards the end of his life. He released it as a free book called [The Vignelli Canon](../../../img/VignelliCanon.pdf). This is what he says about starting a new project:
+Massimo Vignelli, a very well respected designer, decided to try and capture what he had learned about design towards the end of his life. He released it as a free book called [The Vignelli Canon](../../../../img/VignelliCanon.pdf). This is what he says about starting a new project:
 
 > The very first thing that I do whenever I start a new assignment in any form of design, graphic, product, exhibition or interior is to search for the meaning of it. That may start with research on the history of the subject to better understand the nature of the project and to find the most appropriate direction for the development of a new design.
 > Depending on the subject the search can take many directions. It could be a search for more information about the Company, the Product, the Market Position of the subject, the Competition, its Destination, the final user, or indeed, about the real meaning of the subject and its semantic roots.
