@@ -20,7 +20,7 @@ This then should always be your starting point. Define your goals. What is the p
 
 Ultimately there are two design related concerns we should have. The first was discussed in the article [10 Principles of Good Web Design](https://www.smashingmagazine.com/2008/01/10-principles-of-effective-web-design/). It stresses how the usability of your site is really, really important, and then gives tips on how to increase that usability.
 
-The second concern is addressed in the other readings: [Typography](https://edu.gcfglobal.org/en/beginning-graphic-design/typography/1/), [Color](https://edu.gcfglobal.org/en/beginning-graphic-design/color/1/), and [Layout and Composition](https://edu.gcfglobal.org/en/beginning-graphic-design/layout-and-composition/1/). These talk more about the use of visual design principles to create something that will appeal to our audience.
+The second concern is addressed in the other readings: [Typography](https://www.learnfree.org/episode/beginning-graphic-design/?id=15254), [Color](https://www.learnfree.org/episode/beginning-graphic-design/?id=15255), and [Layout and Composition](https://www.learnfree.org/episode/beginning-graphic-design/?id=15256). These talk more about the use of visual design principles to create something that will appeal to our audience.
 
 If you have not yet read those articles...do that now then come back.
 
